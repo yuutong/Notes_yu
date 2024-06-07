@@ -2,12 +2,7 @@
 # 我的文档网站
 
 > 
-<!--
-A magical documentation site generator
+   我愿星夜兼程，永不言弃
 
-* Simple and lightweight (~12kb gzipped)
-* Multiple themes
-* Not build static html files  -->
-
-[GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://github.com/yuutong/Notes_yu/tree/master/)
 [Get Started](_coverpage.md)

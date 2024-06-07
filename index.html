@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <title>notes yu</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -14,24 +15,22 @@
 </head>
 
 
-
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'Note',
-     //repo: 'https://github.com/yuutong/Notes_yu.git',
       loadSidebar: true,
       autoHeader: true,
       subMaxLevel: 5,
       coverpage: '_coverpage.md', //true
       onlyCover: true,
       homepage: "README.md",
-      relativePath: true,//启用相对路径      
+      relativePath: true,    //启用相对路径      
       //sidebarDisplayLevel: 10,
-      executeScript: true,//执行文档的第一个srcipt脚本
-      mergeNavbar: true,//小屏设备下合并导航栏到侧边栏。
-      topMargin: 90, // default: 0让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+      executeScript: true,   //执行文档的第一个srcipt脚本
+      mergeNavbar: true,     //小屏设备下合并导航栏到侧边栏。
+      topMargin: 90,         // default: 0让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
 
       count: {
         countable: true,
@@ -39,30 +38,28 @@
         color: 'rgb(90,90,90)',
         language: 'chinese'
       },
+
       search: {
         maxAge: 86400000,
         paths: [],
         placeholder: '开始搜索',
         noData: 'No result!'
       },
+
       copyCode: {
         buttonText: '点击复制',
         errorText: '错误',
         successText: '复制成功'
       },
+
       // 支持LaTeX排版数学公式
       latex: {
         inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
         displayMath  : [['$$', '$$']],               // default
       }
-/*       loadSidebar: function (vm) {
-        const path = vm.route.path;
-        const sidebarPath = path === '/' ? '_sidebar.md' : `${path}_sidebar.md`;
-        return fetch(sidebarPath)
-          .then(response => response.text())
-          .catch(() => ''); // 如果找不到文件，返回空字符串
-      }, */
+
     }
+    
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
