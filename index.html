@@ -20,11 +20,11 @@
       coverpage: '_coverpage.md', //true
       onlyCover: true,
       sidebarDisplayLevel: 1,
-      count:{
-        countable:true,
-        fontsize:'0.9em',
-        color:'rgb(90,90,90)',
-        language:'chinese'
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
       },
       search: {
         maxAge: 86400000,
@@ -33,12 +33,16 @@
         noData: 'No result!'
       },
       copyCode: {
-        buttonText : '点击复制',
-        errorText  : '错误',
+        buttonText: '点击复制',
+        errorText: '错误',
         successText: '复制成功'
       },
-       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
+      loadSidebar: function (vm) {
+        const path = vm.route.path;
+        const sidebarPath = path === '/' ? '_sidebar.md' : `${path}_sidebar.md`;
+        return fetch(sidebarPath)
+          .then(response => response.text())
+          .catch(() => ''); // 如果找不到文件，返回空字符串
       },
     }
   </script>
