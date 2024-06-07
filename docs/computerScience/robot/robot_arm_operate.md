@@ -1,8 +1,8 @@
-# 用于控制和模拟简单机器人手臂的类 robot_arm。
+### 用于控制和模拟简单机器人手臂的类 robot_arm。
    该类包括正向运动学、逆向运动学、碰撞检测、路径规划等功能，
    并提供了3D可视化功能来展示机器人的运动
 
-#总结：
+### 总结：
 代码定义了一个用于控制和模拟简单机器人手臂的类 robot_arm，并提供了一些关键功能：
 正向和逆向运动学：计算末端执行器的位置和关节角度。
 碰撞检测：检查机器人是否与障碍物发生碰撞。
@@ -11,12 +11,12 @@
 通过这些功能，用户可以模拟和验证机器人手臂在特定环境下的运动情况，并确保其路径不与障碍物发生碰撞。
 
 
-# 主要模块和包：
+### 主要模块和包：
   numpy：用于科学计算，特别是数组操作。
   matplotlib.pyplot 和 mpl_toolkits.mplot3d：用于3D绘图。
 
 
-# 类属性：
+### 类属性：
 class robot_arm():
     x_init = [1.5, 0, 0.1]  # 初始位置
     x_product = [1, 1.5]  # 产品位置
@@ -33,7 +33,7 @@ class robot_arm():
     lim_length_d3 = np.array((0, 0.9))  # 另一伸缩范围限制
 
 
-# 路径定义：
+### 路径定义：
 if x_product[0] > 0:
     Xn = np.array([x_init, [x_init[0], x_init[1], 1], [x_product[0], x_product[1], 1], [x_product[0], x_product[1], 0.1]])
 if x_product[0] <= 0 and x_product[1] <= 1.5:
@@ -42,12 +42,12 @@ if x_product[0] < 0 and x_product[1] > 1.5:
     Xn = np.array([x_init, [0, 1.5, 1], [0, 1.5 + (0.2 + 0.005 + 0.001), 1], [x_product[0], x_product[1], 1], [x_product[0], x_product[1], 0.1]])
 
 
-# 初始化函数：
+### 初始化函数：
 def __init__(self):
     pass
 
 
-# 正向运动函数
+### 正向运动函数
 def direct_kinematics(self, q):
     x = q[1] * np.cos(q[0])
     y = q[1] * np.sin(q[0])
@@ -55,7 +55,7 @@ def direct_kinematics(self, q):
     return np.array([x, y, z])  # 返回末端执行器的位置
 
 
-# 逆向运动函数：
+### 逆向运动函数：
 def inv_kinematics(self, X):
     tetha1 = np.arctan2(X[1], X[0])
     d2 = ((X[0]**2) + (X[1]**2))**0.5
@@ -63,7 +63,7 @@ def inv_kinematics(self, X):
     values = np.array([tetha1, d2, d3])
     return values
 
-# 碰撞检测函数：
+### 碰撞检测函数：
 def collision_checker(self, q):
     x = self.direct_kinematics(q)
     radius = (self.x_product[0]**2 + self.x_product[1]**2)**0.5
@@ -87,7 +87,7 @@ def collision_checker(self, q):
         return True
     return False
 
-#路径规划函数：
+### 路径规划函数：
 def theta_pol(self, X, T=1):
     Tt = np.linspace(0, T, 100)
     Q = []
@@ -105,7 +105,7 @@ def theta_pol(self, X, T=1):
     return Q, X
 
 
-# 3D可视化函数plot_3D 负责在三维空间中绘制机器人手臂的运动路径和工作空间中的障碍物
+### 3D可视化函数plot_3D 负责在三维空间中绘制机器人手臂的运动路径和工作空间中的障碍物
 def plot_3D(self, location):
     fig = plt.figure()
     ax = plt.axes(projection="3d")
@@ -169,7 +169,7 @@ def plot_3D(self, location):
     ax.grid(True)
     plt.show()
 
-#3D可视化函数的主要功能：
+### 3D可视化函数的主要功能：
 路径绘制：
 通过调用 theta_pol 方法生成机器人沿着路径 location 的关节角度和末端执行器的位置。
 使用 plot3D 函数绘制末端执行器的运动路径。
@@ -180,13 +180,13 @@ def plot_3D(self, location):
 定义矩形顶点和面，表示工作空间的边界。
 使用 Poly3DCollection 创建矩形，并添加到3D图中。
 
-# 脚本主体部分：
+### 脚本主体部分：
    脚本主体部分用于实例化 robot_arm 类，计算机器人末端位置，并检查碰撞情况，最后可视化路径。
 
-# 实例化机器人手臂
+### 实例化机器人手臂
 robot = robot_arm()
 
-# 根据产品位置定义路径
+### 根据产品位置定义路径
 if robot.x_product[0] > 0:
     Xn = np.array([robot.x_init, [robot.x_init[0], robot.x_init[1], 1], [robot.x_product[0], robot.x_product[1], 1], [robot.x_product[0], robot.x_product[1], 0.1]])
 if robot.x_product[0] <= 0 and robot.x_product[1] <= 1.5:
@@ -194,17 +194,17 @@ if robot.x_product[0] <= 0 and robot.x_product[1] <= 1.5:
 if robot.x_product[0] < 0 and robot.x_product[1] > 1.5:
     Xn = np.array([robot.x_init, [robot.x_init[0], robot.x_init[1], 1], [0, 1.5 + (0.2 + 0.005 + 0.001), 1], [robot.x_product[0], robot.x_product[1], 1], [robot.x_product[0], robot.x_product[1], 0.1]])
 
-# 计算逆向运动学得到最终位置的关节角度和伸缩量
+### 计算逆向运动学得到最终位置的关节角度和伸缩量
 final_position = [robot.x_product[0], robot.x_product[1], 0.1]
 tetha1_d2_d3 = robot.inv_kinematics(final_position)
 
-# 检查末端执行器是否与障碍物碰撞
+### 检查末端执行器是否与障碍物碰撞
 if robot.collision_checker(tetha1_d2_d3):
     print("Warning: End-effector in collision!!!")
 else:
     print("No collision.")
 
-# 可视化路径
+### 可视化路径
 robot.plot_3D(Xn)
 
 以上脚本主体部分的主要步骤：
@@ -220,7 +220,7 @@ robot.plot_3D(Xn)
 调用 plot_3D 方法在三维空间中绘制机器人手臂的运动路径和障碍物。
 
 
-# 完整代码：
+### 完整代码：
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d # Package for 3D plotting
@@ -404,24 +404,5 @@ class robot_arm():
         
 
 
-# ==============================================
-#G = robot_arm() # Generate robot
-robot = robot_arm()
 
-if robot.x_product[0] > 0 :
-    Xn = np.array([robot.x_init,[robot.x_init[0],robot.x_init[1],1], [robot.x_product[0], robot.x_product[1],1], [robot.x_product[0],robot.x_product[1],0.1]])
-if robot.x_product[0] <= 0 and robot.x_product[1] <= 1.5:
-    Xn = np.array([robot.x_init,[robot.x_init[0],robot.x_init[1],1],[0,1.5-(0.2+0.005+0.001), 1],[robot.x_product[0],robot.x_product[1],1],  [robot.x_product[0],robot.x_product[1],0.1]])
-if robot.x_product[0] < 0 and robot.x_product[1] > 1.5 :
-    Xn = np.array([robot.x_init,[robot.x_init[0],robot.x_init[1],1],[0,1.5+(0.2+0.005+0.001), 1],[robot.x_product[0],robot.x_product[1],1],  [robot.x_product[0],robot.x_product[1],0.1]])
-
-
-final_position = [robot.x_product[0],robot.x_product[1], 0.1]
-tetha1_d2_d3 = robot.inv_kinematics(final_position)
-if robot.collision_checker(tetha1_d2_d3):
-    print("Warning: End-effector in collision!!!")
-else:
-    print("No collision.")
-
-robot.plot_3D(Xn)
 
