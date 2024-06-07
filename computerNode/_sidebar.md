@@ -1,3 +1,6 @@
 * [返回](../README.md)
 * [C++](./cpp/)
 * [python](./python/)
+* [opencv](./opencv/)
+* [通信](./communication/)
+* [深度学习](./deep-learning/)
