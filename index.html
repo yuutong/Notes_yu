@@ -7,19 +7,32 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <!-- 支持LaTeX排版数学公式 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+  
 </head>
+
+
+
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'Note',
-//      repo: 'https://github.com/yuutong/Notes_yu.git',
+     //repo: 'https://github.com/yuutong/Notes_yu.git',
       loadSidebar: true,
       autoHeader: true,
-      subMaxLevel: 3,
+      subMaxLevel: 5,
       coverpage: '_coverpage.md', //true
       onlyCover: true,
-      sidebarDisplayLevel: 1,
+      homepage: "README.md",
+      relativePath: true,//启用相对路径      
+      //sidebarDisplayLevel: 10,
+      executeScript: true,//执行文档的第一个srcipt脚本
+      mergeNavbar: true,//小屏设备下合并导航栏到侧边栏。
+      topMargin: 90, // default: 0让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+
       count: {
         countable: true,
         fontsize: '0.9em',
@@ -37,13 +50,18 @@
         errorText: '错误',
         successText: '复制成功'
       },
-      loadSidebar: function (vm) {
+      // 支持LaTeX排版数学公式
+      latex: {
+        inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
+        displayMath  : [['$$', '$$']],               // default
+      }
+/*       loadSidebar: function (vm) {
         const path = vm.route.path;
         const sidebarPath = path === '/' ? '_sidebar.md' : `${path}_sidebar.md`;
         return fetch(sidebarPath)
           .then(response => response.text())
           .catch(() => ''); // 如果找不到文件，返回空字符串
-      },
+      }, */
     }
   </script>
   <!-- Docsify v4 -->
@@ -60,6 +78,14 @@
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 侧边栏扩展与折叠 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 代码高亮  static/prismjs/components 目录下按需引入-->
+  <script src="static/prismjs/components/prism-bash.min.js"></script>
+  <script src="static/prismjs/components/prism-sql.min.js"></script>
+  <script src="static/prismjs/components/prism-c.min.js"></script>
+  <script src="static/prismjs/components/prism-css.min.js"></script>
+  <script src="static/prismjs/components/prism-java.min.js"></script>
+  <script src="static/prismjs/components/prism-javascript.min.js"></script>
+  <script src="static/prismjs/components/prism-yaml.min.js"></script>
   <!-- GitTalk评论 -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>

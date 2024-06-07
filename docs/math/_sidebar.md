@@ -1,2 +1,3 @@
-* [cos](/math/cos/)
-* [sin](/math/sin/)
+* [返回](../README.md)
+* [Sin](./sin/)
+* [Cos](./cos/)
