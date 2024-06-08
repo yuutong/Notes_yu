@@ -1,21 +1,9 @@
 
 > 
-   愿你有足够的勇气去面对生活中的挑战，成为你想成为的人
+   * 愿你有足够的勇气去面对生活中的挑战，成为你想成为的人。    
+
+   * That which does not kill us makes us stronger.        ----Friedrich Nietzsche
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-   ----尼采
 
 
