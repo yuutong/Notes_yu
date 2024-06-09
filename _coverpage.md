@@ -1,5 +1,5 @@
-<!-- ![logo](_media/icon.svg) -->
-# 我的文档网站
+![logo](_media/bg.svg)
+# 我的笔记网站
 
 
 > 我愿星夜兼程，永不言弃
