@@ -369,7 +369,8 @@
 
 
 ### 额外函数
-`QAbstractSocket`还包括如`bind()`, `close()`, `flush()`, `setReadBufferSize()`, `isReadable()` 和 `isWritable()`等函数，用于细粒度控制套接字行为。
+   `QAbstractSocket`还包括如`bind()`, `close()`, `flush()`, `setReadBufferSize()`, `isReadable()` 和 `isWritable()`等函数，用于细粒度控制套接字行为。
+   **解析**：
     bind() 函数:用于将套接字绑定到一个特定的地址和端口,绑定成功后，服务器就可以开启监听了。
     close() 函数:关闭套接字并取消所有挂起的网络操作
     flush() 函数尝试立即写入任何挂起的网络数据，而不是等待数据被操作系统的网络层处理。这可以确保数据尽可能快地被发送出去。
