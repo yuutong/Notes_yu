@@ -117,7 +117,7 @@ int main(int argc, char *argv[])
 
 在这个示例中，`waitForConnections` 方法会持续等待新的连接，并在每个循环中处理连接或处理超时情况。
 
-### 几个关于连接的问题
+
 
    1. 在 `waitForConnections` 等待新连接时发生错误的情况主要有：
       - 网络问题，如网络断开或者服务器无法访问。
@@ -129,7 +129,11 @@ int main(int argc, char *argv[])
 
     3. 使用 `server.errorString()` 函数可以获取到更多的错误信息。这个函数会返回一个描述最后一次发生的网络错误的字符串。
 
-    4. 在 Qt 网络编程中，`QTcpSocket` 类是用来处理 TCP 连接的主要类。当 `QTcpServer` 接收到新的客户端连接时，它会创建一个与该连接相关联的 `QTcpSocket` 对象。你可以通过这个对象来读取和发送数据，处理连接的各种状态。
+
+
+### 几个关于连接的问题
+
+    1. 在 Qt 网络编程中，`QTcpSocket` 类是用来处理 TCP 连接的主要类。当 `QTcpServer` 接收到新的客户端连接时，它会创建一个与该连接相关联的 `QTcpSocket` 对象。你可以通过这个对象来读取和发送数据，处理连接的各种状态。
 
     5. `QTcpSocket` 对象的主要方法包括：
     - `read()` 和 `readAll()`：用于读取从客户端发送过来的数据。
@@ -161,84 +165,82 @@ int main(int argc, char *argv[])
 
 
 
-### 1. 几个PendingConnection相关
-  hasPendingConnections，nextPendingConnection，incomingConnection，addPendingConnection，setMaxPendingConnections，maxPendingConnections函数用途
-
-#### `hasPendingConnections()`
+##### 几个PendingConnection相关
+###### `hasPendingConnections()`
 - **功能**：检查当前是否有挂起的连接等待接受。
 - **签名**：`bool hasPendingConnections() const;`
 - **返回值**：如果有挂起的连接，返回 `true`；否则返回 `false`。
 
-#### `nextPendingConnection()`
+###### `nextPendingConnection()`
 - **功能**：获取下一个挂起的连接。
 - **签名**：`QTcpSocket* nextPendingConnection();`
 - **返回值**：返回一个指向挂起连接的 `QTcpSocket` 对象的指针。如果没有挂起的连接，则返回 `nullptr`。
 - **注意**：调用此函数会返回连接，并将其从挂起列表中移除。
 
-#### `incomingConnection()`
+###### `incomingConnection()`
 - **功能**：虚函数，在有新连接到来时调用，实现自定义处理新连接的行为。
 - **签名**：`virtual void incomingConnection(qintptr socketDescriptor);`
 - **参数**：`socketDescriptor` 是标识新连接的套接字描述符。
 
-#### `addPendingConnection()`
+###### `addPendingConnection()`
 - **功能**：将一个现有的套接字添加到挂起连接队列中。
 - **签名**：`void addPendingConnection(QTcpSocket* socket);`
 - **参数**：`socket` 是指向要添加的 `QTcpSocket` 对象的指针。
 
-#### `setMaxPendingConnections()`
+###### `setMaxPendingConnections()`
 - **功能**：设置最大可以同时等待的挂起连接数。
 - **签名**：`void setMaxPendingConnections(int numConnections);`
 - **参数**：`numConnections` 是允许的最大挂起连接数。
 
-#### `maxPendingConnections()`
+###### `maxPendingConnections()`
 - **功能**：获取当前设置的最大挂起连接数。
 - **签名**：`int maxPendingConnections() const;`
 - **返回值**：返回最大挂起连接数。
 
-### 2. 函数使用场景
+##### 2. 函数使用场景
 
-#### `hasPendingConnections()`
+###### `hasPendingConnections()`
 - **场景**：通常在服务器的事件循环中使用，以检查是否有新的未处理连接。例如，当 `newConnection()` 信号发出时，可以使用此函数。
 
-#### `nextPendingConnection()`
+###### `nextPendingConnection()`
 - **场景**：在有挂起连接时，获取并处理这些连接。通常在信号槽机制中使用，例如在处理 `newConnection()` 信号时。
 
-#### `incomingConnection()`
+###### `incomingConnection()`
 - **场景**：当你需要自定义处理新连接时，可以重写此虚函数。比如，可以派生一个类，并在其中实现特定的连接处理逻辑。
 
-#### `addPendingConnection()`
+###### `addPendingConnection()`
 - **场景**：在一些高级用途中，你可能需要手动管理连接。例如，通过socket拆分创建不同类型的连接，然后将它们添加到挂起队列中以便后续处理。
 
-#### `setMaxPendingConnections()` 和 `maxPendingConnections()`
+###### `setMaxPendingConnections()` 和 `maxPendingConnections()`
 - **场景**：管理服务器的连接容量。例如，限制服务器只能处理一定数量的挂起连接，以便流量控制或减轻服务器压力。
 
-### 3. 阻塞行为
+##### 3. 阻塞行为
 
 - **不会阻塞整个应用进程的执行**。这些函数在设计上都非常轻量级，不会阻塞主事件循环。
   - `hasPendingConnections() `和 `nextPendingConnection()` 这些查询和获取挂起连接的函数，为简单函数式调用;
   - `incomingConnection()` 是一个回调函数，专门用于异步事件到来的处理。
 
-### 4. 函数返回false或其他错误的情况
+##### 4. 函数返回false或其他错误的情况
 
-#### `hasPendingConnections()`
+###### `hasPendingConnections()`
 - **返回 `false` 的情况**：没有挂起的连接。
 
-#### `nextPendingConnection()`
+###### `nextPendingConnection()`
 - **返回 `nullptr` 的情况**：没有挂起的连接。
 
-#### `incomingConnection()`
+###### `incomingConnection()`
 - **错误情况**：具体行为取决于函数的重写实现。默认实现不会返回错误，但重写时可能会产生异常。
 
-#### `addPendingConnection()`
+###### `addPendingConnection()`
 - **错误情况**：如果 `socket` 为 `nullptr` 或已经存在于挂起队列中，可能导致逻辑错误。
 
-#### `setMaxPendingConnections()`
+###### `setMaxPendingConnections()`
 - **不会返回值**，直接设置参数。
 
-#### `maxPendingConnections()`
+###### `maxPendingConnections()`
 - **不会返回错误**，直接返回配置值。
 
-### 示例代码
+###### 示例代码
 
 ```cpp
 class MyTcpServer : public QTcpServer
@@ -271,6 +273,8 @@ int main(int argc, char *argv[]) {
 ```
 
 在这个例子中，自定义的 `incomingConnection` 函数被重写，用于处理新的连接。`hasPendingConnections` 和 `nextPendingConnection` 被用来处理挂起的连接。
+
+
 
 ### QTcpServerPrivate类：
     采用的是把一个类的私有实现都放在一个单独的类中，然后在公共类中用一个指向这个私有类的指针来访问这些实现。这种模式被称为 Pimpl（"Pointer to implementation"）或者编译器防火墙
