@@ -1,3 +1,3 @@
-## 机器人末端检测
+## OpenGL
 
 > An awesome project.
