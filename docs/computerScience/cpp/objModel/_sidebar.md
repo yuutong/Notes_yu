@@ -1,5 +1,5 @@
 * [返回](../README.md)
-* [设计模式](./design_model.md)
+* [虚函数](./virtual_function.md)
 * [02](./02.md)
 * [03](./03.md)
 * [04](./04.md)
