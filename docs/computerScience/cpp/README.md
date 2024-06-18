@@ -4,6 +4,6 @@
   
                                              
                                                
-——————Bjarne Stroustrup
+
 
 

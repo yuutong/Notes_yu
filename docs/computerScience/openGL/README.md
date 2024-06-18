@@ -1,3 +1,3 @@
 ## OpenGL
 
-> An awesome project.
+> 一个跨语言、跨平台的API，用于渲染2D和3D矢量图形

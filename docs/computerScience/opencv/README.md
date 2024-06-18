@@ -5,4 +5,4 @@
 
 
 
-* ———— 加里·布拉德斯基（Gary Bradski，OpenCV 创始人）
+

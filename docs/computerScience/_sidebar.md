@@ -3,6 +3,7 @@
 * [python](./python/)
 * [opencv](./opencv/)
 * [openGL](./openGL/)
+* [Operting_System](./Operting_System/)
+* [Robot](./robot/)
 * [通信](./communication/)
 * [深度学习](./deep-learning/)
-* [Robot](./robot/)
