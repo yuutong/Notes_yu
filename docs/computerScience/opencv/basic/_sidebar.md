@@ -1,5 +1,6 @@
 * [返回](../README.md)
 * [像素操作](./opencv_base.md)
 * [彩图灰度化](./grayImage.md)
-* [图像去噪](./denoising.md)
+* [均值滤波](./Mean_Filtering.md)
+* [高斯滤波](./Gaussian.md)
 * [模板匹配](./template_matching.md)
