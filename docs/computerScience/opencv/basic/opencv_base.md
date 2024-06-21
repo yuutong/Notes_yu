@@ -12,7 +12,8 @@ cv::Vec3b 是一个包含三个 uchar（无符号8位整数）的向量，每个
 
  **1.1例子**：使用 cv::Vec3b 访问和修改图像的像素值,它是访问和操作多通道图像数据的基础
 
-`
+```cpp
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -40,11 +41,11 @@ int main() {
     cv::waitKey(0);
     return 0;
 }
-`
+```
 
 **1.2 像素操作的效率问题**：在进行大规模像素操作时，逐个像素地使用 at 方法访问和修改像素值可能比较慢。可以直接操作指针以提高效率。
 
-`
+```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -79,7 +80,7 @@ int main() {
     cv::waitKey(0);
     return 0;
 }
-`
+```
 
 **1.3 代码答疑：** int index = y * width * 3 + x * 3;
 
@@ -90,17 +91,17 @@ int main() {
 
 **图像在内存中的存储方式：**假设有一张宽度为width,高度为height的RGB图像，在内存中按行优先顺序存储，即从第一行开始，一次存每一行的像素。
 
-`
+```
 BGR(BGR像素1), BGR(BGR像素2), ..., BGR(BGR像素width),   // 第一行像素数据
 BGR(BGR像素width+1), BGR(BGR像素width+2), ..., BGR(BGR像素2*width),  // 第二行像素数据
 ...
-`
+```
 
 **计算像素的索引**：任意一个像素在数组中的索引计算公式：
 
-`
+```
 index = y * width * 3 + x * 3
-`
+```
 
 *  y * width * 3：表示第 y 行的起始位置。每行有 width 个像素，每个像素占用 3 个字节，所以第 y 行的起始位置是 y 行之前所有像素占用的字节数，即 y * width * 3。
 
@@ -108,17 +109,17 @@ index = y * width * 3 + x * 3
 
 通过这两个部分相加，可以得到像素 (x, y) 在一维数组中的起始索引。
 
-`
+```
 data[index] = 255;：将蓝色通道的值设置为 255（最大值）。
 data[index + 1] = 255;：将绿色通道的值设置为 255（最大值）。
 data[index + 2] = 255;：将红色通道的值设置为 255（最大值）。
-`
+```
 直接操作图像数据指针，访问和修改图像中的每个像素，提高像素操作的效率
 
 #### 图像剪裁
 从图像中提取出某个矩形区域，例如在预处理阶段提取感兴趣区域（ROI），直接定义矩形区域
 
-`
+```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -142,7 +143,7 @@ int main() {
     cv::waitKey(0);
     return 0;
 }
-`
+```
 
 **2.1 代码答疑：**
 
@@ -152,7 +153,7 @@ int main() {
 #### 图像加法
 将两幅图像进行像素级的叠加操作。在图像融合、图像增强等任务中常见
 
-`
+```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -180,7 +181,7 @@ int main() {
     cv::waitKey(0);
     return 0;
 }
-`
+```
 
 **3.1 代码解读：** 直接使用加法
 
