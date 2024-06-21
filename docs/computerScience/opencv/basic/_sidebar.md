@@ -3,4 +3,5 @@
 * [彩图灰度化](./grayImage.md)
 * [均值滤波](./Mean_Filtering.md)
 * [高斯滤波](./Gaussian.md)
+* [中值滤波](./medianFilter.md)
 * [模板匹配](./template_matching.md)
