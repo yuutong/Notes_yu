@@ -1,5 +1,7 @@
-# 一个典型的3D渲染过程：
-//2.画整个窗体，包括前景（图片），背景（窗体颜色）和中间层的3D视图
+##### 绘制整个窗体
+画整个窗体，包括前景（图片），背景（窗体颜色）和中间层的3D视图
+
+```cpp
 void ccGLWindow::paintGL()
 {
 	//OpenGL窗口的绘制函数。当窗口需要刷新时，例如窗口大小改变或者显示内容更新时，这个函数就会被调用
@@ -46,7 +48,6 @@ void ccGLWindow::paintGL()
 	{
 		fullRenderingPass(CONTEXT, renderingParams);   //这个语句渲染整个窗体，包括前景（图片），背景（窗体颜色）和中间层的3D视图
 	}
-
 
 }
 
@@ -166,9 +167,11 @@ void ccGLWindow::fullRenderingPass(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& re
 	//用于强制刷新缓冲，保证绘图命令将被执行，而不是存储在缓冲区中等待其他的OpenGL命令。
 	glFunc->glFlush();
 }
+```
 
 
-
+##### 绘制背景
+```cpp
 //4.画背景   
 void ccGLWindow::drawBackground(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingParams)
 {
@@ -260,8 +263,11 @@ void ccGLWindow::drawBackground(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rende
 	}
 #endif
 }
+```
 
-
+##### 绘制前景
+ 
+```cpp
 void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingParams)
 {
 	ccQOpenGLFunctions* glFunc = functions();
@@ -393,9 +399,11 @@ void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rend
 	//}
 	//logGLError("ccGLWindow::drawForeground");
 }
+```
 
+##### 绘制3D图像
 
-//5.画3D 不能删，删除后无法显示点云图像
+```cpp
 void ccGLWindow::draw3D(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingParams)
 {
 	ccQOpenGLFunctions* glFunc = functions();
@@ -504,4 +512,4 @@ void ccGLWindow::draw3D(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingPara
 	}
 
 }
-
+```
