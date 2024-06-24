@@ -1,2 +1,2 @@
 * [返回](../../README.md)
-* [自我繁荣](./Self-Management/)
+* [自修](./Self-Management/)
