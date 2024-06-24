@@ -1,4 +1,4 @@
-###### 计算梯度   
+##### 计算梯度   
 ```cpp
 void Extract1DEdge::GetGradientMat()
 {
@@ -31,7 +31,7 @@ void Extract1DEdge::GetGradientMat()
 
 
 
-###### 边缘检测和提取
+##### 边缘检测和提取
 ```cpp
 void Extract1DEdge::GetEdgePoint(int threshold, Translation traslation, Selection selection)
 {
@@ -235,7 +235,7 @@ void process_edges(const cv::Mat& RoiMat,
 
 ```
 
-###### 直线拟合：
+##### 直线拟合：
 
 ```cpp
 void myGraphicRectItem::RansacLineFiler(const vector<Point2d>& points, vector<Point2d>&vpdExceptPoints, double sigma)
@@ -637,7 +637,7 @@ void myGraphicRectItem::FindLine(Point2d& pdStart, Point2d& pdEnd, double& dAngl
 
 
 
-###### 圆拟合的图形绘制：
+##### 圆拟合的图形绘制：
 
 ```cpp
 void QtFitCircleTool::FitCircle()
@@ -768,7 +768,7 @@ void QtFitCircleTool::FitCircle()
 
 ```
 
-###### 拟合圆
+##### 拟合圆
 
 ```cpp
 void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMethod)
@@ -895,7 +895,7 @@ void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMeth
 
 ```
 
-###### 圆拟合的关键算法
+##### 圆拟合的关键算法
 
 关键的算法是RANSAC和通过三点确定一个圆。通过这个函数，我们可以从给定的点集中找出一个最佳的圆，并找出这个圆以外的离群点。
 
@@ -1007,7 +1007,7 @@ void DyConcentricArc::RansacCircleFiler(const vector<Point2d>& points, vector<Po
 }
 ```
 
-###### 最小二乘法拟合
+##### 最小二乘法拟合
 
 ```cpp
 
