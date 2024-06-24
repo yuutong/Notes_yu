@@ -1,7 +1,7 @@
 #### 深度学习入门
 **1.python**：安装Anaconda就够了，其他的需要jupyter notebook编程工具
 
-**python工具包**:Numpy(矩阵计算),Pandas（数据处理）,Matplotlib（可视化）,Seaborn（更简单的可视化神器）
+**python工具包**：Numpy(矩阵计算), Pandas（数据处理）, Matplotlib（可视化）, Seaborn（更简单的可视化神器）
 
 #### 计算机视觉-OpenCV
 **两件事**：一个是图像处理，另一个是图像建模

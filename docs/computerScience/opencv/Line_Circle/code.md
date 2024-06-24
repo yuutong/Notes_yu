@@ -1,7 +1,5 @@
-### 找直线：
-      两个过程：边缘提取（抓取边缘点）   拟合成直线
-
-## 边缘检测和提取：
+###### 计算梯度   
+```cpp
 void Extract1DEdge::GetGradientMat()
 {
 	//计算图像的一维梯度
@@ -29,11 +27,12 @@ void Extract1DEdge::GetGradientMat()
 	//为了调整梯度的尺度，使其适应后续的处理步骤
     m_mInputMat = m_dSigma * sqrt(2 * PI) * m_mInputMat;
 }
+```
 
 
 
-
-
+###### 边缘检测和提取
+```cpp
 void Extract1DEdge::GetEdgePoint(int threshold, Translation traslation, Selection selection)
 {
     if (m_mInputMat.empty())
@@ -169,8 +168,6 @@ void Extract1DEdge::GetEdgePoint(int threshold, Translation traslation, Selectio
 
 
 
-
-
 vector<Edge1D_Result> Extract1DEdge::Get1DEdge(Mat inputMat, Point2d pdCenter, double dMeasureLength, double dMeasureHeight, double dMeasureAngle,double sigma, int threshold, Translation traslation, Selection selection)
 {
     if (inputMat.empty())
@@ -198,7 +195,6 @@ vector<Edge1D_Result> Extract1DEdge::Get1DEdge(Mat inputMat, Point2d pdCenter, d
 }
 
 
-### 直线拟合：
 
 void process_edges(const cv::Mat& RoiMat,
 	const std::vector<cv::Point2d>& m_vpdEquinoxPoints,
@@ -237,8 +233,11 @@ void process_edges(const cv::Mat& RoiMat,
 	}
 }
 
+```
 
+###### 直线拟合：
 
+```cpp
 void myGraphicRectItem::RansacLineFiler(const vector<Point2d>& points, vector<Point2d>&vpdExceptPoints, double sigma)
 {
 	/**
@@ -320,8 +319,6 @@ void myGraphicRectItem::RansacLineFiler(const vector<Point2d>& points, vector<Po
 		}
 	}
 }
-
-
 
 
 
@@ -466,9 +463,12 @@ void myGraphicRectItem::DouglasPeucker(const vector<Point2d>& points, vector<Poi
 		simplifiedPoints = { points[0], points[n - 1] };
 	}
 }
+```
 
 
+##### 找直线的图形绘制与函数调用
 
+```cpp
 //找直线算法
 void myGraphicRectItem::FindLine(Point2d& pdStart, Point2d& pdEnd, double& dAngle)
 {
@@ -630,14 +630,17 @@ void myGraphicRectItem::FindLine(Point2d& pdStart, Point2d& pdEnd, double& dAngl
 		dAngle = GetAngleVecWithX(pdStart, pdEnd);
 	}
 
-
 }
+```
 
 
 
 
-#### 拟合成圆：
-     void QtFitCircleTool::FitCircle()
+
+###### 圆拟合的图形绘制：
+
+```cpp
+void QtFitCircleTool::FitCircle()
 {	
 	/**
 	 *对图形界面进行更新，包括绘制一个圆形，圆心，以及圆的边缘点
@@ -763,9 +766,11 @@ void myGraphicRectItem::FindLine(Point2d& pdStart, Point2d& pdEnd, double& dAngl
 	ui->Radius->setText(str);
 }
 
+```
 
+###### 拟合圆
 
-
+```cpp
 void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMethod)
 {
 
@@ -888,10 +893,15 @@ void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMeth
 
 }
 
+```
+
+###### 圆拟合的关键算法
 
 关键的算法是RANSAC和通过三点确定一个圆。通过这个函数，我们可以从给定的点集中找出一个最佳的圆，并找出这个圆以外的离群点。
 
+**随机样本一致性**
 
+```cpp
 void DyConcentricArc::RansacCircleFiler(const vector<Point2d>& points, vector<Point2d>& vpdExceptPoints, double sigma)
 {
 
@@ -995,8 +1005,11 @@ void DyConcentricArc::RansacCircleFiler(const vector<Point2d>& points, vector<Po
 		}
 	}
 }
+```
 
+###### 最小二乘法拟合
 
+```cpp
 
 void DyConcentricArc::FitCircleWithHype(vector<Point2d> pdPoints, Point2d& pdCenter, double& dRadius)
 {
@@ -1196,3 +1209,4 @@ void DyConcentricArc::FitCircleWithLeastSquare(vector<Point2d> pdPoints, Point2d
 	dRadius = R;
 }
 
+```
