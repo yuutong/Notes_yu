@@ -1,3 +1,2 @@
-* [返回](../README.md)
-* [Sin](./sin/)
-* [Cos](./cos/)
+* [返回](../../README.md)
+* [自我繁荣](./Self-Management/)
