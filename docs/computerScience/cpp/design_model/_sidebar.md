@@ -1,2 +1,3 @@
 * [返回](../README.md)
-* [设计模式](./design_model.md)
+* [单例模式](./Singleton.md)
+* [观察者模式](./Observer.md)
