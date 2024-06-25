@@ -1,5 +1,5 @@
-## find line and find circle
+## opencv基础算法
 
-> 
+> 遍历图像像素点，从数学逻辑层面理解和应用算法
 
 
