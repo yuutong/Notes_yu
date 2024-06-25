@@ -1,5 +1,5 @@
 
-![首页图片](_media/june.jpg)
+![](_media/june.jpg)
 
 > 
 
