@@ -1,4 +1,3 @@
-##### JPEG有损压缩算法 DCT（Discrete Cosine Transform）压缩技术
 
 是一种基于频域转换的压缩技术
 
