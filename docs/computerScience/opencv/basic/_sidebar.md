@@ -1,6 +1,7 @@
 * [返回](../README.md)
 * [像素操作](./pixel_operations.md)
 * [彩图灰度化](./grayImage.md)
+* [直方图均衡化](./Histogram_Equalization.md)
 * [均值滤波](./Mean_Filtering.md)
 * [高斯滤波](./Gaussian.md)
 * [中值滤波](./medianFilter.md)
