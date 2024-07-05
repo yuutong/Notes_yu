@@ -4,7 +4,9 @@
 * [分水岭算法](./Watershed.md)
 
 * [傅里叶变换](./DFT.md)
+* [霍夫变换](./Hough_Transform.md)
 
+* [Harris角点检测](./Harris.md)
 * [Blob分析](./Blob.md)
 
 * [特征匹配](./Feature_Matching.md)
