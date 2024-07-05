@@ -1,3 +1,5 @@
 ## 自省自修
 
-> 培养敏锐的思维，独立思考
+> Cultivate keen thinking and Think independently
+
+
