@@ -11,10 +11,6 @@
 
 * [膨胀腐蚀](./Dilation_Erosion.md)
 
-* [霍夫变换](./Hough_Transform.md)
-
-* [Harris角点检测](./Harris.md)
-
 
 * [模板匹配](./template_matching.md)
 * [图像处理](./Image_processing.md)

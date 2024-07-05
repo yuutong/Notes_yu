@@ -190,7 +190,9 @@ Focusing on the present experience to reduce worries about the past and future.
 #### Cognitive Behavioral Therapy
 Alleviating psychological distress by changing thought patterns and behaviors
 
-Causes of psychological distress: Automatic thinking (cognitive distortions), including overgeneralization, dichotomous thinking (black and white thinking), catastrophizing (always expecting the worst outcome), personalization (attributing external events to oneself)
+Causes of psychological distress: Automatic thinking (cognitive distortions), including overgeneralization, dichotomous thinking (black and white thinking), 
+
+catastrophizing (always expecting the worst outcome), personalization (attributing external events to oneself)
 
 **Specific practices**:
 
