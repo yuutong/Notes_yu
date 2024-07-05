@@ -58,13 +58,19 @@
 #include <opencv2/opencv.hpp>
 
 // 单阈值分割
-cv::Mat singleThreshold(const cv::Mat& src, int threshold) {
+cv::Mat singleThreshold(const cv::Mat& src, int threshold) 
+{
     cv::Mat dst = cv::Mat::zeros(src.size(), CV_8U);
-    for (int y = 0; y < src.rows; ++y) {
-        for (int x = 0; x < src.cols; ++x) {
-            if (src.at<uchar>(y, x) >= threshold) {
+    for (int y = 0; y < src.rows; ++y) 
+    {
+        for (int x = 0; x < src.cols; ++x) 
+        {
+            if (src.at<uchar>(y, x) >= threshold) 
+            {
                 dst.at<uchar>(y, x) = 255;
-            } else {
+            }
+            else 
+            {
                 dst.at<uchar>(y, x) = 0;
             }
         }
@@ -73,15 +79,23 @@ cv::Mat singleThreshold(const cv::Mat& src, int threshold) {
 }
 
 // 多阈值分割
-cv::Mat multiThreshold(const cv::Mat& src, int threshold1, int threshold2) {
+cv::Mat multiThreshold(const cv::Mat& src, int threshold1, int threshold2) 
+{
     cv::Mat dst = cv::Mat::zeros(src.size(), CV_8U);
-    for (int y = 0; y < src.rows; ++y) {
-        for (int x = 0; x < src.cols; ++x) {
-            if (src.at<uchar>(y, x) >= threshold2) {
+    for (int y = 0; y < src.rows; ++y) 
+    {
+        for (int x = 0; x < src.cols; ++x) 
+        {
+            if (src.at<uchar>(y, x) >= threshold2) 
+            {
                 dst.at<uchar>(y, x) = 255;
-            } else if (src.at<uchar>(y, x) >= threshold1) {
+            }
+            else if (src.at<uchar>(y, x) >= threshold1) 
+            {
                 dst.at<uchar>(y, x) = 128;
-            } else {
+            } 
+            else 
+            {
                 dst.at<uchar>(y, x) = 0;
             }
         }
@@ -89,10 +103,12 @@ cv::Mat multiThreshold(const cv::Mat& src, int threshold1, int threshold2) {
     return dst;
 }
 
-int main() {
+int main() 
+{
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) {
+    if (img.empty()) 
+    {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
     }

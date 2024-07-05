@@ -50,12 +50,15 @@ k 是一个经验常数，通常取值在0.04到0.06之间。<br>
 #include <cmath>
 
 // 计算图像梯度
-void computeGradient(const cv::Mat& src, cv::Mat& gradX, cv::Mat& gradY) {
+void computeGradient(const cv::Mat& src, cv::Mat& gradX, cv::Mat& gradY) 
+{
     gradX = cv::Mat::zeros(src.size(), CV_32F);
     gradY = cv::Mat::zeros(src.size(), CV_32F);
 
-    for (int y = 1; y < src.rows - 1; ++y) {
-        for (int x = 1; x < src.cols - 1; ++x) {
+    for (int y = 1; y < src.rows - 1; ++y) 
+    {
+        for (int x = 1; x < src.cols - 1; ++x) 
+        {
             gradX.at<float>(y, x) = (src.at<uchar>(y, x + 1) - src.at<uchar>(y, x - 1)) / 2.0f;
             gradY.at<float>(y, x) = (src.at<uchar>(y + 1, x) - src.at<uchar>(y - 1, x)) / 2.0f;
         }
@@ -63,19 +66,24 @@ void computeGradient(const cv::Mat& src, cv::Mat& gradX, cv::Mat& gradY) {
 }
 
 // 计算Harris响应
-cv::Mat computeHarrisResponse(const cv::Mat& gradX, const cv::Mat& gradY, float k, int windowSize) {
+cv::Mat computeHarrisResponse(const cv::Mat& gradX, const cv::Mat& gradY, float k, int windowSize) 
+{
     cv::Mat response = cv::Mat::zeros(gradX.size(), CV_32F);
 
     int offset = windowSize / 2;
 
-    for (int y = offset; y < gradX.rows - offset; ++y) {
-        for (int x = offset; x < gradX.cols - offset; ++x) {
+    for (int y = offset; y < gradX.rows - offset; ++y) 
+    {
+        for (int x = offset; x < gradX.cols - offset; ++x) 
+        {
             float sumIx2 = 0.0f;
             float sumIy2 = 0.0f;
             float sumIxIy = 0.0f;
 
-            for (int wy = -offset; wy <= offset; ++wy) {
-                for (int wx = -offset; wx <= offset; ++wx) {
+            for (int wy = -offset; wy <= offset; ++wy) 
+            {
+                for (int wx = -offset; wx <= offset; ++wx) 
+                {
                     float ix = gradX.at<float>(y + wy, x + wx);
                     float iy = gradY.at<float>(y + wy, x + wx);
 
@@ -95,11 +103,14 @@ cv::Mat computeHarrisResponse(const cv::Mat& gradX, const cv::Mat& gradY, float 
 }
 
 // 非极大值抑制
-std::vector<cv::Point> nonMaxSuppression(const cv::Mat& response, float threshold) {
+std::vector<cv::Point> nonMaxSuppression(const cv::Mat& response, float threshold) 
+{
     std::vector<cv::Point> corners;
 
-    for (int y = 1; y < response.rows - 1; ++y) {
-        for (int x = 1; x < response.cols - 1; ++x) {
+    for (int y = 1; y < response.rows - 1; ++y) 
+    {
+        for (int x = 1; x < response.cols - 1; ++x) 
+        {
             float value = response.at<float>(y, x);
             if (value > threshold &&
                 value > response.at<float>(y - 1, x - 1) &&
@@ -109,7 +120,8 @@ std::vector<cv::Point> nonMaxSuppression(const cv::Mat& response, float threshol
                 value > response.at<float>(y, x + 1) &&
                 value > response.at<float>(y + 1, x - 1) &&
                 value > response.at<float>(y + 1, x) &&
-                value > response.at<float>(y + 1, x + 1)) {
+                value > response.at<float>(y + 1, x + 1)) 
+            {
                 corners.push_back(cv::Point(x, y));
             }
         }
@@ -118,10 +130,12 @@ std::vector<cv::Point> nonMaxSuppression(const cv::Mat& response, float threshol
     return corners;
 }
 
-int main() {
+int main() 
+{
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) {
+    if (img.empty()) 
+    {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
     }
@@ -142,7 +156,8 @@ int main() {
     // 在图像上绘制角点
     cv::Mat result;
     cv::cvtColor(img, result, cv::COLOR_GRAY2BGR);
-    for (const auto& corner : corners) {
+    for (const auto& corner : corners) 
+    {
         cv::circle(result, corner, 5, cv::Scalar(0, 0, 255), 2);
     }
 

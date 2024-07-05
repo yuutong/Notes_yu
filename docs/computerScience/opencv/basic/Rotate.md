@@ -5,8 +5,8 @@
 
 *旋转矩阵*：
 
-[cosθ,-sinθ]
-[sinθ, cosθ]
+[cosθ,-sinθ]<br>
+[sinθ, cosθ]<br>
 
 其中，θ 是旋转角度，逆时针方向为正。
 
@@ -26,7 +26,8 @@
 #include <cmath>
 
 // 计算旋转后的坐标
-std::pair<int, int> rotatePoint(int x, int y, int centerX, int centerY, double angle) {
+std::pair<int, int> rotatePoint(int x, int y, int centerX, int centerY, double angle) 
+{
     double radians = angle * M_PI / 180.0;
     double cosTheta = cos(radians);
     double sinTheta = sin(radians);
@@ -38,7 +39,8 @@ std::pair<int, int> rotatePoint(int x, int y, int centerX, int centerY, double a
 }
 
 // 最近邻插值算法实现图像旋转
-cv::Mat rotateImage(const cv::Mat& src, double angle) {
+cv::Mat rotateImage(const cv::Mat& src, double angle) 
+{
     int width = src.cols;
     int height = src.rows;
     cv::Mat dst(height, width, src.type(), cv::Scalar(255, 255, 255));
@@ -46,8 +48,10 @@ cv::Mat rotateImage(const cv::Mat& src, double angle) {
     int centerX = width / 2;
     int centerY = height / 2;
 
-    for (int y = 0; y < height; ++y) {
-        for (int x = 0; x < width; ++x) {
+    for (int y = 0; y < height; ++y) 
+    {
+        for (int x = 0; x < width; ++x) 
+        {
             // 计算旋转后的坐标
             auto [srcX, srcY] = rotatePoint(x, y, centerX, centerY, -angle);
 
@@ -61,10 +65,12 @@ cv::Mat rotateImage(const cv::Mat& src, double angle) {
     return dst;
 }
 
-int main() {
+int main() 
+{
     // 从文件加载图像
     cv::Mat img = cv::imread("input.jpg");
-    if (img.empty()) {
+    if (img.empty()) 
+    {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
     }

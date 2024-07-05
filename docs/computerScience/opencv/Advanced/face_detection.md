@@ -40,13 +40,16 @@
 #include <vector>
 
 // 计算积分图像
-cv::Mat computeIntegralImage(const cv::Mat& src) {
+cv::Mat computeIntegralImage(const cv::Mat& src) 
+{
     int rows = src.rows;
     int cols = src.cols;
     cv::Mat integralImage(rows + 1, cols + 1, CV_64F, cv::Scalar(0));
 
-    for (int y = 1; y <= rows; ++y) {
-        for (int x = 1; x <= cols; ++x) {
+    for (int y = 1; y <= rows; ++y) 
+    {
+        for (int x = 1; x <= cols; ++x) 
+        {
             integralImage.at<double>(y, x) = src.at<uchar>(y - 1, x - 1) +
                                              integralImage.at<double>(y - 1, x) +
                                              integralImage.at<double>(y, x - 1) -
@@ -59,9 +62,11 @@ cv::Mat computeIntegralImage(const cv::Mat& src) {
 
 // 计算Haar特征
 double computeHaarFeature(const cv::Mat& integralImage, int x, int y, int width, int height, int type) {
+    
     double featureValue = 0.0;
 
-    switch (type) {
+    switch (type) 
+    {
         case 1: // 边缘特征
             featureValue = integralImage.at<double>(y + height, x + width / 2) - integralImage.at<double>(y, x + width / 2) -
                            integralImage.at<double>(y + height, x) + integralImage.at<double>(y, x);
@@ -86,27 +91,32 @@ double computeHaarFeature(const cv::Mat& integralImage, int x, int y, int width,
 }
 
 // 简单的弱分类器示例
-bool weakClassifier(double featureValue, double threshold) {
+bool weakClassifier(double featureValue, double threshold) 
+{
     return featureValue >= threshold;
 }
 
 // 级联分类器示例
-bool cascadeClassifier(const cv::Mat& integralImage, int x, int y, int width, int height) {
+bool cascadeClassifier(const cv::Mat& integralImage, int x, int y, int width, int height) 
+{
     // 定义多个弱分类器的参数
-    std::vector<std::tuple<int, double>> classifiers = {
+    std::vector<std::tuple<int, double>> classifiers = 
+    {
         {1, 1000.0}, // 边缘特征，阈值1000.0
         {2, 500.0},  // 线条特征，阈值500.0
         {3, 200.0}   // 四边形特征，阈值200.0
     };
 
     // 逐层筛选
-    for (const auto& classifier : classifiers) {
+    for (const auto& classifier : classifiers) 
+    {
         int type;
         double threshold;
         std::tie(type, threshold) = classifier;
 
         double featureValue = computeHaarFeature(integralImage, x, y, width, height, type);
-        if (!weakClassifier(featureValue, threshold)) {
+        if (!weakClassifier(featureValue, threshold)) 
+        {
             return false; // 未通过当前层的检测
         }
     }
@@ -115,9 +125,11 @@ bool cascadeClassifier(const cv::Mat& integralImage, int x, int y, int width, in
 }
 
 int main() {
+
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("face.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) {
+    if (img.empty()) 
+    {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
     }

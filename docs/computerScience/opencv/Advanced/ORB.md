@@ -41,20 +41,26 @@ BRIEF描述符是一个二进制向量，通过比较角点周围的像素对来
 #include <cmath>
 
 // FAST角点检测
-std::vector<cv::KeyPoint> detectFAST(const cv::Mat& img, int threshold) {
+std::vector<cv::KeyPoint> detectFAST(const cv::Mat& img, int threshold) 
+{
     std::vector<cv::KeyPoint> keypoints;
-    for (int y = 3; y < img.rows - 3; ++y) {
-        for (int x = 3; x < img.cols - 3; ++x) {
+    for (int y = 3; y < img.rows - 3; ++y) 
+    {
+        for (int x = 3; x < img.cols - 3; ++x) 
+        {
             int center = img.at<uchar>(y, x);
             int count = 0;
-            for (int i = 0; i < 16; ++i) {
+            for (int i = 0; i < 16; ++i) 
+            {
                 int dx = static_cast<int>(std::cos(i * CV_PI / 8) * 3);
                 int dy = static_cast<int>(std::sin(i * CV_PI / 8) * 3);
-                if (std::abs(img.at<uchar>(y + dy, x + dx) - center) > threshold) {
+                if (std::abs(img.at<uchar>(y + dy, x + dx) - center) > threshold) 
+                {
                     ++count;
                 }
             }
-            if (count >= 12) {
+            if (count >= 12) 
+            {
                 keypoints.emplace_back(cv::KeyPoint(cv::Point2f(x, y), 1));
             }
         }
@@ -63,14 +69,18 @@ std::vector<cv::KeyPoint> detectFAST(const cv::Mat& img, int threshold) {
 }
 
 // 计算主方向
-void computeOrientation(const cv::Mat& img, std::vector<cv::KeyPoint>& keypoints) {
-    for (auto& kp : keypoints) {
+void computeOrientation(const cv::Mat& img, std::vector<cv::KeyPoint>& keypoints) 
+{
+    for (auto& kp : keypoints) 
+    {
         int x = static_cast<int>(kp.pt.x);
         int y = static_cast<int>(kp.pt.y);
 
         float m10 = 0, m01 = 0;
-        for (int i = -3; i <= 3; ++i) {
-            for (int j = -3; j <= 3; ++j) {
+        for (int i = -3; i <= 3; ++i) 
+        {
+            for (int j = -3; j <= 3; ++j) 
+            {
                 float dx = img.at<uchar>(y + j, x + i) - img.at<uchar>(y, x);
                 float dy = img.at<uchar>(y + j, x + i) - img.at<uchar>(y, x);
                 m10 += dx * i;
@@ -83,28 +93,34 @@ void computeOrientation(const cv::Mat& img, std::vector<cv::KeyPoint>& keypoints
 }
 
 // 计算BRIEF描述符
-std::vector<std::vector<uchar>> computeBRIEF(const cv::Mat& img, const std::vector<cv::KeyPoint>& keypoints) {
+std::vector<std::vector<uchar>> computeBRIEF(const cv::Mat& img, const std::vector<cv::KeyPoint>& keypoints) 
+{
     std::vector<std::vector<uchar>> descriptors;
-    int pattern[256][2][2] = {
+    int pattern[256][2][2] = 
+    {
         // 预定义的随机像素对
         {{8, -3}, {9, 5}}, {{4, 2}, {7, -12}}, {{-11, 9}, {-8, 2}}, {{7, -12}, {12, -13}},
         // 省略其余的像素对
     };
 
-    for (const auto& kp : keypoints) {
+    for (const auto& kp : keypoints) 
+    {
         std::vector<uchar> descriptor(32, 0);
         int x = static_cast<int>(kp.pt.x);
         int y = static_cast<int>(kp.pt.y);
 
-        for (int i = 0; i < 256; ++i) {
+        for (int i = 0; i < 256; ++i) 
+        {
             int p1x = x + pattern[i][0][0];
             int p1y = y + pattern[i][0][1];
             int p2x = x + pattern[i][1][0];
             int p2y = y + pattern[i][1][1];
 
             if (p1x >= 0 && p1x < img.cols && p1y >= 0 && p1y < img.rows &&
-                p2x >= 0 && p2x < img.cols && p2y >= 0 && p2y < img.rows) {
-                if (img.at<uchar>(p1y, p1x) < img.at<uchar>(p2y, p2x)) {
+                p2x >= 0 && p2x < img.cols && p2y >= 0 && p2y < img.rows) 
+                {
+                if (img.at<uchar>(p1y, p1x) < img.at<uchar>(p2y, p2x)) 
+                {
                     descriptor[i / 8] |= (1 << (i % 8));
                 }
             }
@@ -115,10 +131,12 @@ std::vector<std::vector<uchar>> computeBRIEF(const cv::Mat& img, const std::vect
     return descriptors;
 }
 
-int main() {
+int main() 
+{
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) {
+    if (img.empty()) 
+    {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
     }

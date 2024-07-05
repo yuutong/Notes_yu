@@ -3,8 +3,9 @@
 
 cv::Mat 是一个多维矩阵类，每个像素的数据存储在 cv::Mat 矩阵的元素中。
 
-对于 BGR 图像，每个像素数据由三个通道组成，分别表示蓝色、绿色和红色通道。
-cv::Vec3b 是一个包含三个 uchar（无符号8位整数）的向量，每个值的范围是 0 到 255，它是 cv::Vec 模板类的一个特化版本，cv::Vec3b 通常用于表示 BGR 图像中的一个像素：
+对于 BGR 图像，每个像素数据由三个通道组成，分别表示蓝色、绿色和红色通道。<br>
+cv::Vec3b 是一个包含三个 uchar（无符号8位整数）的向量，每个值的范围是 0 到 255，<br>
+它是 cv::Vec 模板类的一个特化版本，cv::Vec3b 通常用于表示 BGR 图像中的一个像素：<br>
 
    * Vec3b[0]：表示蓝色通道的值（B）
    * Vec3b[1]：表示绿色通道的值（G）
@@ -19,11 +20,13 @@ cv::Vec3b 是一个包含三个 uchar（无符号8位整数）的向量，每个
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-int main() {
+int main() 
+{
     // 读取图像
     cv::Mat image = cv::imread("path_to_your_image.jpg");
 
-    if (image.empty()) {
+    if (image.empty()) 
+    {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
     }
@@ -52,11 +55,13 @@ int main() {
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-int main() {
+int main() 
+{
     // 读取图像
     cv::Mat image = cv::imread("path_to_your_image.jpg");
 
-    if (image.empty()) {
+    if (image.empty()) 
+    {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
     }
@@ -69,8 +74,10 @@ int main() {
     int height = image.rows;
 
     // 遍历图像的每个像素并修改
-    for (int y = 0; y < height; ++y) {
-        for (int x = 0; x < width; ++x) {
+    for (int y = 0; y < height; ++y) 
+    {
+        for (int x = 0; x < width; ++x) 
+        {
             int index = y * width * 3 + x * 3;
             data[index] = 255;     // 蓝色通道
             data[index + 1] = 255; // 绿色通道
@@ -87,12 +94,12 @@ int main() {
 
 **1.3 代码答疑：** int index = y * width * 3 + x * 3;
 
-用于计算图像中某个像素在一维数组（即线性化存储）的数据索引。
-为了更好地理解这句代码，需要了解图像的存储结构以及像素数据的存储方式。
+用于计算图像中某个像素在一维数组（即线性化存储）的数据索引。<br>
+为了更好地理解这句代码，需要了解图像的存储结构以及像素数据的存储方式。<br>
 
-**图像的存储结构：**在cv::Mat中，每个通道的值占用一个字节（uchar），所以每个像素占用三个字节。
+*图像的存储结构：*在cv::Mat中，每个通道的值占用一个字节（uchar），所以每个像素占用三个字节。
 
-**图像在内存中的存储方式：**假设有一张宽度为width,高度为height的RGB图像，在内存中按行优先顺序存储，即从第一行开始，一次存每一行的像素。
+*图像在内存中的存储方式：*假设有一张宽度为width,高度为height的RGB图像，在内存中按行优先顺序存储，即从第一行开始，一次存每一行的像素。
 
 ```
 BGR(BGR像素1), BGR(BGR像素2), ..., BGR(BGR像素width),   // 第一行像素数据
@@ -100,7 +107,7 @@ BGR(BGR像素width+1), BGR(BGR像素width+2), ..., BGR(BGR像素2*width),  // �
 ...
 ```
 
-**计算像素的索引**：任意一个像素在数组中的索引计算公式：
+*计算像素的索引*：任意一个像素在数组中的索引计算公式：<br>
 
 ```
 index = y * width * 3 + x * 3
@@ -117,33 +124,62 @@ data[index] = 255;：将蓝色通道的值设置为 255（最大值）。
 data[index + 1] = 255;：将绿色通道的值设置为 255（最大值）。
 data[index + 2] = 255;：将红色通道的值设置为 255（最大值）。
 ```
+
 直接操作图像数据指针，访问和修改图像中的每个像素，提高像素操作的效率
 
 #### 图像剪裁
+
 从图像中提取出某个矩形区域，例如在预处理阶段提取感兴趣区域（ROI），直接定义矩形区域
 
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
+// 手动裁剪图像函数
+cv::Mat cropImage(const cv::Mat& image, int x, int y, int width, int height) 
+{
+    // 创建一个新的矩阵用于存储裁剪后的图像
+    cv::Mat croppedImage(height, width, image.type());
+
+    // 遍历裁剪区域的每个像素
+    for (int row = 0; row < height; ++row) 
+    {
+        for (int col = 0; col < width; ++col) 
+        {
+            // 计算原图像中的对应位置
+            int orig_x = x + col;
+            int orig_y = y + row;
+
+            // 将原图像中的像素值复制到裁剪后的图像中
+            croppedImage.at<cv::Vec3b>(row, col) = image.at<cv::Vec3b>(orig_y, orig_x);
+        }
+    }
+
+    return croppedImage;
+}
+
 int main() {
     // 读取图像
-    cv::Mat image = cv::imread("path_to_your_image.jpg");
-
-    if (image.empty()) {
-        std::cerr << "Could not open or find the image!" << std::endl;
+    cv::Mat image = cv::imread("image.jpg");
+    if (image.empty()) 
+    {
+        std::cerr << "无法读取图像!" << std::endl;
         return -1;
     }
 
     // 定义裁剪区域 (x, y, width, height)
-    cv::Rect cropRegion(100, 50, 200, 150);
+    int x = 100;
+    int y = 50;
+    int width = 200;
+    int height = 150;
 
     // 裁剪图像
-    cv::Mat croppedImage = image(cropRegion);
+    cv::Mat croppedImage = cropImage(image, x, y, width, height);
 
-    // 显示结果
+    // 显示裁剪后的图像
     cv::imshow("Cropped Image", croppedImage);
     cv::waitKey(0);
+
     return 0;
 }
 ```
@@ -154,24 +190,28 @@ int main() {
 * cv::Mat croppedImage = image(cropRegion);**：使用矩形区域 cropRegion 对图像进行裁剪，得到裁剪后的图像 croppedImage
 
 #### 图像加法
+
 将两幅图像进行像素级的叠加操作。在图像融合、图像增强等任务中常见
 
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-int main() {
+int main() 
+{
     // 读取两幅图像
     cv::Mat image1 = cv::imread("path_to_your_image1.jpg");
     cv::Mat image2 = cv::imread("path_to_your_image2.jpg");
 
-    if (image1.empty() || image2.empty()) {
+    if (image1.empty() || image2.empty()) 
+    {
         std::cerr << "Could not open or find the images!" << std::endl;
         return -1;
     }
 
     // 确保两幅图像的尺寸相同
-    if (image1.size() != image2.size()) {
+    if (image1.size() != image2.size()) 
+    {
         std::cerr << "Images must be of the same size for addition!" << std::endl;
         return -1;
     }

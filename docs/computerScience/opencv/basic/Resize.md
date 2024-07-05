@@ -17,13 +17,16 @@
 #include <opencv2/opencv.hpp>
 
 // 双线性插值算法实现图像放大2倍
-cv::Mat enlargeImage(const cv::Mat& src) {
+cv::Mat enlargeImage(const cv::Mat& src) 
+{
     int newWidth = src.cols * 2;
     int newHeight = src.rows * 2;
     cv::Mat dst(newHeight, newWidth, src.type());
 
-    for (int y = 0; y < newHeight; ++y) {
-        for (int x = 0; x < newWidth; ++x) {
+    for (int y = 0; y < newHeight; ++y) 
+    {
+        for (int x = 0; x < newWidth; ++x) 
+        {
             // 计算源图像中的坐标
             float srcX = x / 2.0f;
             float srcY = y / 2.0f;
@@ -39,7 +42,8 @@ cv::Mat enlargeImage(const cv::Mat& src) {
             float dy = srcY - y1;
 
             // 双线性插值计算新像素值
-            for (int c = 0; c < src.channels(); ++c) {
+            for (int c = 0; c < src.channels(); ++c) 
+            {
                 float value = 
                     (1 - dx) * (1 - dy) * src.at<cv::Vec3b>(y1, x1)[c] +
                     dx * (1 - dy) * src.at<cv::Vec3b>(y1, x2)[c] +
@@ -54,13 +58,16 @@ cv::Mat enlargeImage(const cv::Mat& src) {
 }
 
 // 最近邻插值算法实现图像缩小2倍
-cv::Mat shrinkImage(const cv::Mat& src) {
+cv::Mat shrinkImage(const cv::Mat& src) 
+{
     int newWidth = src.cols / 2;
     int newHeight = src.rows / 2;
     cv::Mat dst(newHeight, newWidth, src.type());
 
-    for (int y = 0; y < newHeight; ++y) {
-        for (int x = 0; x < newWidth; ++x) {
+    for (int y = 0; y < newHeight; ++y) 
+    {
+        for (int x = 0; x < newWidth; ++x) 
+        {
             // 计算源图像中的坐标
             int srcX = x * 2;
             int srcY = y * 2;
@@ -73,10 +80,12 @@ cv::Mat shrinkImage(const cv::Mat& src) {
     return dst;
 }
 
-int main() {
+int main() 
+{
     // 从文件加载图像
     cv::Mat img = cv::imread("input.jpg");
-    if (img.empty()) {
+    if (img.empty()) 
+    {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
     }
