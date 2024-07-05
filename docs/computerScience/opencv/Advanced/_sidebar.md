@@ -5,7 +5,11 @@
 
 * [傅里叶变换](./DFT.md)
 
+* [Blob分析](./Blob.md)
+
 * [特征匹配](./Feature_Matching.md)
 * [ORB特征描述](./ORB.md)
 * [Canny边缘检测](./Canny.md)
 * [人脸检测](./face_detection.md)
+
+
