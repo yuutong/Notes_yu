@@ -1,14 +1,13 @@
-1.在做事遇到难题时自言自语
+1.Talking to oneself when facing difficulties in doing things
 
-2.在紧张焦虑时 习惯说错了，对不起
+2.Habitually saying "I made a mistake, I'm sorry" when feeling nervous or anxious
 
 
 
-#### 改正
+#### correction
 
-在遇到难题时深呼吸，闭嘴不要叹气，不要抱怨
+Take a deep breath when facing difficulties, keep quiet, do not sigh, do not complain
 
-不可嘟嘟囔囔（在任何情况下）
+Do not mumble (in any situation)
 
-在紧张焦虑时深呼吸，强迫自己思考，整理思路
-
+Take a deep breath when feeling nervous or anxious, force yourself to think, and organize your thoughts

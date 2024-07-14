@@ -1,3 +1,3 @@
-## 自省自修
+## self-improvement
 
-> 首要的目标是 不追求别人的认同
+> The primary goal is not to seek others' approval

@@ -23,6 +23,7 @@
 +-----+-----+-----+
 | (x-1, y+1) | (x, y+1) | (x+1, y+1) |
 +-----+-----+-----+
+
 ```
 
 在这种情况下，累加的范围是：
@@ -44,15 +45,20 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-cv::Mat meanFilter(const cv::Mat& src, int kernelSize) {
+cv::Mat meanFilter(const cv::Mat& src, int kernelSize) 
+{
     cv::Mat dst = src.clone();
     int radius = kernelSize / 2;
 
-    for (int y = radius; y < src.rows - radius; ++y) {
-        for (int x = radius; x < src.cols - radius; ++x) {
+    for (int y = radius; y < src.rows - radius; ++y) 
+    {
+        for (int x = radius; x < src.cols - radius; ++x) 
+        {
             float sum = 0.0;
-            for (int dy = -radius; dy <= radius; ++dy) {
-                for (int dx = -radius; dx <= radius; ++dx) {
+            for (int dy = -radius; dy <= radius; ++dy) 
+            {
+                for (int dx = -radius; dx <= radius; ++dx) 
+                {
                     sum += src.at<uchar>(y + dy, x + dx);
                 }
             }
@@ -63,9 +69,11 @@ cv::Mat meanFilter(const cv::Mat& src, int kernelSize) {
     return dst;
 }
 
-int main() {
+int main() 
+{
     cv::Mat src = cv::imread("path_to_your_image.jpg", cv::IMREAD_GRAYSCALE);
-    if (src.empty()) {
+    if (src.empty()) 
+    {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
     }
@@ -85,6 +93,7 @@ int main() {
 
 - *滤波窗口的尺寸 `kernelSize`*：在上述代码中，我们使用尺寸为 3 的滤波窗口
 - *遍历图像的每个像素*：对于每个像素 (x, y)，我们遍历其周围的像素范围
-- *累加范围*：使用两个嵌套的循环 `for (int dy = -radius; dy <= radius; ++dy)` 和 `for (int dx = -radius; dx <= radius; ++dx)` 来累加当前像素及其周围像素的值
+- *累加范围*：使用两个嵌套的循环 `for (int dy = -radius; dy <= radius; ++dy)` 和 
+             `for (int dx = -radius; dx <= radius; ++dx)` 来累加当前像素及其周围像素的值
 - *计算均值*：累加完所有像素值后，计算均值并将结果赋值给目标图像
 
