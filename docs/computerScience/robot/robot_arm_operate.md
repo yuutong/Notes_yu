@@ -16,6 +16,7 @@
 
 
 #### 类属性：
+```cpp
 class robot_arm():
     x_init = [1.5, 0, 0.1]  # 初始位置
     x_product = [1, 1.5]  # 产品位置
@@ -30,7 +31,7 @@ class robot_arm():
     lim_angle = np.array((-np.pi, np.pi))  # 角度限制
     lim_length_d2 = np.array((1, 2))  # 伸缩范围限制
     lim_length_d3 = np.array((0, 0.9))  # 另一伸缩范围限制
-
+```
 
 #### 路径定义：
 if x_product[0] > 0:
@@ -220,6 +221,8 @@ robot.plot_3D(Xn)
 
 
 #### 完整代码：
+
+```cpp
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d # Package for 3D plotting
@@ -399,7 +402,7 @@ class robot_arm():
         ax.set_axis_on()
         ax.grid(True)
         plt.show()
-
+```
         
 
 
