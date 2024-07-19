@@ -66,8 +66,8 @@ void ccFrameBufferObject::reset()
 }
 ```
 
-- 如果帧缓冲对象有效，删除深度纹理和颜色纹理。
-- 删除帧缓冲对象（如果存在）。
+- 如果帧缓冲对象有效，删除深度纹理和颜色纹理。<br>
+- 删除帧缓冲对象（如果存在）。<br>
 - 重置宽度和高度。
 
 #### `init()` 方法
@@ -103,8 +103,8 @@ bool ccFrameBufferObject::init(unsigned w, unsigned h)
 }
 ```
 
-- 如果帧缓冲对象无效，初始化 OpenGL 函数。
-- 重置之前的帧缓冲对象（如果存在）。
+- 如果帧缓冲对象无效，初始化 OpenGL 函数。<br>
+- 重置之前的帧缓冲对象（如果存在）。<br>
 - 创建一个新的帧缓冲对象，并更新有效标志。
 
 #### `start()` 和 `stop()` 方法
@@ -247,7 +247,7 @@ bool ccFrameBufferObject::initDepth(GLint wrapParam/*=GL_CLAMP_TO_BORDER*/,
 }
 ```
 
-- `initColor()`：初始化颜色纹理，并将其附加到帧缓冲对象。
+- `initColor()`：初始化颜色纹理，并将其附加到帧缓冲对象。<br>
 - `initDepth()`：初始化深度纹理，并将其附加到帧缓冲对象。
 
 #### `attachColor()` 和 `attachDepth()` 方法
@@ -341,13 +341,13 @@ bool ccFrameBufferObject::attachDepth(GLuint texID,
 }
 ```
 
-*检查有效性*：确保 `ccFrameBufferObject` 对象有效且 `m_fboId` 不为 0。
-*检查纹理*：验证 `texID` 是否是有效的纹理对象。
-*绑定 FBO*：调用 `start()` 方法将帧缓冲对象绑定为当前帧缓冲。
-*附加深度纹理*：使用 `glFramebufferTexture2D` 将深度纹理附加到 FBO 的深度附件点。
-*检查状态*：调用 `glCheckFramebufferStatus` 确认 FBO 状态是否完整。
-*解绑 FBO*：调用 `stop()` 方法解绑帧缓冲对象。
-*成功标志*：如果 FBO 状态完整，则删除旧的深度纹理（如果存在），并保存新的深度纹理及其管理权；否则记录错误信息。
+*检查有效性*：确保 `ccFrameBufferObject` 对象有效且 `m_fboId` 不为 0。<br>
+*检查纹理*：验证 `texID` 是否是有效的纹理对象。<br>
+*绑定 FBO*：调用 `start()` 方法将帧缓冲对象绑定为当前帧缓冲。<br>
+*附加深度纹理*：使用 `glFramebufferTexture2D` 将深度纹理附加到 FBO 的深度附件点。<br>
+*检查状态*：调用 `glCheckFramebufferStatus` 确认 FBO 状态是否完整。<br>
+*解绑 FBO*：调用 `stop()` 方法解绑帧缓冲对象。<br>
+*成功标志*：如果 FBO 状态完整，则删除旧的深度纹理（如果存在），并保存新的深度纹理及其管理权；否则记录错误信息。<br>
 
 
 #### 帧缓冲区 (FBO) 详解
