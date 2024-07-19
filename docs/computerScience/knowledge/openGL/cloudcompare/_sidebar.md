@@ -3,6 +3,7 @@
 * [shader](./shader.md)
 * [shader实例](./shader_code.md)
 * [QOpenGLShaderProgram](./QOpenGLShaderProgram.md)
+* [FBO](./FBO.md)
 * [vtk](./about_Vtk.md)
 * [Cloudcompare](./about_cloudcompare.md)
 * [重要名词解释](./Explanation_of_Terms.md)
