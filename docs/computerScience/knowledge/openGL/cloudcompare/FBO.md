@@ -8,12 +8,12 @@
 
 #### 类成员变量
 
-- `m_isValid`：标志帧缓冲对象是否有效。<br>
-- `m_width` 和 `m_height`：帧缓冲对象的宽度和高度。<br>
-- `m_depthTexture` 和 `m_colorTexture`：深度纹理和颜色纹理的 ID。<br>
-- `m_ownDepthTexture` 和 `m_ownColorTexture`：标志是否拥有这些纹理的管理权。<br>
-- `m_fboId`：帧缓冲对象的 ID。<br>
-- `m_glFunc` 和 `m_glExtFunc`：OpenGL 函数的封装，用于调用 OpenGL 函数。<br>
+`m_isValid`：标志帧缓冲对象是否有效。<br>
+`m_width` 和 `m_height`：帧缓冲对象的宽度和高度。<br>
+`m_depthTexture` 和 `m_colorTexture`：深度纹理和颜色纹理的 ID。<br>
+`m_ownDepthTexture` 和 `m_ownColorTexture`：标志是否拥有这些纹理的管理权。<br>
+`m_fboId`：帧缓冲对象的 ID。<br>
+`m_glFunc` 和 `m_glExtFunc`：OpenGL 函数的封装，用于调用 OpenGL 函数。<br>
 
 #### 构造函数
 
@@ -66,9 +66,9 @@ void ccFrameBufferObject::reset()
 }
 ```
 
-- 如果帧缓冲对象有效，删除深度纹理和颜色纹理。<br>
-- 删除帧缓冲对象（如果存在）。<br>
-- 重置宽度和高度。
+如果帧缓冲对象有效，删除深度纹理和颜色纹理。<br>
+删除帧缓冲对象（如果存在）。<br>
+重置宽度和高度。
 
 #### `init()` 方法
 
@@ -103,9 +103,9 @@ bool ccFrameBufferObject::init(unsigned w, unsigned h)
 }
 ```
 
-- 如果帧缓冲对象无效，初始化 OpenGL 函数。<br>
-- 重置之前的帧缓冲对象（如果存在）。<br>
-- 创建一个新的帧缓冲对象，并更新有效标志。
+如果帧缓冲对象无效，初始化 OpenGL 函数。<br>
+重置之前的帧缓冲对象（如果存在）。<br>
+创建一个新的帧缓冲对象，并更新有效标志。
 
 #### `start()` 和 `stop()` 方法
 
@@ -132,8 +132,8 @@ void ccFrameBufferObject::stop()
 }
 ```
 
-- `start()`：绑定帧缓冲对象，使其成为当前的渲染目标。
-- `stop()`：解绑当前帧缓冲对象（渲染回默认帧缓冲）。
+`start()`：绑定帧缓冲对象，使其成为当前的渲染目标。
+`stop()`：解绑当前帧缓冲对象（渲染回默认帧缓冲）。
 
 #### `deleteColorTexture()` 和 `deleteDepthTexture()` 方法
 
@@ -159,7 +159,7 @@ void ccFrameBufferObject::deleteDepthTexture()
 }
 ```
 
-- 删除颜色和深度纹理（如果存在且拥有这些纹理的管理权）。
+删除颜色和深度纹理（如果存在且拥有这些纹理的管理权）。
 
 #### `initColor()` 和 `initDepth()` 方法
 
@@ -247,8 +247,8 @@ bool ccFrameBufferObject::initDepth(GLint wrapParam/*=GL_CLAMP_TO_BORDER*/,
 }
 ```
 
-- `initColor()`：初始化颜色纹理，并将其附加到帧缓冲对象。<br>
-- `initDepth()`：初始化深度纹理，并将其附加到帧缓冲对象。
+`initColor()`：初始化颜色纹理，并将其附加到帧缓冲对象。<br>
+`initDepth()`：初始化深度纹理，并将其附加到帧缓冲对象。
 
 #### `attachColor()` 和 `attachDepth()` 方法
 
@@ -401,7 +401,7 @@ m_glExtFunc.glFramebufferTexture2D(GL_FRAMEBUFFER_EXT, GL_DEPTH_ATTACHMENT_EXT, 
 GLenum status = m_glExtFunc.glCheckFramebufferStatus(GL_FRAMEBUFFER_EXT);
 ```
 
-- `glCheckFramebufferStatus`：检查 FBO 的完整性状态，确保其可以用于渲染。
+`glCheckFramebufferStatus`：检查 FBO 的完整性状态，确保其可以用于渲染。
 
 ##### 5. **解绑 FBO**
 
@@ -411,11 +411,11 @@ GLenum status = m_glExtFunc.glCheckFramebufferStatus(GL_FRAMEBUFFER_EXT);
 m_glExtFunc.glBindFramebuffer(GL_FRAMEBUFFER_EXT, 0);
 ```
 
-- `glBindFramebuffer`：将帧缓冲绑定到 0，表示解除绑定。
+`glBindFramebuffer`：将帧缓冲绑定到 0，表示解除绑定。
 
 ##### 总结
 
-- *`ccFrameBufferObject` 类* 封装了对帧缓冲对象的管理，包括创建、初始化、绑定、纹理附加、状态检查和资源释放等操作。<br>
-- *帧缓冲对象（FBO）* 是用于离屏渲染的关键工具，使得渲染结果可以被存储到纹理中以用于后续处理或显示。
+*`ccFrameBufferObject` 类* 封装了对帧缓冲对象的管理，包括创建、初始化、绑定、纹理附加、状态检查和资源释放等操作。<br>
+*帧缓冲对象（FBO）* 是用于离屏渲染的关键工具，使得渲染结果可以被存储到纹理中以用于后续处理或显示。
 
 这些操作帮助开发人员实现复杂的渲染效果，例如后期处理、阴影映射和多重渲染目标（MRT）等。
