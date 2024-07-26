@@ -1,3 +1,3 @@
 * [返回](../../README.md)
-* [Sin](./sin/)
+* [相机](./camera/)
 * [Cos](./cos/)
