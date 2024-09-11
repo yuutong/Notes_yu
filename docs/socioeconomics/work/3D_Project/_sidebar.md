@@ -1,6 +1,4 @@
 * [返回](../README.md)
 * [插件功能]（./insert.md）
-* [插件接口类](./toolServiceBase.md) 
+* [插件管理](./dll.md) 
 
-<!--* [自修](./Self-Management/)>
-I
