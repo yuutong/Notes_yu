@@ -154,3 +154,55 @@ private:
 此外，这里还使用了 `QList` 和 `QHash` 来存储和管理加载的插件信息。
 
 `ToolDllManager` 确用于对接和管理插件的接口实现类，它通过加载插件（动态链接库），然后根据插件提供的接口进行调用，实现了插件的管理和功能调用。
+
+
+### 插件加载的路径
+
+1.软件启动时：<br>
+dll路径："/root/Work/3D/CLV3D/build-CLVision/toollib"
+
+![启动时](image.png)
+
+打开该路径，可以看到确实有libCloudConvertCircle.so， libCloudCorrect.so， libDefectChecks.so等18个.so文件
+
+![CLVison](image-1.png)
+
+
+### 涉及插件库的功能和工具
+
+1.软件启动时加载插件: mainwindow
+
+2.软件升级：softwareupdatedlg
+
+3.包括PointAndLine在内的18个插件的pro文件的编译输出目录<br>
+TARGET = /root/Work/3D/CLV3D/build-CLVision/toollib/PointAndLine
+
+
+### 相机库加载的路径
+
+![相机库路径](image-2.png)
+
+1.软件启动时加载插件: mainwindow
+
+2.软件升级：softwareupdatedlg
+
+3.深视智能的激光头项目pro文件的编译输出目录：<br>
+TARGET = /root/Work/3D/CLV3D/build-CLVision/cameralib/SSZNLaser
+
+
+### 公共库加载的路径
+
+![公共库路径](image-3.png)
+
+1.软件启动时加载插件: mainwindow
+
+2.软件升级：softwareupdatedlg
+
+3.TCP通信项目TCPComm.pro的编译输出目录：<br>
+TARGET = /opt/.CLVision/commlib/TCPComm
+
+
+
+
+
+
