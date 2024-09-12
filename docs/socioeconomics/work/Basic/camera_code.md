@@ -179,3 +179,5 @@ bool SSZNLASERSHARED_EXPORT GetLaserObj(vector<LaserInfomation> mLaserInfoList, 
   - 函数返回一个布尔值，表示操作是否成功。
   - 如果找到匹配的激光设备并成功创建了 `LaserBase` 对象，返回 `true`；否则返回 `false`。
 
+
+为工程中的mainwindow类和相机SSZN添加代码注释
