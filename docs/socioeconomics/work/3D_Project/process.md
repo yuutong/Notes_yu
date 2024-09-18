@@ -9,8 +9,8 @@ ip 192.168.100.10
 
 ip：192.168.101.10
 
-![无采集器2](image-9.png)
-![0039](image-10.png)
+
+![无采集器2](image-10.png)
 
 ## 采集器相机2748  
 
@@ -35,6 +35,9 @@ ip：192.168.101.10
 2.相机对象 mInfomation 相机序号 mIndex
 
 ![相机id](image-7.png)
+
+3.采图过程  mCloud
+![](image-9.png)
 
 
 
@@ -79,11 +82,6 @@ int DatasSourceDlg::PushData_3D(CLImage &mImage, CLCloud &mCloud)
 1.8 采图结束的信号：
 
   emit EmitGrabEnd();
-
-
-
-
-
 
 
 2.采集时接收数据
