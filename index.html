@@ -42,8 +42,10 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 100%;
-    }
+      height: 100vh; /* 100% of the viewport height */
+      width: 100vw;  /* 100% of the viewport width */
+}
+
     /* .full-width-image {
       width: 100%;
       height: 100%;
@@ -105,7 +107,7 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- 搜索 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
   <!-- 图片放大缩小支持 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 拷贝文字内容 -->
