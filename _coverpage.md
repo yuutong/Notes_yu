@@ -23,5 +23,6 @@
 
 
 
-[GitHub](https://github.com/)
+
 [Get Started](home.md)
+[GitHub](https://github.com/)
