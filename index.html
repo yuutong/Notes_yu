@@ -42,6 +42,9 @@
       height: 100%;
       object-fit: cover;
     }
+    :root {
+    --theme-hue: 325;
+  }
   </style>
 </head>
 
@@ -61,14 +64,16 @@
       executeScript: true,   //执行文档的第一个srcipt脚本
       mergeNavbar: true,     //小屏设备下合并导航栏到侧边栏。
       topMargin: 90,         // default: 0让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
-
       count: {
         countable: true,
         fontsize: '0.9em',
         color: 'rgb(90,90,90)',
         language: 'chinese'
       },
-
+      themeable: {
+          readyTransition : true, // default
+          responsiveTables: true  // default
+      },
       search: {
         maxAge: 86400000,
         paths: [],
