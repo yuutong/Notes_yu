@@ -11,17 +11,10 @@
    
 
    
-   *  
-
-
-<!--      人必须是最坚固的岛屿，才能成为大陆的一部分 背景色![color](#2f4253) -->
-
-
-
-<!-- 背景图片 ![](_media/bg.jpg) -->
+   * 
 
 
 
 
-[GitHub](https://github.com/)
 [Get Started](home.md)
+[GitHub](https://github.com/)
