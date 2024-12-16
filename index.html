@@ -61,8 +61,20 @@
 
       // 支持 LaTeX 排版数学公式
       latex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']], // default
-        displayMath: [['$$', '$$']],              // default
+        inlineMath   : [['$', '$'], ['@', '@']],
+        displayMath  : [['$$', '$$'], ['@@', '@@']],
+        customOptions: {
+          // For MathJax version 3
+          tex: {
+            tags: 'ams'
+          },
+          // For MathJax version 2
+          TeX: {
+            equationNumbers: {
+              autoNumber: "AMS"
+            }
+          }
+        }
       }
     }
   </script>
