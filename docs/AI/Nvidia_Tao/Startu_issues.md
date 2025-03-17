@@ -118,6 +118,9 @@ docker pull nvcr.io/nvidia/tao/tao-toolkit:5.0.0-pyt
 
 ```bash
 
+docker hub :
+
+https://hub.docker.com/
 
 2. 数据准备（适配工业缺陷数据集）
 
