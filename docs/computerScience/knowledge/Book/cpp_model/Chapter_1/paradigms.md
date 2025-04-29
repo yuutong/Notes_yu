@@ -64,7 +64,7 @@ explain：<br>
 *引用*：
 
 引用（Referance）的 **本质** 是一个常量指针(T* const),它保存的是对象的地址，但语法上表现为别名<br>
-A &ref = c; 实际上和 A* const interface = &C 将对象C绑定<br>
+A &ref = c; 实际上和 A* const interface = &C 用引用将对象C绑定<br>
 
 其实现多态的底层逻辑和指针完全一致：
 
