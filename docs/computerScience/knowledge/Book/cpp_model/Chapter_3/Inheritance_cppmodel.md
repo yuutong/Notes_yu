@@ -233,7 +233,12 @@ protected:
 	float m_z;
 }
 ```
-虽然class的声明语法没有改变，但每一件事情都不一样了：两个z（​） me mber functions 以及 operator+=（​）运算符都成了虚拟函数；每一个 Point3d clas s object内含一个额外的vptr member（继承自Point2d ）​；多了一个Point3d virtual table。
+让我们来看派生类在继承时怎么存放基类的member：
+* a.在类的层面上：两个z（​） member functions 以及 operator+=（​）运算符都成了虚拟函数 -> 多了一个Point3d virtual table(在编译时确定，放在程序的某个数据区)；
+
+![单一继承带虚函数的派生类](image-6.png)
+
+* b.在对象的层面，Point3d class object除了继承了Point2d的两个成员x,y之外，还增加一个额外的vptr member，指向虚表​；
 
 ![单一继承带有虚函数的内存](image-5.png)
 
@@ -242,7 +247,35 @@ protected:
 
 ## 三.多重继承
 
+在单一继承中，将一个派生类对象指定给某一个基类的指针或引用，不管继承的深度是多少，都可以直接找到地址，完成转换：<br>
+A *interface = new C(); <br>
 
+![单一继承的转换](image-7.png)
+
+因为派生类的首地址和基类的首地址是同一个地址。<br>
+但是在多重继承中，派生类需要将两个或两个以上的基类的member都依次放在自己的member之前。其第一个基类的首地址和这个派生类的首地址是相同的，第一个基类的基类指针到派生类对象的转换和之前一样是可以直接完成的。<br>
+
+对于后续的其他基类，则需要在原来的编译器基础上做偏移，使派生类的首地址能够和第一个及之后的其他基类首地址对齐<br>
+参考下面的例子：
+
+![多重继承的派生类对象转为基类指针](image-8.png)
+
+```cpp
+Vertex3d v3d;
+Vertex *pv;
+Point2d *p2d;
+Point3d *p3d;
+
+p2d = &v3d;
+p3d = &v3d;
+
+pv = &v3d ---> pv = (Vertex*)(((char*)&v3d) + sizeof(Point3d));
+```
+
+其中Point2d和Point3d在继承链中和派生类Vertex3d的首地址是相同的，可以直接转换
+而Vertex是Vertex3d的第二个基类，转换需要将地址对齐。下面是派生类的具体布局：
+
+![多重继承派生类的数据布局](image-9.png)
 
 ## 四.虚拟继承
 
