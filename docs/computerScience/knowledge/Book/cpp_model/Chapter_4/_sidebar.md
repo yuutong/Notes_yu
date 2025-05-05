@@ -1,7 +1,7 @@
 * [返回](../README.md)
-* [关于对象的封装](./encapsulation.md)
-* [C++对象模型的设计](./cppModel.md)
-* [C++对C结构体的兼容](./struct.md)
+* [三类函数调用总览](./Function_Invocation.md)
+* [C++继承关系中的虚函数调用](./VFunction_Invocation.md)
+
 
 
 

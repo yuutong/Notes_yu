@@ -1,0 +1,111 @@
+## 非静态成员函数调用
+
+C++的设计准则之一：nonstatic member function 调用至少必须和一般的nonmember function有相同的效率。那么怎样才能做到呢？<br>
+答案是编译器内部将“member函数实例”转换为对等的“nonmember函数实例”​,下面是转换步骤：
+
+### 1.将this指针写到函数签名中
+
+```cpp
+//函数原型
+float Point3d::magnitude() const
+{
+    return sqrt(m_x * m_x + m_y * m_y );
+}
+
+//编译器安插this指针
+float Point3d::magnitude(const Pointd *const this)
+{
+    return sqrt(this->m_x * this->m_x + this->m_y * this->m_y);
+}
+
+//上面的float Point3d::magnitude(const...) 是因为  float Point3d::magnitude() const 是常量，非常量的写法：
+float Point3d::magnitude(Pointd *const this)
+{
+    return sqrt(this->m_x * this->m_x + this->m_y * this->m_y);
+}
+
+```
+编译器将函数原型参数中插入一个this指针，然后对于非静态数据成员的操作都改为使用this指针来完成。
+
+### 2.编译器对函数名称做唯一性处理
+
+编译器如何在调用时区分不同类中的同名成员函数，基类和派生类中的同名成员函数，以及通过函数重载产生的同名函数？<br>
+答案是给每一个函数根据名称和参数重新分配名称，使程序中的每一个函数独一无二
+
+```cpp
+float Point3d::magnitude(Pointd *const this)
+{
+    return sqrt(this->m_x * this->m_x + this->m_y * this->m_y);
+}
+
+//重新命名为magnitude_7Point3dFv
+extern magnitude_7Point3dFv( register Point3d *const this)
+
+class Point{
+public:
+    void x(float newX);
+    float x();
+}
+
+//重新命名
+class Point{
+public:
+    void x_5PointFv(float newX);
+    float x_5PointFv();
+}
+```
+对函数重命名是编译器内部做的事，编译错误消息使用的函数名称仍然是程序源码中的函数名称，但是编译完成之后，链接器使用的是经过重命名的内部函数名称
+
+## 虚成员函数调用
+
+虚函数调用的逻辑是在非静态成员函数的基础之上，多了虚指针检索虚表的转换
+
+```cpp
+Point3d *ptr = &obj;
+ptr->normalize();
+
+//内部转换 index是normalize函数在虚表中的索引
+(*(ptr->vptr[index]))(ptr)
+
+```
+
+
+## 静态成员函数调用
+
+在引入static member functions之前，C++语言要求所有的member functions都必须经由该 class 的 object 来调用。而实际上，只有当一个或多个 nonstatic data members 在member function中被直接存取时，才需要class object。<br>
+Class object提供了this 指针给这种形式的函数调用使用。这个this 指针把“在member func tion中存取的nonstatic class members”绑定于“object内对应的members”之上。如果没有任何一个members被直接存取，事实上就不需要this 指针，因此也就没有必要通过一个class object 来调用一个member function<br>
+
+静态成员函数就是这样的存在，它不依赖类的对象，所以**没有this指针**,所以：<br>
+* a.它不能够直接存取其 class中的 nonstatic members<br>
+* b.它不能够被声明为 const、volatile或 virtual<br>
+
+```cpp
+// 非成员函数
+void nonMemberFunc() {}
+
+// 静态成员函数
+class MyClass {
+public:
+    static void staticMemberFunc() {}
+};
+```
+上述的特性使它和非成员函数很相似,于是：<br>
+* a.兼容C，C语言库（如X Window系统）通常要求回调函数为普通函数指针，无法直接使用C++的非静态成员函数（因隐含this指针）
+* b. 回调逻辑仍封装在类内部,可以过参数间接访问对象实例
+
+```cpp
+class GUIHandler {
+public:
+    static void handleEvent(void* context) {
+        GUIHandler* handler = static_cast<GUIHandler*>(context);
+        handler->onClick(); // 通过实例指针访问非静态方法
+    }
+    void onClick() { /* 处理点击事件 */ }
+};
+
+// 注册回调
+GUIHandler handler;
+register_callback(GUIHandler::handleEvent, &handler);
+```
+
+
