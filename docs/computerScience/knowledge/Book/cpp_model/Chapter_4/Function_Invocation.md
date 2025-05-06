@@ -166,7 +166,6 @@ obj->func();  //输出Base::func（静态绑定，调用Base::func）
 无需运行时动态查找，没有运行时间接寻址开销，无法根据运行时对象类型调整行为<br>
 
 
-
 ## 静态成员函数调用
 
 在引入static member functions之前，C++语言要求所有的member functions都必须经由该 class 的 object 来调用。而实际上，只有当一个或多个 nonstatic data members 在member function中被直接存取时，才需要class object。<br>
