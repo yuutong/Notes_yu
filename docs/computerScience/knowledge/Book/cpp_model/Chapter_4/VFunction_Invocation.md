@@ -38,7 +38,7 @@ public:
 
 ![多重继承下的虚函数调用](image-1.png)
 
-“Derived 支持virtual functions”的困难度，统统落在Base2 subobject 身上。有三个问题需要解决，以此例而言分别是（1） virtual destructor，（2） 被继承下来的Base2 ：​：mumble（​） ，（3） 一组clone（​） 函数实例。
+“Derived 支持virtual functions”的困难度，统统落在Base2 subobject 身上。有三个问题需要解决，以此例而言分别是(1) virtual destructor，(2) 被继承下来的Base2::mumble() ，(3) 一组clone() 函数实例。
 
 ```shell
 Derived* der;                  // 完整对象指针
