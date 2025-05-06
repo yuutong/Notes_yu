@@ -90,8 +90,8 @@ return ret2;
 * 每个基类对应一个虚表：Derived 会为 Base1 和 Base2 各维护一个虚表。
 
 * 虚表内容：<br>
-    主虚表（与 Base1 共享）：包含 ~Derived(), mumble(), clone()。
-    次虚表（与 Base2 共享）：包含 ~Derived() 的 Thunk 和 clone() 的 Thunk。
+    主虚表（与 Base1 共享）：包含 ~Derived(), mumble(), clone()
+    次虚表（与 Base2 共享）：包含 ~Derived() 的 Thunk 和 clone() 的 Thunk
 
 ```tab
 +----------------+----------------+----------------+
@@ -103,6 +103,6 @@ return ret2;
 **优化**：<br>
 * 虚表合并：将多个虚表链接为单个实体，通过偏移量访问次要虚表
 * 优势：减少符号数量，加快动态链接速度
-    主虚表名称：vtbl_Derived。
-    次虚表位置：vtbl_Derived + offset。
+    主虚表名称：vtbl_Derived
+    次虚表位置：vtbl_Derived + offset
 
