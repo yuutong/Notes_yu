@@ -16,20 +16,23 @@ active virtual function有：<br>
 
 ### this指针运行时调整
 ```cpp
-class Base1 { 
+class Base1 
+{ 
 public:
     virtual ~Base1() {}
     virtual void mumble() {}
     virtual Base1* clone() const { return new Base1(*this); }
 };
 
-class Base2 { 
+class Base2 
+{ 
 public:
     virtual ~Base2() {}
     virtual Base2* clone() const { return new Base2(*this); }
 };
 
-class Derived : public Base1, public Base2 {
+class Derived : public Base1, public Base2 
+{
 public:
     virtual ~Derived() {}
     virtual Derived* clone() const { return new Derived(*this); }
