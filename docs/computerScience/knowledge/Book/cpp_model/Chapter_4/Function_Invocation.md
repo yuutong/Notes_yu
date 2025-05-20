@@ -97,7 +97,7 @@ c.虚函数通常无法内联，但是在上面的a.b两种情况的静态绑定
 
 ```cpp
 //magnitude()是内联虚函数
-inline float Point3d::magnitude() const{
+virtual inline float Point3d::magnitude() const{
     return sqrt(x * x + y * y);
 }
 
@@ -107,6 +107,7 @@ float len = obj.magnitude();
 //内联展开后
 float len = sqrt(obj.x * obj.x + obj.y * obj.y);
 ```
+C++允许将虚函数声明成内联函数，但是仅在使用对象静态绑定时有效，在使用指针或引用时，内联虚函数虽然定义了，但是虚函数的多态性不受inline关键字的影响，仍然通过虚表动态分配，此时内联没有意义。
 
 #### 1).静态多态
 通过编译时的类型推导或模板机制实现多态行为，无需运行时类型信息或虚函数表（vtbl）
