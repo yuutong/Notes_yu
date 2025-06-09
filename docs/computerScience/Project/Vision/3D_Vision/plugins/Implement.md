@@ -1,10 +1,27 @@
-# Vision架构分析记录
 
-## 1.Interface_vision模块
+## 插件是怎样实现的？
 
-一个纯粹的接口模块，不含有任何实现。是架构的最顶层<br>
-目前含有插件工厂类，具体的视觉功能类，预留有其他的类型的功能类(比如相机及其他设备；通信等)
+* 1.抽象层接口
 
-这个工厂类目前作用于生产视觉功能，对于工厂，有多个视觉产线（检测圆，检测直线，检测缺陷）<br>
+定义了 工厂接口 Factory_plugin_Function 以及功能接口 功能接口 Interface_Function
 
-用户可以通过这个工厂的各个产线拿出产品，形成工作流程，然后按照特定的工作流程实现具体的目的。
+* 2.工厂实现层:Factory_this
+
+```cpp
+// “工厂方法”：负责构造一个具体的功能实例
+  void Create_plugin_function(std::shared_ptr<Interface_Function>& function) override {
+    function = std::make_shared<Function_this>();
+  }
+```
+核心工厂方法，用来生产具体的功能对象<br>
+工厂内部直接 new Function_this，并通过 shared_ptr<Interface_Function> 返回给调用者。
+
+
+* 3. 功能对象层：Function_this
+
+包括UI交互和算法在内的具体实现
+
+* 4 对外入口：PLUGIN_OUTPUT 函数 
+
+extern "C"：去除 C++ 名字重整，保证所有平台上符号名都叫 PLUGIN_OUTPUT<br>
+调用端动态加载库后，只需调用此函数，就能拿到一个指向 Factory_plugin_Function 的指针（Factory_this 实例）
