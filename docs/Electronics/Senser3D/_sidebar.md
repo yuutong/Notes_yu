@@ -1,4 +1,5 @@
-* [返回](../README.md)
+* [返回](../README.md)  
+* [3D线扫](./3D_senser.md)
 * [应用背景](./background.md)
 * [硬件搭建](./hardware.md)
 * [相机控制](./camera.md.md)
