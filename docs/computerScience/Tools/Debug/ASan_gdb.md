@@ -6,7 +6,7 @@ ASAN_OPTIONS="symbolize=1:verbosity=2:abort_on_error=1:fast_unwind_on_malloc=0:l
 
 背后发生了几件事：
 
-| 参数                        | 含义                                                |
+| 参数                      | 含义                                                |
 | ------------------------- | ------------------------------------------------- |
 | `symbolize=1`             | 打开地址到源码行号的符号化，让报告里出现 `file.cpp:123`               |
 | `verbosity=2`             | 打印更详细的 ASan 调试信息                                  |
@@ -20,10 +20,10 @@ ASAN_OPTIONS="symbolize=1:verbosity=2:abort_on_error=1:fast_unwind_on_malloc=0:l
 
 ### 为什么这样能让“前期”异常就 `abort()`?
 
-1. **`abort_on_error=1`**：任何一次 ASan 检测到非法内存访问（heap-buffer-overflow、use-after-free、double-free 等），它就会立即调用 `abort()`。
-2. **启动在 GDB 下**：`abort()` 会触发 `SIGABRT`，而 GDB 默认在捕获到信号时会停下来，让你在断点处的那一刻就能执行 `bt`、拿到当时的全部调用栈。
+1. `abort_on_error=1`：任何一次 ASan 检测到非法内存访问（heap-buffer-overflow、use-after-free、double-free 等），它就会立即调用 `abort()`。
+2. 启动在 GDB 下：`abort()` 会触发 `SIGABRT`，而 GDB 默认在捕获到信号时会停下来，让你在断点处的那一刻就能执行 `bt`、拿到当时的全部调用栈。
 
-这样，你就可以在「第一次」触发越界或 UAF 的地方停住，精准地看到是哪行代码、哪个函数栈做错了。
+这样，就可以在「第一次」触发越界或 UAF 的地方停住，精准地看到是哪行代码、哪个函数栈做错了。
 
 ---
 
