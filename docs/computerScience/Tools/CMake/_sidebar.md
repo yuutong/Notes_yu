@@ -1,2 +1,2 @@
 * [返回](../README.md)
-* [CMake](./CMake.md)
+* [编译vtk+pcl](./compile_pcl.md)

@@ -1,5 +1,5 @@
 * [返回](../README.md)
 * [CMake](./CMake/)
 * [QT](./QT/)
-* [GDB](./Gdb/)
+* [调试检错](./Debug/)
 * [Git](./Git/)
