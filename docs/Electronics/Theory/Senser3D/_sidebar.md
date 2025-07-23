@@ -1,5 +1,6 @@
 * [返回](../../README.md)
 * [中心线提取](./centerLine.md)
 * [相机的内参标定](./calibration.md)
-* [相机运动标定](./CameraMotionCalibration.md)
+* [相机运动标定](./CameraMotionCalibration.md)  
+* [运动平台移动标定](./motionCalibration.md) 
 * [opencv矩阵转仿射变换矩阵](./martix.md)
