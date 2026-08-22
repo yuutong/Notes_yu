@@ -1,4 +1,4 @@
-#### 基本思想
+# 基本思想
 
 分水岭算法的名字来源于地理学中的“分水岭”概念。<br>
 在地理学中，分水岭是指两个流域之间的高地或山脊线，雨水会从分水岭两侧流向不同的流域。<br>
@@ -13,29 +13,26 @@
 梯度低的地方表示变化平缓（即非边缘）<br>
    - 使用Sobel算子计算图像的梯度强度和方向。<br>
    - Sobel算子的公式：<br>
-     
+
      G_x = <br>
      -1  0  1 <br>
      -2  0  2 <br>
      -1  0  1<br>
-     
+
      G_y = <br>
      -1  -2 -1 <br>
      0   0  0 <br>
      1   2   1
-    
-     
+
    - 梯度强度和方向的公式：
 
      G = sqrt{G_x^2 + G_y^2},  θ = arctan({G_y}/{G_x})
-
 
 ##### 2：标记初始区域
 
 我们在图像中找到一些容易识别的区域，比如明显的前景和背景。<br>
 这些区域就像是我们在地形上找到的一些小水池。<br>
 我们用一些形态学操作（比如膨胀和腐蚀）来标记这些初始区域。<br>
-
 
 ##### 3：分水岭变换
 
@@ -52,15 +49,12 @@
         标记邻域像素 <br>
         将邻域像素加入队列 <br>
 
-
-
 ##### 总结
 
 1. *找到边缘*：我们先找到图像中的边缘，就像在地形图上找到陡峭的地方。<br>
 2. *标记水池*：我们在图像中标记一些容易识别的区域，就像在地形上找到一些小水池。<br>
 3. *倒水*：我们开始向这些水池倒水，水会从低处向高处流动，直到不同的水池相遇。<br>
            当水池相遇时，我们就找到了图像中不同区域的边界。<br>
-
 
 #### 代码示例
 
@@ -70,7 +64,7 @@
 #include <queue>
 
 // 计算梯度图像
-cv::Mat computeGradient(const cv::Mat& src) 
+cv::Mat computeGradient(const cv::Mat& src)
 {
     cv::Mat gradX, gradY, grad;
     cv::Sobel(src, gradX, CV_32F, 1, 0);
@@ -81,7 +75,7 @@ cv::Mat computeGradient(const cv::Mat& src)
 }
 
 // 标记初始区域
-cv::Mat markInitialRegions(const cv::Mat& src) 
+cv::Mat markInitialRegions(const cv::Mat& src)
 {
     cv::Mat markers;
     cv::threshold(src, markers, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
@@ -93,16 +87,16 @@ cv::Mat markInitialRegions(const cv::Mat& src)
 }
 
 // 分水岭变换
-cv::Mat watershedTransform(const cv::Mat& grad, cv::Mat& markers) 
+cv::Mat watershedTransform(const cv::Mat& grad, cv::Mat& markers)
 {
     std::queue<cv::Point> queue;
 
     // 将标记区域加入队列
-    for (int y = 0; y < markers.rows; ++y) 
+    for (int y = 0; y < markers.rows; ++y)
     {
         for (int x = 0; x < markers.cols; ++x)
-        
-            if (markers.at<int>(y, x) > 0) 
+
+            if (markers.at<int>(y, x) > 0)
             {
                 queue.push(cv::Point(x, y));
             }
@@ -110,21 +104,21 @@ cv::Mat watershedTransform(const cv::Mat& grad, cv::Mat& markers)
     }
 
     // 分水岭变换
-    while (!queue.empty()) 
+    while (!queue.empty())
     {
         cv::Point p = queue.front();
         queue.pop();
 
-        for (int j = -1; j <= 1; ++j) 
+        for (int j = -1; j <= 1; ++j)
         {
-            for (int i = -1; i <= 1; ++i) 
+            for (int i = -1; i <= 1; ++i)
             {
                 int nx = p.x + i;
                 int ny = p.y + j;
 
-                if (nx >= 0 && nx < markers.cols && ny >= 0 && ny < markers.rows) 
+                if (nx >= 0 && nx < markers.cols && ny >= 0 && ny < markers.rows)
                 {
-                    if (markers.at<int>(ny, nx) == 0 && grad.at<uchar>(ny, nx) < grad.at<uchar>(p.y, p.x)) 
+                    if (markers.at<int>(ny, nx) == 0 && grad.at<uchar>(ny, nx) < grad.at<uchar>(p.y, p.x))
                     {
                         markers.at<int>(ny, nx) = markers.at<int>(p.y, p.x);
                         queue.push(cv::Point(nx, ny));
@@ -137,11 +131,11 @@ cv::Mat watershedTransform(const cv::Mat& grad, cv::Mat& markers)
     return markers;
 }
 
-int main() 
+int main()
 {
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) 
+    if (img.empty())
     {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
@@ -176,4 +170,3 @@ int main()
 
 3. *分水岭变换*：<br>
    - `watershedTransform` 函数从标记区域开始，使用广度优先搜索（BFS）模拟水从低处向高处流动，逐步填充图像中的所有区域。过程中，每当水流遇到不同的标记区域时，记录下分水岭线。
-

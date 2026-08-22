@@ -1,3 +1,5 @@
+# Delegate
+
 当然可以！让我们用更通俗易懂的语言来解释委托。
 委托就像是一张“任务卡”，它告诉你要做什么事情，但不告诉你具体是谁来做这件事。你可以把这张任务卡交给任何能完成这项任务的人。
 
@@ -73,14 +75,12 @@
 
 在这个例子中，你可以根据需要随时改变按钮按下时的操作，而不需要修改按钮本身的代码。
 
-
-
 ### 委托如何实现动态绑定方法
 
 委托通过以下步骤实现动态绑定方法：
 
 1. *定义委托类型*：定义一个委托类型，指定可以引用的方法的签名。
-   
+
    ```csharp
    public delegate void ProcessDataDelegate(string data);
    ```
@@ -109,7 +109,7 @@
 委托可以在运行时动态绑定不同的方法，这使得代码更加灵活和可扩展。例如，可以将匿名方法或Lambda表达式赋给委托：
 
 ```csharp
-ProcessDataDelegate anotherDelegate = (string data) => 
+ProcessDataDelegate anotherDelegate = (string data) =>
 {
     Console.WriteLine("Another processing: " + data);
 };
@@ -130,7 +130,7 @@ anotherDelegate("Another sample data");
    {
        // 定义事件
        public event EventHandler OnEventOccurred;
-       
+
        public void RaiseEvent(string message)
        {
            // 触发事件
@@ -156,10 +156,10 @@ anotherDelegate("Another sample data");
        {
            EventPublisher publisher = new EventPublisher();
            EventSubscriber subscriber = new EventSubscriber();
-           
+
            // 订阅事件
            publisher.OnEventOccurred += subscriber.HandleEvent;
-           
+
            // 触发事件
            publisher.RaiseEvent("Hello, world!");
        }
@@ -180,4 +180,3 @@ anotherDelegate("Another sample data");
 - *委托*：通过定义方法签名并在运行时绑定具体实现，适用于需要动态调用方法或实现事件驱动编程的场景。
 - *动态绑定*：委托在运行时可以动态绑定不同的方法，这使得代码更加灵活。
 - *事件驱动编程*：委托在事件驱动编程中发挥重要作用，通过定义事件和订阅事件，实现松耦合的事件处理机制。
-

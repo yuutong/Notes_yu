@@ -1,3 +1,5 @@
+# constructor init
+
 编译器会一 一操作初始化列表，以适当的顺序在构造函数之内安插初始化操作，这些操作在所有的explicit user code之前
 
 ## 1.必须使用成员初始化列表的情况
@@ -26,14 +28,13 @@ Word::Word(const std::string& name, int cnt) : m_name(0),m_cnt(0)
 //伪代码  编译器插入在构造函数中的内容
 Word::Word(/*this pointer goes here*/)
 {
-    m_name.String::String(0);  
+    m_name.String::String(0);
     m_cnt = 0;
 }
 
 ```
 
 * d.当调用一个base class的constructor，而它拥有一组参数时
-
 
 ## 2.初始化顺序
 
@@ -53,6 +54,7 @@ public:
     ...
 };
 ```
+
 由于声明顺序的缘故，初始化列表中的i(j)会比j(val)更早执行<br>
 但因为j一开始没有初值，所以i(j)的执行结果导致i无法预知其值<br>
 下面这个是正确的：
@@ -63,9 +65,5 @@ X::X（int val）: j(val)
     i = j;
 }
 ```
+
 在执行 j= val，和i= j之前， i已经被编译器初始化完成了
-
-
-
-
-

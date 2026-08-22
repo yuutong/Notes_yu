@@ -1,4 +1,5 @@
-## 单一继承的虚函数调用
+# 单一继承的虚函数调用
+
 每个class只会有一个虚表，表中是对应class object中所有active virtual function的地址<br>
 active virtual function有：<br>
 * a.当前类的虚函数实例，它改写了base class virtual function 函数实例<br>
@@ -15,15 +16,16 @@ active virtual function有：<br>
 策略的重点在于**this 指针的运行时调整** 和 **虚表（vtable）的管理**
 
 ### this指针运行时调整
+
 ```cpp
-class Base1 { 
+class Base1 {
 public:
     virtual ~Base1() {}
     virtual void mumble() {}
     virtual Base1* clone() const { return new Base1(*this); }
 };
 
-class Base2 { 
+class Base2 {
 public:
     virtual ~Base2() {}
     virtual Base2* clone() const { return new Base2(*this); }
@@ -42,44 +44,60 @@ public:
 
 ```shell
 Derived* der;                  // 完整对象指针
-size_t ofs1 = 0;               // Base1 子对象在 Derived 内的偏移 
-size_t ofs2 = sizeof(Base1);   // Base2 子对象相对于 Derived 开头的偏移 
+size_t ofs1 = 0;               // Base1 子对象在 Derived 内的偏移
+size_t ofs2 = sizeof(Base1);   // Base2 子对象相对于 Derived 开头的偏移
 ```
 
 * a.通过 第二个base class的指针，调用derived class virtual function
 
 ```shell
 #入口：p2 指向 Derived 的 Base2 子对象
-Base2* p2 = der + ofs2;             // 简写：der + sizeof(Base1) 
+Base2* p2 = der + ofs2;             // 简写：der + sizeof(Base1)
 #调整到完整对象
-Derived* full = p2 - ofs2;          // 减去 ofs2 回到完整对象 
+Derived* full = p2 - ofs2;          // 减去 ofs2 回到完整对象
 #调用真正的析构
 full->~Derived();
 ```
+
 在多重继承里，Derived 的 Base2 子对象位于完整对象地址之后 ofs2 字节处，当通过 Base2* p2 调用时，要做减法（p2 - ofs2）而不是加法，才能得到原始的 Derived*
 
 * b.通过 Base1* 调用继承自 Base2::mumble()<br>
 
 ```shell
 #入口：p1 指向 Derived 的 Base1 子对象
-Base1* p1 = der + ofs1;             // ofs1=0，直接指向 der 
+Base1* p1 = der + ofs1;             // ofs1=0，直接指向 der
+
 # 调整到完整对象
+
 Derived* full = p1 - ofs1;          // 减去 ofs1 回到完整对象
+
 # 再定位到 Base2 子对象
+
 Base2* real2  = full + ofs2;        // 加上 ofs2 定位到 Base2 子对象
+
 # 调用 Base2::mumble()
-real2->mumble();                    // 方法定义在 Base2，需要偏移 
+
+real2->mumble();                    // 方法定义在 Base2，需要偏移
 ```
+
 * c 通过 Base2* 调用 Derived 覆盖自 Base2::clone() （协变返回）
 
 ```shell
+
 # 入口：p2 指向 Derived 的 Base2 子对象
-Base2* p2 = der + ofs2;            
+
+Base2* p2 = der + ofs2;
+
 # 调整到完整对象
+
 Derived* full     = p2 - ofs2;             // 回到完整对象
+
 # 调用覆盖的 clone，返回的是 Derived*
-Derived* new_full = full->clone();         // 协变返回 
+
+Derived* new_full = full->clone();         // 协变返回
+
 # 返回时，再偏移到 Base2 子对象
+
 Base2* ret2       = new_full + ofs2;
 return ret2;
 ```
@@ -98,10 +116,8 @@ return ret2;
 | (vptr → vtbl_Base1) | (vptr → vtbl_Base2) |                |
 +----------------+----------------+----------------+
 
-
 **优化**：<br>
 * 虚表合并：将多个虚表链接为单个实体，通过偏移量访问次要虚表
 * 优势：减少符号数量，加快动态链接速度
     主虚表名称：vtbl_Derived
     次虚表位置：vtbl_Derived + offset
-

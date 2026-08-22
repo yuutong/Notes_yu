@@ -1,3 +1,5 @@
+# DFT
+
 傅里叶变换是一种数学方法，它可以将一个信号（例如图像）从空间域转换到频率域。<br>
 简单来说，它可以帮助我们分析图像中不同频率的成分，就像把一首乐曲分解成各种音调一样。<br>
 
@@ -24,7 +26,6 @@
 3. *频域图像*：结果是一个频域图像，显示了不同频率成分的强度。<br>
      高频成分表示图像中的快速变化（如边缘），低频成分表示图像中的慢速变化（如平滑区域）。
 
-
 ##### 通俗总结
 
 1. *图像是由波组成的*：傅里叶变换认为图像是由许多不同频率的波组成的。<br>
@@ -43,20 +44,20 @@
 using namespace std;
 
 // 计算二维离散傅里叶变换（DFT）
-vector<vector<complex<double>>> computeDFT(const cv::Mat& src) 
+vector<vector<complex<double>>> computeDFT(const cv::Mat& src)
 {
     int M = src.rows;
     int N = src.cols;
     vector<vector<complex<double>>> dftResult(M, vector<complex<double>>(N));
 
-    for (int u = 0; u < M; ++u) 
+    for (int u = 0; u < M; ++u)
     {
-        for (int v = 0; v < N; ++v) 
+        for (int v = 0; v < N; ++v)
         {
             complex<double> sum(0.0, 0.0);
-            for (int x = 0; x < M; ++x) 
+            for (int x = 0; x < M; ++x)
             {
-                for (int y = 0; y < N; ++y) 
+                for (int y = 0; y < N; ++y)
                 {
                     double angle = -2.0 * M_PI * ((u * x / double(M)) + (v * y / double(N)));
                     complex<double> expTerm(cos(angle), sin(angle));
@@ -71,20 +72,20 @@ vector<vector<complex<double>>> computeDFT(const cv::Mat& src)
 }
 
 // 计算二维离散傅里叶逆变换（IDFT）
-cv::Mat computeIDFT(const vector<vector<complex<double>>>& dftResult) 
+cv::Mat computeIDFT(const vector<vector<complex<double>>>& dftResult)
 {
     int M = dftResult.size();
     int N = dftResult[0].size();
     cv::Mat idftResult(M, N, CV_64F);
 
-    for (int x = 0; x < M; ++x) 
+    for (int x = 0; x < M; ++x)
     {
-        for (int y = 0; y < N; ++y) 
+        for (int y = 0; y < N; ++y)
         {
             complex<double> sum(0.0, 0.0);
-            for (int u = 0; u < M; ++u) 
+            for (int u = 0; u < M; ++u)
             {
-                for (int v = 0; v < N; ++v) 
+                for (int v = 0; v < N; ++v)
                 {
                     double angle = 2.0 * M_PI * ((u * x / double(M)) + (v * y / double(N)));
                     complex<double> expTerm(cos(angle), sin(angle));
@@ -99,15 +100,15 @@ cv::Mat computeIDFT(const vector<vector<complex<double>>>& dftResult)
 }
 
 // 计算幅值图像
-cv::Mat computeMagnitude(const vector<vector<complex<double>>>& dftResult) 
+cv::Mat computeMagnitude(const vector<vector<complex<double>>>& dftResult)
 {
     int M = dftResult.size();
     int N = dftResult[0].size();
     cv::Mat magI(M, N, CV_64F);
 
-    for (int u = 0; u < M; ++u) 
+    for (int u = 0; u < M; ++u)
     {
-        for (int v = 0; v < N; ++v) 
+        for (int v = 0; v < N; ++v)
         {
             magI.at<double>(u, v) = log(1 + abs(dftResult[u][v]));
         }
@@ -117,7 +118,7 @@ cv::Mat computeMagnitude(const vector<vector<complex<double>>>& dftResult)
 }
 
 // 重排傅里叶图像中的象限
-void shiftQuadrants(cv::Mat& magI) 
+void shiftQuadrants(cv::Mat& magI)
 {
     magI = magI(cv::Rect(0, 0, magI.cols & -2, magI.rows & -2));
     int cx = magI.cols / 2;
@@ -138,11 +139,11 @@ void shiftQuadrants(cv::Mat& magI)
     tmp.copyTo(q2);
 }
 
-int main() 
+int main()
 {
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) 
+    if (img.empty())
     {
         cerr << "Error: Could not open or find the image." << endl;
         return -1;

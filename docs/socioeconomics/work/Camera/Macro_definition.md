@@ -1,4 +1,4 @@
-## 预处理宏
+# 预处理宏
 
 ```cpp
 
@@ -6,9 +6,13 @@
 DEFINES += SSZNLASER_LIBRARY
 
 #if defined(SSZNLASER_LIBRARY)  //检查是否定义了宏
+
 #  define SSZNLASERSHARED_EXPORT Q_DECL_EXPORT  //导出库
+
 #else
+
 #  define SSZNLASERSHARED_EXPORT Q_DECL_IMPORT //导入库
+
 #endif
 
 ```
@@ -30,7 +34,6 @@ else
 
 ```
 
-
 ## 包含路径和库文件路径
 
 ```cpp
@@ -47,6 +50,7 @@ LIBS += /usr/local/lib/baselib/libCirCRiBuf.a
 ## Unix 安装路径
 
 在 Unix 系统上，目标文件将安装到 /usr/lib 目录。
+
 ```
 #Unix 系统的安装路径
 unix {
@@ -56,11 +60,10 @@ unix {
 ```
 
 ## QT的ui文件
+
 ```
 #UI 文件自动编译成代码
 FORMS += \
     laserobj.ui \
     inforemindlg.ui
 ```
-
-

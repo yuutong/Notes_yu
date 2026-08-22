@@ -1,0 +1,16 @@
+# Local/private knowledge that must never be published.
+private/
+
+# Local model credentials. Never commit these files.
+.env
+.env.local
+
+# Obsidian machine-specific UI state.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.trash/
+
+# Operating-system files.
+.DS_Store
+Thumbs.db

@@ -1,3 +1,5 @@
+# tableView
+
 1.
 ui->lwDataSource  右侧文字栏
 
@@ -32,5 +34,3 @@ void CreateProDlg::ToEditIndex()
     delete mImportNumerical; // 删除 ImportNumerical 对象
     mImportNumerical = NULL; // 将指针置空
 }
-
-

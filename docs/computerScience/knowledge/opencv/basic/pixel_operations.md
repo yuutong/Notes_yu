@@ -1,4 +1,5 @@
-#### 修改像素值
+# 修改像素值
+
 图像数据表示为Mat型，图像数据（像素点）存储在 cv::Mat 对象中。
 
 cv::Mat 是一个多维矩阵类，每个像素的数据存储在 cv::Mat 矩阵的元素中。
@@ -11,8 +12,6 @@ cv::Vec3b 是一个包含三个 uchar（无符号8位整数）的向量，每个
    * Vec3b[1]：表示绿色通道的值（G）
    * Vec3b[2]：表示红色通道的值（R）
 
-
-
 **1.1例子**：使用 cv::Vec3b 访问和修改图像的像素值,它是访问和操作多通道图像数据的基础
 
 ```cpp
@@ -20,12 +19,12 @@ cv::Vec3b 是一个包含三个 uchar（无符号8位整数）的向量，每个
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-int main() 
+int main()
 {
     // 读取图像
     cv::Mat image = cv::imread("path_to_your_image.jpg");
 
-    if (image.empty()) 
+    if (image.empty())
     {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
@@ -48,19 +47,18 @@ int main()
 }
 ```
 
-
 **1.2 像素操作的效率问题**：在进行大规模像素操作时，逐个像素地使用 at 方法访问和修改像素值可能比较慢。可以直接操作指针以提高效率。
 
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-int main() 
+int main()
 {
     // 读取图像
     cv::Mat image = cv::imread("path_to_your_image.jpg");
 
-    if (image.empty()) 
+    if (image.empty())
     {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
@@ -74,9 +72,9 @@ int main()
     int height = image.rows;
 
     // 遍历图像的每个像素并修改
-    for (int y = 0; y < height; ++y) 
+    for (int y = 0; y < height; ++y)
     {
-        for (int x = 0; x < width; ++x) 
+        for (int x = 0; x < width; ++x)
         {
             int index = y * width * 3 + x * 3;
             data[index] = 255;     // 蓝色通道
@@ -136,15 +134,15 @@ data[index + 2] = 255;：将红色通道的值设置为 255（最大值）。
 #include <iostream>
 
 // 手动裁剪图像函数
-cv::Mat cropImage(const cv::Mat& image, int x, int y, int width, int height) 
+cv::Mat cropImage(const cv::Mat& image, int x, int y, int width, int height)
 {
     // 创建一个新的矩阵用于存储裁剪后的图像
     cv::Mat croppedImage(height, width, image.type());
 
     // 遍历裁剪区域的每个像素
-    for (int row = 0; row < height; ++row) 
+    for (int row = 0; row < height; ++row)
     {
-        for (int col = 0; col < width; ++col) 
+        for (int col = 0; col < width; ++col)
         {
             // 计算原图像中的对应位置
             int orig_x = x + col;
@@ -161,7 +159,7 @@ cv::Mat cropImage(const cv::Mat& image, int x, int y, int width, int height)
 int main() {
     // 读取图像
     cv::Mat image = cv::imread("image.jpg");
-    if (image.empty()) 
+    if (image.empty())
     {
         std::cerr << "无法读取图像!" << std::endl;
         return -1;
@@ -197,20 +195,20 @@ int main() {
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-int main() 
+int main()
 {
     // 读取两幅图像
     cv::Mat image1 = cv::imread("path_to_your_image1.jpg");
     cv::Mat image2 = cv::imread("path_to_your_image2.jpg");
 
-    if (image1.empty() || image2.empty()) 
+    if (image1.empty() || image2.empty())
     {
         std::cerr << "Could not open or find the images!" << std::endl;
         return -1;
     }
 
     // 确保两幅图像的尺寸相同
-    if (image1.size() != image2.size()) 
+    if (image1.size() != image2.size())
     {
         std::cerr << "Images must be of the same size for addition!" << std::endl;
         return -1;
@@ -227,9 +225,3 @@ int main()
 ```
 
 **3.1 代码解读：** 直接使用加法
-
-
-
-
-
-

@@ -1,10 +1,8 @@
-
+# FBO
 
 `ccFrameBufferObject` 是一个封装了 OpenGL 帧缓冲对象（FBO）操作的类。<br>
 帧缓冲对象用于在渲染到纹理上而不是直接渲染到屏幕时存储渲染结果。<br>
 这在后处理效果、离屏渲染等场景中非常有用。
-
-
 
 #### 类成员变量
 
@@ -286,7 +284,7 @@ bool ccFrameBufferObject::attachColor(GLuint texID,
 		m_colorTexture = texID;
 		m_ownColorTexture = ownTexture;
 		break;
-	
+
 	default:
 		qDebug("[%s line %d] OpenGL Error: %d", __FILE__, __LINE__, status);
 		success = false;
@@ -295,7 +293,6 @@ bool ccFrameBufferObject::attachColor(GLuint texID,
 
 	return success;
 }
-
 
 bool ccFrameBufferObject::attachDepth(GLuint texID,
 										bool ownTexture/*=false*/,
@@ -330,7 +327,7 @@ bool ccFrameBufferObject::attachDepth(GLuint texID,
 		m_depthTexture = texID;
 		m_ownDepthTexture = ownTexture;
 		break;
-	
+
 	default:
 		qDebug("[%s line %d] OpenGL Error: %d", __FILE__, __LINE__, status);
 		success = false;
@@ -348,7 +345,6 @@ bool ccFrameBufferObject::attachDepth(GLuint texID,
 *检查状态*：调用 `glCheckFramebufferStatus` 确认 FBO 状态是否完整。<br>
 *解绑 FBO*：调用 `stop()` 方法解绑帧缓冲对象。<br>
 *成功标志*：如果 FBO 状态完整，则删除旧的深度纹理（如果存在），并保存新的深度纹理及其管理权；否则记录错误信息。<br>
-
 
 #### 帧缓冲区 (FBO) 详解
 

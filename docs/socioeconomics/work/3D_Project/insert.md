@@ -1,4 +1,4 @@
-### 插件的逻辑
+# 插件的逻辑
 
 1.主工程要加载某个动态链接库，这个动态链接库放在某个固定的路径下
 
@@ -30,9 +30,13 @@
 
 #if defined(CLOUDMIRROR_LIBRARY)
 // 导出宏定义，用于确定是导出 (Q_DECL_EXPORT) 还是导入 (Q_DECL_IMPORT)
+
 #  define CLOUDMIRRORSHARED_EXPORT Q_DECL_EXPORT
+
 #else
+
 #  define CLOUDMIRRORSHARED_EXPORT Q_DECL_IMPORT
+
 #endif
 
 // 外部 C 接口，用于获取插件 ID

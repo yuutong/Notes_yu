@@ -1,3 +1,4 @@
+# Canny
 
 Canny边缘检测是一种多阶段算法，用于检测图像中的边缘。<br>
 1. *高斯滤波*：使用高斯滤波器平滑图像，减少噪声。<br>
@@ -13,22 +14,20 @@ Canny边缘检测是一种多阶段算法，用于检测图像中的边缘。<br
 2. **计算梯度**：
    - 使用Sobel算子计算图像的梯度强度和方向。<br>
    - Sobel算子的公式：
-     
+
      G_x = <br>
      -1  0  1 <br>
      -2  0  2 <br>
      -1  0  1<br>
-     
+
      G_y = <br>
      -1  -2 -1 <br>
      0   0   0 <br>
      1   2   1<br>
-    
-     
+
    - 梯度强度和方向的公式：
 
      G = sqrt{G_x^2 + G_y^2},  θ = arctan({G_y}/{G_x})
-
 
 3. *非极大值抑制*：<br>
    - 对梯度强度进行非极大值抑制，精确定位边缘。<br>
@@ -42,7 +41,6 @@ Canny边缘检测是一种多阶段算法，用于检测图像中的边缘。<br
 
 5. *边缘连接*：<br>
    - 通过抑制孤立的弱边缘，连接强边缘和弱边缘。<br>
-
 
 #### 通俗解释
 
@@ -78,7 +76,6 @@ Canny边缘检测是一种多阶段算法，用于检测图像中的边缘。<br
 解决方法：边缘连接步骤会检查弱边缘是否与强边缘相连。如果一个弱边缘像素与一个强边缘<br>
 像素相连，那么它也被认为是边缘。否则，它将被抑制。这一步帮助我们连接断开的边缘，确保边缘的连续性。<br>
 
-
 - *Sobel算子计算梯度*：就像是初步筛选，找到所有可能的边缘区域。<br>
 - *非极大值抑制*：就像是精确定位，确保边缘是细的和准确的。<br>
 - *双阈值检测*：就像是进一步筛选，区分强边缘和弱边缘。<br>
@@ -93,7 +90,7 @@ Canny边缘检测是一种多阶段算法，用于检测图像中的边缘。<br
 #include <cmath>
 
 // 高斯滤波器
-cv::Mat gaussianFilter(const cv::Mat& src, double sigma) 
+cv::Mat gaussianFilter(const cv::Mat& src, double sigma)
 {
     int ksize = 2 * (int)(3 * sigma) + 1;
     cv::Mat dst;
@@ -102,16 +99,16 @@ cv::Mat gaussianFilter(const cv::Mat& src, double sigma)
 }
 
 // 计算梯度
-void computeGradient(const cv::Mat& src, cv::Mat& gradX, cv::Mat& gradY, cv::Mat& grad, cv::Mat& angle) 
+void computeGradient(const cv::Mat& src, cv::Mat& gradX, cv::Mat& gradY, cv::Mat& grad, cv::Mat& angle)
 {
     gradX = cv::Mat::zeros(src.size(), CV_32F);
     gradY = cv::Mat::zeros(src.size(), CV_32F);
     grad = cv::Mat::zeros(src.size(), CV_32F);
     angle = cv::Mat::zeros(src.size(), CV_32F);
 
-    for (int y = 1; y < src.rows - 1; ++y) 
+    for (int y = 1; y < src.rows - 1; ++y)
     {
-        for (int x = 1; x < src.cols - 1; ++x) 
+        for (int x = 1; x < src.cols - 1; ++x)
         {
             float gx = -src.at<uchar>(y - 1, x - 1) + src.at<uchar>(y - 1, x + 1)
                        - 2 * src.at<uchar>(y, x - 1) + 2 * src.at<uchar>(y, x + 1)
@@ -129,40 +126,40 @@ void computeGradient(const cv::Mat& src, cv::Mat& gradX, cv::Mat& gradY, cv::Mat
 }
 
 // 非极大值抑制
-cv::Mat nonMaxSuppression(const cv::Mat& grad, const cv::Mat& angle) 
+cv::Mat nonMaxSuppression(const cv::Mat& grad, const cv::Mat& angle)
 {
     cv::Mat suppressed = cv::Mat::zeros(grad.size(), CV_32F);
 
-    for (int y = 1; y < grad.rows - 1; ++y) 
+    for (int y = 1; y < grad.rows - 1; ++y)
     {
-        for (int x = 1; x < grad.cols - 1; ++x) 
+        for (int x = 1; x < grad.cols - 1; ++x)
         {
             float theta = angle.at<float>(y, x);
             float magnitude = grad.at<float>(y, x);
 
             float q = 0, r = 0;
-            if ((theta >= -CV_PI / 8 && theta < CV_PI / 8) || (theta >= 7 * CV_PI / 8 || theta < -7 * CV_PI / 8)) 
+            if ((theta >= -CV_PI / 8 && theta < CV_PI / 8) || (theta >= 7 * CV_PI / 8 || theta < -7 * CV_PI / 8))
             {
                 q = grad.at<float>(y, x + 1);
                 r = grad.at<float>(y, x - 1);
             }
-            else if ((theta >= CV_PI / 8 && theta < 3 * CV_PI / 8) || (theta >= -7 * CV_PI / 8 && theta < -5 * CV_PI / 8)) 
+            else if ((theta >= CV_PI / 8 && theta < 3 * CV_PI / 8) || (theta >= -7 * CV_PI / 8 && theta < -5 * CV_PI / 8))
             {
                 q = grad.at<float>(y + 1, x - 1);
                 r = grad.at<float>(y - 1, x + 1);
             }
-            else if ((theta >= 3 * CV_PI / 8 && theta < 5 * CV_PI / 8) || (theta >= -5 * CV_PI / 8 && theta < -3 * CV_PI / 8)) 
+            else if ((theta >= 3 * CV_PI / 8 && theta < 5 * CV_PI / 8) || (theta >= -5 * CV_PI / 8 && theta < -3 * CV_PI / 8))
             {
                 q = grad.at<float>(y + 1, x);
                 r = grad.at<float>(y - 1, x);
             }
-            else if ((theta >= 5 * CV_PI / 8 && theta < 7 * CV_PI / 8) || (theta >= -3 * CV_PI / 8 && theta < -CV_PI / 8)) 
+            else if ((theta >= 5 * CV_PI / 8 && theta < 7 * CV_PI / 8) || (theta >= -3 * CV_PI / 8 && theta < -CV_PI / 8))
             {
                 q = grad.at<float>(y - 1, x - 1);
                 r = grad.at<float>(y + 1, x + 1);
             }
 
-            if (magnitude >= q && magnitude >= r) 
+            if (magnitude >= q && magnitude >= r)
             {
                 suppressed.at<float>(y, x) = magnitude;
             }
@@ -173,28 +170,28 @@ cv::Mat nonMaxSuppression(const cv::Mat& grad, const cv::Mat& angle)
 }
 
 // 双阈值检测和边缘连接
-cv::Mat doubleThresholdAndEdgeLinking(const cv::Mat& suppressed, float lowThresh, float highThresh) 
+cv::Mat doubleThresholdAndEdgeLinking(const cv::Mat& suppressed, float lowThresh, float highThresh)
 {
     cv::Mat edges = cv::Mat::zeros(suppressed.size(), CV_8U);
 
-    for (int y = 1; y < suppressed.rows - 1; ++y) 
+    for (int y = 1; y < suppressed.rows - 1; ++y)
     {
-        for (int x = 1; x < suppressed.cols - 1; ++x) 
+        for (int x = 1; x < suppressed.cols - 1; ++x)
         {
             float magnitude = suppressed.at<float>(y, x);
 
-            if (magnitude >= highThresh) 
+            if (magnitude >= highThresh)
             {
                 edges.at<uchar>(y, x) = 255;
             }
-            else if (magnitude >= lowThresh) 
+            else if (magnitude >= lowThresh)
             {
                 bool connectedToStrongEdge = false;
-                for (int j = -1; j <= 1; ++j) 
+                for (int j = -1; j <= 1; ++j)
                 {
-                    for (int i = -1; i <= 1; ++i) 
+                    for (int i = -1; i <= 1; ++i)
                     {
-                        if (suppressed.at<float>(y + j, x + i) >= highThresh) 
+                        if (suppressed.at<float>(y + j, x + i) >= highThresh)
                         {
                             connectedToStrongEdge = true;
                             break;
@@ -202,7 +199,7 @@ cv::Mat doubleThresholdAndEdgeLinking(const cv::Mat& suppressed, float lowThresh
                     }
                     if (connectedToStrongEdge) break;
                 }
-                if (connectedToStrongEdge) 
+                if (connectedToStrongEdge)
                 {
                     edges.at<uchar>(y, x) = 255;
                 }
@@ -213,11 +210,11 @@ cv::Mat doubleThresholdAndEdgeLinking(const cv::Mat& suppressed, float lowThresh
     return edges;
 }
 
-int main() 
+int main()
 {
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) 
+    if (img.empty())
     {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
@@ -263,4 +260,3 @@ int main()
    - `doubleThresholdAndEdgeLinking` 函数应用双阈值检测确定潜在的边缘，并通过抑制孤立的弱边缘，连接强边缘和弱边缘。
 
 好的，让我用更简单的语言来解释为什么在使用Sobel算子计算梯度之后，还需要进行非极大值抑制、双阈值检测和边缘连接。
-

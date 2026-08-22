@@ -1,4 +1,4 @@
-### 获取图像特征点坐标
+# 获取图像特征点坐标
 
 fitPlane和 getPt3DPlane:先拟合标定块平面，然后通过2D特征点，计算出平面上的3D点坐标；
 
@@ -69,9 +69,9 @@ int CloudCorrectClassDlg::FitPlane(CLCloud &mCloud, HTuple &mRows, HTuple &mCols
    这个函数/实现还没有找到
 
 ```
- 
+
 ### 通过点云配准，计算变换矩阵
- 
+
  ![点云配准](image-2.png)
 
 ```shell
@@ -84,22 +84,13 @@ int CloudCorrectClassDlg::FitPlane(CLCloud &mCloud, HTuple &mRows, HTuple &mCols
 1. 点云变换  2.点的仿射变换
 
 ![仿射变换](image-3.png)
- 
+
 ```cpp
    AffineTransPointCloud 的实现没有找到
    HalconCpp::AffineTransPoint3d(mMat, hXs, hYs, hZs, &hDx, &hDy, &hDz);
 
 ```
 
-
-
-
-
-
-
-
 示例：
- 
-若isShow参数为true，计算结束后会弹出点云与目标位置的标定效果，如下图。
- 
 
+若isShow参数为true，计算结束后会弹出点云与目标位置的标定效果，如下图。

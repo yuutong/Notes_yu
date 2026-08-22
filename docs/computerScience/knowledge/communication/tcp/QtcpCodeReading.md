@@ -1,9 +1,11 @@
-## QT源代码阅读
+# QT源代码阅读
 
 ### Qtcpsoccket类：
+
     QTcpSocket类继承自QAbstractSocket，只是简单的定义了一些基本的构造函数和析构函数，构造函数创建一个QTcpSocket对象，初始状态为UnconnectedState。它接受一个可选的父对象指针parent，并将其传递给QObject的构造函数。构造函数还初始化了私有数据成员isBuffered为true。这是为了确保QTcpSocket对象在创建时默认启用缓冲功能。这意味着数据在传输过程中会被缓冲，以提高传输效率和性能。缓冲机制可以减少系统调用的次数，从而提高网络通信的效率。
 
 ### QTcpServer类
+
     QTcpServer类用于创建和管理TCP服务器，提供了监听、接受连接、错误处理网络代理等功能。
     包含了包含了算法、主机地址、列表、指针、抽象套接字引擎、TCP套接字和网络代理等相关类的定义
     1.代理解析函数：用于解析代理设置，根据地址和端口返回合适的代理
@@ -31,8 +33,8 @@
       *setProxy :功能：设置网络代理。逻辑：设置 proxy 的值
       *proxy :回当前使用的网络代理。逻辑：返回 proxy 的值
 
-
 ### 1. `waitForNewConnection` 是做什么的？
+
 `waitForNewConnection` 是 `QTcpServer` 类中的一个成员函数。这个函数会阻塞当前线程，直到有新的连接到来或超时：
 
 ```cpp
@@ -44,15 +46,18 @@ bool QTcpServer::waitForNewConnection(int msec = 0, bool* timedOut = nullptr);
 - `timedOut` 指针用于指示是否因为超时而返回 `false`；如果不需要该信息，可以将其设置为 `nullptr`。
 
 ### 2. `waitForNewConnection` 函数可以用在哪些场景中？
+
 `waitForNewConnection` 通常用于以下场景：
 - **同步服务器设计**：在你希望使用阻塞模式来处理新的连接而不使用信号和槽的异步机制时。
 - **单线程服务器**：在某些简单的单线程服务器实现中，可以使用该方法来等待新连接，然后进行处理。
 - **调试和测试**：在调试和测试环境中，使用该函数可以简化逻辑，便于观察和控制连接的处理过程。
 
 ### 3. `waitForNewConnection` 函数是否会阻塞整个应用进程的执行？
+
 `waitForNewConnection` **会**阻塞当前调用的线程，直到有新的连接到来或超时。这意味着如果在主线程上调用该函数，将会阻塞整个主事件循环的执行。因此，通常在使用时需要小心，尤其在主线程中调用时要格外注意。
 
 #### 解决方案：
+
 为了避免阻塞主线程，可以考虑以下几种方法：
 - **使用子线程**：在子线程中调用 `waitForNewConnection`，从而避免阻塞主线程。
 - **异步处理**：使用 `QTcpServer` 的信号 `newConnection()` 来处理新连接，这样可以避免阻塞。
@@ -62,6 +67,7 @@ connect(server, &QTcpServer::newConnection, this, &YourClass::handleNewConnectio
 ```
 
 ### 4. `waitForNewConnection` 函数返回 `false` 的情况有哪些？
+
 `waitForNewConnection` 返回 `false` 的情况包括但不限于以下几种：
 
 - **超时**：指定的等待时间耗尽，没有新的连接到来。如果传递了 `timedOut` 参数，则该变量会被设置为 `true`。
@@ -117,8 +123,6 @@ int main(int argc, char *argv[])
 
 在这个示例中，`waitForConnections` 方法会持续等待新的连接，并在每个循环中处理连接或处理超时情况。
 
-
-
    1. 在 `waitForConnections` 等待新连接时发生错误的情况主要有：
       - 网络问题，如网络断开或者服务器无法访问。
       - 服务器未正确启动，如 `listen()` 方法未被正确调用或者调用失败。
@@ -128,8 +132,6 @@ int main(int argc, char *argv[])
     2. 在 `waitForConnections` 中设置超时时间，只需要在调用 `waitForNewConnection` 函数时，传入你希望设置的超时时间（单位为毫秒）即可。例如，`waitForNewConnection(5000)` 就是设置超时时间为5秒。
 
     3. 使用 `server.errorString()` 函数可以获取到更多的错误信息。这个函数会返回一个描述最后一次发生的网络错误的字符串。
-
-
 
 ### 几个关于连接的问题
 
@@ -163,36 +165,41 @@ int main(int argc, char *argv[])
 
     - `QWebSocket`：用于处理 WebSocket 连接。WebSocket 是一种在单个 TCP 连接上进行全双工通信的协议。`QWebSocket` 提供了 `sendTextMessage()`、`sendBinaryMessage()` 和 `readMessage()` 等方法来发送和接收数据。
 
-
-
 ##### 几个PendingConnection相关
+
 ###### `hasPendingConnections()`
+
 - **功能**：检查当前是否有挂起的连接等待接受。
 - **签名**：`bool hasPendingConnections() const;`
 - **返回值**：如果有挂起的连接，返回 `true`；否则返回 `false`。
 
 ###### `nextPendingConnection()`
+
 - **功能**：获取下一个挂起的连接。
 - **签名**：`QTcpSocket* nextPendingConnection();`
 - **返回值**：返回一个指向挂起连接的 `QTcpSocket` 对象的指针。如果没有挂起的连接，则返回 `nullptr`。
 - **注意**：调用此函数会返回连接，并将其从挂起列表中移除。
 
 ###### `incomingConnection()`
+
 - **功能**：虚函数，在有新连接到来时调用，实现自定义处理新连接的行为。
 - **签名**：`virtual void incomingConnection(qintptr socketDescriptor);`
 - **参数**：`socketDescriptor` 是标识新连接的套接字描述符。
 
 ###### `addPendingConnection()`
+
 - **功能**：将一个现有的套接字添加到挂起连接队列中。
 - **签名**：`void addPendingConnection(QTcpSocket* socket);`
 - **参数**：`socket` 是指向要添加的 `QTcpSocket` 对象的指针。
 
 ###### `setMaxPendingConnections()`
+
 - **功能**：设置最大可以同时等待的挂起连接数。
 - **签名**：`void setMaxPendingConnections(int numConnections);`
 - **参数**：`numConnections` 是允许的最大挂起连接数。
 
 ###### `maxPendingConnections()`
+
 - **功能**：获取当前设置的最大挂起连接数。
 - **签名**：`int maxPendingConnections() const;`
 - **返回值**：返回最大挂起连接数。
@@ -200,18 +207,23 @@ int main(int argc, char *argv[])
 ##### 2. 函数使用场景
 
 ###### `hasPendingConnections()`
+
 - **场景**：通常在服务器的事件循环中使用，以检查是否有新的未处理连接。例如，当 `newConnection()` 信号发出时，可以使用此函数。
 
 ###### `nextPendingConnection()`
+
 - **场景**：在有挂起连接时，获取并处理这些连接。通常在信号槽机制中使用，例如在处理 `newConnection()` 信号时。
 
 ###### `incomingConnection()`
+
 - **场景**：当你需要自定义处理新连接时，可以重写此虚函数。比如，可以派生一个类，并在其中实现特定的连接处理逻辑。
 
 ###### `addPendingConnection()`
+
 - **场景**：在一些高级用途中，你可能需要手动管理连接。例如，通过socket拆分创建不同类型的连接，然后将它们添加到挂起队列中以便后续处理。
 
 ###### `setMaxPendingConnections()` 和 `maxPendingConnections()`
+
 - **场景**：管理服务器的连接容量。例如，限制服务器只能处理一定数量的挂起连接，以便流量控制或减轻服务器压力。
 
 ##### 3. 阻塞行为
@@ -223,21 +235,27 @@ int main(int argc, char *argv[])
 ##### 4. 函数返回false或其他错误的情况
 
 ###### `hasPendingConnections()`
+
 - **返回 `false` 的情况**：没有挂起的连接。
 
 ###### `nextPendingConnection()`
+
 - **返回 `nullptr` 的情况**：没有挂起的连接。
 
 ###### `incomingConnection()`
+
 - **错误情况**：具体行为取决于函数的重写实现。默认实现不会返回错误，但重写时可能会产生异常。
 
 ###### `addPendingConnection()`
+
 - **错误情况**：如果 `socket` 为 `nullptr` 或已经存在于挂起队列中，可能导致逻辑错误。
 
 ###### `setMaxPendingConnections()`
+
 - **不会返回值**，直接设置参数。
 
 ###### `maxPendingConnections()`
+
 - **不会返回错误**，直接返回配置值。
 
 ###### 示例代码
@@ -274,9 +292,8 @@ int main(int argc, char *argv[]) {
 
 在这个例子中，自定义的 `incomingConnection` 函数被重写，用于处理新的连接。`hasPendingConnections` 和 `nextPendingConnection` 被用来处理挂起的连接。
 
-
-
 ### QTcpServerPrivate类：
+
     采用的是把一个类的私有实现都放在一个单独的类中，然后在公共类中用一个指向这个私有类的指针来访问这些实现。这种模式被称为 Pimpl（"Pointer to implementation"）或者编译器防火墙
     QTcpServerPrivate 的实现通常在 QT 源代码的 qtbase/src/network/socket/qtcpserver_p.h 和 qtcpserver.cpp 文件中。这两个文件分别包含了 QTcpServerPrivate 的声明和定义
 
@@ -295,10 +312,9 @@ int main(int argc, char *argv[]) {
 
     3. `readNotification` 方法是用来处理有数据可读的事件的。当 `QTcpSocket` 对象接收到新的数据时，就会调用这个方法。你可以在这个方法中读取和处理数据。例如，你可以调用 `QTcpSocket` 的 `read()` 或 `readAll()` 方法来读取数据。
 
+### QSctpSocket类
 
-
-### QSctpSocket类 
-     QTcpSocket 的公开继承类。这个类提供了一些用于处理 SCTP（流控制传输协议）套接字的方法，列方法显示了 QSctpSocket 类是如何管理其底层连接的，包括读写数据报、通道管理以及错误处理等。结合这些方法可以实现对 SCTP 协议的支持，并且允许在多通道模式下进行高级别的网络传输。   
+     QTcpSocket 的公开继承类。这个类提供了一些用于处理 SCTP（流控制传输协议）套接字的方法，列方法显示了 QSctpSocket 类是如何管理其底层连接的，包括读写数据报、通道管理以及错误处理等。结合这些方法可以实现对 SCTP 协议的支持，并且允许在多通道模式下进行高级别的网络传输。
 
     - 构造函数：`QSctpSocket(QObject *parent = nullptr)`。这是一个显式构造函数，接受一个 QObject 指针作为其父对象。
 
@@ -326,7 +342,7 @@ int main(int argc, char *argv[]) {
     - 网络连接中断：如果网络连接被中断，数据报将无法发送。
     - 数据报过大：如果数据报的大小超过了网络的最大传输单元（MTU），那么数据报可能无法成功发送。
     - 套接字未连接：如果套接字未连接到任何主机，那么无法发送数据报。
-    - 系统资源不足：如果系统资源（如内存）不足，那么可能无法创建或发送数据报。   
+    - 系统资源不足：如果系统资源（如内存）不足，那么可能无法创建或发送数据报。
     当 `writeDatagram` 函数失败时，它会返回 `false`，并且可以通过 `QSctpSocket` 类的 `error()` 函数来获取更具体的错误信息。
     4. `QSctpSocket` 从 `QTcpSocket` 继承了以下用于读取和写入网络数据包的函数：
     - `write(const char *data, qint64 maxSize)`：将数据写入套接字。返回实际写入的字节数。如果没有错误发生，返回的值将等于 maxSize；否则返回 -1。
@@ -339,6 +355,7 @@ int main(int argc, char *argv[]) {
     6. 如果数据报过大，超过了网络的最大传输单元（MTU），你需要在应用层手动将数据报分割为多个较小的数据报。例如，你可以将大的数据报分割为多个小的字节数组，然后对每个字节数组调用 `writeDatagram` 函数。注意，接收端也需要进行相应的处理，以便正确地重新组装数据报。
 
 ### 分析 QSctpSocket.cpp源码
+
     包含QSctpSocketPrivate 类的函数实现
     1.canReadNotification：处理数据报的读取，在数据到来时进行处理。如果超时或连接关闭则设置错误状态。
     逻辑：调用 socketEngine->readDatagram 读取数据，如果读取成功则将数据存储在 readBuffers 中，并在 header.endOfRecord 标志位为真时处理完整的数据报。
@@ -349,6 +366,7 @@ int main(int argc, char *argv[]) {
     代码末尾禁用写通知，除非处于 ClosingState 状态。
 
 #####  QSctpSocket 类：
+
      1.readData：从当前读通道读取数据。
      逻辑：清除当前读通道的头部信息，然后调用基类 QTcpSocket::readData 函数
      2.从当前读通道读取一行数据。
@@ -366,14 +384,13 @@ int main(int argc, char *argv[]) {
     检查数据报是否为空，如果为空则返回 false。
     将数据报的头部信息加入头部队列，将数据加入缓冲区。
     启用写通知，并返回 true 表示操作成功。
-**QSctpSocket 道和模式相关方法**    
+**QSctpSocket 道和模式相关方法**
    *setMaximumChannelCount：设置最大通道数量。
    逻辑：只能在套接字处于未连接状态时设置。将 count 值与最小值 -1 比较取最大值，并赋值给 maximumChannelCount。
    *isInDatagramMode：检查当前套接字是否处于数据报模式。
     逻辑：返回一个布尔值，只有 maximumChannelCount 不等于 -1 且 isBuffered 为 true 时为真。
    *configureCreatedSocket：配置已创建的套接字。
     逻辑：设置套接字引擎的 MaxStreamsSocketOption 选项，根据 maximumChannelCount 的值来决定使用的通道数
-
 
 ### QStcpServer类：
 
@@ -408,11 +425,11 @@ int main(int argc, char *argv[]) {
 - `void setMaximumChannelCount(int count);`
   - **功能**：设置最大通道数量。
   - **参数**：`count` 表示最大通道数量。
-  
+
 - `int maximumChannelCount() const;`
   - **功能**：返回最大通道数量。
   - **返回值**：整型表示最大通道数量。
-  
+
 - `QSctpSocket *nextPendingDatagramConnection();`
   - **功能**：获取下一个待处理的数据报连接。
   - **返回值**：指向 `QSctpSocket` 对象的指针。
@@ -449,12 +466,12 @@ int main(int argc, char *argv[]) {
 
 综上所述，`QSctpServer` 类通过继承和扩展 `QTcpServer`，为其增加了对 SCTP 协议的支持。关键函数如 `setMaximumChannelCount` 和 `nextPendingDatagramConnection` 帮助开发者有效地管理和处理多通道 SCTP 连接。
 
-
 ### `QAbstractSocket` 类分析
 
 `QAbstractSocket` 是一个抽象类，继承自 `QIODevice`，用于处理网络套接字的基本操作。它定义了多种枚举类型、信号和槽函数，以及一系列虚函数，供具体的套接字类（如 `QTcpSocket` 和 `QUdpSocket`）继承和实现。
 
 #### 枚举类型
+
 - **SocketType**：定义了套接字的类型，包括 `TcpSocket`、`UdpSocket`、`SctpSocket` 和 `UnknownSocketType`。
 - **NetworkLayerProtocol**：定义了网络层协议，包括 `IPv4Protocol`、`IPv6Protocol`、`AnyIPProtocol` 和 `UnknownNetworkLayerProtocol`。
 - **SocketError**：定义了套接字可能遇到的错误类型，如 `ConnectionRefusedError`、`RemoteHostClosedError`、`HostNotFoundError` 等。
@@ -464,10 +481,12 @@ int main(int argc, char *argv[]) {
 - **PauseMode**：定义了暂停模式，如 `PauseNever` 和 `PauseOnSslErrors`。
 
 #### 构造函数和析构函数
+
 - **QAbstractSocket(SocketType socketType, QObject *parent)**：构造函数，初始化套接字类型和父对象。
 - **virtual ~QAbstractSocket()**：虚析构函数，销毁套接字对象。
 
 #### 主要成员函数
+
 - **resume()**：继续操作，如代理认证或SSL错误后继续。
 - **PauseModes pauseMode() const**：返回当前的暂停模式。
 - **void setPauseMode(PauseModes pauseMode)**：设置暂停模式。
@@ -505,6 +524,7 @@ int main(int argc, char *argv[]) {
 - **virtual bool waitForDisconnected(int msecs = 30000)**：等待断开连接，最多等待指定毫秒数。
 
 #### 信号
+
 - **void hostFound()**：主机找到信号。
 - **void connected()**：连接成功信号。
 - **void disconnected()**：断开连接信号。
@@ -513,6 +533,7 @@ int main(int argc, char *argv[]) {
 - **void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *authenticator)**：代理认证信号。
 
 #### 保护成员函数
+
 - **qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE**：读取数据。
 - **qint64 readLineData(char *data, qint64 maxlen) Q_DECL_OVERRIDE**：读取一行数据。
 - **qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE**：写入数据。
@@ -525,13 +546,16 @@ int main(int argc, char *argv[]) {
 - **void setPeerName(const QString &name)**：设置对等主机名。
 
 #### 私有成员函数
+
 - **Q_DECLARE_PRIVATE(QAbstractSocket)**：声明私有数据成员。
 - **Q_DISABLE_COPY(QAbstractSocket)**：禁用拷贝构造函数和赋值操作符。
 
 #### 总结
+
 `QAbstractSocket` 类提供了一个抽象接口，用于处理网络套接字的基本操作。它定义了多种枚举类型、信号和槽函数，以及一系列虚函数，供具体的套接字类（如 `QTcpSocket` 和 `QUdpSocket`）继承和实现。通过这些接口，开发者可以方便地进行网络通信操作。
 
 ### bind()函数：
+
    `bind()` 函数在 `QAbstractSocket` 类中用于将套接字绑定到指定的地址和端口。这个操作通常在服务器端套接字中使用，以便监听来自特定地址和端口的连接请求。
     ```cpp
     bool bind(const QHostAddress &address, quint16 port = 0, BindMode mode = DefaultForPlatform);
@@ -564,43 +588,3 @@ int main(int argc, char *argv[]) {
     绑定到特定地址：可以使用具体的 QHostAddress 对象来绑定到特定的IP地址。
     绑定到任何端口：可以将端口参数设置为 0，这样系统会自动选择一个可用的端口。
     绑定到特定端口：可以指定一个具体的端口号来绑定。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

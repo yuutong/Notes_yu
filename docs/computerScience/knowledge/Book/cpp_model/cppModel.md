@@ -1,8 +1,8 @@
-## 模型的设计思路和演化
+# 模型的设计思路和演化
 
 ### 1.简单对象模型：
 
-![alt text](image-1.png)
+![简单对象模型](Chapter_1/image-1.png)
 
 * 将对象的内存空间分成很多个块，每个块都存一个指向其data Member 或者 function member
 也就是说，数据和函数用相同的容器去装。<br>
@@ -11,10 +11,9 @@
 这样做虽然具有一致性，但是要求每一个容器都要大于等于最大的函数所占的空间，这显然不合理<br>
 所以只有 这里的 **索引方式** 被 C++模型采用了， 指向成员的指针（pointer to membr) 就是这样设计的
 
-
 ### 2.表格驱动的模型：
 
- ![alt text](image-2.png)
+![表格驱动的对象模型](Chapter_1/image-2.png)
 
 *将data member 和 function member 用两个表分开存储 <br>
 data member table直接存数据成员， function member table 存函数成员的指针，通过指针可以在内存中找到函数的具体实现<br>
@@ -26,10 +25,9 @@ data member table直接存数据成员， function member table 存函数成员�
 
 所以这里的 **表格多级索引方式**  被 C++应用在虚函数的构建中
 
-
 ### 3. C++对象模型
 
-![alt text](image-3.png)
+![C++ 对象模型](Chapter_1/image-3.png)
 
 C++有两类 data member：静态和非静态<br>
 有三类function member：静态，非静态 和 虚函数
@@ -45,16 +43,4 @@ C++有两类 data member：静态和非静态<br>
 
 在虚基类实例化阶段， A* interface =  new C(); 在虚基类A实例化虚函数类C时，C的构造函数会设置vptr指向C的虚表（vtbl）
 
-
 **缺点**：将 nonstatic data member 直接放到对象中的话，如果类中 nonstatic data member 修改，那么程序就需要重新编译
-
-
-
-
-
-
-
-
-
-
-

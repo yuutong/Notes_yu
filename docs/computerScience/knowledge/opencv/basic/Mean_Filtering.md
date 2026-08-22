@@ -1,9 +1,8 @@
-#### 概念
+# 概念
 
 均值滤波是一种线性平滑滤波方法，通过将每个像素的值替换为其邻域内像素值的平均值来减少噪声。假设有一个  k * k  的滤波窗口，均值滤波公式如下：
 
 ![均值滤波](image-3.png)
-
 
 其中：
 -  I(x, y)  是原图像在 (x, y) 位置的像素值
@@ -38,26 +37,25 @@
   -  j = 0  表示 (x, y)
   -  j = 1  表示 (x, y+1)
 
-
 #### 代码实现
 
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-cv::Mat meanFilter(const cv::Mat& src, int kernelSize) 
+cv::Mat meanFilter(const cv::Mat& src, int kernelSize)
 {
     cv::Mat dst = src.clone();
     int radius = kernelSize / 2;
 
-    for (int y = radius; y < src.rows - radius; ++y) 
+    for (int y = radius; y < src.rows - radius; ++y)
     {
-        for (int x = radius; x < src.cols - radius; ++x) 
+        for (int x = radius; x < src.cols - radius; ++x)
         {
             float sum = 0.0;
-            for (int dy = -radius; dy <= radius; ++dy) 
+            for (int dy = -radius; dy <= radius; ++dy)
             {
-                for (int dx = -radius; dx <= radius; ++dx) 
+                for (int dx = -radius; dx <= radius; ++dx)
                 {
                     sum += src.at<uchar>(y + dy, x + dx);
                 }
@@ -69,10 +67,10 @@ cv::Mat meanFilter(const cv::Mat& src, int kernelSize)
     return dst;
 }
 
-int main() 
+int main()
 {
     cv::Mat src = cv::imread("path_to_your_image.jpg", cv::IMREAD_GRAYSCALE);
-    if (src.empty()) 
+    if (src.empty())
     {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
@@ -93,7 +91,6 @@ int main()
 
 - *滤波窗口的尺寸 `kernelSize`*：在上述代码中，我们使用尺寸为 3 的滤波窗口
 - *遍历图像的每个像素*：对于每个像素 (x, y)，我们遍历其周围的像素范围
-- *累加范围*：使用两个嵌套的循环 `for (int dy = -radius; dy <= radius; ++dy)` 和 
+- *累加范围*：使用两个嵌套的循环 `for (int dy = -radius; dy <= radius; ++dy)` 和
              `for (int dx = -radius; dx <= radius; ++dx)` 来累加当前像素及其周围像素的值
 - *计算均值*：累加完所有像素值后，计算均值并将结果赋值给目标图像
-

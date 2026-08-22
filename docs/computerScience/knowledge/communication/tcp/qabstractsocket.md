@@ -1,4 +1,5 @@
-### qabstractsocket类
+# qabstractsocket类
+
 在Qt中，`QAbstractSocket`类提供了TCP和UDP套接字的功能。下面我们来分析`waitForReadyRead`, `waitForBytesWritten`, 和`waitForDisconnected`等方法的实现，以及`abort`方法，这些方法是`QAbstractSocket`的核心功能之一。
 
 您提供的代码片段是Qt网络编程中`QAbstractSocket`类的一部分，这个类是Qt网络模块的核心，提供了TCP和UDP客户端的功能。我将逐步分析这个代码的关键部分，帮助您理解其作用和结构。
@@ -32,8 +33,6 @@
 
 这段代码是`QAbstractSocket`的私有实现部分，涵盖了套接字的初始化、连接、读写数据、错误处理等核心功能。通过这些功能，`QAbstractSocket`为Qt应用程序提供了网络通信的能力。代码使用了Qt的信号和槽机制来处理异步网络事件，如数据到达和连接状态变化，确保网络通信的高效和响应性。
 
-
-
 在`QAbstractSocketPrivate`的实现中，`canReadNotification`函数负责处理数据读取。这个函数是当底层套接字指示有数据可读时被触发的。具体来说，它的工作流程如下：
 
 1. **检查缓冲区**：首先，函数会检查是否启用了缓冲（`isBuffered`标志）。如果启用了缓冲，函数会尝试从套接字读取数据到缓冲区中。如果缓冲区已满（达到`readBufferMaxSize`限制），则会暂时停止读取并等待下一次读取机会。
@@ -47,17 +46,6 @@
 5. **递归读取处理**：`canReadNotification`还能处理递归调用的情况。这意味着在处理读取事件时，如果再次触发了读取事件（例如，通过`readyRead`信号槽中的代码），`canReadNotification`能够正确地管理这种情况。
 
 总的来说，`canReadNotification`函数是`QAbstractSocketPrivate`数据读取逻辑的核心，它负责管理从套接字到应用程序的数据流。通过检查缓冲区状态、实际读取数据，并根据读取结果发出通知，这个函数确保了数据能够高效且正确地从网络传输到应用程序。
-
-
-
-
-
-
-
-
-
-
-
 
 `canReadNotification`函数判断是否有新数据可读的逻辑主要依赖于两个方面：
 
@@ -116,10 +104,7 @@
 
 这部分代码非常关键，它涵盖了`QAbstractSocket`类的核心功能，包括连接管理、数据传输和信号发射等。通过这些实现，`QAbstractSocket`为Qt应用程序提供了一个强大且灵活的网络通信能力。
 
-
 在`QAbstractSocket`类的实现中，`hostLookupId`变量用于跟踪主机名查找（DNS解析）的进程。当你请求连接到一个主机名（例如，通过`connectToHost`函数），Qt会首先需要将这个主机名解析成一个或多个IP地址，这个解析过程是异步的。`hostLookupId`就是这个异步查找操作的唯一标识符。
-
-
 
 ### `hostLookupId`的作用包括：
 
@@ -134,6 +119,7 @@
 当调用`connectToHost`函数时，如果提供的是一个主机名而不是IP地址，`QAbstractSocket`会启动一个异步的主机名查找操作。这个查找操作通过`QHostInfo::lookupHost`函数启动，而`hostLookupId`就是这个查找操作的返回值。在查找完成时，Qt会调用一个预先指定的槽函数（如`_q_startConnecting`），并通过`QHostInfo`对象传递查找结果。在这个槽函数内部，通过比较传入的`QHostInfo`对象的`lookupId()`方法返回的值与`hostLookupId`变量的值，`QAbstractSocket`可以确认这个查找结果是否是当前连接请求所期待的。
 
 通过这种方式，`hostLookupId`帮助`QAbstractSocket`管理和处理异步的主机名查找过程，确保网络连接流程的正确性和有效性。
+
 ### _q_connectToNextAddress函数延迟连接处理
 
 在`_q_connectToNextAddress`函数中，如果一个连接请求没有立即成功（例如，因为它正在等待网络响应），那么将会启动一个定时器，这个定时器负责在给定的超时时间后触发连接的中止。这是通过以下步骤实现的：
@@ -161,7 +147,6 @@
 ### 使用hostLookupId取消主机名查找操作
 
 如果用户取消了连接操作或者开始了一个新的连接请求，在新请求开始之前，需要取消之前可能还在进行的查找操作，以避免无关的查找结果影响到新的连接流程。这时候可以调用`QHostInfo::abortHostLookup`函数并传入`hostLookupId`来取消查找。这通常发生在用户调用`abort`或者`close`函数时，或者在发起一个新的连接请求之前。
-
 
 ### waitForReadyRead(int msecs)
 
@@ -211,7 +196,7 @@
 
    - 如果在等待期间，套接字变为可读（`readyToRead`）或可写（`readyToWrite`），则会分别调用`canReadNotification`和`canWriteNotification`处理读写事件。这可能涉及读取套接字接收到的最后数据或完成最后的数据发送。
    - 如果套接字在等待过程中已经断开连接（状态变为`UnconnectedState`），则方法返回`true`，表示断开操作成功。
-   
+
 4. **处理超时和错误**：如果在指定的超时时间内套接字仍未断开连接，或者在等待过程中发生错误（例如，套接字出现读写错误），则`waitForDisconnected`方法会将套接字的错误状态设置为相应的错误，并可能关闭套接字，最终返回`false`。
 
 总结来说，`waitForDisconnected`方法通过循环等待套接字状态变化，来实现同步等待套接字断开连接的功能。在等待过程中，它会处理连接完成、读写事件和超时情况，直到套接字成功断开或者发生错误为止。
@@ -253,9 +238,6 @@
 3. **断开连接失败或超时**：如果在等待期间发生错误或者超过了超时时间，套接字可能会因为错误而关闭，并且状态也会设置为`UnconnectedState`。但是如果是超时的情况，套接字可能仍然处于`ConnectedState`或`ClosingState`，具体取决于错误的性质和`waitForDisconnected`方法的实现。
 
 总结来说，`waitForDisconnected`方法主要是为了等待套接字断开连接，它会在等待期间处理套接字发生的错误，并在成功断开连接后更新套接字的状态。在等待断开连接的过程中，应避免进行写操作，因为这可能会与断开连接的操作冲突。
-
-
-
 
 `QAbstractSocket`类是Qt网络模块的基础，提供了TCP和UDP套接字的通用接口。这个类封装了网络编程中常见的功能，以下是`QAbstractSocket`类中一些最重要的函数：
 
@@ -313,14 +295,11 @@
 
 阅读`QAbstractSocket`类的源代码时，重要的是结合Qt官方文档来理解这些函数的行为和预期用途，同时也可以通过实际编写和运行代码来加深理解。Qt社区和官方论坛也是获取信息和解决疑惑的好地方。
 
-
-
 QAbstractSocket中：localAddress()和peerAddress()函数有什么作用
 QAbstractSocke如何处理超时的情况
 
-
-
 ### 阻塞函数有哪些：
+
    阻塞函数是指那些在执行期间暂停程序执行，直到某个条件满足或超时发生的函数。以下是`QAbstractSocket`中的阻塞函数：
 
     1. **waitForConnected()**: 等待一个网络连接成功建立或者超时。这个函数在尝试连接到主机时使用。
@@ -353,12 +332,6 @@ QAbstractSocke如何处理超时的情况
 4. **定时器和事件循环**：在一些场景下，可以使用`QTimer`来周期性地检查某个条件是否满足，而不是使用阻塞函数等待。这种方法允许事件循环继续运行，避免了GUI的冻结。
 
 通过采取上述策略，可以有效地避免阻塞操作导致GUI冻结或响应性差，从而提高应用程序的用户体验。在设计网络通信功能时，推荐优先考虑使用异步操作和信号槽机制。
-
-
-
-
-
-
 
 请介绍一种快速标定三维激光扫描仪内参数的方法
 如何进行三维激光扫描仪与激光雷达的外参标定

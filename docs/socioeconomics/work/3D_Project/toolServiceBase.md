@@ -1,11 +1,13 @@
+# toolServiceBase
 
 ```cpp
 #-------------------------------------------------
 #
+
 # CLToolServiceBase
+
 #
 #-------------------------------------------------
-
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 QT += widgets sql
@@ -43,7 +45,7 @@ else{
     DEFINES += ubuntu20
 }
 INCLUDEPATH +=/root/Work/3D/CLV3D/CLVisionBase
-INCLUDEPATH += /root/Work/3D/CLV3D/ROIExpand 
+INCLUDEPATH += /root/Work/3D/CLV3D/ROIExpand
 
 LIBS += /usr/local/lib/baselib/libCLVisionBase.so
 LIBS += /usr/local/lib/baselib/libROIExpand.so
@@ -72,18 +74,20 @@ RESOURCES += \
     ICO.qrc
 ```
 
-
 其中包含了项目的配置信息、源文件、头文件、库依赖、Qt 版本检测等部分。可以处理一个跨版本支持的项目，目标平台是 Ubuntu 14 和 Ubuntu 20，并且依赖了多个外部库如 Halcon、PCL 和 Qt。
 
 #### 1. Qt 版本判断
+
 这个文件检测 Qt 的版本，如果低于 5.10 则定义 `ubuntu14`，否则定义 `ubuntu20`。这用于在不同的系统版本下编译不同的代码逻辑。
-   
+
 #### 2. 头文件和库路径设置
+
 根据不同的操作系统版本，添加不同的包含路径和库路径，比如：
    - Ubuntu 14：包含了 PCL 库的路径 `/usr/local/include/pcl-1.8`。
    - Ubuntu 20：添加了 Halcon 库的路径 `/var/pvt/.pvt/include`。
 
 #### 3. 库依赖
+
 项目依赖多个外部库，如：
 
 ```shell
@@ -91,7 +95,7 @@ RESOURCES += \
    - Halcon 视觉库 (`-lhalcon -lhalconcpp`)
    - PCL（在 Ubuntu 14 中）
 ```
+
 #### 4.编译选项
+
 针对 Ubuntu 20，忽略关于隐式声明的弃用警告 (`-Wno-deprecated-copy`)。
-
-

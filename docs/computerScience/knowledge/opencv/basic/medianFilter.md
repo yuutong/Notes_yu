@@ -1,5 +1,5 @@
+# 数学原理
 
-#### 数学原理
 中值滤波的基本思想是用图像局部区域的中值来替换该区域中心像素的值，从而减少噪声的影响。
 
 1. *选择滤波窗口*：通常是一个奇数大小的矩形窗口（如3x3、5x5等）。<br>
@@ -81,21 +81,21 @@
 #include <algorithm>
 
 // 中值滤波实现
-cv::Mat medianFilter(const cv::Mat& src, int kernelSize) 
+cv::Mat medianFilter(const cv::Mat& src, int kernelSize)
 {
     int radius = kernelSize / 2;
     cv::Mat dst = src.clone();
 
-    for (int y = radius; y < src.rows - radius; ++y) 
+    for (int y = radius; y < src.rows - radius; ++y)
     {
-        for (int x = radius; x < src.cols - radius; ++x) 
+        for (int x = radius; x < src.cols - radius; ++x)
         {
             std::vector<uchar> neighborhood;
 
             // 遍历窗口内的所有像素
-            for (int dy = -radius; dy <= radius; ++dy) 
+            for (int dy = -radius; dy <= radius; ++dy)
             {
-                for (int dx = -radius; dx <= radius; ++dx) 
+                for (int dx = -radius; dx <= radius; ++dx)
                 {
                     neighborhood.push_back(src.at<uchar>(y + dy, x + dx));
                 }
@@ -113,11 +113,11 @@ cv::Mat medianFilter(const cv::Mat& src, int kernelSize)
     return dst;
 }
 
-int main() 
+int main()
 {
     // 读取灰度图像
     cv::Mat src = cv::imread("path_to_your_image.jpg", cv::IMREAD_GRAYSCALE);
-    if (src.empty()) 
+    if (src.empty())
     {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
@@ -142,4 +142,3 @@ int main()
 3. *提取邻域像素值*：在每个像素点处提取邻域内的所有像素值。<br>
 4. *排序并取中值*：对这些值进行排序，并取中间值作为新的像素值。<br>
 5. *赋值*：将中值赋给新的图像。<br>
-

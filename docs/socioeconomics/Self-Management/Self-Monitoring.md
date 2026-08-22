@@ -1,8 +1,8 @@
+# Self Monitoring
+
 1.Talking to oneself when facing difficulties in doing things
 
 2.Habitually saying "I made a mistake, I'm sorry" when feeling nervous or anxious
-
-
 
 #### correction
 

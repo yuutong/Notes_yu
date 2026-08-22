@@ -1,3 +1,5 @@
+# Adaptive Threshold
+
 *普通阈值分割*是指使用一个全局的阈值将图像分为前景和背景。这个阈值是固定的，对整个图像都适用。
 
 - 假设我们有一张灰度图像，我们选择一个阈值 T。<br>
@@ -28,7 +30,6 @@
 2. *分割公式*：
 
   ![阈值分割](image-3.png)
- 
 
 #### 代码实现
 
@@ -37,26 +38,26 @@
 #include <opencv2/opencv.hpp>
 
 // 自适应阈值分割
-cv::Mat adaptiveThreshold(const cv::Mat& src, int windowSize, int C) 
+cv::Mat adaptiveThreshold(const cv::Mat& src, int windowSize, int C)
 {
     cv::Mat dst = cv::Mat::zeros(src.size(), CV_8U);
     int halfWindowSize = windowSize / 2;
 
-    for (int y = 0; y < src.rows; ++y) 
+    for (int y = 0; y < src.rows; ++y)
     {
-        for (int x = 0; x < src.cols; ++x) 
+        for (int x = 0; x < src.cols; ++x)
         {
             int sum = 0;
             int count = 0;
 
-            for (int j = -halfWindowSize; j <= halfWindowSize; ++j) 
+            for (int j = -halfWindowSize; j <= halfWindowSize; ++j)
             {
-                for (int i = -halfWindowSize; i <= halfWindowSize; ++i) 
+                for (int i = -halfWindowSize; i <= halfWindowSize; ++i)
                 {
                     int ny = y + j;
                     int nx = x + i;
 
-                    if (ny >= 0 && ny < src.rows && nx >= 0 && nx < src.cols) 
+                    if (ny >= 0 && ny < src.rows && nx >= 0 && nx < src.cols)
                     {
                         sum += src.at<uchar>(ny, nx);
                         ++count;
@@ -66,11 +67,11 @@ cv::Mat adaptiveThreshold(const cv::Mat& src, int windowSize, int C)
 
             int localThreshold = sum / count - C;
 
-            if (src.at<uchar>(y, x) >= localThreshold) 
+            if (src.at<uchar>(y, x) >= localThreshold)
             {
                 dst.at<uchar>(y, x) = 255;
-            } 
-            else 
+            }
+            else
             {
                 dst.at<uchar>(y, x) = 0;
             }
@@ -80,11 +81,11 @@ cv::Mat adaptiveThreshold(const cv::Mat& src, int windowSize, int C)
     return dst;
 }
 
-int main() 
+int main()
 {
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) 
+    if (img.empty())
     {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
@@ -109,4 +110,3 @@ int main()
 自适应阈值分割：
    - `adaptiveThreshold` 函数遍历图像中的每个像素，计算其周围窗口内的平均值减去常数 C作为该像素的局部阈值。
    - 如果像素的灰度值大于或等于这个局部阈值，则将该像素设为255（白色）；否则设为0（黑色）。
-

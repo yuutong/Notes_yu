@@ -1,5 +1,2 @@
 * [返回](../README.md)
-* [Annaconda指令](./Annaconda/)
-
-
-
+* [Anaconda 指令](./Anaconda/)

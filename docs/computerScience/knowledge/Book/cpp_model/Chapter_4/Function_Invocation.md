@@ -1,4 +1,4 @@
-## 非静态成员函数调用
+# 非静态成员函数调用
 
 C++的设计准则之一：nonstatic member function 调用至少必须和一般的nonmember function有相同的效率。那么怎样才能做到呢？<br>
 答案是编译器内部将“member函数实例”转换为对等的“nonmember函数实例”​,下面是转换步骤：
@@ -25,6 +25,7 @@ float Point3d::magnitude(Pointd *const this)
 }
 
 ```
+
 编译器将函数原型参数中插入一个this指针，然后对于非静态数据成员的操作都改为使用this指针来完成。
 
 ### 2.编译器对函数名称做唯一性处理
@@ -54,11 +55,13 @@ public:
     float x_5PointFv();
 }
 ```
+
 对函数重命名是编译器内部做的事，编译错误消息使用的函数名称仍然是程序源码中的函数名称，但是编译完成之后，链接器使用的是经过重命名的内部函数名称
 
 ## 虚成员函数调用
 
 ### 1.通过动态绑定机制调用
+
 通过vptr和虚表动态绑定，是**虚函数的默认调用机制**，调用虚函数时，需通过两次间接寻址<br>
 * a.通过vptr找到虚表<br>
 * b.通过虚表索引找到函数地址-->调用<br>
@@ -69,13 +72,13 @@ public:
 Point3d *ptr = &obj;
 ptr->normalize();
 
-//内部转换 
+//内部转换
 (*(ptr->vptr[index]))(ptr)
 
 ```
+
 * a.index是normalize函数在虚表中的索引值<br>
 * b.第二个ptr表示this指针<br>
-
 
 ### 2.绕过虚表通过静态绑定方式调用
 
@@ -90,6 +93,7 @@ void Point3d::normalize()
     //转换成Point3d::magnitude(this) 直接静态绑定
 }
 ```
+
 b.通过对象直接调用<br>
 无需查找虚表，只能绑定一个类的实现<br>
 
@@ -109,11 +113,11 @@ float len = sqrt(obj.x * obj.x + obj.y * obj.y);
 ```
 
 #### 1).静态多态
+
 通过编译时的类型推导或模板机制实现多态行为，无需运行时类型信息或虚函数表（vtbl）
 
 * a.函数重载(Function Overloading)<br>
     同一作用域内定义多个同名函数，通过参数类型或个数区分。编译器会根据实参类型在编译时选择匹配的函数
-
 
 * b.运算符重载(Operator Overloading)<br>
     为自定义类型定义运算符。运算符的规则在编译时已经确定
@@ -140,10 +144,11 @@ T max(T a,T b)
 }
 
 int m1 = max(3,5);          //实例化max(int)
-double m2 = max(3.23,2.69); //实例化max(double)  
+double m2 = max(3.23,2.69); //实例化max(double)
 ```
 
 #### 2).静态绑定
+
 又称早期绑定，在编译时确定函数调用的具体地址，无需动态查找<br>
 
 ```cpp
@@ -163,8 +168,8 @@ public:
 Base* obj = new Derived();
 obj->func();  //输出Base::func（静态绑定，调用Base::func）
 ```
-无需运行时动态查找，没有运行时间接寻址开销，无法根据运行时对象类型调整行为<br>
 
+无需运行时动态查找，没有运行时间接寻址开销，无法根据运行时对象类型调整行为<br>
 
 ## 静态成员函数调用
 
@@ -185,6 +190,7 @@ public:
     static void staticMemberFunc() {}
 };
 ```
+
 上述的特性使它和非成员函数很相似,于是：<br>
 * a.兼容C，C语言库（如X Window系统）通常要求回调函数为普通函数指针，无法直接使用C++的非静态成员函数（因隐含this指针）
 * b. 回调逻辑仍封装在类内部,可以过参数间接访问对象实例
@@ -203,5 +209,3 @@ public:
 GUIHandler handler;
 register_callback(GUIHandler::handleEvent, &handler);
 ```
-
-

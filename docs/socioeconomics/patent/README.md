@@ -1,5 +1,3 @@
-## 自省自修
+# 自省自修
 
 > Cultivate keen thinking and Think independently
-
-

@@ -1,4 +1,4 @@
-## C++在加上类的封装之后，布局成本增加了吗？
+# C++在加上类的封装之后，布局成本增加了吗？
 
 ### C语言处理数据和函数
 
@@ -21,11 +21,9 @@ void Point3d_print(const Point3d *pd)
 	printf("( %g, %g,%g) ", pd->x, pd->y, pd->z);
 }
 
-
 //1.打印点数据
 #define Point3d_print( pd ) \
 	printf( "( %g, %g,%g) ", pd->x, pd->y, pd->z );
-
 
 void my_foo()
 {
@@ -39,7 +37,6 @@ void my_foo()
 	pt.x = 0.0;
 
 }
-
 
 //2. 设置点数据
 #define X( p,xval ) (p.x) = ( xval );
@@ -57,6 +54,7 @@ void my_foo()
 下面是C++对于Pointe3d的构建方式：
 
 #### 1.直接实现
+
 ```cpp
 
  // C++
@@ -94,7 +92,6 @@ void my_foo()
 
 };
 
-
  inline ostream & operator << (ostream &os, const Point3d &pt)
  {
 	 os << "(" << pt.x() << ","
@@ -105,7 +102,7 @@ void my_foo()
 #### 2.多重继承的方式实现
 
 ```cpp
- 
+
  class Point {
  public:
 	 Point(float x = 0.0) : m_x(x)
@@ -185,9 +182,7 @@ void my_foo()
 	 type m_y;
 	 type m_z;
 
-
  };
-
 
  template < class type, int dim >
  class Point
@@ -248,11 +243,11 @@ void my_foo()
 
 ```c
 
-void point3d_set(struct Point3d* this, float a, float b, float c) 
-{ 
-  this->x = a; 
-  this->y = b; 
-  this->z = c; 
+void point3d_set(struct Point3d* this, float a, float b, float c)
+{
+  this->x = a;
+  this->y = b;
+  this->z = c;
 }
 ```
 

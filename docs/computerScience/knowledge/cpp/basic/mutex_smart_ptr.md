@@ -1,4 +1,5 @@
-### 解释一下C++中的RAII（Resource Acquisition Is Initialization）以及作用
+# 解释一下C++中的RAII（Resource Acquisition Is Initialization）以及作用
+
 RAII是一种管理资源的方法，将资源的获取与对象的生命周期绑定在一起。<br>
 资源的获取和释放分别在对象的构造函数和析构函数中进行。当对象创建时获取资源，当对象销毁时释放资源。<br>
 RAII的主要作用是避免资源泄漏，尤其是在异常处理的情况下。<br>
@@ -118,7 +119,7 @@ int main() {
 
 在这个例子中，`std::lock_guard`会在作用域结束时自动释放锁，确保`shared_data`的操作是线程安全的。
 
-### `std::lock_guard` 和 `std::unique_lock` 
+### `std::lock_guard` 和 `std::unique_lock`
 
 `std::lock_guard` 和 `std::unique_lock` 是C++标准库中用于管理互斥锁（mutex）的两种工具。<br>
 它们的主要作用是确保在多线程环境中对共享资源的安全访问，避免数据竞争。<br>
@@ -229,14 +230,7 @@ int main() {
   cv.wait(lock, []{ return some_condition; });
   ```
 
-
 `std::lock_guard` 和 `std::unique_lock` 都是用于管理锁的工具，确保对共享资源的访问是线程安全的。<br>
 
 - *`std::lock_guard`*：简单易用，适用于需要自动锁定和解锁的情况。<br>
 - *`std::unique_lock`*：功能更强大和灵活，适用于需要手动控制锁定和解锁、以及使用条件变量的情况。<br>
-
-
-
-
-
-

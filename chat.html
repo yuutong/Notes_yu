@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="与瑜的 Markdown 知识库对话，并追溯每条答案的笔记来源。">
+  <title>问问我的知识库</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">瑜</div>
+        <div>
+          <strong>Notes_yu</strong>
+          <span>个人知识助手</span>
+        </div>
+      </div>
+
+      <button class="new-chat" id="new-chat" type="button"><span aria-hidden="true">＋</span> 新对话</button>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">最近对话</p>
+        <div class="history-list" id="history-list"></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="./" class="quiet-link">浏览全部笔记 <span aria-hidden="true">↗</span></a>
+        <div class="connection" id="connection">
+          <span class="status-dot"></span>
+          <span>正在连接知识库…</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="chat-main">
+      <header class="topbar">
+        <button class="menu-button" id="menu-button" type="button" aria-label="打开对话列表">☰</button>
+        <div>
+          <p class="eyebrow">PRIVATE KNOWLEDGE</p>
+          <h1 id="chat-title">问问我的知识库</h1>
+        </div>
+        <div class="mode-pill" id="mode-pill">连接中</div>
+      </header>
+
+      <section class="conversation" id="conversation" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="welcome-orbit" aria-hidden="true"><span>瑜</span></div>
+          <p class="eyebrow">249 篇笔记，随问随取</p>
+          <h2>把翻目录，变成一次对话。</h2>
+          <p class="welcome-copy">我会先检索你的 Markdown 原文，再根据命中的笔记回答。答案中的编号可以直接打开来源。</p>
+          <div class="prompt-grid">
+            <button class="prompt-card" type="button" data-prompt="C++ 虚函数是如何实现的？">
+              <span class="prompt-icon">C++</span>
+              <strong>解释一个概念</strong>
+              <small>虚函数是如何实现的？</small>
+            </button>
+            <button class="prompt-card" type="button" data-prompt="总结我的 TCP 通信笔记，并列出关键类之间的关系。">
+              <span class="prompt-icon">TCP</span>
+              <strong>总结一组笔记</strong>
+              <small>整理通信知识脉络</small>
+            </button>
+            <button class="prompt-card" type="button" data-prompt="我的笔记里有哪些关于相机标定的内容？">
+              <span class="prompt-icon">3D</span>
+              <strong>寻找已有知识</strong>
+              <small>相机标定相关内容</small>
+            </button>
+            <button class="prompt-card" type="button" data-prompt="根据我的笔记，OpenCV 图像处理中有哪些常见方法？">
+              <span class="prompt-icon">CV</span>
+              <strong>跨笔记归纳</strong>
+              <small>汇总图像处理方法</small>
+            </button>
+          </div>
+        </div>
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="composer">
+          <label class="sr-only" for="prompt">向知识库提问</label>
+          <textarea id="prompt" rows="1" maxlength="8000" placeholder="例如：帮我总结 C++ 对象模型的核心内容…"></textarea>
+          <div class="composer-actions">
+            <span class="composer-hint">Enter 发送 · Shift + Enter 换行</span>
+            <button class="send-button" id="send-button" type="submit" aria-label="发送问题">↑</button>
+            <button class="stop-button" id="stop-button" type="button" aria-label="停止生成" hidden>■</button>
+          </div>
+        </form>
+        <p class="disclaimer">答案来自个人笔记，重要信息请打开引用原文核对。</p>
+      </footer>
+    </main>
+  </div>
+  <div class="scrim" id="scrim"></div>
+  <script src="chat.js" defer></script>
+</body>
+</html>

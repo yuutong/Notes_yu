@@ -1,3 +1,5 @@
+# Histogram Equalization
+
 直方图均衡化（Histogram Equalization）是一种用于增强图像对比度的技术，<br>
 通过调整图像灰度级的分布，使得图像的灰度直方图更加均匀。<br>
 可以把它想象成调整一张照片的亮度和对比度，让照片中的暗部变得更亮，亮部变得更暗，<br>
@@ -31,7 +33,6 @@
 
 #### 示例代码
 
-
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -40,14 +41,14 @@ using namespace cv;
 using namespace std;
 
 // 直方图均衡化函数
-void histogramEqualization(Mat& src, Mat& dst) 
+void histogramEqualization(Mat& src, Mat& dst)
 {
     // 第一步：计算直方图
     // 初始化直方图数组，大小为256，对应灰度级0-255
     int hist[256] = {0};
-    for (int y = 0; y < src.rows; y++) 
+    for (int y = 0; y < src.rows; y++)
     {
-        for (int x = 0; x < src.cols; x++) 
+        for (int x = 0; x < src.cols; x++)
         {
             // 统计每个灰度级的像素数量
             hist[src.at<uchar>(y, x)]++;
@@ -58,7 +59,7 @@ void histogramEqualization(Mat& src, Mat& dst)
     // 初始化CDF数组
     int cdf[256] = {0};
     cdf[0] = hist[0];
-    for (int i = 1; i < 256; i++) 
+    for (int i = 1; i < 256; i++)
     {
         // 计算每个灰度级的CDF
         cdf[i] = cdf[i - 1] + hist[i];
@@ -67,9 +68,9 @@ void histogramEqualization(Mat& src, Mat& dst)
     // 第三步：归一化累积分布函数
     // 找到CDF中的最小非零值
     int cdf_min = 0;
-    for (int i = 0; i < 256; i++) 
+    for (int i = 0; i < 256; i++)
     {
-        if (cdf[i] != 0) 
+        if (cdf[i] != 0)
         {
             cdf_min = cdf[i];
             break;
@@ -80,7 +81,7 @@ void histogramEqualization(Mat& src, Mat& dst)
     int total_pixels = src.rows * src.cols;
     // 初始化归一化CDF数组
     int cdf_normalized[256] = {0};
-    for (int i = 0; i < 256; i++) 
+    for (int i = 0; i < 256; i++)
     {
         // 将CDF归一化到[0, 255]范围
         cdf_normalized[i] = round((float)(cdf[i] - cdf_min) / (total_pixels - cdf_min) * 255);
@@ -89,9 +90,9 @@ void histogramEqualization(Mat& src, Mat& dst)
     // 第四步：映射新的灰度级
     // 克隆源图像到目标图像
     dst = src.clone();
-    for (int y = 0; y < src.rows; y++) 
+    for (int y = 0; y < src.rows; y++)
     {
-        for (int x = 0; x < src.cols; x++) 
+        for (int x = 0; x < src.cols; x++)
         {
             // 根据归一化的CDF，将原始灰度级映射到新的灰度级
             dst.at<uchar>(y, x) = cdf_normalized[src.at<uchar>(y, x)];
@@ -99,11 +100,11 @@ void histogramEqualization(Mat& src, Mat& dst)
     }
 }
 
-int main(int argc, char** argv) 
+int main(int argc, char** argv)
 {
     // 加载图像
     Mat src = imread("input.jpg", IMREAD_GRAYSCALE);
-    if (src.empty()) 
+    if (src.empty())
     {
         cout << "无法打开或找到图像！" << endl;
         return -1;
@@ -146,5 +147,3 @@ int main(int argc, char** argv)
 
 5. *显示和保存结果*：<br>
    - 使用OpenCV函数`imshow`显示原始图像和均衡化后的图像，并使用`imwrite`保存结果。<br>
-
-

@@ -1,4 +1,4 @@
-
+# self2
 
 **Self-Introduction:**
 
@@ -10,7 +10,7 @@ At Shenzhen Sejong Automation, I played a key role in 3C electronics visual insp
 
 I was an early member of the project team, initially responsible for designing the inspection software architecture. Inspired by the open-source project CloudCompare, I designed and built a plugin-based software framework. As the team expanded, I had the opportunity to participate in the development of image processing modules.
 
-Later, at Zhuhai Pantum Electronics' Shenzhen branch, I continued working in image processing, focusing on image compression and content recognition. 
+Later, at Zhuhai Pantum Electronics' Shenzhen branch, I continued working in image processing, focusing on image compression and content recognition.
 
 ---
 
@@ -67,4 +67,3 @@ Later, at Zhuhai Pantum Electronics' Shenzhen branch, I continued working in ima
 ---
 
 I believe my skills and experience align well with the requirements of the camera image quality engineer role, and I am excited about the opportunity to contribute to your team.
-

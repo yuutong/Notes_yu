@@ -1,3 +1,4 @@
+# Feature Matching
 
 特征匹配的基本思想是通过比较特征描述符来找到两个图像中相似的特征点。
 将使用欧氏距离来衡量描述符之间的相似性。
@@ -44,10 +45,10 @@
 #include <cmath>
 
 // 计算欧氏距离
-float euclideanDistance(const std::vector<uchar>& desc1, const std::vector<uchar>& desc2) 
+float euclideanDistance(const std::vector<uchar>& desc1, const std::vector<uchar>& desc2)
 {
     float distance = 0.0f;
-    for (size_t i = 0; i < desc1.size(); ++i) 
+    for (size_t i = 0; i < desc1.size(); ++i)
     {
         int diff = desc1[i] - desc2[i];
         distance += diff * diff;
@@ -57,25 +58,25 @@ float euclideanDistance(const std::vector<uchar>& desc1, const std::vector<uchar
 
 // 特征匹配
 std::vector<cv::DMatch> matchDescriptors(const std::vector<std::vector<uchar>>& descriptors1,
-                                         const std::vector<std::vector<uchar>>& descriptors2) 
+                                         const std::vector<std::vector<uchar>>& descriptors2)
                                          {
     std::vector<cv::DMatch> matches;
-    for (size_t i = 0; i < descriptors1.size(); ++i) 
+    for (size_t i = 0; i < descriptors1.size(); ++i)
     {
         float minDistance = std::numeric_limits<float>::max();
         int bestMatchIndex = -1;
 
-        for (size_t j = 0; j < descriptors2.size(); ++j) 
+        for (size_t j = 0; j < descriptors2.size(); ++j)
         {
             float distance = euclideanDistance(descriptors1[i], descriptors2[j]);
-            if (distance < minDistance) 
+            if (distance < minDistance)
             {
                 minDistance = distance;
                 bestMatchIndex = j;
             }
         }
 
-        if (bestMatchIndex != -1) 
+        if (bestMatchIndex != -1)
         {
             matches.emplace_back(cv::DMatch(i, bestMatchIndex, minDistance));
         }
@@ -83,12 +84,12 @@ std::vector<cv::DMatch> matchDescriptors(const std::vector<std::vector<uchar>>& 
     return matches;
 }
 
-int main() 
+int main()
 {
     // 从文件加载灰度图像
     cv::Mat img1 = cv::imread("image1.jpg", cv::IMREAD_GRAYSCALE);
     cv::Mat img2 = cv::imread("image2.jpg", cv::IMREAD_GRAYSCALE);
-    if (img1.empty() || img2.empty()) 
+    if (img1.empty() || img2.empty())
     {
         std::cerr << "Error: Could not open or find the images." << std::endl;
         return -1;

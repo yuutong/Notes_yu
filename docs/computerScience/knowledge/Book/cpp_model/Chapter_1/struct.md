@@ -1,4 +1,4 @@
-## struct 关键词
+# struct 关键词
 
 ### class 和 struct
 
@@ -14,7 +14,6 @@ class cplus_plus_keyword{
 
 ```
 
-
 ```c
 struct c_keyword {
 	//the same number
@@ -25,14 +24,14 @@ C++所支持的 struct 和 C 所支持的 struct 是不同的 :<br>
 * C 的 struct：在 C 中，struct 是纯数据集合体，无封装或方法<br>
 * struct 在 C++ 中与 class 几乎等价，仅默认访问修饰符不同（struct 默认为 public，class 默认为 private）<br>
 
-C++ 兼容struct以直接兼容C代码，但是可能会给带来一些疑惑：<br> 
+C++ 兼容struct以直接兼容C代码，但是可能会给带来一些疑惑：<br>
 开发者可能认为struct表示纯数据，但是struct本身可能包含 虚函数，继承等面向对象特性
 这是C++存在的设计矛盾。需要留意
-
 
 ### C程序和C++程序不兼容的地方
 
 在C语言中，程序员可以通过在结构体末尾定义一个单一元素的数组来实现可变长度数组（柔性数组）<br>
+
 ```c
 struct CStruct{
 	int count;
@@ -48,9 +47,9 @@ CStruct* s = malloc(sizeof(CStruct) + (n - 1) * sizeof(int));
 s->count = n;
 // 此时可以通过 s->data[i] 访问 0 ≤ i < n 的元素
 ```
+
 这在C中是允许的，但是在C++中容易出错，是不允许这么写的<br>
 C++对类型和内存访问的检查更严格。声明为data[1]的数组在编译时被认为是固定大小的，但运行时越界访问可能导致未定义行为（如内存破坏、崩溃）
-
 
 ### C++  通过什么方式兼容C程序
 
@@ -94,7 +93,3 @@ int main() {
 }
 
 ```
-
-
-
-  

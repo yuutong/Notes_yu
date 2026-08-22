@@ -1,6 +1,3 @@
-## Deep Learning
+# Deep Learning
 
 > 深度学习是人工智能的未来，它让机器能够像人类一样学习和思考
-  
-  
- 

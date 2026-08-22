@@ -1,19 +1,7 @@
-细化点数等于200，意味着200个脉冲才触发一次编码器？？？
+# senser
 
-### mLaserNum  = 2
+> 此页面与其他笔记内容重复，已合并至权威页面。
 
-![mLaserNum](image.png)
+[前往权威笔记](../Camera/senser.md)
 
-### LaserObj
-
-![LaserObj](image-1.png)
-
-### laser_index   
-
-![laser_index](image-2.png)
-
-
-### ui选项
-
-![ui](image-3.png)
-
+<!-- kb-canonical: docs/socioeconomics/work/Camera/senser.md -->

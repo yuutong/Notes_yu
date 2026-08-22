@@ -1,4 +1,3 @@
-
 # 相机模块接口文档
 
 本文档提供了相机模块的详细接口说明，包括相机控制、图像采集、用户界面参数设置等功能。
@@ -93,7 +92,6 @@ int LaserObj::OpenCamera()
 - **CloseCamera**：关闭相机。
 ...
 
-
 ### 1.3第三方软件的开闭
 
 LaserObj::OnRunSsznFinished()
@@ -102,11 +100,9 @@ LaserObj::OpenLaser()
 LaserObj::on_btnConfig_clicked()
 LaserObj::CloseLaser()
 
-
-
 ## 2. 图像采集
 
-### 2.1 单次采集 
+### 2.1 单次采集
 
 从相机获取图像和点云数据
 
@@ -115,61 +111,56 @@ LaserObj::CloseLaser()
 1.
 DatasSourceDlg::GrabDatas(int mGrabType)
 
-mResult = laser_obj->GrabOnce(this); 
+mResult = laser_obj->GrabOnce(this);
 
 2.
 LaserWorkClass::GrabOnce(QString mTaskName)
 
 3.
-mLaser->StartGrab(false, &image_obj, &cloud_obj);  
+mLaser->StartGrab(false, &image_obj, &cloud_obj);
 LaserObj::StartGrab
 
 ### 2.1 传输图像
 
 1.LaserObj::StartGrab
-this->PushDatas_3D(image_obj, cloud_obj);  
-2.  
-virtual int PushDatas_3D(CLImage &mImage, CLCloud &mCloud)   
+this->PushDatas_3D(image_obj, cloud_obj);
+2.
+virtual int PushDatas_3D(CLImage &mImage, CLCloud &mCloud)
 LaserClass::PushData_3D
 3.
 DatasSourceDlg::PushData_3D
 
+### 2.2 硬触发采集
 
-### 2.2 硬触发采集 
 - TrigOnce：执行硬触发模式下的数据采集。
 ...同上
 
 - LaserTrigThread：一个用于控制激光触发操作的线程类，通过周期性地调用 **LaserWorkClass::TrigOnce** 方法来执行激光触发。
 
-
-
-
-
 ## 3. 用户界面参数设置
 
 ### 3.1 参数显示更新
+
 - *UpdateParamShow*：更新参数显示。
 
 ### 3.2 触发模式设置
+
 - *SetTrig*：设置设备为硬触发或单帧工作模式。
 
 ### 3.3 参数加载
+
 - *UpdateCameraParm*：加载参数到激光设备。
 
 ---
 
-
 ## 4. 实时显示和数据处理
 
 ### 4.1 实时数据显示
+
 - *on_btnRealTime_clicked* 和 *on_btnStopRealTime_clicked*：控制实时数据显示的开始和停止。
 
 ### 4.2 实时数据处理线程
+
 - *MeasureUpdateThead*：一个用于实时数据处理的线程类，处理从相机接收到的数据，并更新绘图。
 
 ---
-
-
-
-
-

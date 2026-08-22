@@ -1,23 +1,20 @@
-## 无采集器002A 
+# 无采集器002A
 
 ip 192.168.100.10
 
 ![无采集器1](image-8.png)
 
-
-## 无采集器0039  
+## 无采集器0039
 
 ip：192.168.101.10
 
-
 ![无采集器2](image-10.png)
 
-## 采集器相机2748  
+## 采集器相机2748
 
 连接IP地址为192.168.101.xx
 
 ![2748](image-4.png)
-
 
 ## 采集器相机0018
 
@@ -29,7 +26,6 @@ ip：192.168.101.10
 
 1.序列号 mSerial  strModel mLaserNum
 
-
 ![序列号](image-6.png)
 
 2.相机对象 mInfomation 相机序号 mIndex
@@ -38,8 +34,6 @@ ip：192.168.101.10
 
 3.采图过程  mCloud
 ![](image-9.png)
-
-
 
 ## 相机采集顺序
 
@@ -55,7 +49,7 @@ mResult = laser_obj->GrabOnce(this);
 int LaserClass::GrabOnce(DatasSourceDlg *mDataSource)
 
 1.4 和任务绑定
-  
+
 m_TaskName
         // 获取使用的任务名称
         QString mUseTaskName = data_source->task_class->task_name;
@@ -69,12 +63,10 @@ m_TaskName
 
 int LaserWorkClass::GrabOnce(QString mTaskName)
 
-
 1.6 真正的数据采集
 
 // 开始采集数据形成点云
 int LaserObj::StartGrab(bool mIsIOTrig, CLImage *mImage, CLCloud *mCloud)
-
 
 1.7 传送3Ddian云数据
 int DatasSourceDlg::PushData_3D(CLImage &mImage, CLCloud &mCloud)
@@ -82,7 +74,6 @@ int DatasSourceDlg::PushData_3D(CLImage &mImage, CLCloud &mCloud)
 1.8 采图结束的信号：
 
   emit EmitGrabEnd();
-
 
 2.采集时接收数据
           // 如果开始测量成功
@@ -160,7 +151,7 @@ int DatasSourceDlg::PushData_3D(CLImage &mImage, CLCloud &mCloud)
             //定义编码器数据缓存---双激光头会导致异常闪退--且不需要使用此处数据，故暂时屏蔽
             //unsigned int* Encoder=new unsigned int[mLineCount];
             //SR7IF_GetEncoder(laser_index,DataObject,Encoder);
-        
+
             // 释放之前分配的内存
             delete[] HeightDatas;
             delete[] grayDatas;
@@ -170,5 +161,3 @@ int DatasSourceDlg::PushData_3D(CLImage &mImage, CLCloud &mCloud)
     }
     return -1;
 }
-
-

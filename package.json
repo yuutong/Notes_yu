@@ -1,0 +1,17 @@
+{
+  "name": "notes-yu-knowledge-base",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "node tools/format-markdown.mjs",
+    "format:check": "node tools/format-markdown.mjs --check",
+    "notes:titles": "node tools/normalize-note-titles.mjs --write",
+    "notes:dedupe": "node tools/deduplicate-notes.mjs --write",
+    "kb:build": "node tools/build-knowledge-base.mjs",
+    "kb:check": "node tools/build-knowledge-base.mjs --check",
+    "kb:chat": "node tools/build-knowledge-base.mjs && node tools/knowledge-chat-server.mjs",
+    "kb:chat:test": "node tools/test-knowledge-chat.mjs",
+    "audit": "node tools/audit-markdown.mjs",
+    "check": "npm run format:check && npm run kb:check"
+  }
+}

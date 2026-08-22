@@ -1,3 +1,5 @@
+# compile
+
 1.	CLVisionBase（所有工程的基类工程）、DllManager（动态库的动态链接工程，与其他工程没有互联，可放在第一位）
 2.	ROIExpand（ROI区域添加工程，需要调用CLVisionBase库以及opencv库）
 3.	ShowImageAndCloud（显示窗口工程，调用CLVisionBase库、ROIExpand库以及boost、opencv和vtk库）
@@ -42,5 +44,3 @@ CLVision
 
 额外说明：
 GenKey工程为注册软件使用时间的工程，可单独编译并执行，与其他模块无关联关系，仅用于软件有效使用时间注册。
-
-

@@ -1,5 +1,4 @@
-
-### 插件接口类 (CloudMirror)
+# 插件接口类 (CloudMirror)
 
 ```cpp
 #ifndef CLOUDMIRROR_H
@@ -23,9 +22,13 @@
 
 #if defined(CLOUDMIRROR_LIBRARY)
 // 导出宏定义，用于确定是导出 (Q_DECL_EXPORT) 还是导入 (Q_DECL_IMPORT)
+
 #  define CLOUDMIRRORSHARED_EXPORT Q_DECL_EXPORT
+
 #else
+
 #  define CLOUDMIRRORSHARED_EXPORT Q_DECL_IMPORT
+
 #endif
 
 // 外部 C 接口，用于获取插件 ID
@@ -89,38 +92,38 @@ class DLLMANAGERSHARED_EXPORT ToolDllManager
 public:
     // 构造函数，初始化工具管理器
     ToolDllManager();
-    
+
     // 析构函数，释放资源
     ~ToolDllManager();
 
     // 从指定目录获取工具列表，返回工具个数
     int GetToolList(QString mDirPath);
-    
+
     // 释放资源
     void Dispose();
-    
+
     // 根据工具类型和名称创建新的工具对象
     int NewToolObj(string mToolType, string mToolName, ToolBase **mNewTool);
-    
+
     // 复制工具对象
     int CopyToolObj(ToolBase *mSrcTool, ToolBase **mNewTool);
-    
+
     // 设置任务 ID
     void SetTaskID(string mClassID);
-    
+
     // 获取工具图标
     int GetToolShowIco(string mToolType, string mToolName, QIcon *mIcon);
-    
+
     // 获取工具说明
     int GetToolShowExplain(string mToolType, string mToolName, QString *mExplain);
-    
+
     // 重置工具序列号
     void ResetToolSerialNumber();
 
 private:
     // 从指定目录获取 .dll 文件，返回文件数量
     int GetToolDll(QString mDirPath);
-    
+
     // 从文件路径获取工具对象信息
     int GetToolObjInfo(string mFilePath);
 
@@ -131,13 +134,13 @@ public:
 private:
     // .dll 文件列表
     QList<QString> dll_list;
-    
+
     // .dll 文件对应的哈希表
     QHash<QString, QString> dll_hash;
-    
+
     // .dll 文件句柄列表，用于动态加载和卸载
     QHash<QString, void*> dll_handle_list;
-    
+
     // 当前任务 ID
     string task_id;
 };
@@ -155,7 +158,6 @@ private:
 
 `ToolDllManager` 确用于对接和管理插件的接口实现类，它通过加载插件（动态链接库），然后根据插件提供的接口进行调用，实现了插件的管理和功能调用。
 
-
 ### 插件加载的路径
 
 1.软件启动时：<br>
@@ -167,7 +169,6 @@ dll路径："/root/Work/3D/CLV3D/build-CLVision/toollib"
 
 ![CLVison](image-1.png)
 
-
 ### 涉及插件库的功能和工具
 
 1.软件启动时加载插件: mainwindow
@@ -176,7 +177,6 @@ dll路径："/root/Work/3D/CLV3D/build-CLVision/toollib"
 
 3.包括PointAndLine在内的18个插件的pro文件的编译输出目录<br>
 TARGET = /root/Work/3D/CLV3D/build-CLVision/toollib/PointAndLine
-
 
 ### 相机库加载的路径
 
@@ -189,7 +189,6 @@ TARGET = /root/Work/3D/CLV3D/build-CLVision/toollib/PointAndLine
 3.深视智能的激光头项目pro文件的编译输出目录：<br>
 TARGET = /root/Work/3D/CLV3D/build-CLVision/cameralib/SSZNLaser
 
-
 ### 公共库加载的路径
 
 ![公共库路径](image-3.png)
@@ -200,9 +199,3 @@ TARGET = /root/Work/3D/CLV3D/build-CLVision/cameralib/SSZNLaser
 
 3.TCP通信项目TCPComm.pro的编译输出目录：<br>
 TARGET = /opt/.CLVision/commlib/TCPComm
-
-
-
-
-
-

@@ -29,6 +29,7 @@
     window.$docsify = {
       name: 'Note',
       loadSidebar: true,
+      loadNavbar: true,
       autoHeader: true,
       subMaxLevel: 5,
       coverpage: '_coverpage.md', // 设置封面页面
@@ -48,7 +49,7 @@
 
       search: {
         maxAge: 86400000,
-        paths: [],
+        paths: 'auto',
         placeholder: '开始搜索',
         noData: 'No result!'
       },

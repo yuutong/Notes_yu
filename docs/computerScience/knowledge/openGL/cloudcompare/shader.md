@@ -1,3 +1,5 @@
+# shader
+
 Shader编程和图形渲染是CloudCompare中处理三维数据可视化的重要部分。
 
 以下是CloudCompare中用于shader编程和图形渲染的部分源代码片段。<br>
@@ -15,7 +17,7 @@ uniform mat4 MVP;
 
 out vec3 fragmentColor;
 
-void main() 
+void main()
 {
     gl_Position = MVP * vec4(vertexPosition_modelspace, 1.0);
     fragmentColor = vertexColor;
@@ -31,7 +33,7 @@ in vec3 fragmentColor;
 
 out vec3 color;
 
-void main() 
+void main()
 {
     color = fragmentColor;
 }
@@ -42,11 +44,11 @@ void main()
 以下是`ccGLWindow`类中与初始化OpenGL和编译着色器相关的代码片段：
 
 ```cpp
-void ccGLWindow::initializeGL() 
+void ccGLWindow::initializeGL()
 {
     // 初始化Glew
     GLenum err = glewInit();
-    if (GLEW_OK != err) 
+    if (GLEW_OK != err)
     {
         // Glew初始化失败
         qCritical() << "Error: " << glewGetErrorString(err);
@@ -77,7 +79,7 @@ void ccGLWindow::initializeGL()
     GLuint MatrixID = glGetUniformLocation(programID, "MVP");
 }
 
-void ccGLWindow::paintGL() 
+void ccGLWindow::paintGL()
 {
     // 清除屏幕
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -91,8 +93,6 @@ void ccGLWindow::paintGL()
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 ```
-
-
 
 #### 顶点着色器
 
@@ -158,7 +158,7 @@ glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYT
 glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texture, 0);
 
 // 检查FBO是否完整
-if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) 
+if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
 {
     // 错误处理
 }

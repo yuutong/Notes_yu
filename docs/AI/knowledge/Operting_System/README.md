@@ -1,19 +1,3 @@
-## Operating System
+# Operating System
 
 > 操作系统是计算机的灵魂，它管理着硬件资源，使得软件能够顺利运行
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

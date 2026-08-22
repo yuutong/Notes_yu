@@ -1,4 +1,4 @@
-#### 在gitee上克隆项目 
+# 在gitee上克隆项目
 
 ##### 用私人令牌
 
@@ -12,13 +12,13 @@
 例如：<br>
 令牌名称：3D Detection Clone
 
-3813b770053449b7cf08327cf23ff760x
+<私人令牌>
 
 git clone https://<x>@gitee.com/feng_yezi/3d_detection.git
-
 
 拉取时的登录框：
 
 ```shell
 Gitee用户名 ：tong-yua
 密码：私人令牌序列
+```

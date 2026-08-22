@@ -1,4 +1,4 @@
-#### 直接取平均值
+# 直接取平均值
 
 直接取平均值的方法是将 RGB 三个通道的值相加后除以 3，公式如下：
 
@@ -16,14 +16,14 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-cv::Mat convertToGrayscaleAverage(const cv::Mat& colorImage) 
+cv::Mat convertToGrayscaleAverage(const cv::Mat& colorImage)
 {
     // 创建一个与输入图像相同大小的灰度图像
     cv::Mat grayImage(colorImage.rows, colorImage.cols, CV_8UC1);
 
-    for (int i = 0; i < colorImage.rows; ++i) 
+    for (int i = 0; i < colorImage.rows; ++i)
     {
-        for (int j = 0; j < colorImage.cols; ++j) 
+        for (int j = 0; j < colorImage.cols; ++j)
         {
             // 获取彩色图像中 (i, j) 位置的像素值
             cv::Vec3b pixel = colorImage.at<cv::Vec3b>(i, j);
@@ -42,12 +42,12 @@ cv::Mat convertToGrayscaleAverage(const cv::Mat& colorImage)
     return grayImage;
 }
 
-int main() 
+int main()
 {
     // 读取彩色图像
     cv::Mat colorImage = cv::imread("path_to_your_image.jpg");
 
-    if (colorImage.empty()) 
+    if (colorImage.empty())
     {
         std::cerr << "Could not open or find the image!" << std::endl;
         return -1;
@@ -74,11 +74,10 @@ int main()
     5. **生成灰度图像**：将计算出的灰度值赋给灰度图像对应位置的像素。
     6. **显示结果**：使用 `cv::imshow` 函数显示彩色图像和灰度图像。
 
-
 #### 加权平均法
 
   - 考虑了人眼对不同颜色的敏感度，通常效果更好。
-  - 使用公式：Y = 0.299 * R + 0.587 * G + 0.114 * B 
+  - 使用公式：Y = 0.299 * R + 0.587 * G + 0.114 * B
 
 **代码实现**
 
@@ -89,12 +88,12 @@ int main()
 using namespace cv;
 using namespace std;
 
-int main() 
+int main()
 {
     // 读取彩色图像
     Mat colorImage = imread("color_image.jpg");
 
-    if (colorImage.empty()) 
+    if (colorImage.empty())
     {
         cout << "无法打开或找到图像!" << endl;
         return -1;
@@ -104,9 +103,9 @@ int main()
     Mat grayImage(colorImage.rows, colorImage.cols, CV_8UC1);
 
     // 遍历每个像素点，计算灰度值
-    for (int i = 0; i < colorImage.rows; ++i) 
+    for (int i = 0; i < colorImage.rows; ++i)
     {
-        for (int j = 0; j < colorImage.cols; ++j) 
+        for (int j = 0; j < colorImage.cols; ++j)
         {
             Vec3b intensity = colorImage.at<Vec3b>(i, j);
             uchar blue = intensity.val[0];

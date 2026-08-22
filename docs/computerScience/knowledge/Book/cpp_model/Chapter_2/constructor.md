@@ -1,4 +1,5 @@
-## 编译器在什么时候生成默认构造函数
+# 编译器在什么时候生成默认构造函数
+
 C++新手一般有两个常见的误区：<br>
 * 1.任何class如果没有定义default constructor，就会被合成一个出来<br>
 * 2.编译器合成出来的default constructor会显式设定 class内每一个data member的默认值<br>
@@ -32,6 +33,7 @@ void foo_bar()
     if(str){}
 }
 ```
+
 编译器合成以恶搞Bar类的默认构造函数，内含必要的代码，能够调用Foo类的构造函数来处理member object Bar::foo,
 但不会产生任何代码来初始化Bar::str<br>
 将Bar::foo初始化是编译器的责任，而初始化Bar::str则是程序员的责任
@@ -41,14 +43,14 @@ void foo_bar()
 inline Bar::Bar()
 {
     //C++伪代码
-    foo.Foo::Foo();   
+    foo.Foo::Foo();
 }
 ```
+
 ### 2. 派生自一个base class
 
 如果基类拥有默认构造而派生类既没有默认构造也没有用户自定义的符合需求的构造函数，尝试 Derived d; 会导致编译器报错 “no matching constructor for initialization of ‘Derived’”。该错误本质上是因为编译器找不到可用于初始化基类子对象和派生类成员的构造函数<br>
 于是这种情况下当前类的默认构造会被合成出来，它会调用上一层base class的默认构造函数，对于当前类的后续派生类，这个合成的默认构造和 显式提供的默认构造 没有什么差异。
-
 
 ### 3.内含一个虚函数
 
@@ -56,7 +58,6 @@ inline Bar::Bar()
 a.会生成一个虚表，存放虚函数的实现地址<br>
 b.在每个class object中，生成一个vptr，指向虚表<br>
 编译器必须要为object的vptr设置初始值，使它指向当前类的虚表，这件事由默认构造函数来做，没有默认构造，编译器就生成默认构造函数
-
 
 ### 4.派生自虚基类
 

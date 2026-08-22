@@ -1,3 +1,3 @@
-## Useful tips
+# Useful tips
 
 > Develop a keen mind and think independently

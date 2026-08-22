@@ -1,4 +1,5 @@
-### QTcpSocket 类概述
+# QTcpSocket 类概述
+
 `QTcpSocket` 类，继承自 `QAbstractSocket`，主要用于处理TCP网络通信。
 
 - **基本特性**：
@@ -9,9 +10,9 @@
 
 在 `QTcpSocket` 类中，`isBuffered` 成员变量指示是否启用了套接字的内部缓冲。当 `isBuffered` 设置为 `true` 时，套接字会缓存传入和传出的数据，这样可以减少每次网络传输的系统调用次数，从而提高网络通信的效率和性能。这是因为频繁的系统调用会增加额外的开销，而通过缓冲，可以在一定程度上减少这些开销，通过一次性发送或接收更大块的数据来提高效率。
 
-
 ### QTcpServer 类功能
-    QTcpServer类用于创建和管理TCP服务器，提供了监听、接受连接、错误处理网络代理等功能。。    
+
+    QTcpServer类用于创建和管理TCP服务器，提供了监听、接受连接、错误处理网络代理等功能。。
     包含了包含了算法、主机地址、列表、指针、抽象套接字引擎、TCP套接字和网络代理等相关类的定义
     1.代理解析函数：用于解析代理设置，根据地址和端口返回合适的代理
       *resolveProxy：解析并返回合适的网络代理
@@ -48,6 +49,7 @@
   - `incomingConnection`：处理新的连接，创建 `QTcpSocket` 实例。
 
 ##### 1. `waitFoSrNewConnection` 是做什么的？
+
 `waitForNewConnection` 是 `QTcpServer` 类中的一个成员函数。这个函数会阻塞当前线程，直到有新的连接到来或超时：
 
 ```cpp
@@ -59,15 +61,18 @@ bool QTcpServer::waitForNewConnection(int msec = 0, bool* timedOut = nullptr);
 - `timedOut` 指针用于指示是否因为超时而返回 `false`；如果不需要该信息，可以将其设置为 `nullptr`。
 
 ##### 2. `waitForNewConnection` 函数可以用在哪些场景中？
+
 `waitForNewConnection` 通常用于以下场景：
 - **同步服务器设计**：在你希望使用阻塞模式来处理新的连接而不使用信号和槽的异步机制时。
 - **单线程服务器**：在某些简单的单线程服务器实现中，可以使用该方法来等待新连接，然后进行处理。
 - **调试和测试**：在调试和测试环境中，使用该函数可以简化逻辑，便于观察和控制连接的处理过程。
 
 ##### 3. `waitForNewConnection` 函数是否会阻塞整个应用进程的执行？
+
 `waitForNewConnection` **会**阻塞当前调用的线程，直到有新的连接到来或超时。这意味着如果在主线程上调用该函数，将会阻塞整个主事件循环的执行。因此，通常在使用时需要小心，尤其在主线程中调用时要格外注意。
 
 ###### 解决方案：
+
 为了避免阻塞主线程，可以考虑以下几种方法：
 - **使用子线程**：在子线程中调用 `waitForNewConnection`，从而避免阻塞主线程。
 - **异步处理**：使用 `QTcpServer` 的信号 `newConnection()` 来处理新连接，这样可以避免阻塞。
@@ -77,6 +82,7 @@ connect(server, &QTcpServer::newConnection, this, &YourClass::handleNewConnectio
 ```
 
 ##### 4. `waitForNewConnection` 函数返回 `false` 的情况有哪些？
+
 `waitForNewConnection` 返回 `false` 的情况包括但不限于以下几种：
 
 - **超时**：指定的等待时间耗尽，没有新的连接到来。如果传递了 `timedOut` 参数，则该变量会被设置为 `true`。
@@ -129,9 +135,11 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 ```
+
 在这个示例中，`waitForConnections` 方法会持续等待新的连接，并在每个循环中处理连接或处理超时情况。
 
 ### 编译器防火墙
+
     采用 Pimpl（"Pointer to implementation"）模式是一种常见的C++编程技术，旨在减少编译依赖并隐藏类的私有实现细节。这种模式通过将一个类的私有数据和实现细节放在一个单独的实现类中，并在原始类中通过一个指针来访问这个实现类，从而实现接口与实现的分离。这样做有几个优点：
 
     1. **接口与实现分离**
@@ -148,9 +156,10 @@ int main(int argc, char *argv[])
 
     #QTcpServerPrivate的示例
     对于 `QTcpServer` 类，它的私有实现被放在了 `QTcpServerPrivate` 类中，这个类通常定义在 `qtcpserver_p.h` 头文件中，而实现则放在 `qtcpserver.cpp` 文件中。`QTcpServer` 类通过一个指向 `QTcpServerPrivate` 类的指针来访问其私有数据和实现细节。这样做不仅隐藏了实现细节，还使得 `QTcpServer` 类的维护和扩展变得更加容易。
-    通过这种方式，Qt 框架实现了清晰的接口设计和高效的编译管理，同时保持了良好的代码封装和模块化。   
+    通过这种方式，Qt 框架实现了清晰的接口设计和高效的编译管理，同时保持了良好的代码封装和模块化。
 
 ##### 为什么使用pimpl模式可以提高代码的维护性和可扩展性
+
   使用Pimpl模式可以提高代码的维护性和可扩展性，主要原因包括：
     - **减少头文件依赖**：将实现细节放在源文件中，减少了头文件的依赖，这意味着对私有实现的修改不会导致重新编译依赖于该头文件的所有代码，只需重新编译实现文件即可。
     - **接口稳定性**：由于实现细节被隐藏，类的公共接口可以保持稳定，即使实现细节发生变化，也不会影响到使用该类的代码。
@@ -160,13 +169,12 @@ int main(int argc, char *argv[])
     通过这种方式，Pimpl模式提供了一种有效的手段来管理和维护复杂的软件系统，特别是在大型项目或需要保持二进制兼容性的库中。
 
 ##### QTcpServerPrivate是如何封装和隐藏QTcpServer类的实现细节的
+
      QTcpServerPrivate 是一个私有的内部类，通常不会在库的公共头文件中声明，而是在源文件中定义。这意味着用户无法从使用 QTcpServer 的代码中直接访问 QTcpServerPrivate。QTcpServerPrivate 包含所有的非公开成员变量和函数，这些是实现 QTcpServer 功能所必需的，但不需要暴露给用户的。通过这种方式，QTcpServer 类可以在不暴露实现细节的情况下提供一个干净的接口。
 
 ##### QTcpServer类的构造函数为什么要创造QTcpServerPrivate实例
+
     在 QTcpServer 类的构造函数中创建 QTcpServerPrivate 实例是为了初始化类的私有实现。这样做可以确保当 QTcpServer 对象被创建时，其所有的实现细节都已经就绪且可以使用。此外，由于实现细节被封装在 QTcpServerPrivate 中，QTcpServer 的公共接口不会因为实现的变化而发生改变，这有助于保持公共接口的稳定。
-
-
-
 
 ### 几个关于连接的问题
 
@@ -195,33 +203,40 @@ int main(int argc, char *argv[])
     - `QWebSocket`：用于处理 WebSocket 连接。WebSocket 是一种在单个 TCP 连接上进行全双工通信的协议。`QWebSocket` 提供了 `sendTextMessage()`、`sendBinaryMessage()` 和 `readMessage()` 等方法来发送和接收数据。
 
 ##### 几个PendingConnection相关
+
 ###### `hasPendingConnections()`
+
 - **功能**：检查当前是否有挂起的连接等待接受。
 - **签名**：`bool hasPendingConnections() const;`
 - **返回值**：如果有挂起的连接，返回 `true`；否则返回 `false`。
 
 ###### `nextPendingConnection()`
+
 - **功能**：获取下一个挂起的连接。
 - **签名**：`QTcpSocket* nextPendingConnection();`
 - **返回值**：返回一个指向挂起连接的 `QTcpSocket` 对象的指针。如果没有挂起的连接，则返回 `nullptr`。
 - **注意**：调用此函数会返回连接，并将其从挂起列表中移除。
 
 ###### `incomingConnection()`
+
 - **功能**：虚函数，在有新连接到来时调用，实现自定义处理新连接的行为。
 - **签名**：`virtual void incomingConnection(qintptr socketDescriptor);`
 - **参数**：`socketDescriptor` 是标识新连接的套接字描述符。
 
 ###### `addPendingConnection()`
+
 - **功能**：将一个现有的套接字添加到挂起连接队列中。
 - **签名**：`void addPendingConnection(QTcpSocket* socket);`
 - **参数**：`socket` 是指向要添加的 `QTcpSocket` 对象的指针。
 
 ###### `setMaxPendingConnections()`
+
 - **功能**：设置最大可以同时等待的挂起连接数。
 - **签名**：`void setMaxPendingConnections(int numConnections);`
 - **参数**：`numConnections` 是允许的最大挂起连接数。
 
 ###### `maxPendingConnections()`
+
 - **功能**：获取当前设置的最大挂起连接数。
 - **签名**：`int maxPendingConnections() const;`
 - **返回值**：返回最大挂起连接数。
@@ -229,18 +244,23 @@ int main(int argc, char *argv[])
 ##### 2. 函数使用场景
 
 ###### `hasPendingConnections()`
+
 - **场景**：通常在服务器的事件循环中使用，以检查是否有新的未处理连接。例如，当 `newConnection()` 信号发出时，可以使用此函数。
 
 ###### `nextPendingConnection()`
+
 - **场景**：在有挂起连接时，获取并处理这些连接。通常在信号槽机制中使用，例如在处理 `newConnection()` 信号时。
 
 ###### `incomingConnection()`
+
 - **场景**：当你需要自定义处理新连接时，可以重写此虚函数。比如，可以派生一个类，并在其中实现特定的连接处理逻辑。
 
 ###### `addPendingConnection()`
+
 - **场景**：在一些高级用途中，你可能需要手动管理连接。例如，通过socket拆分创建不同类型的连接，然后将它们添加到挂起队列中以便后续处理。
 
 ###### `setMaxPendingConnections()` 和 `maxPendingConnections()`
+
 - **场景**：管理服务器的连接容量。例如，限制服务器只能处理一定数量的挂起连接，以便流量控制或减轻服务器压力。
 
 ##### 3. 阻塞行为
@@ -252,21 +272,27 @@ int main(int argc, char *argv[])
 ##### 4. 函数返回false或其他错误的情况
 
 ###### `hasPendingConnections()`
+
 - **返回 `false` 的情况**：没有挂起的连接。
 
 ###### `nextPendingConnection()`
+
 - **返回 `nullptr` 的情况**：没有挂起的连接。
 
 ###### `incomingConnection()`
+
 - **错误情况**：具体行为取决于函数的重写实现。默认实现不会返回错误，但重写时可能会产生异常。
 
 ###### `addPendingConnection()`
+
 - **错误情况**：如果 `socket` 为 `nullptr` 或已经存在于挂起队列中，可能导致逻辑错误。
 
 ###### `setMaxPendingConnections()`
+
 - **不会返回值**，直接设置参数。
 
 ###### `maxPendingConnections()`
+
 - **不会返回错误**，直接返回配置值。
 
 ###### 示例代码
@@ -303,8 +329,8 @@ int main(int argc, char *argv[]) {
 
 在这个例子中，自定义的 `incomingConnection` 函数被重写，用于处理新的连接。`hasPendingConnections` 和 `nextPendingConnection` 被用来处理挂起的连接。
 
-
 ### QSctpSocket 类特点
+
 `QSctpSocket`，作为 `QTcpSocket` 的扩展，支持SCTP协议，提供多通道网络传输。
 
 - **主要功能**：
@@ -312,6 +338,7 @@ int main(int argc, char *argv[]) {
   - 最大通道数设置（`setMaximumChannelCount`）。
 
 ### QSctpServer 类分析
+
 `QSctpServer`，基于 `QTcpServer`，专门用于处理基于SCTP协议的服务器端操作。
 
 - **增强功能**：
@@ -333,8 +360,8 @@ int main(int argc, char *argv[]) {
 
 由于以上特性，`QSctpSocket` 通常用于需要高可靠性和某些级别的传输效率的场景，例如电话网络和高速数据传输。它可以提供比TCP更高级的网络传输特性，尤其在需要处理多个并发连接时更为有用。
 
-
 ### QTcpServerPrivate 类与隐藏实现
+
 `QTcpServerPrivate`，遵循Pimpl设计模式，封装了 `QTcpServer` 的私有数据和实现细节。
 
 - **核心组成**：
@@ -344,6 +371,7 @@ int main(int argc, char *argv[]) {
   - 错误处理和代理设置。
 
 ##### 如何通过 `QTcpServerPrivate` 实现 `QTcpServer` 的功能
+
    `QTcpServerPrivate` 类作为 `QTcpServer` 的实现细节，包含了所有必要的成员变量和函数来实现 `QTcpServer` 的功能。这些成员和函数直接处理网络通信的底层细节，如套接字的创建、绑定、监听，以及接受新的连接。`QTcpServerPrivate` 可以包括如下实现细节：
 
     - **套接字管理**：管理一个或多个底层网络套接字（如TCP套接字），用于监听来自客户端的连接。
@@ -364,6 +392,7 @@ int main(int argc, char *argv[]) {
     通过严格控制对公共接口的修改，并将实现细节封装在 `QTcpServerPrivate` 内，Pimpl模式有助于在提供强大功能的同时，保持API的稳定性和清晰性。这对于库的用户来说是非常重要的，因为它减少了因为库更新而需要修改客户端代码的情况。
 
 ### QSctpSocket 数据报处理
+
 `QSctpSocket` 类中，数据报模式下的操作处理包括读写数据报和通道管理等。
 
 - **数据报操作**：
@@ -371,17 +400,20 @@ int main(int argc, char *argv[]) {
   - 通道数量配置，优化数据传输。
 
 ### 网络编程中的PendingConnection相关操作
+
 - **主要方法**：
   - `hasPendingConnections`：检查是否有待处理的连接。
   - `nextPendingConnection`：获取下一个待处理的连接实例。
 
 ### 网络应用场景分析
+
 - **适用场景**：
   - 建立高性能的网络服务器。
   - 处理TCP和SCTP协议的网络通信需求。
   - 实现异步和阻塞模式下的网络服务。
 
 ### 示例代码：处理新连接
+
 ```cpp
 class MyTcpServer : public QTcpServer {
 protected:
@@ -396,13 +428,9 @@ protected:
     }
 };
 ```
+
 - **说明**：展示了如何在QT网络编程中处理新的TCP连接请求。
 
 ### 总结
+
 以上内容对QT网络编程中的`QTcpSocket`、`QTcpServer`、`QSctpSocket`、和`QSctpServer`类的关键特性和功能进行了整理，旨在提供清晰的概览和使用场景理解，同时通过示例代码展示了如何在实际应用中处理网络连接。
-
-
-
-
-
-

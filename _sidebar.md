@@ -1,6 +1,9 @@
-* [AI](./docs/AI/ "AI")  
-* [数学](./docs/math/ "数学")  
-* [计算机](./docs/computerScience/ "计算机")   
+* [问知识库](./chat.html "知识库聊天")
+* [知识库中心](./KNOWLEDGE_BASE.md "知识库中心")
+* [知识库工程](./docs/socioeconomics/work/Knowledge_Base/ "个人知识库工程")
+* [AI](./docs/AI/ "AI")
+* [数学](./docs/math/ "数学")
+* [计算机](./docs/computerScience/ "计算机")
 * [通信电子](./docs/Electronics/ "电子通信")
 * [社会经济学](./docs/socioeconomics/ "社会经济学")
-
+* [笔记收件箱](./inbox/ "收件箱")

@@ -1,5 +1,4 @@
-
-#### How to Achieve: Not Seeking Others' Approval
+# How to Achieve: Not Seeking Others' Approval
 
 1. Self-reflection and Awareness
 
@@ -55,6 +54,7 @@
    - After the set time, slowly open your eyes, spend a minute or two feeling your state, and gradually come out of meditation
 
 #### Mindfulness
+
 Focusing on the present experience to reduce worries about the past and future.
 
 1. Choose a routine activity: Showering, eating, walking, etc.
@@ -77,9 +77,10 @@ Focusing on the present experience to reduce worries about the past and future.
    Spend a few minutes each day on mindfulness practice, which can be done anytime in daily life
 
 #### Cognitive Behavioral Therapy
+
 Alleviating psychological distress by changing thought patterns and behaviors
 
-Causes of psychological distress: Automatic thinking (cognitive distortions), including overgeneralization, dichotomous thinking (black and white thinking), 
+Causes of psychological distress: Automatic thinking (cognitive distortions), including overgeneralization, dichotomous thinking (black and white thinking),
 
 catastrophizing (always expecting the worst outcome), personalization (attributing external events to oneself)
 
@@ -105,8 +106,3 @@ catastrophizing (always expecting the worst outcome), personalization (attributi
 
    - Deep breathing
    - Meditation and mindfulness
-
-
-
-
-

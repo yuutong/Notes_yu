@@ -1,3 +1,4 @@
+# face detection
 
 级联分类器是一种快速而高效的人脸检测方法。它由一系列简单的检查步骤组成，每一步都像是一个小考官，逐层筛选图像中的区域，最终找出人脸。
 
@@ -26,11 +27,9 @@
 3. *训练分类器*：使用大量包含人脸和不包含人脸的图像训练每个小考官（弱分类器）。<br>
 4. *检测人脸*：使用训练好的级联分类器在图像中检测人脸。<br>
 
-
 1. *小考官*：每个小考官问一个简单的问题，比如“这里有没有眼睛？”。<br>
 2. *逐层筛选*：考官们排成一队，一个接一个地检查图像中的小区域。如果某个考官发现答案是否定的，就直接淘汰这个区域。<br>
 3. *最终判断*：如果所有考官都认为这个区域可能包含人脸，那它就被认为是人脸区域。<br>
-
 
 #### 代码示例
 
@@ -40,15 +39,15 @@
 #include <vector>
 
 // 计算积分图像
-cv::Mat computeIntegralImage(const cv::Mat& src) 
+cv::Mat computeIntegralImage(const cv::Mat& src)
 {
     int rows = src.rows;
     int cols = src.cols;
     cv::Mat integralImage(rows + 1, cols + 1, CV_64F, cv::Scalar(0));
 
-    for (int y = 1; y <= rows; ++y) 
+    for (int y = 1; y <= rows; ++y)
     {
-        for (int x = 1; x <= cols; ++x) 
+        for (int x = 1; x <= cols; ++x)
         {
             integralImage.at<double>(y, x) = src.at<uchar>(y - 1, x - 1) +
                                              integralImage.at<double>(y - 1, x) +
@@ -62,10 +61,10 @@ cv::Mat computeIntegralImage(const cv::Mat& src)
 
 // 计算Haar特征
 double computeHaarFeature(const cv::Mat& integralImage, int x, int y, int width, int height, int type) {
-    
+
     double featureValue = 0.0;
 
-    switch (type) 
+    switch (type)
     {
         case 1: // 边缘特征
             featureValue = integralImage.at<double>(y + height, x + width / 2) - integralImage.at<double>(y, x + width / 2) -
@@ -91,16 +90,16 @@ double computeHaarFeature(const cv::Mat& integralImage, int x, int y, int width,
 }
 
 // 简单的弱分类器示例
-bool weakClassifier(double featureValue, double threshold) 
+bool weakClassifier(double featureValue, double threshold)
 {
     return featureValue >= threshold;
 }
 
 // 级联分类器示例
-bool cascadeClassifier(const cv::Mat& integralImage, int x, int y, int width, int height) 
+bool cascadeClassifier(const cv::Mat& integralImage, int x, int y, int width, int height)
 {
     // 定义多个弱分类器的参数
-    std::vector<std::tuple<int, double>> classifiers = 
+    std::vector<std::tuple<int, double>> classifiers =
     {
         {1, 1000.0}, // 边缘特征，阈值1000.0
         {2, 500.0},  // 线条特征，阈值500.0
@@ -108,14 +107,14 @@ bool cascadeClassifier(const cv::Mat& integralImage, int x, int y, int width, in
     };
 
     // 逐层筛选
-    for (const auto& classifier : classifiers) 
+    for (const auto& classifier : classifiers)
     {
         int type;
         double threshold;
         std::tie(type, threshold) = classifier;
 
         double featureValue = computeHaarFeature(integralImage, x, y, width, height, type);
-        if (!weakClassifier(featureValue, threshold)) 
+        if (!weakClassifier(featureValue, threshold))
         {
             return false; // 未通过当前层的检测
         }
@@ -128,7 +127,7 @@ int main() {
 
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("face.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) 
+    if (img.empty())
     {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;
@@ -159,4 +158,3 @@ int main() {
 3. *弱分类器*：每个弱分类器只问一个简单的问题，比如“这个区域的特征值是否大于某个阈值？”。<br>
 4. *级联分类器*：级联分类器通过逐层筛选的方式，使用多个弱分类器对图像中的小窗口进行检测。<br>
  如果某一层未通过检测，就立即排除该窗口；如果所有层都通过检测，则认为该窗口包含人脸。
-

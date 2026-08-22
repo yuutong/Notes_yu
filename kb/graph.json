@@ -1,0 +1,4505 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "id": "_media/README.md",
+      "title": "人工智能实战就业(面试)学习路线图",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [
+        "_media"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "about.md",
+      "title": "关于这个笔记库",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "archive/README.md",
+      "title": "归档",
+      "section": "archive",
+      "status": "archived",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "CHAT_SETUP.md",
+      "title": "知识库聊天使用说明",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "contact.md",
+      "title": "联系方式",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/3D/Angle_Mapping.md",
+      "title": "Angle Mapping",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": "docs/computerScience/knowledge/3D/Angle_Mapping.md"
+    },
+    {
+      "id": "docs/AI/knowledge/3D/AngleTransform.md",
+      "title": "1.什么是方向余弦？",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": "docs/computerScience/knowledge/3D/AngleTransform.md"
+    },
+    {
+      "id": "docs/AI/knowledge/3D/AngleTransform2.md",
+      "title": "AngleTransform2",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": "docs/computerScience/knowledge/3D/AngleTransform2.md"
+    },
+    {
+      "id": "docs/AI/knowledge/3D/AngleTransform3.md",
+      "title": "激光线扫相机成像受倾斜的影响关系",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": "docs/computerScience/knowledge/3D/AngleTransform3.md"
+    },
+    {
+      "id": "docs/AI/knowledge/3D/BasePoint.md",
+      "title": "BasePoint",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": "docs/computerScience/knowledge/3D/BasePoint.md"
+    },
+    {
+      "id": "docs/AI/knowledge/3D/Height_Mapping.md",
+      "title": "Height Mapping",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": "docs/computerScience/knowledge/3D/Height_Mapping.md"
+    },
+    {
+      "id": "docs/AI/knowledge/3D/README.md",
+      "title": "C++面向对象模型",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/3D/Transformation.md",
+      "title": "3D图像坐标转换实际坐标：",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "3D"
+      ],
+      "canonical": "docs/computerScience/knowledge/3D/Transformation.md"
+    },
+    {
+      "id": "docs/AI/knowledge/communication/README.md",
+      "title": "通信",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "communication"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/communication/tcp/base.md",
+      "title": "QAbstractSocket 类概述",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "communication",
+        "tcp"
+      ],
+      "canonical": "docs/computerScience/knowledge/communication/tcp/base.md"
+    },
+    {
+      "id": "docs/AI/knowledge/communication/tcp/Derived.md",
+      "title": "QTcpSocket 类概述",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "communication",
+        "tcp"
+      ],
+      "canonical": "docs/computerScience/knowledge/communication/tcp/Derived.md"
+    },
+    {
+      "id": "docs/AI/knowledge/communication/tcp/qabstractsocket.md",
+      "title": "qabstractsocket类",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "communication",
+        "tcp"
+      ],
+      "canonical": "docs/computerScience/knowledge/communication/tcp/qabstractsocket.md"
+    },
+    {
+      "id": "docs/AI/knowledge/communication/tcp/QtcpCodeReading.md",
+      "title": "QT源代码阅读",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "communication",
+        "tcp"
+      ],
+      "canonical": "docs/computerScience/knowledge/communication/tcp/QtcpCodeReading.md"
+    },
+    {
+      "id": "docs/AI/knowledge/communication/tcp/README.md",
+      "title": "通信",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "communication",
+        "tcp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/communication/tcp/tcp.md",
+      "title": "tcp",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "communication",
+        "tcp"
+      ],
+      "canonical": "docs/computerScience/knowledge/communication/tcp/tcp.md"
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/basic/mutex_smart_ptr.md",
+      "title": "解释一下C++中的RAII（Resource Acquisition Is Initialization）以及作用",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "cpp",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/cpp/basic/mutex_smart_ptr.md"
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/basic/README.md",
+      "title": "面向对象编程",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "cpp",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/design_model/Delegate.md",
+      "title": "Delegate",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": "docs/computerScience/knowledge/cpp/design_model/Delegate.md"
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/design_model/Observer.md",
+      "title": "Observer",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": "docs/computerScience/knowledge/cpp/design_model/Observer.md"
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/design_model/README.md",
+      "title": "设计模式",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/design_model/Singleton.md",
+      "title": "Singleton",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": "docs/computerScience/knowledge/cpp/design_model/Singleton.md"
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/objModel/README.md",
+      "title": "C++面向对象模型",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "cpp",
+        "objModel"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/objModel/TemplateClass.md",
+      "title": "TemplateClass",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "cpp",
+        "objModel"
+      ],
+      "canonical": "docs/computerScience/knowledge/cpp/objModel/TemplateClass.md"
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/objModel/virtual_function.md",
+      "title": "虚函数实现：",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "cpp",
+        "objModel"
+      ],
+      "canonical": "docs/computerScience/knowledge/cpp/objModel/virtual_function.md"
+    },
+    {
+      "id": "docs/AI/knowledge/cpp/README.md",
+      "title": "C++",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "cpp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/deep-learning/basic/deep-learning.md",
+      "title": "机器学习",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "deep-learning",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/deep-learning/basic/README.md",
+      "title": "Deep Learning",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "deep-learning",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/deep-learning/basic/the_way_to_learn.md",
+      "title": "深度学习入门",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "deep-learning",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/deep-learning/lane_detection/Interview.md",
+      "title": "深度学习模型训练",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "deep-learning",
+        "lane_detection"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/deep-learning/lane_detection/lane_detection.md",
+      "title": "简介",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "deep-learning",
+        "lane_detection"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/deep-learning/lane_detection/README.md",
+      "title": "车道检测",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "deep-learning",
+        "lane_detection"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/deep-learning/README.md",
+      "title": "Deep Learning",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "deep-learning"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Adaptive_Threshold.md",
+      "title": "Adaptive Threshold",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Adaptive_Threshold.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Blob.md",
+      "title": "Blob",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Blob.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Canny.md",
+      "title": "Canny",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Canny.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/DFT.md",
+      "title": "DFT",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/DFT.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/face_detection.md",
+      "title": "face detection",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/face_detection.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Feature_Matching.md",
+      "title": "Feature Matching",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Feature_Matching.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Harris.md",
+      "title": "Harris",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Harris.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Hough_Transform.md",
+      "title": "Hough Transform",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Hough_Transform.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/ORB.md",
+      "title": "ORB",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/ORB.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/README.md",
+      "title": "opencv进阶算法",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Threshold.md",
+      "title": "Threshold",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Threshold.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Advanced/Watershed.md",
+      "title": "基本思想",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Advanced/Watershed.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Context.md",
+      "title": "Context",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Context.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Dilation_Erosion.md",
+      "title": "Dilation Erosion",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Dilation_Erosion.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Gaussian.md",
+      "title": "原理",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Gaussian.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/grayImage.md",
+      "title": "直接取平均值",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/grayImage.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Histogram_Equalization.md",
+      "title": "Histogram Equalization",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Histogram_Equalization.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Image_processing.md",
+      "title": "一般步骤",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Image_processing.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Mean_Filtering.md",
+      "title": "概念",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Mean_Filtering.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/medianFilter.md",
+      "title": "数学原理",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/medianFilter.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/pixel_operations.md",
+      "title": "修改像素值",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/pixel_operations.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/README.md",
+      "title": "opencv基础算法",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Resize.md",
+      "title": "Resize",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Resize.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/Rotate.md",
+      "title": "数学逻辑",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/Rotate.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/basic/template_matching.md",
+      "title": "template matching",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/basic/template_matching.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Image_Compression/Image_Compression.md",
+      "title": "DCT（离散余弦变换）",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Image_Compression"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Image_Compression/Image_Compression.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Image_Compression/PNG.md",
+      "title": "PNG",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Image_Compression"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Image_Compression/PNG.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Image_Compression/README.md",
+      "title": "图像压缩",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "opencv",
+        "Image_Compression"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Line_Circle/code.md",
+      "title": "计算梯度",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Line_Circle"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Line_Circle/code.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Line_Circle/Line_circle.md",
+      "title": "找直线：",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "opencv",
+        "Line_Circle"
+      ],
+      "canonical": "docs/computerScience/knowledge/opencv/Line_Circle/Line_circle.md"
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/Line_Circle/README.md",
+      "title": "find line and find circle",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "opencv",
+        "Line_Circle"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/opencv/README.md",
+      "title": "OpenCV",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "opencv"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_basic/3Drebuild.md",
+      "title": "3Drebuild",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_basic/3Drebuild.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_basic/camera.md",
+      "title": "camera",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_basic/camera.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_basic/Height_Difference.md",
+      "title": "1. 平面度 (Planarity)",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_basic/Height_Difference.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_basic/README.md",
+      "title": "OpenGL",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter2.md",
+      "title": "特征保持的点云去噪算法",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter2.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter3.md",
+      "title": "基于信息熵和聚类的点云简化算法",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter3.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter4.md",
+      "title": "Chapter4",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter4.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter5.md",
+      "title": "基于栅格划分和曲率分级的点云简化算法",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter5.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter6.md",
+      "title": "基于正态分布和曲率的层次化点云配准算法",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter6.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/cloudPoint.md",
+      "title": "三维点云数据：",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_cloud_book/cloudPoint.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/Question.md",
+      "title": "点云数据如何规避二维图像处理中的姿态和光照问题：",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/3D_cloud_book/Question.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/3D_cloud_book/README.md",
+      "title": "OpenGL",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/A_3D_Process.md",
+      "title": "绘制整个窗体",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/A_3D_Process.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/about_cloudcompare.md",
+      "title": "about cloudcompare",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/about_cloudcompare.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/about_Vtk.md",
+      "title": "OpenGL 简介",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/about_Vtk.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/Architecture.md",
+      "title": "Architecture",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/Architecture.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/Explanation_of_Terms.md",
+      "title": "法向量",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/Explanation_of_Terms.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/FBO.md",
+      "title": "FBO",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/FBO.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/openGL.md",
+      "title": "编程技巧实战总结",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/openGL.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/QOpenGLShaderProgram.md",
+      "title": "QOpenGLShaderProgram",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/QOpenGLShaderProgram.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/README.md",
+      "title": "OpenGL",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/shader_code.md",
+      "title": "shader code",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/shader_code.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/cloudcompare/shader.md",
+      "title": "shader",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/cloudcompare/shader.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/code/Axis.md",
+      "title": "Axis",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "openGL",
+        "code"
+      ],
+      "canonical": "docs/computerScience/knowledge/openGL/code/Axis.md"
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/code/README.md",
+      "title": "OpenGL",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "openGL",
+        "code"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/openGL/README.md",
+      "title": "OpenGL",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "openGL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/Operting_System/Operating_System.md",
+      "title": "进程和线程",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "Operting_System"
+      ],
+      "canonical": "docs/computerScience/knowledge/Operting_System/Operating_System.md"
+    },
+    {
+      "id": "docs/AI/knowledge/Operting_System/README.md",
+      "title": "Operating System",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "Operting_System"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/python/Anaconda/README.md",
+      "title": "Python",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "python",
+        "Anaconda"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/python/README.md",
+      "title": "Python",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "python"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/README.md",
+      "title": "计算机",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/robot/arm_eye_calibration.md",
+      "title": "arm eye calibration",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "robot"
+      ],
+      "canonical": "docs/computerScience/knowledge/robot/arm_eye_calibration.md"
+    },
+    {
+      "id": "docs/AI/knowledge/robot/Calibration.md",
+      "title": "标定的一般过程",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "robot"
+      ],
+      "canonical": "docs/computerScience/knowledge/robot/Calibration.md"
+    },
+    {
+      "id": "docs/AI/knowledge/robot/Image_model.md",
+      "title": "机器人末端检测",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "robot"
+      ],
+      "canonical": "docs/computerScience/knowledge/robot/Image_model.md"
+    },
+    {
+      "id": "docs/AI/knowledge/robot/Move_model.md",
+      "title": "机器人末端检测",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "robot"
+      ],
+      "canonical": "docs/computerScience/knowledge/robot/Move_model.md"
+    },
+    {
+      "id": "docs/AI/knowledge/robot/README.md",
+      "title": "机器人末端检测",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "robot"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/knowledge/robot/robot_arm_operate.md",
+      "title": "用于控制和模拟简单机器人手臂的类 robot_arm。",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "robot"
+      ],
+      "canonical": "docs/computerScience/knowledge/robot/robot_arm_operate.md"
+    },
+    {
+      "id": "docs/AI/Nvidia_Tao/docker_tao.md",
+      "title": "TAO Toolkit Docker 环境与训练",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "Nvidia_Tao"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Nvidia_Tao/README.md",
+      "title": "Tao - 训练、适应、优化",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "Nvidia_Tao"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Nvidia_Tao/Startu_issues.md",
+      "title": "TAO Toolkit 启动问题与配置",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "Nvidia_Tao"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/README.md",
+      "title": "AI",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Tools/CMake/CMake.md",
+      "title": "CMake的使用：",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "CMake"
+      ],
+      "canonical": "docs/computerScience/Tools/CMake/CMake.md"
+    },
+    {
+      "id": "docs/AI/Tools/CMake/README.md",
+      "title": "计算机",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "CMake"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Tools/Gdb/gdb.md",
+      "title": "在Linux上使用gdb调试已经在运行的程序",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "Gdb"
+      ],
+      "canonical": "docs/computerScience/Tools/Gdb/gdb.md"
+    },
+    {
+      "id": "docs/AI/Tools/Gdb/README.md",
+      "title": "gdb",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "Gdb"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Tools/Git/delete_remote.md",
+      "title": "提交删除操作",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "Git"
+      ],
+      "canonical": "docs/computerScience/Tools/Git/delete_remote.md"
+    },
+    {
+      "id": "docs/AI/Tools/Git/Git.md",
+      "title": "Git",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "Git"
+      ],
+      "canonical": "docs/computerScience/Tools/Git/Git.md"
+    },
+    {
+      "id": "docs/AI/Tools/Git/gitignore.md",
+      "title": "Git 忽略规则示例",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "Git"
+      ],
+      "canonical": "docs/computerScience/Tools/Git/gitignore.md"
+    },
+    {
+      "id": "docs/AI/Tools/Git/README.md",
+      "title": "Git",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "Git"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Tools/Git/ssh.md",
+      "title": "ssh",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "Git"
+      ],
+      "canonical": "docs/computerScience/Tools/Git/ssh.md"
+    },
+    {
+      "id": "docs/AI/Tools/QT/Architecture.md",
+      "title": "MVVM架构简介",
+      "section": "ai",
+      "status": "alias",
+      "tags": [
+        "AI",
+        "QT"
+      ],
+      "canonical": "docs/computerScience/Tools/QT/Architecture.md"
+    },
+    {
+      "id": "docs/AI/Tools/QT/README.md",
+      "title": "QT",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "QT"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Tools/README.md",
+      "title": "计算机",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Tools/VSCode/README.md",
+      "title": "QT",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "VSCode"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/Tools/VSCode/set.md",
+      "title": "Status Bar Visibility",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "VSCode"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/Angle_Mapping.md",
+      "title": "Angle Mapping",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/AngleTransform.md",
+      "title": "1.什么是方向余弦？",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/AngleTransform2.md",
+      "title": "AngleTransform2",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/AngleTransform3.md",
+      "title": "激光线扫相机成像受倾斜的影响关系",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/BasePoint.md",
+      "title": "BasePoint",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/Height_Mapping.md",
+      "title": "Height Mapping",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/README.md",
+      "title": "C++面向对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/3D/Transformation.md",
+      "title": "3D图像坐标转换实际坐标：",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_1/cppModel.md",
+      "title": "模型的设计思路和演化",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_1"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_1/encapsulation.md",
+      "title": "C++在加上类的封装之后，布局成本增加了吗？",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_1"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_1/Inheritance_cppmodel.md",
+      "title": "C++面向对象模型的继承",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_1"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_1/paradigms.md",
+      "title": "C++程序设计模型的三种范式",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_1"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_1/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_1"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_1/struct.md",
+      "title": "struct 关键词",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_1"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_2/constructor_init.md",
+      "title": "constructor init",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_2"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_2/constructor.md",
+      "title": "编译器在什么时候生成默认构造函数",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_2"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_2/copy_constructor_progressive.md",
+      "title": "copy constructor progressive",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_2"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_2/copy_constructor.md",
+      "title": "一.拷贝构造函数在什么时候被调用",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_2"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_2/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_2"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/class_size.md",
+      "title": "一个菱形继承中的各个类的大小",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_3"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md",
+      "title": "一.数据的调用",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_3"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md",
+      "title": "一.含义和用法",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_3"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/dataBind_Layout.md",
+      "title": "一.Data Member的绑定",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_3"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md",
+      "title": "Inheritance cppmodel",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_3"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_3"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md",
+      "title": "非静态成员函数调用",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_4"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_4"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/VFunction_Invocation.md",
+      "title": "单一继承的虚函数调用",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_4"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/cppModel.md",
+      "title": "模型的设计思路和演化",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/README.md",
+      "title": "通信",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/tcp/base.md",
+      "title": "QAbstractSocket 类概述",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication",
+        "tcp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/tcp/Derived.md",
+      "title": "QTcpSocket 类概述",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication",
+        "tcp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/tcp/qabstractsocket.md",
+      "title": "qabstractsocket类",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication",
+        "tcp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/tcp/QtcpCodeReading.md",
+      "title": "QT源代码阅读",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication",
+        "tcp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/tcp/README.md",
+      "title": "通信",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication",
+        "tcp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/tcp/tcp.md",
+      "title": "tcp",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication",
+        "tcp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/basic/Callback.md",
+      "title": "回调函数（Callback Function）",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/basic/mutex_smart_ptr.md",
+      "title": "解释一下C++中的RAII（Resource Acquisition Is Initialization）以及作用",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/basic/README.md",
+      "title": "面向对象编程",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/design_model/Delegate.md",
+      "title": "Delegate",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/design_model/Observer.md",
+      "title": "Observer",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/design_model/README.md",
+      "title": "设计模式",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/design_model/Singleton.md",
+      "title": "Singleton",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "design_model"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/objModel/README.md",
+      "title": "C++面向对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "objModel"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/objModel/TemplateClass.md",
+      "title": "TemplateClass",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "objModel"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/objModel/virtual_function.md",
+      "title": "虚函数实现：",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp",
+        "objModel"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/cpp/README.md",
+      "title": "C++",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "cpp"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/deep-learning/basic/deep-learning.md",
+      "title": "机器学习",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "deep-learning",
+        "basic"
+      ],
+      "canonical": "docs/AI/knowledge/deep-learning/basic/deep-learning.md"
+    },
+    {
+      "id": "docs/computerScience/knowledge/deep-learning/basic/README.md",
+      "title": "Deep Learning",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "deep-learning",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/deep-learning/basic/the_way_to_learn.md",
+      "title": "深度学习入门",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "deep-learning",
+        "basic"
+      ],
+      "canonical": "docs/AI/knowledge/deep-learning/basic/the_way_to_learn.md"
+    },
+    {
+      "id": "docs/computerScience/knowledge/deep-learning/lane_detection/Interview.md",
+      "title": "深度学习模型训练",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "deep-learning",
+        "lane_detection"
+      ],
+      "canonical": "docs/AI/knowledge/deep-learning/lane_detection/Interview.md"
+    },
+    {
+      "id": "docs/computerScience/knowledge/deep-learning/lane_detection/lane_detection.md",
+      "title": "简介",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "deep-learning",
+        "lane_detection"
+      ],
+      "canonical": "docs/AI/knowledge/deep-learning/lane_detection/lane_detection.md"
+    },
+    {
+      "id": "docs/computerScience/knowledge/deep-learning/lane_detection/README.md",
+      "title": "车道检测",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "deep-learning",
+        "lane_detection"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/deep-learning/README.md",
+      "title": "Deep Learning",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "deep-learning"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Adaptive_Threshold.md",
+      "title": "Adaptive Threshold",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Blob.md",
+      "title": "Blob",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Canny.md",
+      "title": "Canny",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/DFT.md",
+      "title": "DFT",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/face_detection.md",
+      "title": "face detection",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Feature_Matching.md",
+      "title": "Feature Matching",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Harris.md",
+      "title": "Harris",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Hough_Transform.md",
+      "title": "Hough Transform",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/ORB.md",
+      "title": "ORB",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/README.md",
+      "title": "opencv进阶算法",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Threshold.md",
+      "title": "Threshold",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Advanced/Watershed.md",
+      "title": "基本思想",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Advanced"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Context.md",
+      "title": "Context",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Dilation_Erosion.md",
+      "title": "Dilation Erosion",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Gaussian.md",
+      "title": "原理",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/grayImage.md",
+      "title": "直接取平均值",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Histogram_Equalization.md",
+      "title": "Histogram Equalization",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Image_processing.md",
+      "title": "一般步骤",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Mean_Filtering.md",
+      "title": "概念",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/medianFilter.md",
+      "title": "数学原理",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/pixel_operations.md",
+      "title": "修改像素值",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/README.md",
+      "title": "opencv基础算法",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Resize.md",
+      "title": "Resize",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/Rotate.md",
+      "title": "数学逻辑",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/basic/template_matching.md",
+      "title": "template matching",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Image_Compression/Image_Compression.md",
+      "title": "DCT（离散余弦变换）",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Image_Compression"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Image_Compression/PNG.md",
+      "title": "PNG",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Image_Compression"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Image_Compression/README.md",
+      "title": "图像压缩",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Image_Compression"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Line_Circle/code.md",
+      "title": "计算梯度",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Line_Circle"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Line_Circle/Line_circle.md",
+      "title": "找直线：",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Line_Circle"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/Line_Circle/README.md",
+      "title": "find line and find circle",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv",
+        "Line_Circle"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/opencv/README.md",
+      "title": "OpenCV",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "opencv"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_basic/3Drebuild.md",
+      "title": "3Drebuild",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_basic/camera.md",
+      "title": "camera",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_basic/Height_Difference.md",
+      "title": "1. 平面度 (Planarity)",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_basic/README.md",
+      "title": "OpenGL",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter2.md",
+      "title": "特征保持的点云去噪算法",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter3.md",
+      "title": "基于信息熵和聚类的点云简化算法",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter4.md",
+      "title": "Chapter4",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter5.md",
+      "title": "基于栅格划分和曲率分级的点云简化算法",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter6.md",
+      "title": "基于正态分布和曲率的层次化点云配准算法",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/cloudPoint.md",
+      "title": "三维点云数据：",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/Question.md",
+      "title": "点云数据如何规避二维图像处理中的姿态和光照问题：",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/3D_cloud_book/README.md",
+      "title": "OpenGL",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "3D_cloud_book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/A_3D_Process.md",
+      "title": "绘制整个窗体",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/about_cloudcompare.md",
+      "title": "about cloudcompare",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/about_Vtk.md",
+      "title": "OpenGL 简介",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/Architecture.md",
+      "title": "Architecture",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/Explanation_of_Terms.md",
+      "title": "法向量",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/FBO.md",
+      "title": "FBO",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/openGL.md",
+      "title": "编程技巧实战总结",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/QOpenGLShaderProgram.md",
+      "title": "QOpenGLShaderProgram",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/README.md",
+      "title": "OpenGL",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/shader_code.md",
+      "title": "shader code",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/cloudcompare/shader.md",
+      "title": "shader",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "cloudcompare"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/code/Axis.md",
+      "title": "Axis",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "code"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/code/README.md",
+      "title": "OpenGL",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL",
+        "code"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/openGL/README.md",
+      "title": "OpenGL",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "openGL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Operting_System/Operating_System.md",
+      "title": "进程和线程",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Operting_System"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Operting_System/README.md",
+      "title": "Operating System",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Operting_System"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/python/Anaconda/README.md",
+      "title": "Python",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "python",
+        "Anaconda"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/python/README.md",
+      "title": "Python",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "python"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/README.md",
+      "title": "计算机",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/robot/arm_eye_calibration.md",
+      "title": "arm eye calibration",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "robot"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/robot/Calibration.md",
+      "title": "标定的一般过程",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "robot"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/robot/Image_model.md",
+      "title": "机器人末端检测",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "robot"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/robot/Move_model.md",
+      "title": "机器人末端检测",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "robot"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/robot/README.md",
+      "title": "机器人末端检测",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "robot"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/robot/robot_arm_operate.md",
+      "title": "用于控制和模拟简单机器人手臂的类 robot_arm。",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "robot"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/README.md",
+      "title": "计算机",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/CMake/CMake.md",
+      "title": "CMake的使用：",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "CMake"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/CMake/README.md",
+      "title": "计算机",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "CMake"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Gdb/gdb.md",
+      "title": "在Linux上使用gdb调试已经在运行的程序",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Gdb"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Gdb/README.md",
+      "title": "gdb",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Gdb"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Git/delete_remote.md",
+      "title": "提交删除操作",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Git"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Git/Git.md",
+      "title": "Git",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Git"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Git/gitignore.md",
+      "title": "Git 忽略规则示例",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Git"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Git/README.md",
+      "title": "Git",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Git"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Git/ssh.md",
+      "title": "ssh",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Git"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/QT/Architecture.md",
+      "title": "MVVM架构简介",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "QT"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/QT/README.md",
+      "title": "QT",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "QT"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/README.md",
+      "title": "计算机",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/VSCode/README.md",
+      "title": "QT",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "VSCode"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/VSCode/set.md",
+      "title": "Status Bar Visibility",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "VSCode"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Ubuntu/README.md",
+      "title": "Ubuntu",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Ubuntu"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Ubuntu/Startu_issues.md",
+      "title": "报错",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Ubuntu"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Network_Analyser/Application.md",
+      "title": "应用领域",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Network_Analyser"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Network_Analyser/README.md",
+      "title": "网络分析仪",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Network_Analyser"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/README.md",
+      "title": "电子与通信",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/English/proficient_English.md",
+      "title": "proficient English",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [
+        "English"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/Advanced_Mathematics/README.md",
+      "title": "高等数学",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math",
+        "Advanced_Mathematics"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/Higher_Mathematics/TransformT12.md",
+      "title": "如何通过两个已知变换推导出点云1到点云2的变换",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math",
+        "Higher_Mathematics"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/README.md",
+      "title": "数学",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/signal_processing/camera/camera.md",
+      "title": "camera",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math",
+        "signal_processing",
+        "camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/signal_processing/camera/README.md",
+      "title": "相机与成像",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math",
+        "signal_processing",
+        "camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/signal_processing/LTI/LTI.md",
+      "title": "线性时不变系统（LTI系统）",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math",
+        "signal_processing",
+        "LTI"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/signal_processing/LTI/README.md",
+      "title": "线性时不变系统",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math",
+        "signal_processing",
+        "LTI"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/math/signal_processing/README.md",
+      "title": "信号处理",
+      "section": "math",
+      "status": "unreviewed",
+      "tags": [
+        "math",
+        "signal_processing"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/patent/patent.md",
+      "title": "二. 技术信息",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "patent"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/patent/pentum.md",
+      "title": "pentum",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "patent"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/patent/README.md",
+      "title": "自省自修",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "patent"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/README.md",
+      "title": "self-improvement",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/2024-07-17.md",
+      "title": "2024 07 17",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/culti.md",
+      "title": "怎样做到：不追求别人的认同",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/Cultivation.md",
+      "title": "How to Achieve: Not Seeking Others' Approval",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/README.md",
+      "title": "自省自修",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/Self-Monitoring.md",
+      "title": "Self Monitoring",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/self1.md",
+      "title": "self1",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/self2.md",
+      "title": "self2",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/Self-Management/thoughts.md",
+      "title": "point",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "Self-Management"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/useful_tips/Key.md",
+      "title": "在gitee上克隆项目",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "useful_tips"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/useful_tips/README.md",
+      "title": "Useful tips",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "useful_tips"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/useful_tips/symbol.md",
+      "title": "symbol",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "useful_tips"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/useful_tips/windows.md",
+      "title": "Windows+R键",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "useful_tips"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/2024_CL/calibration.md",
+      "title": "获取图像特征点坐标",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "2024_CL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/2024_CL/disk_transform.md",
+      "title": "sda-->sdb",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "2024_CL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/2024_CL/ftp.md",
+      "title": "ftp",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "2024_CL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/2024_CL/init.md",
+      "title": "init",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "2024_CL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/2024_CL/README.md",
+      "title": "自省自修",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "2024_CL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/2024_CL/tools_null.md",
+      "title": "工具列表为空",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "2024_CL"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/compile.md",
+      "title": "compile",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/dll.md",
+      "title": "插件接口类 (CloudMirror)",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/insert.md",
+      "title": "插件的逻辑",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/MainApp.md",
+      "title": "MainApp",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/process.md",
+      "title": "无采集器002A",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/README.md",
+      "title": "自省自修",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/tableView.md",
+      "title": "tableView",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/task.md",
+      "title": "添加任务",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/3D_Project/toolServiceBase.md",
+      "title": "toolServiceBase",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "3D_Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Basic/camera_code.md",
+      "title": "相机的导出函数",
+      "section": "life-work",
+      "status": "alias",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Basic"
+      ],
+      "canonical": "docs/socioeconomics/work/Camera/camera_code.md"
+    },
+    {
+      "id": "docs/socioeconomics/work/Basic/CameraLog.md",
+      "title": "CameraLog",
+      "section": "life-work",
+      "status": "alias",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Basic"
+      ],
+      "canonical": "docs/socioeconomics/work/Camera/CameraLog.md"
+    },
+    {
+      "id": "docs/socioeconomics/work/Basic/Macro_definition.md",
+      "title": "预处理宏",
+      "section": "life-work",
+      "status": "alias",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Basic"
+      ],
+      "canonical": "docs/socioeconomics/work/Camera/Macro_definition.md"
+    },
+    {
+      "id": "docs/socioeconomics/work/Basic/README.md",
+      "title": "自省自修",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Basic"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Basic/senser.md",
+      "title": "senser",
+      "section": "life-work",
+      "status": "alias",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Basic"
+      ],
+      "canonical": "docs/socioeconomics/work/Camera/senser.md"
+    },
+    {
+      "id": "docs/socioeconomics/work/Camera/camera_code.md",
+      "title": "相机的导出函数",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Camera/CameraLog.md",
+      "title": "CameraLog",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Camera/Macro_definition.md",
+      "title": "预处理宏",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Camera/README.md",
+      "title": "自省自修",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Camera/senser.md",
+      "title": "senser",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Camera/sszn.md",
+      "title": "相机模块的实现",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Camera/sszn1.md",
+      "title": "相机模块接口文档",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Camera"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/erbuild/Code_review.md",
+      "title": "Code review",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "erbuild"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/erbuild/rebuild_plan.md",
+      "title": "rebuild plan",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "erbuild"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/0718.md",
+      "title": "0718",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/Apple.md",
+      "title": "苹果外包",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/CPP.md",
+      "title": "历来的面试问题总结：",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/ppt.md",
+      "title": "ppt",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/Q-A1.md",
+      "title": "1.你在之前的项目中遇到过哪些挑战，你是如何克服的？",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/Q-A2.md",
+      "title": "问题1：你在珠海奔图电子深圳分公司的工作中，提到你参与了图像处理算法开发和内容识别功能开发。你能详细讲讲你在这个项目中的具体职责和贡献吗？",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/README.md",
+      "title": "自省自修",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Interview/self.md",
+      "title": "self",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work",
+        "Interview"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md",
+      "title": "知识库自动化与质量工具链",
+      "section": "life-work",
+      "status": "evergreen",
+      "tags": [
+        "knowledge-base",
+        "automation",
+        "quality",
+        "socioeconomics",
+        "work",
+        "Knowledge_Base"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md",
+      "title": "Markdown 笔记库的内容治理",
+      "section": "life-work",
+      "status": "evergreen",
+      "tags": [
+        "knowledge-base",
+        "markdown",
+        "information-architecture",
+        "socioeconomics",
+        "work",
+        "Knowledge_Base"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
+      "title": "知识库的日常维护与网站发布",
+      "section": "life-work",
+      "status": "evergreen",
+      "tags": [
+        "knowledge-base",
+        "workflow",
+        "docsify",
+        "git",
+        "socioeconomics",
+        "work",
+        "Knowledge_Base"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md",
+      "title": "本地 RAG 知识库聊天系统",
+      "section": "life-work",
+      "status": "evergreen",
+      "tags": [
+        "rag",
+        "retrieval",
+        "ai",
+        "knowledge-base",
+        "socioeconomics",
+        "work",
+        "Knowledge_Base"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "title": "个人知识库工程",
+      "section": "life-work",
+      "status": "evergreen",
+      "tags": [
+        "knowledge-base",
+        "markdown",
+        "rag",
+        "socioeconomics",
+        "work",
+        "Knowledge_Base"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/socioeconomics/work/README.md",
+      "title": "工作实践",
+      "section": "life-work",
+      "status": "unreviewed",
+      "tags": [
+        "socioeconomics",
+        "work"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "home.md",
+      "title": "瑜的笔记",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "inbox/README.md",
+      "title": "收件箱",
+      "section": "inbox",
+      "status": "draft",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "NOTE_OPTIMIZATION.md",
+      "title": "笔记优化与知识库方案",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "OBSIDIAN_SETUP.md",
+      "title": "Obsidian 使用说明",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "README.md",
+      "title": "Notes_yu",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs/AI/knowledge/3D/Angle_Mapping.md",
+      "target": "docs/computerScience/knowledge/3D/Angle_Mapping.md"
+    },
+    {
+      "source": "docs/AI/knowledge/3D/AngleTransform.md",
+      "target": "docs/computerScience/knowledge/3D/AngleTransform.md"
+    },
+    {
+      "source": "docs/AI/knowledge/3D/AngleTransform2.md",
+      "target": "docs/computerScience/knowledge/3D/AngleTransform2.md"
+    },
+    {
+      "source": "docs/AI/knowledge/3D/AngleTransform3.md",
+      "target": "docs/computerScience/knowledge/3D/AngleTransform3.md"
+    },
+    {
+      "source": "docs/AI/knowledge/3D/BasePoint.md",
+      "target": "docs/computerScience/knowledge/3D/BasePoint.md"
+    },
+    {
+      "source": "docs/AI/knowledge/3D/Height_Mapping.md",
+      "target": "docs/computerScience/knowledge/3D/Height_Mapping.md"
+    },
+    {
+      "source": "docs/AI/knowledge/3D/Transformation.md",
+      "target": "docs/computerScience/knowledge/3D/Transformation.md"
+    },
+    {
+      "source": "docs/AI/knowledge/communication/tcp/base.md",
+      "target": "docs/computerScience/knowledge/communication/tcp/base.md"
+    },
+    {
+      "source": "docs/AI/knowledge/communication/tcp/Derived.md",
+      "target": "docs/computerScience/knowledge/communication/tcp/Derived.md"
+    },
+    {
+      "source": "docs/AI/knowledge/communication/tcp/qabstractsocket.md",
+      "target": "docs/computerScience/knowledge/communication/tcp/qabstractsocket.md"
+    },
+    {
+      "source": "docs/AI/knowledge/communication/tcp/QtcpCodeReading.md",
+      "target": "docs/computerScience/knowledge/communication/tcp/QtcpCodeReading.md"
+    },
+    {
+      "source": "docs/AI/knowledge/communication/tcp/tcp.md",
+      "target": "docs/computerScience/knowledge/communication/tcp/tcp.md"
+    },
+    {
+      "source": "docs/AI/knowledge/cpp/basic/mutex_smart_ptr.md",
+      "target": "docs/computerScience/knowledge/cpp/basic/mutex_smart_ptr.md"
+    },
+    {
+      "source": "docs/AI/knowledge/cpp/design_model/Delegate.md",
+      "target": "docs/computerScience/knowledge/cpp/design_model/Delegate.md"
+    },
+    {
+      "source": "docs/AI/knowledge/cpp/design_model/Observer.md",
+      "target": "docs/computerScience/knowledge/cpp/design_model/Observer.md"
+    },
+    {
+      "source": "docs/AI/knowledge/cpp/design_model/Singleton.md",
+      "target": "docs/computerScience/knowledge/cpp/design_model/Singleton.md"
+    },
+    {
+      "source": "docs/AI/knowledge/cpp/objModel/TemplateClass.md",
+      "target": "docs/computerScience/knowledge/cpp/objModel/TemplateClass.md"
+    },
+    {
+      "source": "docs/AI/knowledge/cpp/objModel/virtual_function.md",
+      "target": "docs/computerScience/knowledge/cpp/objModel/virtual_function.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Adaptive_Threshold.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Adaptive_Threshold.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Blob.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Blob.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Canny.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Canny.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/DFT.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/DFT.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/face_detection.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/face_detection.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Feature_Matching.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Feature_Matching.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Harris.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Harris.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Hough_Transform.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Hough_Transform.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/ORB.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/ORB.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Threshold.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Threshold.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Advanced/Watershed.md",
+      "target": "docs/computerScience/knowledge/opencv/Advanced/Watershed.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Context.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Context.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Dilation_Erosion.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Dilation_Erosion.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Gaussian.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Gaussian.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/grayImage.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/grayImage.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Histogram_Equalization.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Histogram_Equalization.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Image_processing.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Image_processing.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Mean_Filtering.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Mean_Filtering.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/medianFilter.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/medianFilter.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/pixel_operations.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/pixel_operations.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Resize.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Resize.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/Rotate.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/Rotate.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/basic/template_matching.md",
+      "target": "docs/computerScience/knowledge/opencv/basic/template_matching.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Image_Compression/Image_Compression.md",
+      "target": "docs/computerScience/knowledge/opencv/Image_Compression/Image_Compression.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Image_Compression/PNG.md",
+      "target": "docs/computerScience/knowledge/opencv/Image_Compression/PNG.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Line_Circle/code.md",
+      "target": "docs/computerScience/knowledge/opencv/Line_Circle/code.md"
+    },
+    {
+      "source": "docs/AI/knowledge/opencv/Line_Circle/Line_circle.md",
+      "target": "docs/computerScience/knowledge/opencv/Line_Circle/Line_circle.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_basic/3Drebuild.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_basic/3Drebuild.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_basic/camera.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_basic/camera.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_basic/Height_Difference.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_basic/Height_Difference.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter2.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter2.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter3.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter3.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter4.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter4.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter5.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter5.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_cloud_book/Chapter6.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_cloud_book/Chapter6.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_cloud_book/cloudPoint.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_cloud_book/cloudPoint.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/3D_cloud_book/Question.md",
+      "target": "docs/computerScience/knowledge/openGL/3D_cloud_book/Question.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/A_3D_Process.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/A_3D_Process.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/about_cloudcompare.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/about_cloudcompare.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/about_Vtk.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/about_Vtk.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/Architecture.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/Architecture.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/Explanation_of_Terms.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/Explanation_of_Terms.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/FBO.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/FBO.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/openGL.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/openGL.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/QOpenGLShaderProgram.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/QOpenGLShaderProgram.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/shader_code.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/shader_code.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/cloudcompare/shader.md",
+      "target": "docs/computerScience/knowledge/openGL/cloudcompare/shader.md"
+    },
+    {
+      "source": "docs/AI/knowledge/openGL/code/Axis.md",
+      "target": "docs/computerScience/knowledge/openGL/code/Axis.md"
+    },
+    {
+      "source": "docs/AI/knowledge/Operting_System/Operating_System.md",
+      "target": "docs/computerScience/knowledge/Operting_System/Operating_System.md"
+    },
+    {
+      "source": "docs/AI/knowledge/robot/arm_eye_calibration.md",
+      "target": "docs/computerScience/knowledge/robot/arm_eye_calibration.md"
+    },
+    {
+      "source": "docs/AI/knowledge/robot/Calibration.md",
+      "target": "docs/computerScience/knowledge/robot/Calibration.md"
+    },
+    {
+      "source": "docs/AI/knowledge/robot/Image_model.md",
+      "target": "docs/computerScience/knowledge/robot/Image_model.md"
+    },
+    {
+      "source": "docs/AI/knowledge/robot/Move_model.md",
+      "target": "docs/computerScience/knowledge/robot/Move_model.md"
+    },
+    {
+      "source": "docs/AI/knowledge/robot/robot_arm_operate.md",
+      "target": "docs/computerScience/knowledge/robot/robot_arm_operate.md"
+    },
+    {
+      "source": "docs/AI/Tools/CMake/CMake.md",
+      "target": "docs/computerScience/Tools/CMake/CMake.md"
+    },
+    {
+      "source": "docs/AI/Tools/Gdb/gdb.md",
+      "target": "docs/computerScience/Tools/Gdb/gdb.md"
+    },
+    {
+      "source": "docs/AI/Tools/Git/delete_remote.md",
+      "target": "docs/computerScience/Tools/Git/delete_remote.md"
+    },
+    {
+      "source": "docs/AI/Tools/Git/Git.md",
+      "target": "docs/computerScience/Tools/Git/Git.md"
+    },
+    {
+      "source": "docs/AI/Tools/Git/gitignore.md",
+      "target": "docs/computerScience/Tools/Git/gitignore.md"
+    },
+    {
+      "source": "docs/AI/Tools/Git/ssh.md",
+      "target": "docs/computerScience/Tools/Git/ssh.md"
+    },
+    {
+      "source": "docs/AI/Tools/QT/Architecture.md",
+      "target": "docs/computerScience/Tools/QT/Architecture.md"
+    },
+    {
+      "source": "docs/computerScience/knowledge/deep-learning/basic/deep-learning.md",
+      "target": "docs/AI/knowledge/deep-learning/basic/deep-learning.md"
+    },
+    {
+      "source": "docs/computerScience/knowledge/deep-learning/basic/the_way_to_learn.md",
+      "target": "docs/AI/knowledge/deep-learning/basic/the_way_to_learn.md"
+    },
+    {
+      "source": "docs/computerScience/knowledge/deep-learning/lane_detection/Interview.md",
+      "target": "docs/AI/knowledge/deep-learning/lane_detection/Interview.md"
+    },
+    {
+      "source": "docs/computerScience/knowledge/deep-learning/lane_detection/lane_detection.md",
+      "target": "docs/AI/knowledge/deep-learning/lane_detection/lane_detection.md"
+    },
+    {
+      "source": "docs/Electronics/Network_Analyser/README.md",
+      "target": "docs/Electronics/Network_Analyser/Application.md"
+    },
+    {
+      "source": "docs/math/signal_processing/camera/README.md",
+      "target": "docs/math/signal_processing/camera/camera.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Basic/camera_code.md",
+      "target": "docs/socioeconomics/work/Camera/camera_code.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Basic/CameraLog.md",
+      "target": "docs/socioeconomics/work/Camera/CameraLog.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Basic/Macro_definition.md",
+      "target": "docs/socioeconomics/work/Camera/Macro_definition.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Basic/senser.md",
+      "target": "docs/socioeconomics/work/Camera/senser.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md",
+      "target": "CHAT_SETUP.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "CHAT_SETUP.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "docs/AI/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "docs/computerScience/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "docs/socioeconomics/work/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "KNOWLEDGE_BASE.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "NOTE_OPTIMIZATION.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "OBSIDIAN_SETUP.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/README.md",
+      "target": "docs/socioeconomics/work/2024_CL/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/README.md",
+      "target": "docs/socioeconomics/work/3D_Project/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/README.md",
+      "target": "docs/socioeconomics/work/Basic/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/README.md",
+      "target": "docs/socioeconomics/work/Camera/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/README.md",
+      "target": "docs/socioeconomics/work/Interview/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/README.md",
+      "target": "docs/socioeconomics/work/Knowledge_Base/README.md"
+    },
+    {
+      "source": "home.md",
+      "target": "CHAT_SETUP.md"
+    },
+    {
+      "source": "home.md",
+      "target": "KNOWLEDGE_BASE.md"
+    },
+    {
+      "source": "home.md",
+      "target": "NOTE_OPTIMIZATION.md"
+    },
+    {
+      "source": "home.md",
+      "target": "OBSIDIAN_SETUP.md"
+    },
+    {
+      "source": "README.md",
+      "target": "CHAT_SETUP.md"
+    },
+    {
+      "source": "README.md",
+      "target": "KNOWLEDGE_BASE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "NOTE_OPTIMIZATION.md"
+    },
+    {
+      "source": "README.md",
+      "target": "OBSIDIAN_SETUP.md"
+    }
+  ]
+}

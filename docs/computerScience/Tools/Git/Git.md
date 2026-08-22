@@ -1,3 +1,5 @@
+# Git
+
 chmod -R 775 /root/Work/3D/Code_git<br>
 sudo chown -R $USER:$USER /root/Work/3D/Code_git<br>
 chmod 600 ~/.ssh/authorized_keys<br>
@@ -32,6 +34,3 @@ lscpu | grep -E<br>
 gnome-session-properties <br>
 ./EdgeImagingV3.3.3.4-x86_64.AppImage -m<br>
 chmod +x EdgeImagingV3.3.3.4-x86_64.AppImage <br>
-
-
-

@@ -1,3 +1,4 @@
+# Threshold
 
 阈值分割是一种简单而有效的图像分割方法。其基本思想是通过设定一个或多个阈值，<br>
 将图像像素分为不同的类别（通常是前景和背景）。<br>
@@ -48,7 +49,6 @@
 解释：在安全监控系统中，我们需要检测并识别人脸。<br>
 通过阈值分割，可以将人脸区域与背景区分开来，从而提高人脸检测和识别的准确性。
 
-
 #### 代码实现
 
 以下是一个完整的C++代码示例，实现了单阈值分割和多阈值分割。我们将使用图像像素点遍历的方式来实现。
@@ -58,18 +58,18 @@
 #include <opencv2/opencv.hpp>
 
 // 单阈值分割
-cv::Mat singleThreshold(const cv::Mat& src, int threshold) 
+cv::Mat singleThreshold(const cv::Mat& src, int threshold)
 {
     cv::Mat dst = cv::Mat::zeros(src.size(), CV_8U);
-    for (int y = 0; y < src.rows; ++y) 
+    for (int y = 0; y < src.rows; ++y)
     {
-        for (int x = 0; x < src.cols; ++x) 
+        for (int x = 0; x < src.cols; ++x)
         {
-            if (src.at<uchar>(y, x) >= threshold) 
+            if (src.at<uchar>(y, x) >= threshold)
             {
                 dst.at<uchar>(y, x) = 255;
             }
-            else 
+            else
             {
                 dst.at<uchar>(y, x) = 0;
             }
@@ -79,22 +79,22 @@ cv::Mat singleThreshold(const cv::Mat& src, int threshold)
 }
 
 // 多阈值分割
-cv::Mat multiThreshold(const cv::Mat& src, int threshold1, int threshold2) 
+cv::Mat multiThreshold(const cv::Mat& src, int threshold1, int threshold2)
 {
     cv::Mat dst = cv::Mat::zeros(src.size(), CV_8U);
-    for (int y = 0; y < src.rows; ++y) 
+    for (int y = 0; y < src.rows; ++y)
     {
-        for (int x = 0; x < src.cols; ++x) 
+        for (int x = 0; x < src.cols; ++x)
         {
-            if (src.at<uchar>(y, x) >= threshold2) 
+            if (src.at<uchar>(y, x) >= threshold2)
             {
                 dst.at<uchar>(y, x) = 255;
             }
-            else if (src.at<uchar>(y, x) >= threshold1) 
+            else if (src.at<uchar>(y, x) >= threshold1)
             {
                 dst.at<uchar>(y, x) = 128;
-            } 
-            else 
+            }
+            else
             {
                 dst.at<uchar>(y, x) = 0;
             }
@@ -103,11 +103,11 @@ cv::Mat multiThreshold(const cv::Mat& src, int threshold1, int threshold2)
     return dst;
 }
 
-int main() 
+int main()
 {
     // 从文件加载灰度图像
     cv::Mat img = cv::imread("input.jpg", cv::IMREAD_GRAYSCALE);
-    if (img.empty()) 
+    if (img.empty())
     {
         std::cerr << "Error: Could not open or find the image." << std::endl;
         return -1;

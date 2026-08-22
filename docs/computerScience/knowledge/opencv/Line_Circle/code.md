@@ -1,4 +1,5 @@
-##### 计算梯度   
+# 计算梯度
+
 ```cpp
 void Extract1DEdge::GetGradientMat()
 {
@@ -11,7 +12,7 @@ void Extract1DEdge::GetGradientMat()
     if (m_mInputMat.channels() > 1)
     {
         cvtColor(m_mInputMat, m_mInputMat, COLOR_BGR2GRAY);
-    }  
+    }
 	//码将输入的二维图像m_mInputMat在垂直方向（第三个参数为0）上进行压缩，使用的方法是取平均值（REDUCE_AVG），结果是一个一维图像。
     reduce(m_mInputMat, m_mInputMat, 0, REDUCE_AVG, CV_64FC1);
 	/**
@@ -29,9 +30,8 @@ void Extract1DEdge::GetGradientMat()
 }
 ```
 
-
-
 ##### 边缘检测和提取
+
 ```cpp
 void Extract1DEdge::GetEdgePoint(int threshold, Translation traslation, Selection selection)
 {
@@ -61,7 +61,7 @@ void Extract1DEdge::GetEdgePoint(int threshold, Translation traslation, Selectio
     }
 	//若候选点集为空则返回
     if (m_vpCandidate.size() == 0)
-    { 
+    {
         return;
     }
     //若输入是由暗到明，删除所有梯度值小于0的点
@@ -92,14 +92,13 @@ void Extract1DEdge::GetEdgePoint(int threshold, Translation traslation, Selectio
             else
             {
                 iter++;
-            }           
+            }
         }
     }
     if (m_vpCandidate.size() == 0)
     {
         return;
     }
-
 
     /**
 	 *selection是候选点类型
@@ -166,8 +165,6 @@ void Extract1DEdge::GetEdgePoint(int threshold, Translation traslation, Selectio
     }
 }
 
-
-
 vector<Edge1D_Result> Extract1DEdge::Get1DEdge(Mat inputMat, Point2d pdCenter, double dMeasureLength, double dMeasureHeight, double dMeasureAngle,double sigma, int threshold, Translation traslation, Selection selection)
 {
     if (inputMat.empty())
@@ -185,7 +182,7 @@ vector<Edge1D_Result> Extract1DEdge::Get1DEdge(Mat inputMat, Point2d pdCenter, d
     GetEndPointsOfLine(pdCenter, dMeasureAngle, dMeasureLength, m_pdStart, m_pdEnd);
     m_dK            = GetLineSlope(m_pdStart, m_pdEnd);
     m_dB            = m_pdStart.y - m_dK * m_pdStart.x;
-  
+
 	GetProfieMat();
     FilterMat();
     GetGradientMat();
@@ -193,8 +190,6 @@ vector<Edge1D_Result> Extract1DEdge::Get1DEdge(Mat inputMat, Point2d pdCenter, d
 
     return m_vEdgesResult;
 }
-
-
 
 void process_edges(const cv::Mat& RoiMat,
 	const std::vector<cv::Point2d>& m_vpdEquinoxPoints,
@@ -320,9 +315,6 @@ void myGraphicRectItem::RansacLineFiler(const vector<Point2d>& points, vector<Po
 	}
 }
 
-
-
-
 void myGraphicRectItem::LeastSquaresLineFit(const vector<Point2d>& points, vector<double>& residuals, double& a, double& b)
 {
 	/**
@@ -359,9 +351,6 @@ void myGraphicRectItem::LeastSquaresLineFit(const vector<Point2d>& points, vecto
 		residuals[i] = residual * residual; //计算残差平方
 	}
 }
-
-
-
 
 void myGraphicRectItem::HoughTransformLineFit(const vector<Point2d>& points, vector<Point2d>& lineParams, int numBinsTheta, int numBinsRho, int minVotes)
 {
@@ -414,10 +403,6 @@ void myGraphicRectItem::HoughTransformLineFit(const vector<Point2d>& points, vec
 	}
 }
 
-
-
-
-
 void myGraphicRectItem::DouglasPeucker(const vector<Point2d>& points, vector<Point2d>& simplifiedPoints, double epsilon)
 {
 	/**
@@ -465,7 +450,6 @@ void myGraphicRectItem::DouglasPeucker(const vector<Point2d>& points, vector<Poi
 }
 ```
 
-
 ##### 找直线的图形绘制与函数调用
 
 ```cpp
@@ -505,7 +489,6 @@ void myGraphicRectItem::FindLine(Point2d& pdStart, Point2d& pdEnd, double& dAngl
 	m_vpdEdgePoints.clear();
 	m_vdEdgeGradient.clear();
 	m_vpdExcepetEdgePoints.clear();
-
 
 	int m = m_vpdEquinoxPoints.size();//等分点的大小
 	//预留m个空间给m_vpdEdgePoints和m_vdEdgeGradient这两个向量。
@@ -572,11 +555,9 @@ void myGraphicRectItem::FindLine(Point2d& pdStart, Point2d& pdEnd, double& dAngl
 		  //LeastSquaresLineFit(m_vpdEdgePoints, m_vpdExcepetEdgePoints, m_dFiltrate);
 		  //HoughTransformLineFit(m_vpdEdgePoints, m_vpdExcepetEdgePoints, m_dFiltrate);
 
-
 		//LeastSquaresLineFit(const vector<Point2d>& points, vector<double>& residuals, double& a, double& b)
 		//HoughTransformLineFit(const vector<Point2d>& points, vector<Point2d>& lineParams, int numBinsTheta, int numBinsRho, int minVotes)
 		//DouglasPeucker(const vector<Point2d>& points, vector<Point2d>& simplifiedPoints, double epsilon)
-
 
 		//遍历了所有的异常点，并在边缘点集合中找到相同的点并删除
 		for (Point2d point : m_vpdExcepetEdgePoints)//remove the excepted points.移除多余的点
@@ -633,15 +614,11 @@ void myGraphicRectItem::FindLine(Point2d& pdStart, Point2d& pdEnd, double& dAngl
 }
 ```
 
-
-
-
-
 ##### 圆拟合的图形绘制：
 
 ```cpp
 void QtFitCircleTool::FitCircle()
-{	
+{
 	/**
 	 *对图形界面进行更新，包括绘制一个圆形，圆心，以及圆的边缘点
 	 *使用一个名为m_Circle的对象来找到一个圆形。方法FitCircle的输入参数是圆心的坐标(pdCenter)和半径(dRadius)，以及一个标志(1)。
@@ -654,7 +631,6 @@ void QtFitCircleTool::FitCircle()
      *创建新的QGraphicsLineItem对象，分别表示拟合边缘点和不参与拟合的边缘点，然后把这些点添加到场景(scene)中。
      *显示圆心的坐标和半径
 	*/
-
 
 	//找圆
 	Point2d pdCenter(0, 0);
@@ -741,7 +717,6 @@ void QtFitCircleTool::FitCircle()
 		DisplayEdgePoints[j + 1] = new QGraphicsLineItem(m_Circle->m_vpdExcepetEdgePoints[i].x,
 			m_Circle->m_vpdExcepetEdgePoints[i].y - 5, m_Circle->m_vpdExcepetEdgePoints[i].x, m_Circle->m_vpdExcepetEdgePoints[i].y + 5);
 
-
 		DisplayEdgePoints[j]->setPen(mPen);
 		DisplayEdgePoints[j]->setFlag(QGraphicsItem::ItemIsMovable, false);
 
@@ -752,7 +727,6 @@ void QtFitCircleTool::FitCircle()
 		scene->addItem(DisplayEdgePoints[j + 1]);
 		j += 2;
 	}
-
 
 	//打印圆信息
 	double _CenterX = pdCenter.x;
@@ -822,9 +796,9 @@ void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMeth
 	{
 		int start_idx = i * m / num_threads;
 		int end_idx = (i + 1) * m / num_threads;
-		threads[i] = std::thread(process_edges, std::ref(RoiMat), 
-			std::ref(m_vpdEquinoxPoints), m_dMeasureLength, m_dMeasureHeight, m_dSigma, m_nThresholdCircle, 
-			m_nTranslationCircle, std::ref(m_vdMeasureAngle),std::ref(edge_points[i]), std::ref(edge_gradients[i]), 
+		threads[i] = std::thread(process_edges, std::ref(RoiMat),
+			std::ref(m_vpdEquinoxPoints), m_dMeasureLength, m_dMeasureHeight, m_dSigma, m_nThresholdCircle,
+			m_nTranslationCircle, std::ref(m_vdMeasureAngle),std::ref(edge_points[i]), std::ref(edge_gradients[i]),
 			start_idx, end_idx, Extract1DEdgeCircle, m_nSelectionCircle);
 	}
 	//等待所有线程结束，并将所有结果合并
@@ -835,7 +809,6 @@ void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMeth
 		m_vpdEdgePoints.insert(m_vpdEdgePoints.end(), edge_points[i].begin(), edge_points[i].end());
 		m_vdEdgeGradient.insert(m_vdEdgeGradient.end(), edge_gradients[i].begin(), edge_gradients[i].end());
 	}
-
 
 	/*for (int i = 0; i < m; i++)
 	{
@@ -870,7 +843,7 @@ void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMeth
 			}
 		}
 	}
-    
+
 	//根据参数选择，采用最小二乘法拟合圆 或采用Hype方法拟合圆
 	if (nFitMethod == 0)
 	{
@@ -880,8 +853,6 @@ void DyConcentricArc::FitCircle(Point2d& pdCenter, double& dRadius, int nFitMeth
 	{
 		FitCircleWithHype(m_vpdEdgePoints, pdCenter, dRadius);
 	}
-
-
 
 	//else
 	//{
@@ -914,16 +885,15 @@ void DyConcentricArc::RansacCircleFiler(const vector<Point2d>& points, vector<Po
 	{
 		return;
 	}
-	
+
 	RNG random;
 
 	//初始化最佳得分为-1
-	double bestScore = -1.; 
+	double bestScore = -1.;
 	//创建一个临时的Point2d向量，用于在每次迭代中存储不在当前估计的圆上的点
 	vector<Point2d>vpdTemp;
 	//设置RANSAC的迭代次数。函数使用了一个公式计算迭代次数，以确保有99%的概率能够找到一个好的模型
 	int iterations = log(1 - 0.99) / (log(1 - (1.00 / n)));
-
 
 	/**
 	 *对每次迭代：
@@ -1024,7 +994,6 @@ void DyConcentricArc::FitCircleWithHype(vector<Point2d> pdPoints, Point2d& pdCen
 	*4.使用优化算法（如牛顿法）找到使得误差最小的圆心位置和半径
 	*/
 
-
 	int nSize = pdPoints.size();
 	if (nSize < 3)
 	{
@@ -1086,13 +1055,11 @@ void DyConcentricArc::FitCircleWithHype(vector<Point2d> pdPoints, Point2d& pdCen
 	Cov_xy = Mxx * Myy - Mxy * Mxy;
 	Var_z = Mzz - Mz * Mz;
 
-
 	//计算特征多项式的系数
 	A2 = 4.0 * Cov_xy - 3.0 * Mz * Mz - Mzz;
 	A1 = Var_z * Mz + 4.0 * Cov_xy * Mz - Mxz * Mxz - Myz * Myz;
 	A0 = Mxz * (Mxz * Myy - Myz * Mxy) + Myz * (Myz * Mxx - Mxz * Mxy) - Var_z * Cov_xy;
 	A22 = A2 + A2;
-
 
 	/**
 	 *使用牛顿迭代法找到特征多项式的根x（半径值），这个根使得误差平方和最小
@@ -1135,9 +1102,6 @@ void DyConcentricArc::FitCircleWithHype(vector<Point2d> pdPoints, Point2d& pdCen
 	pdCenter = Point2d(Xcenter + dMeanX, Ycenter + dMeanY);
 
 }
-
-
-
 
 void DyConcentricArc::FitCircleWithLeastSquare(vector<Point2d> pdPoints, Point2d& pdCenter, double& dRadius)
 {

@@ -1,8 +1,8 @@
+# Blob
 
 Blob分析是一种图像处理方法，用来识别和分析图像中的“块”或“物体”。<br>
 想象一下，你有一张黑白图片，上面有一些白色的物体（比如圆形、方形）在黑色的背景上。<br>
 Blob分析的过程就像是在这张图片上找到所有的白色物体，并且计算出每个物体的大小、形状和位置等信息。<br>
-
 
 #### 数学逻辑
 
@@ -11,9 +11,7 @@ Blob分析的过程就像是在这张图片上找到所有的白色物体，并�
 3. *标记和特征提取*：为每个连通域分配一个唯一的标签，并提取其特征（如面积、周长、质心等）。<br>
 4. *分析和处理*：对提取的特征进行分析，可以进行分类、筛选等操作。<br>
 
-
 #### 代码实现
-
 
 ```cpp
 #include <opencv2/opencv.hpp>
@@ -21,7 +19,7 @@ Blob分析的过程就像是在这张图片上找到所有的白色物体，并�
 #include <vector>
 
 // 定义一个结构体来存储Blob的信息
-struct Blob 
+struct Blob
 {
     std::vector<cv::Point> points; // Blob中的像素点
     cv::Rect boundingBox; // 包围框
@@ -33,32 +31,32 @@ const int dx[4] = {-1, 1, 0, 0};
 const int dy[4] = {0, 0, -1, 1};
 
 // 检查一个点是否在图像范围内
-bool isInside(int x, int y, int rows, int cols) 
+bool isInside(int x, int y, int rows, int cols)
 {
     return x >= 0 && x < cols && y >= 0 && y < rows;
 }
 
 // 使用深度优先搜索（DFS）进行连通域检测
-void dfs(cv::Mat& binaryImage, cv::Mat& labelImage, int x, int y, int label, Blob& blob) 
+void dfs(cv::Mat& binaryImage, cv::Mat& labelImage, int x, int y, int label, Blob& blob)
 {
     std::stack<cv::Point> stack;
     stack.push(cv::Point(x, y));
     labelImage.at<int>(y, x) = label;
 
-    while (!stack.empty()) 
+    while (!stack.empty())
     {
         cv::Point p = stack.top();
         stack.pop();
         blob.points.push_back(p);
 
-        for (int i = 0; i < 4; ++i) 
+        for (int i = 0; i < 4; ++i)
         {
             int nx = p.x + dx[i];
             int ny = p.y + dy[i];
 
-            if (isInside(nx, ny, binaryImage.rows, binaryImage.cols) && 
-                binaryImage.at<uchar>(ny, nx) == 255 && 
-                labelImage.at<int>(ny, nx) == 0) 
+            if (isInside(nx, ny, binaryImage.rows, binaryImage.cols) &&
+                binaryImage.at<uchar>(ny, nx) == 255 &&
+                labelImage.at<int>(ny, nx) == 0)
             {
                 stack.push(cv::Point(nx, ny));
                 labelImage.at<int>(ny, nx) = label;
@@ -67,11 +65,11 @@ void dfs(cv::Mat& binaryImage, cv::Mat& labelImage, int x, int y, int label, Blo
     }
 }
 
-int main() 
+int main()
 {
     // 读取图像并转换为灰度图像
     cv::Mat image = cv::imread("image.jpg", cv::IMREAD_GRAYSCALE);
-    if (image.empty()) 
+    if (image.empty())
     {
         std::cerr << "无法读取图像!" << std::endl;
         return -1;
@@ -88,11 +86,11 @@ int main()
     std::vector<Blob> blobs;
 
     // 遍历图像的每个像素点
-    for (int y = 0; y < binaryImage.rows; ++y) 
+    for (int y = 0; y < binaryImage.rows; ++y)
     {
-        for (int x = 0; x < binaryImage.cols; ++x) 
+        for (int x = 0; x < binaryImage.cols; ++x)
         {
-            if (binaryImage.at<uchar>(y, x) == 255 && labelImage.at<int>(y, x) == 0) 
+            if (binaryImage.at<uchar>(y, x) == 255 && labelImage.at<int>(y, x) == 0)
             {
                 Blob blob;
                 // 使用DFS进行连通域检测
@@ -108,10 +106,10 @@ int main()
     // 显示结果
     cv::Mat outputImage = cv::Mat::zeros(binaryImage.size(), CV_8UC3);
     cv::RNG rng(12345);
-    for (const auto& blob : blobs) 
+    for (const auto& blob : blobs)
     {
         cv::Scalar color = cv::Scalar(rng.uniform(0, 256), rng.uniform(0, 256), rng.uniform(0, 256));
-        for (const auto& point : blob.points) 
+        for (const auto& point : blob.points)
         {
             outputImage.at<cv::Vec3b>(point) = cv::Vec3b(color[0], color[1], color[2]);
         }

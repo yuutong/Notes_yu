@@ -1,3 +1,5 @@
+# Axis
+
 使用C++和Qt来实现一个带有3D坐标系的OpenGL窗口，并实现旋转和缩放功能。参考CloudCompare中的`ccGLWindow.cpp`类来编写这个类。
 
 以下是实现步骤：

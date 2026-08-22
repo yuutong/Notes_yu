@@ -1,4 +1,4 @@
-## 回调函数（Callback Function）
+# 回调函数（Callback Function）
 
 是一种通过函数指针/对象 实现的异步编程模型：<br>
 
@@ -18,9 +18,8 @@
 
 你接到电话后去取包裹（处理数据）
 
-
-
 ### 2.实例：相机的数据采集
+
 ```cpp
 bool Start()
 {
@@ -43,7 +42,6 @@ bool Start()
 
     // 设置流的缓冲区数量
     m_streamPtr->setBufferCount(m_pGCamDevice->m_CamSettingParam.m_iBuffCount);
-
 
     //注册数据帧回调函数,数据帧回调函数(OnGetFrame)
     //建议不要在该函数中处理耗时的操作，否则会阻塞后续数据帧的实时性
@@ -104,7 +102,6 @@ bool isSuccess = m_streamPtr->attachGrabbing(
 
 通知主逻辑：回调中可能设置事件（如 SetEvent(m_hFinishCapture)），唤醒 DrawImageTimer() 中的等待线程
 
-
 #### 2,3 关键细节
 
 1.性能要求：<br>
@@ -117,18 +114,17 @@ bool isSuccess = m_streamPtr->attachGrabbing(
 3.数据生命周期：<br>
 回调中接收的帧数据可能来自临时内存，需及时拷贝到应用层缓冲区，避免被 SDK 覆盖
 
-
 #### 2.4 回调函数与多线程协作的典型架构
 
 ```shell
-[相机硬件] 
-    |--(中断/数据到达)--> [SDK 内部线程] 
-                          |-- 调用 OnGetFrame() 
-                              |-- 拷贝数据到缓冲区 
-                              |-- 设置事件 (SetEvent) 
+[相机硬件]
+    |--(中断/数据到达)--> [SDK 内部线程]
+                          |-- 调用 OnGetFrame()
+                              |-- 拷贝数据到缓冲区
+                              |-- 设置事件 (SetEvent)
                                   |
-[WorkThread] <--(WaitForSingleObject 唤醒)-- 读取缓冲区 
-                                  |-- 发送信号到 UI 线程 
+[WorkThread] <--(WaitForSingleObject 唤醒)-- 读取缓冲区
+                                  |-- 发送信号到 UI 线程
                                       |
 [主线程] <--(Qt 信号槽)-- 更新图像显示
 
@@ -151,14 +147,10 @@ Socket 消息监听：客户端收到消息时自动调用回调解析内容
 
 定时器事件：定时刷新界面元素（如进度条）
 
-注：这里是通过qt的信号槽机制实现的回调 
+注：这里是通过qt的信号槽机制实现的回调
 信号槽机制（Signals & Slots）本质上就是Qt对回调函数的一种封装和升级
 
 4. 异步任务
 文件读写完成通知：大文件读取完成后回调通知主线程
 
 多线程任务协调：子线程完成任务后回调主线程汇总结果
-
-
-
-

@@ -1,4 +1,5 @@
-##### 绘制整个窗体
+# 绘制整个窗体
+
 画整个窗体，包括前景（图片），背景（窗体颜色）和中间层的3D视图
 
 ```cpp
@@ -28,20 +29,15 @@ void ccGLWindow::paintGL()
 
 	qint64 startTime_ms = m_currentLODState.inProgress ? m_timer.elapsed() : 0;
 
-
 	//初始化一个名为CC_DRAW_CONTEXT的上下文对象，并向其填充一些必要的信息。这个上下文对象会在后续的绘制过程中被使用
 	CC_DRAW_CONTEXT CONTEXT;
 	getContext(CONTEXT);        //getcontext删掉后无法显示点云图像
-
-
 
 	//初始化一个名为RenderingParams的渲染参数对象。这个对象包含了一些控制渲染过程的参数
 	RenderingParams renderingParams;
 	//renderingParams.drawBackground = false;
 	//renderingParams.draw3DPass = false;    //通行证？  中间层
 	//renderingParams.drawForeground = true;
-	
-
 
 	//进行渲染循环。在这个循环中，会根据RenderingParams的设置，依次进行背景绘制，3D内容绘制，以及前景绘制
 	for (renderingParams.passIndex = 0; renderingParams.passIndex < renderingParams.passCount; ++renderingParams.passIndex)
@@ -50,7 +46,6 @@ void ccGLWindow::paintGL()
 	}
 
 }
-
 
 //3. 完全渲染过程
 void ccGLWindow::fullRenderingPass(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingParams)
@@ -73,7 +68,7 @@ void ccGLWindow::fullRenderingPass(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& re
 			diagStrings << "draw background";
 		}*/
 
-		//shall we clear the background (depth and/or color)  
+		//shall we clear the background (depth and/or color)
 		//要清除背景（深度和/或颜色）吗
 		if (m_currentLODState.level == 0)
 		{
@@ -106,7 +101,7 @@ void ccGLWindow::fullRenderingPass(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& re
 		if (m_stereoModeEnabled && m_stereoParams.isAnaglyph())
 		{
 			//change color filter    更改颜色过滤器
-			static GLboolean RED[3] = { GL_TRUE, GL_FALSE, GL_FALSE };   //红 
+			static GLboolean RED[3] = { GL_TRUE, GL_FALSE, GL_FALSE };   //红
 			static GLboolean BLUE[3] = { GL_FALSE, GL_FALSE, GL_TRUE };  //蓝
 			static GLboolean CYAN[3] = { GL_FALSE, GL_TRUE, GL_TRUE };   //青
 			const GLboolean* RGB = nullptr;
@@ -141,7 +136,6 @@ void ccGLWindow::fullRenderingPass(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& re
 		}
 	}
 
-
 	//如果在渲染过程中改变了视口大小，那么在所有渲染步骤结束后，需要恢复初始的视口大小
 	if (modifiedViewport)
 	{
@@ -153,7 +147,6 @@ void ccGLWindow::fullRenderingPass(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& re
 
 	bool oculusMode = (m_stereoModeEnabled && m_stereoParams.glassType == StereoParams::OCULUS);
 	glFunc->glFlush();
-
 
 	/******************/
 	/*** FOREGROUND ***/    //前景
@@ -169,10 +162,10 @@ void ccGLWindow::fullRenderingPass(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& re
 }
 ```
 
-
 ##### 绘制背景
+
 ```cpp
-//4.画背景   
+//4.画背景
 void ccGLWindow::drawBackground(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingParams)
 {
 	ccQOpenGLFunctions* glFunc = functions();
@@ -207,7 +200,7 @@ void ccGLWindow::drawBackground(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rende
 			const ccGui::ParamStruct& displayParams = getDisplayParameters();
 			if (displayParams.drawBackgroundGradient)  //背景渐变
 			{
-				//draw the default gradient color background  
+				//draw the default gradient color background
 				int w = m_glViewport.width() / 2 + 1;
 				int h = m_glViewport.height() / 2 + 1;
 
@@ -266,7 +259,7 @@ void ccGLWindow::drawBackground(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rende
 ```
 
 ##### 绘制前景
- 
+
 ```cpp
 void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingParams)
 {
@@ -285,14 +278,13 @@ void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rend
 		CONTEXT.drawingFlags |= CC_VIRTUAL_TRANS_ENABLED;
 	}
 
-
 	//we draw 2D entities
 	if (m_globalDBRoot)  //这个if语句画主界面上的2D图像
 	{
 		//model and projection matrices
 		ccGLMatrixd modelViewMat;
 		modelViewMat = getModelViewMatrix();
-		glFunc->glPushMatrix();             //将多组属性或者全部属性通过函数glPushAttrib压入属性堆栈中    
+		glFunc->glPushMatrix();             //将多组属性或者全部属性通过函数glPushAttrib压入属性堆栈中
 		//setup the default view matrix
 		{
 			//模型视图变换（GL_MODELVIEW）：从“相对移动”的观点来看，改变观察点的位置与方向和改变物体本身的位置与方向具有等效性。
@@ -304,12 +296,11 @@ void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rend
 		glFunc->glPopMatrix();             //恢复到将属性压入堆栈前的状态
 	}
 
-
 	if (m_winDBRoot)  //这个if语句画子界面上的2D图像，以及子界面上的2D矩形roi
 	{
 		ccGLMatrixd modelViewMat;
 		modelViewMat = getModelViewMatrix();
-		glFunc->glPushMatrix();             //将多组属性或者全部属性通过函数glPushAttrib压入属性堆栈中    
+		glFunc->glPushMatrix();             //将多组属性或者全部属性通过函数glPushAttrib压入属性堆栈中
 		//setup the default view matrix
 		{
 			glFunc->glMatrixMode(GL_MODELVIEW);
@@ -319,14 +310,11 @@ void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rend
 		glFunc->glPopMatrix();             //恢复到将属性压入堆栈前的状态
 	}
 
-
-
 	//glFunc->glLoadMatrixd(false);
 	//current displayed scalar field color ramp (if any)
 	//透视投影变换（GL_PROJECTION）：定义一个可视空间，可视空间以外的物体不会被绘制到屏幕上
 	glFunc->glDisable(GL_MODELVIEW);
 	ccRenderingTools::DrawColorRamp(CONTEXT);     //删掉这个语句，colorscale将不能实现
-
 
 	//m_clickableItems.clear();
 	/*** overlay entities ***/
@@ -350,7 +338,7 @@ void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rend
 	//		//transparent border at the top of the screen
 	//		bool showGLFilterRibbon = renderingParams.useFBO && m_activeGLFilter;
 	//		showGLFilterRibbon &= !exclusiveFullScreen(); //we hide it in fullscreen mode!
-	//		
+	//
 	//		//current messages (if valid)
 	//		if (!m_messagesToDisplay.empty())
 	//		{
@@ -394,7 +382,7 @@ void ccGLWindow::drawForeground1(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& rend
 	//				}
 	//			}
 	//		}
-	//		
+	//
 	//	}
 	//}
 	//logGLError("ccGLWindow::drawForeground");
@@ -425,7 +413,6 @@ void ccGLWindow::draw3D(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingPara
 	/****************************************/
 	/****    PASS: 3D/FOREGROUND/LIGHT   ****/
 	/****************************************/
-
 
 	if (m_customLightEnabled || m_sunLightEnabled)
 	{
@@ -469,7 +456,6 @@ void ccGLWindow::draw3D(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingPara
 		glFunc->glLoadMatrixd(modelViewMat.data());
 	}
 
-
 	//we draw 3D entities
 	if (m_globalDBRoot)     //删掉这个if语句，在主界面上没有3D图像在视图中显示
 	{
@@ -485,10 +471,8 @@ void ccGLWindow::draw3D(CC_DRAW_CONTEXT& CONTEXT, RenderingParams& renderingPara
 	if (m_globalDBRoot && m_globalDBRoot->getChildrenNumber())
 	{
 		//draw pivot  轴线先不用画
-		//drawPivot();  
+		//drawPivot();
 	}
-
-
 
 	//reset context  复位内容
 	CONTEXT.colorRampShader = nullptr;

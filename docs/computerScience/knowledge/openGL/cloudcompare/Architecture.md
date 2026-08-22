@@ -1,3 +1,4 @@
+# Architecture
 
 CloudCompare 的架构并不严格遵循单一的设计模式，但它主要采用了以下几种模式的结合：
 
@@ -11,8 +12,6 @@ CloudCompare 的架构并不严格遵循单一的设计模式，但它主要采�
 
 3. **插件架构**：<br>
    - CloudCompare 支持插件，通过插件机制扩展软件功能。插件通常以动态库的形式存在，用户可以根据需要加载或卸载插件。这种插件架构允许开发者独立于主程序开发新的功能，并能方便地进行扩展。
-
-
 
 #### Model-View-Controller (MVC) 模式
 
@@ -51,7 +50,7 @@ CloudCompare 的架构并不严格遵循单一的设计模式，但它主要采�
 ##### Model（数据模型）
 
 ```cpp
-class ccPointCloud : public ccHObject 
+class ccPointCloud : public ccHObject
 {
 public:
     // 加载点云数据
@@ -65,7 +64,7 @@ public:
 ##### View（视图）
 
 ```cpp
-class ccGLWindow : public QGLWidget 
+class ccGLWindow : public QGLWidget
 {
 public:
     // 渲染点云
@@ -80,7 +79,7 @@ public:
 ##### Controller（控制器）
 
 ```cpp
-class MainWindow : public QMainWindow 
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
@@ -91,10 +90,9 @@ private slots:
     void onOpenFile();
     void onSaveFile();
     void onViewModeChanged();
-    
+
 private:
     ccGLWindow* m_glWindow;
     ccPointCloud* m_pointCloud;
 };
 ```
-

@@ -1,13 +1,12 @@
-## 相机模块的实现
-
+# 相机模块的实现
 
 #### 相机控制
+
 OpenCamera：打开相机，设置IP地址，注册回调函数，启动测量。
 
 CloseCamera：关闭相机。
 
 OpenLaser和CloseLaser：打开和关闭激光设备。
-
 
 1.
     QString mCameraPath = fileName + QString::fromStdString("/cameralib");
@@ -83,22 +82,15 @@ int LaserObj::OpenCamera()
     return  -1;
 }
 
-
 ### DatasSourceDlg
 
-
-
-
-
-
- 
 ### 第三方软件的开闭
+
 LaserObj::OnRunSsznFinished()
 LaserObj::OpenLaser()
 
 LaserObj::on_btnConfig_clicked()
 LaserObj::CloseLaser()
-
 
 ### 采集
 
@@ -108,10 +100,8 @@ mResult = laser_obj->GrabOnce(this);  LaserWorkClass::GrabOnce(QString mTaskName
 
 mLaser->StartGrab(false, &image_obj, &cloud_obj);  LaserObj::StartGrab
 
-
 this->PushDatas_3D(image_obj, cloud_obj);    virtual int PushDatas_3D(CLImage &mImage, CLCloud &mCloud)   LaserClass::PushData_3D
 DatasSourceDlg::PushData_3D
-
 
 #### 设备控制：
 
@@ -128,7 +118,6 @@ TrigOnce：执行硬触发模式下的数据采集。
 UpdateParamShow：更新参数显示。
 SetTrig：设置设备为硬触发或单帧工作模式。
 UpdateCameraParm：加载参数到激光设备。
-
 
 #### 参数设置和更新
 
@@ -150,10 +139,10 @@ MeasureUpdateThead：一个用于实时数据处理的线程类，处理从相�
 updatePlot：更新绘图控件的数据。
 LineShowPlotInit：初始化绘图控件
 
-
 #### 控制激光触发操作
+
 LaserTrigThread 类是一个用于控制激光触发操作的线程类，它通过周期性地调用 LaserWorkClass 的 TrigOnce 方法来执行激光触发，直到外部请求停止线程。这个类的设计允许激光触发操作在后台线程中执行，从而不会阻塞主线程，提高程序的响应性和性能
 
 #### sszn
-用于获取激光设备的信息并创建与之关联的 LaserBase 对象
 
+用于获取激光设备的信息并创建与之关联的 LaserBase 对象

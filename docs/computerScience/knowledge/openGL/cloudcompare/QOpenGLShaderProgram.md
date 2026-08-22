@@ -1,3 +1,5 @@
+# QOpenGLShaderProgram
+
 `QOpenGLShaderProgram` 是 Qt 提供的一个方便的类，用于在 OpenGL 应用程序中编译和链接着色器。<br>
 这个类封装了 OpenGL 着色器程序的常见操作，使开发者能够更容易地处理着色器的编译、链接和使用。
 
@@ -119,30 +121,30 @@ void main() {
 #include <QOpenGLShaderProgram>
 #include <QMatrix4x4>
 
-class MyGLWidget : public QOpenGLWidget 
+class MyGLWidget : public QOpenGLWidget
 {
     Q_OBJECT
 
 protected:
-    void initializeGL() override 
+    void initializeGL() override
     {
         // 创建着色器程序
         shaderProgram = new QOpenGLShaderProgram(this);
 
         // 添加顶点着色器
-        if (!shaderProgram->addShaderFromSourceFile(QOpenGLShader::Vertex, ":/vertex_shader.glsl")) 
+        if (!shaderProgram->addShaderFromSourceFile(QOpenGLShader::Vertex, ":/vertex_shader.glsl"))
         {
             qDebug() << "Vertex Shader Error: " << shaderProgram->log();
         }
 
         // 添加片段着色器
-        if (!shaderProgram->addShaderFromSourceFile(QOpenGLShader::Fragment, ":/fragment_shader.glsl")) 
+        if (!shaderProgram->addShaderFromSourceFile(QOpenGLShader::Fragment, ":/fragment_shader.glsl"))
         {
             qDebug() << "Fragment Shader Error: " << shaderProgram->log();
         }
 
         // 链接着色器程序
-        if (!shaderProgram->link()) 
+        if (!shaderProgram->link())
         {
             qDebug() << "Shader Program Link Error: " << shaderProgram->log();
         }
@@ -159,7 +161,7 @@ protected:
         // 设置其他OpenGL初始化代码
     }
 
-    void paintGL() override 
+    void paintGL() override
     {
         // 渲染代码
     }
@@ -168,7 +170,7 @@ private:
     QOpenGLShaderProgram *shaderProgram;
 };
 
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 

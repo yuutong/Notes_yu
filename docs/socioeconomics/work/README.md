@@ -1,5 +1,12 @@
-## Working Hard
+# 工作实践
 
-> Cultivate keen thinking and Think independently
+> 记录项目经验、工程方法和可以长期复用的工作知识。
 
+## 专题
 
+- [个人知识库工程](Knowledge_Base/)：Markdown 内容治理、自动化质量工具、RAG 聊天和网站发布。
+- [2024 CL 项目](2024_CL/)：标定、初始化、FTP 和数据转换。
+- [3D 项目](3D_Project/)：三维项目架构、编译、界面和任务处理。
+- [相机相关](Camera/)：相机日志、宏定义、传感器和代码记录。
+- [基础工作记录](Basic/)：通用工程问题和基础资料。
+- [面试准备](Interview/)：技术问题、自我介绍和面试记录。

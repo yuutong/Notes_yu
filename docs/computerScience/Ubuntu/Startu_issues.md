@@ -1,4 +1,4 @@
-## 报错
+# 报错
 
 `COMRESET failed   Filesystem check or mount failed , A maintenance shell will now be started ...输入密码的提示`
 
@@ -37,11 +37,10 @@
 5.也可以执行 `umount /dev/sda1 & fsck -y /dev/sda1`
 
 `umount /dev/sda1`：卸载 `/dev/sda1` 设备。如果设备正在使用中，可能会失败。
-  
+
 `fsck -y /dev/sda1`：检查并修复 `/dev/sda1` 文件系统中的错误。`-y` 选项表示自动回答“是”以确认所有修复。
 
 在运行这些命令之前，请确保没有进程正在使用 `/dev/sda1`，否则卸载可能会失败
-
 
 6.运行 `df -lh`
 
@@ -51,5 +50,3 @@
 - `-h`：以人类可读的格式显示文件大小（例如 1K、234M、2G）。
 
 执行此命令后，输出一个表格，包含每个挂载的文件系统的总大小、已用空间、可用空间和挂载点等信息
-
-
