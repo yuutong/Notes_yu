@@ -5254,6 +5254,14 @@
       "target": "docs/socioeconomics/work/Knowledge_Base/README.md"
     },
     {
+      "source": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md",
+      "target": "templates/knowledge-note.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md",
+      "target": "templates/project-note.md"
+    },
+    {
       "source": "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
       "target": "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md"
     },
@@ -5316,6 +5324,10 @@
     {
       "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
       "target": "docs/socioeconomics/work/README.md"
+    },
+    {
+      "source": "docs/socioeconomics/work/Knowledge_Base/README.md",
+      "target": "kb/quality-report.md"
     },
     {
       "source": "docs/socioeconomics/work/Knowledge_Base/README.md",

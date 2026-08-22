@@ -4,8 +4,8 @@
     "notes": 406,
     "canonicalNotes": 302,
     "aliases": 104,
-    "links": 145,
-    "brokenLinks": 3,
+    "links": 148,
+    "brokenLinks": 0,
     "duplicateGroups": 0,
     "orphanNotes": 183
   },
@@ -14341,7 +14341,9 @@
       "links": [
         "docs/socioeconomics/work/Knowledge_Base/README.md",
         "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md",
-        "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md"
+        "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
+        "templates/knowledge-note.md",
+        "templates/project-note.md"
       ],
       "backlinks": [
         "docs/socioeconomics/work/Knowledge_Base/README.md",
@@ -14589,7 +14591,8 @@
         "docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md",
         "docs/socioeconomics/work/Knowledge_Base/maintenance-and-publishing.md",
         "docs/socioeconomics/work/Knowledge_Base/rag-chat-system.md",
-        "docs/socioeconomics/work/README.md"
+        "docs/socioeconomics/work/README.md",
+        "kb/quality-report.md"
       ],
       "backlinks": [
         "docs/socioeconomics/work/Knowledge_Base/automation-toolchain.md",

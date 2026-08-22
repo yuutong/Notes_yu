@@ -7,7 +7,7 @@
 - 权威笔记：302 篇
 - 兼容跳转页：104 篇
 - 无任何内部关系的笔记：183 篇
-- 失效内部链接：3 条
+- 失效内部链接：0 条
 - 重复权威正文：0 组
 
 ## 下一步重点
@@ -15,12 +15,6 @@
 1. 优先为高频笔记补充 YAML 属性、摘要和来源。
 2. 在正文中补充真正有语义的相关笔记链接，减少孤立页面。
 3. 将 `unreviewed` 笔记逐步复核为 `evergreen` 或移入归档。
-
-## 失效链接
-
-- `docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md` → `../../../../templates/knowledge-note.md`
-- `docs/socioeconomics/work/Knowledge_Base/knowledge-governance.md` → `../../../../templates/project-note.md`
-- `docs/socioeconomics/work/Knowledge_Base/README.md` → `../../../../kb/quality-report.md`
 
 ## 孤立笔记（前 100 篇）
 

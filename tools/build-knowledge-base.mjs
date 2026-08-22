@@ -17,13 +17,13 @@ const sectionDefinitions = [
   { key: "archive", label: "归档", prefix: "archive/" },
 ];
 
-async function collectMarkdownFiles(directory) {
+async function collectMarkdownFiles(directory, ignored = ignoredDirectories) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
-    if (ignoredDirectories.has(entry.name)) continue;
+    if (ignored.has(entry.name)) continue;
     const fullPath = path.join(directory, entry.name);
-    if (entry.isDirectory()) files.push(...(await collectMarkdownFiles(fullPath)));
+    if (entry.isDirectory()) files.push(...(await collectMarkdownFiles(fullPath, ignored)));
     else if (entry.isFile() && entry.name.toLowerCase().endsWith(".md")) files.push(fullPath);
   }
   return files;
@@ -185,7 +185,8 @@ const sourceFiles = allFiles.filter((file) => {
   const name = path.basename(file).toLowerCase();
   return !structuralNames.has(name) && !ignoredFiles.has(path.basename(file));
 });
-const knownPaths = new Set(allFiles.map(relative));
+const knownFiles = await collectMarkdownFiles(root, new Set([".git", "node_modules", "private"]));
+const knownPaths = new Set(knownFiles.map(relative));
 const notes = [];
 
 for (const file of sourceFiles) {
