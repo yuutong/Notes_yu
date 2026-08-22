@@ -4,18 +4,18 @@
 
 ## 当前规模
 
-- 权威笔记：255 篇
-- 兼容跳转页：87 篇
-- 笔记间链接：128 条
+- 权威笔记：302 篇
+- 兼容跳转页：104 篇
+- 笔记间链接：145 条
 - 待处理失效链接：3 条
 - 待合并重复组：0 组
 
 ## 主题地图
 
-- [人工智能](kb/topics/ai.md)：40 篇
-- [计算机科学](kb/topics/computer-science.md)：138 篇
+- [人工智能](kb/topics/ai.md)：44 篇
+- [计算机科学](kb/topics/computer-science.md)：163 篇
 - [数学](kb/topics/math.md)：8 篇
-- [电子与通信](kb/topics/electronics.md)：3 篇
+- [电子与通信](kb/topics/electronics.md)：21 篇
 - [工作与自我管理](kb/topics/life-work.md)：55 篇
 - [收件箱](kb/topics/inbox.md)：1 篇
 - [归档](kb/topics/archive.md)：1 篇

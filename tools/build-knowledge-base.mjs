@@ -119,7 +119,7 @@ function summaryFor(lines, title) {
       .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
       .replace(/[*_`]/g, "")
       .trim();
-    if (cleaned && cleaned !== title) return cleaned.slice(0, 180);
+    if (cleaned && cleaned !== title) return cleaned.slice(0, 180).trimEnd();
   }
   return "";
 }

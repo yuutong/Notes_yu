@@ -101,7 +101,7 @@ c.虚函数通常无法内联，但是在上面的a.b两种情况的静态绑定
 
 ```cpp
 //magnitude()是内联虚函数
-inline float Point3d::magnitude() const{
+virtual inline float Point3d::magnitude() const{
     return sqrt(x * x + y * y);
 }
 
@@ -111,6 +111,8 @@ float len = obj.magnitude();
 //内联展开后
 float len = sqrt(obj.x * obj.x + obj.y * obj.y);
 ```
+
+C++允许将虚函数声明成内联函数，但是仅在使用对象静态绑定时有效，在使用指针或引用时，内联虚函数虽然定义了，但是虚函数的多态性不受inline关键字的影响，仍然通过虚表动态分配，此时内联没有意义。
 
 #### 1).静态多态
 
@@ -123,9 +125,11 @@ float len = sqrt(obj.x * obj.x + obj.y * obj.y);
     为自定义类型定义运算符。运算符的规则在编译时已经确定
 
 ```cpp
-class Vector{
+class Vector
+{
     public:
-    Vector operator+(const Vector& other){
+    Vector operator+(const Vector& other)
+    {
         //向量加法的实现
     }
 }；
@@ -152,15 +156,19 @@ double m2 = max(3.23,2.69); //实例化max(double)
 又称早期绑定，在编译时确定函数调用的具体地址，无需动态查找<br>
 
 ```cpp
-class Base{
+class Base
+
 public:
-    void func(){
+    void func()
+    {
         cout<< "Base::func" <<endl;
     }
 };
-class Derived ： public Base{
+class Derived ： public Base
+{
 public:
-    void func(){
+    void func()
+    {
     cout<< "Derived::func" <<endl;
     }
 };
@@ -196,9 +204,11 @@ public:
 * b. 回调逻辑仍封装在类内部,可以过参数间接访问对象实例
 
 ```cpp
-class GUIHandler {
+class GUIHandler
+{
 public:
-    static void handleEvent(void* context) {
+    static void handleEvent(void* context)
+    {
         GUIHandler* handler = static_cast<GUIHandler*>(context);
         handler->onClick(); // 通过实例指针访问非静态方法
     }

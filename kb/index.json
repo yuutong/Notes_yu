@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "stats": {
-    "notes": 342,
-    "canonicalNotes": 255,
-    "aliases": 87,
-    "links": 128,
+    "notes": 406,
+    "canonicalNotes": 302,
+    "aliases": 104,
+    "links": 145,
     "brokenLinks": 3,
     "duplicateGroups": 0,
-    "orphanNotes": 146
+    "orphanNotes": 183
   },
   "notes": [
     {
@@ -3135,30 +3135,6 @@
       "backlinks": []
     },
     {
-      "id": "docs/AI/Tools/CMake/README.md",
-      "title": "计算机",
-      "section": "ai",
-      "sectionLabel": "人工智能",
-      "group": "Tools / CMake",
-      "status": "unreviewed",
-      "tags": [
-        "AI",
-        "CMake"
-      ],
-      "summary": "计算机是地球上的一个新物种，它们正在学习如何与我们共存",
-      "headings": [
-        {
-          "level": 1,
-          "text": "计算机"
-        }
-      ],
-      "canonical": null,
-      "contentHash": "3caa7c38ec34966c1a92c9027e733ee9bcbd1790df55b887a8a35ed954780d3b",
-      "characters": 32,
-      "links": [],
-      "backlinks": []
-    },
-    {
       "id": "docs/AI/Tools/Gdb/gdb.md",
       "title": "在Linux上使用gdb调试已经在运行的程序",
       "section": "ai",
@@ -3182,30 +3158,6 @@
       "links": [
         "docs/computerScience/Tools/Gdb/gdb.md"
       ],
-      "backlinks": []
-    },
-    {
-      "id": "docs/AI/Tools/Gdb/README.md",
-      "title": "gdb",
-      "section": "ai",
-      "sectionLabel": "人工智能",
-      "group": "Tools / Gdb",
-      "status": "unreviewed",
-      "tags": [
-        "AI",
-        "Gdb"
-      ],
-      "summary": "",
-      "headings": [
-        {
-          "level": 1,
-          "text": "gdb"
-        }
-      ],
-      "canonical": null,
-      "contentHash": "746e245962bf790f526c09e191a2bab66adf5d3645accb725330f8de71782e21",
-      "characters": 5,
-      "links": [],
       "backlinks": []
     },
     {
@@ -3454,6 +3406,183 @@
       "canonical": null,
       "contentHash": "f8269ca820e56ad8c3c27162e2516fa228ff72c97d41440fd5be00fcd795d6b6",
       "characters": 41,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/AI/YOLO/README.md",
+      "title": "AI",
+      "section": "ai",
+      "sectionLabel": "人工智能",
+      "group": "YOLO",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO"
+      ],
+      "summary": "AI是地球上的一个新物种，它们正在学习如何与我们共存",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AI"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "4cb3bc559e9245dcdf7c733ecb4ec459a8c87dc13aa30e7b5175f01506d942bd",
+      "characters": 30,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/AI/YOLO/task/ParameterAnalysis.md",
+      "title": "训练中的参数",
+      "section": "ai",
+      "sectionLabel": "人工智能",
+      "group": "YOLO / task",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "task"
+      ],
+      "summary": "| 名称               | 大白话解释                                                  | 专业术语",
+      "headings": [
+        {
+          "level": 1,
+          "text": "训练中的参数"
+        },
+        {
+          "level": 2,
+          "text": "训练后的参数"
+        },
+        {
+          "level": 3,
+          "text": "小结"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "cac9cab6e51f99d9074489fa1f542f35e1c6ec40008656064d66cbec9f982957",
+      "characters": 3767,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/AI/YOLO/task/README.md",
+      "title": "AI",
+      "section": "ai",
+      "sectionLabel": "人工智能",
+      "group": "YOLO / task",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "task"
+      ],
+      "summary": "AI是地球上的一个新物种，它们正在学习如何与我们共存",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AI"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "4cb3bc559e9245dcdf7c733ecb4ec459a8c87dc13aa30e7b5175f01506d942bd",
+      "characters": 30,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/AI/YOLO/task/wheel_Install.md",
+      "title": "使用 --prefer-binary 让 pip 优先安装 wheel",
+      "section": "ai",
+      "sectionLabel": "人工智能",
+      "group": "YOLO / task",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "task"
+      ],
+      "summary": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "使用 --prefer-binary 让 pip 优先安装 wheel"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "54baf58b8bf183305f4a957a929399b0fc60479646b8bd7808b6b267a770d992",
+      "characters": 231,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/AI/YOLO/theory/prama.md",
+      "title": "注意力机制",
+      "section": "ai",
+      "sectionLabel": "人工智能",
+      "group": "YOLO / theory",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "theory"
+      ],
+      "summary": "通俗",
+      "headings": [
+        {
+          "level": 1,
+          "text": "注意力机制"
+        },
+        {
+          "level": 3,
+          "text": "1. Query-Key-Value 架构"
+        },
+        {
+          "level": 3,
+          "text": "2. 相关性计算（打分）"
+        },
+        {
+          "level": 3,
+          "text": "3. 权重归一化（Softmax）"
+        },
+        {
+          "level": 3,
+          "text": "4. 特征聚合（加权求和）"
+        },
+        {
+          "level": 3,
+          "text": "总结："
+        }
+      ],
+      "canonical": null,
+      "contentHash": "7629b2103bad0e27445845be2a512124c58ee140a57f48f2638a3aecbb4606e2",
+      "characters": 1688,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/AI/YOLO/theory/README.md",
+      "title": "AI",
+      "section": "ai",
+      "sectionLabel": "人工智能",
+      "group": "YOLO / theory",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "theory"
+      ],
+      "summary": "AI是地球上的一个新物种，它们正在学习如何与我们共存",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AI"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "4cb3bc559e9245dcdf7c733ecb4ec459a8c87dc13aa30e7b5175f01506d942bd",
+      "characters": 30,
       "links": [],
       "backlinks": []
     },
@@ -4249,7 +4378,9 @@
       "contentHash": "f27b01979094f07ec921e4e3305bfaff2e487b17174a4ddcbc592538be81aaf5",
       "characters": 850,
       "links": [],
-      "backlinks": []
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/models/class_size.md"
+      ]
     },
     {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md",
@@ -4299,7 +4430,9 @@
       "contentHash": "c25ec2c3de1dfda4bd1f3dfa4558ac5a59f36ab4e25aa0aa59ff4db0b1dcdf4e",
       "characters": 1796,
       "links": [],
-      "backlinks": []
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/models/data_call_efficiency.md"
+      ]
     },
     {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md",
@@ -4329,7 +4462,9 @@
       "contentHash": "bb5f10a87bca3bdc56890d05dfd7886224535b4b49c8c57e3e1bc273635d72e0",
       "characters": 1357,
       "links": [],
-      "backlinks": []
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/models/data_member_pointer.md"
+      ]
     },
     {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/dataBind_Layout.md",
@@ -4367,7 +4502,9 @@
       "contentHash": "0a0d46d6ff1f138f97b065f469e007efaa8469a0a726a7a3f23527d6d6c6d3af",
       "characters": 1299,
       "links": [],
-      "backlinks": []
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/models/dataBind_Layout.md"
+      ]
     },
     {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md",
@@ -4445,7 +4582,9 @@
       "contentHash": "92817f9369db28e8c3d621c6e358ad06a872d53ff6ab2b8bea54e0acace2b9f3",
       "characters": 5136,
       "links": [],
-      "backlinks": []
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/models/Inheritance_cppmodel.md"
+      ]
     },
     {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/README.md",
@@ -4472,6 +4611,39 @@
       "characters": 33,
       "links": [],
       "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md",
+      "title": "两个3D点坐标的加减",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / Book",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_4"
+      ],
+      "summary": "对于不同类型的两个3D点加减的函数，执行1000万次，讨论执行效率。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "两个3D点坐标的加减"
+        },
+        {
+          "level": 2,
+          "text": "探讨调用过程中构造是否会被调用"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "94197944113aea3358b5914636ecd6238b90103a7a2b239a91b96e3ff114b537",
+      "characters": 938,
+      "links": [],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/lib_QT/object_Efficiency.md",
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/object_Efficiency.md"
+      ]
     },
     {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md",
@@ -4526,10 +4698,12 @@
         }
       ],
       "canonical": null,
-      "contentHash": "8536f4ed74e2e5bb0fd6aaa297204b6d8e7badb44be10ca1eceec531d4f2b2a1",
-      "characters": 3533,
+      "contentHash": "5b07a9f533379478c107cfa8a73b35ea09196e3f4ab203d4b9f10339b095dcd3",
+      "characters": 3637,
       "links": [],
-      "backlinks": []
+      "backlinks": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md"
+      ]
     },
     {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/README.md",
@@ -4570,10 +4744,22 @@
         "cpp_model",
         "Chapter_4"
       ],
-      "summary": "每个class只会有一个虚表，表中是对应class object中所有active virtual function的地址",
+      "summary": "编译器在执行期都做了些什么，才能确保包含虚函数的各类函数的调用正确无误？",
       "headings": [
         {
           "level": 1,
+          "text": "单一继承的虚函数调用"
+        },
+        {
+          "level": 2,
+          "text": "什么是编译器，什么是执行期"
+        },
+        {
+          "level": 3,
+          "text": "为什么是虚指针和虚表"
+        },
+        {
+          "level": 2,
           "text": "单一继承的虚函数调用"
         },
         {
@@ -4590,8 +4776,202 @@
         }
       ],
       "canonical": null,
-      "contentHash": "86252e8e285ed60e2c9dade921098a3922b3a680b46e1e0116d46d003e5201aa",
-      "characters": 2198,
+      "contentHash": "48980d8b1a2776c02437d9bbd08b146c4170323d9b130423871287d75073917f",
+      "characters": 3342,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / Book",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "summary": "编译器在执行期都做了些什么，才能确保包含虚函数的各类函数的调用正确无误？",
+      "headings": [
+        {
+          "level": 1,
+          "text": "什么是编译器，什么是执行期"
+        },
+        {
+          "level": 3,
+          "text": "为什么是虚指针和虚表"
+        },
+        {
+          "level": 2,
+          "text": "单一继承的虚函数调用"
+        },
+        {
+          "level": 2,
+          "text": "多重继承的虚函数调用"
+        },
+        {
+          "level": 3,
+          "text": "this指针运行时调整"
+        },
+        {
+          "level": 3,
+          "text": "虚表管理"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "f06a144265839a693bc57ec37b749bfb5a5c08945836a2ca934e1bceae379cdd",
+      "characters": 3356,
+      "links": [],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/lib_QT/construction.md",
+        "docs/computerScience/Project/Vision/3D_Vision/lib_QT/copy.md",
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/copy.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/copy.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / Book",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "什么是编译器，什么是执行期"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md",
+      "contentHash": "66bf89bc6cb47bfb0224128292fbca143d1b00a27697f7d8fca912e68fed1f87",
+      "characters": 155,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/Destruction.md",
+      "title": "编译器在什么情况下合成析构函数",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / Book",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "summary": "编译器只在必要的时候为class生成析构函数:",
+      "headings": [
+        {
+          "level": 1,
+          "text": "编译器在什么情况下合成析构函数"
+        },
+        {
+          "level": 2,
+          "text": "析构函数的职能"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "6f5f34b87334a90546aa24b0ada64740d3454dae307bb8f4073652a356848d40",
+      "characters": 1434,
+      "links": [],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/lib_QT/Destruction.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md",
+      "title": "非静态成员函数调用",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / Book",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "非静态成员函数调用"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md",
+      "contentHash": "4b24fd665719dc8d0754f59c82cc9ea80d162620df7cb40c004b6a2210229f43",
+      "characters": 176,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md"
+      ],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/lib_QT/inherit_construction.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/object_Efficiency.md",
+      "title": "两个3D点坐标的加减",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / Book",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "两个3D点坐标的加减"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md",
+      "contentHash": "35de31be1f8bc62c9e051d8f7a6bf14afc5677f41d109d25c32483ae99e8f0f3",
+      "characters": 177,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / Book",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
+      "characters": 33,
       "links": [],
       "backlinks": []
     },
@@ -4678,6 +5058,54 @@
       "canonical": null,
       "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
       "characters": 33,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/modbusRtu.md",
+      "title": "modbusRtu",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / communication",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication"
+      ],
+      "summary": "大白话版：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "modbusRtu"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "2499b98c321758ab85f1173bb6215dfed9fcb97acf79b1f196acb94b5cfe8f2f",
+      "characters": 572,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/modbusTcp.md",
+      "title": "modbusTcp",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "knowledge / communication",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication"
+      ],
+      "summary": "大白话版：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "modbusTcp"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "c3fed195a3af12c833e09ce70801dc6746fcf60b0f0a5d8e0912b4964354cd2a",
+      "characters": 1113,
       "links": [],
       "backlinks": []
     },
@@ -9406,6 +9834,786 @@
       ]
     },
     {
+      "id": "docs/computerScience/Project/README.md",
+      "title": "计算机",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project"
+      ],
+      "summary": "计算机是地球上的一个新物种，它们正在学习如何与我们共存",
+      "headings": [
+        {
+          "level": 1,
+          "text": "计算机"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "3caa7c38ec34966c1a92c9027e733ee9bcbd1790df55b887a8a35ed954780d3b",
+      "characters": 32,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "summary": "一个纯粹的接口模块，不含有任何实现。是架构的最顶层",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vision架构分析记录"
+        },
+        {
+          "level": 2,
+          "text": "1.Interface_vision模块"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "d770d791ac3be18c357c039ab87a2b1954aaaee79f1e3845ed7507872674c086",
+      "characters": 204,
+      "links": [],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/device.md",
+        "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/vision.md",
+        "docs/computerScience/Project/Vision/3D_Vision/main_vision/interface.md",
+        "docs/computerScience/Project/Vision/3D_Vision/main_vision/vision.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/device.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vision架构分析记录"
+        }
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md",
+      "contentHash": "599477e8957340639a7c67c9801f80f2ce08ec86b2b1497e20b0f48f2bfd30ae",
+      "characters": 163,
+      "links": [
+        "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/factory.md",
+      "title": "1.Interface_vision模块",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "summary": "一个纯粹的接口模块，不含有任何实现。是架构的最顶层",
+      "headings": [
+        {
+          "level": 1,
+          "text": "1.Interface_vision模块"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "2f6b257ace8e69e0d1951eb8fb8a7996249ec807084110c19202e60f16c3b43c",
+      "characters": 190,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/interface.md",
+      "title": "1.接口模块简介",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "summary": "这里是3D视觉项目的顶层接口类，对于所有的接口，均不提供具体实现。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "1.接口模块简介"
+        },
+        {
+          "level": 2,
+          "text": "2.纯虚接口的模块的库创建"
+        },
+        {
+          "level": 2,
+          "text": "3.其他模块是怎样拿到 Interface_vision 的头文件的？"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "1e04166a98a16eb28c8874f7cf1dc73ea9e1c821c2c7d1ba59fd74bd8e9c3f5d",
+      "characters": 1205,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
+      "characters": 33,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/vision.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vision架构分析记录"
+        }
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md",
+      "contentHash": "599477e8957340639a7c67c9801f80f2ce08ec86b2b1497e20b0f48f2bfd30ae",
+      "characters": 163,
+      "links": [
+        "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/construction.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "什么是编译器，什么是执行期"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md",
+      "contentHash": "85a4ce9b2a44773faddc809d17b2988fbeb548c6863a34a4a0576533d94097a0",
+      "characters": 200,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/copy.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "什么是编译器，什么是执行期"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md",
+      "contentHash": "85a4ce9b2a44773faddc809d17b2988fbeb548c6863a34a4a0576533d94097a0",
+      "characters": 200,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/Destruction.md",
+      "title": "编译器在什么情况下合成析构函数",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "编译器在什么情况下合成析构函数"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/Destruction.md",
+      "contentHash": "755b0ee2647c1ad08b539d889ab32c54c0a7c98d6fd7e1b67ea641817504b74d",
+      "characters": 200,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/Destruction.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/inherit_construction.md",
+      "title": "非静态成员函数调用",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "非静态成员函数调用"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md",
+      "contentHash": "10757c91b6b10512cd3bb487aedf1c93cfd9455bd169912e27316cab69cfbac6",
+      "characters": 212,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/object_Efficiency.md",
+      "title": "两个3D点坐标的加减",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "两个3D点坐标的加减"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md",
+      "contentHash": "1eb79db6e8235db039ccd3b40dc3c3275518f04e726e20f5057bb9bd15ba710f",
+      "characters": 211,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
+      "characters": 33,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/main_vision/interface.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "main_vision"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vision架构分析记录"
+        }
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md",
+      "contentHash": "1b49ea154115da66518bdeadf64386f1ad391aff4f050fd35354fc948b7817c7",
+      "characters": 181,
+      "links": [
+        "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/main_vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "main_vision"
+      ],
+      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
+      "characters": 33,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/main_vision/vision.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "main_vision"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vision架构分析记录"
+        }
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md",
+      "contentHash": "1b49ea154115da66518bdeadf64386f1ad391aff4f050fd35354fc948b7817c7",
+      "characters": 181,
+      "links": [
+        "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/class_size.md",
+      "title": "一个菱形继承中的各个类的大小",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "一个菱形继承中的各个类的大小"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/class_size.md",
+      "contentHash": "fc474a69c683c7d7d544172f5fd2fb9ef9e1dfa24bbb0a39effaedfcfeaae5ec",
+      "characters": 197,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/class_size.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/data_call_efficiency.md",
+      "title": "一.数据的调用",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "一.数据的调用"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md",
+      "contentHash": "46d777696f6049effc3cc6578ca14b9a984286facccd2d60f875f022c575cfbd",
+      "characters": 210,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/data_member_pointer.md",
+      "title": "一.含义和用法",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "一.含义和用法"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md",
+      "contentHash": "d141c4ba991d649348be7b30df108b5ab458222abd8c225163e34fe901c61e67",
+      "characters": 208,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/dataBind_Layout.md",
+      "title": "一.Data Member的绑定",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "一.Data Member的绑定"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/dataBind_Layout.md",
+      "contentHash": "a28647ef4a0c509cf9a8a9afc45dcafe4bad79649dcd3f9a6b6db909c6ead7f4",
+      "characters": 208,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/dataBind_Layout.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/Inheritance_cppmodel.md",
+      "title": "Inheritance cppmodel",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "summary": "此页面与其他笔记内容重复，已合并至权威页面。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Inheritance cppmodel"
+        }
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md",
+      "contentHash": "e9a24948794268df8adb2a2e8afa8e1e5bfb190185addae4a4ff716525f9d8cb",
+      "characters": 222,
+      "links": [
+        "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
+      "characters": 33,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/plugins/export.md",
+      "title": "插件是怎样导出的？",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "plugins"
+      ],
+      "summary": "导出机制：QDECLEXPORT + extern \"C\"",
+      "headings": [
+        {
+          "level": 1,
+          "text": "插件是怎样导出的？"
+        },
+        {
+          "level": 3,
+          "text": "1.Q_DECL_EXPORT"
+        },
+        {
+          "level": 3,
+          "text": "2.extern \"C\""
+        },
+        {
+          "level": 3,
+          "text": "3.CMakeLists配置"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "7eddc51ce6dd752c1018041d260d244e2e9366994bb911264c7b1951f744baeb",
+      "characters": 774,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/plugins/Implement.md",
+      "title": "插件是怎样实现的？",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "plugins"
+      ],
+      "summary": "1.抽象层接口",
+      "headings": [
+        {
+          "level": 1,
+          "text": "插件是怎样实现的？"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "e78c4b476b096a1620b943c2c468ddab50b5e54981c3977e445e46f7ec4e8214",
+      "characters": 515,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/plugins/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "plugins"
+      ],
+      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
+      "characters": 33,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision"
+      ],
+      "summary": "如何用C++ Qt组织一个视觉架构",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "d75e7b8ed48541744e58e9b3dc6df6adf129a34919933265968fe6851b04170e",
+      "characters": 29,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision"
+      ],
+      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "headings": [
+        {
+          "level": 1,
+          "text": "深度探索C++对象模型"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
+      "characters": 33,
+      "links": [],
+      "backlinks": []
+    },
+    {
       "id": "docs/computerScience/README.md",
       "title": "计算机",
       "section": "computer-science",
@@ -9461,6 +10669,34 @@
       ]
     },
     {
+      "id": "docs/computerScience/Tools/CMake/compile_pcl.md",
+      "title": "1. VTK9.3.0编译",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Tools / CMake",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "CMake"
+      ],
+      "summary": "使用cmake-gui编译",
+      "headings": [
+        {
+          "level": 1,
+          "text": "1. VTK9.3.0编译"
+        },
+        {
+          "level": 2,
+          "text": "2.编译Pcl1.14.0"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "cff477c20be702ffe97c5e3ac3d461eb55c274f4371ece53412b7a431ec6e788",
+      "characters": 390,
+      "links": [],
+      "backlinks": []
+    },
+    {
       "id": "docs/computerScience/Tools/CMake/README.md",
       "title": "计算机",
       "section": "computer-science",
@@ -9481,6 +10717,182 @@
       "canonical": null,
       "contentHash": "3caa7c38ec34966c1a92c9027e733ee9bcbd1790df55b887a8a35ed954780d3b",
       "characters": 32,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/ASan_gdb.md",
+      "title": "ASan gdb",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Tools / Debug",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "summary": "这条命令：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "ASan gdb"
+        },
+        {
+          "level": 3,
+          "text": "为什么这样能让“前期”异常就 `abort()`?"
+        },
+        {
+          "level": 3,
+          "text": "为什么你之前的那串 `export ASAN_OPTIONS=...` 没用？"
+        },
+        {
+          "level": 3,
+          "text": "关键区别"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "2b6a822ff8c0cc75f42fd801a406ae12e6e055b08b7f0d35fd83b70c093f4e67",
+      "characters": 1605,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/gdb.md",
+      "title": "gdb",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Tools / Debug",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "summary": "定位大型项目中，double‑free、heap corruption、buffer overflow 出现的地方",
+      "headings": [
+        {
+          "level": 1,
+          "text": "gdb"
+        },
+        {
+          "level": 2,
+          "text": "1.GDB 基础"
+        },
+        {
+          "level": 2,
+          "text": "3. 定位 Double‑Free"
+        },
+        {
+          "level": 3,
+          "text": "3.1 设置条件断点拦截 `free()`"
+        },
+        {
+          "level": 3,
+          "text": "3.2 拦截 C++ `delete`"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "04939bf6fa62871511d6e3c7997b8472d82af55398e46dae81f4981b44e6cd6a",
+      "characters": 662,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/hook.md",
+      "title": "一个拦截 double free 的钩子",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Tools / Debug",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "summary": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "一个拦截 double free 的钩子"
+        },
+        {
+          "level": 2,
+          "text": "2 编译与使用"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "03b37365316e0dfb332b8128a2f21106aac522f8dd4ef425ab24d3d4cb8afdf1",
+      "characters": 3767,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/memory_leak.md",
+      "title": "ASan vs Valgrind: 内存泄漏检测对比",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Tools / Debug",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "summary": "| 特性   | AddressSanitizer (ASan)       | Valgrind (Memcheck)      |",
+      "headings": [
+        {
+          "level": 1,
+          "text": "ASan vs Valgrind: 内存泄漏检测对比"
+        },
+        {
+          "level": 2,
+          "text": "1. 工具概览"
+        },
+        {
+          "level": 2,
+          "text": "2. 内存泄漏检测——用法"
+        },
+        {
+          "level": 3,
+          "text": "2.1 AddressSanitizer"
+        },
+        {
+          "level": 3,
+          "text": "2.2 Valgrind"
+        },
+        {
+          "level": 2,
+          "text": "3. 优势与局限"
+        },
+        {
+          "level": 2,
+          "text": "4. 结论"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "43c2878ec72593d23dfcca9ddfae2afe04011885ac54f92d6796403f2855f526",
+      "characters": 1547,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/README.md",
+      "title": "gdb",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Tools / Debug",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "summary": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "gdb"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "746e245962bf790f526c09e191a2bab66adf5d3645accb725330f8de71782e21",
+      "characters": 5,
       "links": [],
       "backlinks": []
     },
@@ -9587,16 +10999,44 @@
         "computerScience",
         "Git"
       ],
-      "summary": "chmod -R 775 /root/Work/3D/Codegit",
+      "summary": "在 Linux 主机上创建 Git 裸仓库，并通过 SSH 进行访问和推送。",
       "headings": [
         {
           "level": 1,
           "text": "Git"
+        },
+        {
+          "level": 2,
+          "text": "1. 在主机上创建裸仓库"
+        },
+        {
+          "level": 2,
+          "text": "2. 配置 SSH 访问"
+        },
+        {
+          "level": 3,
+          "text": "1.安装ssh服务（ubuntu）"
+        },
+        {
+          "level": 3,
+          "text": "2.创建用户/使用已有用户"
+        },
+        {
+          "level": 3,
+          "text": "3.配置 SSH 公钥认证（免密码登录）"
+        },
+        {
+          "level": 2,
+          "text": "3. 本地项目目录（非裸仓库）设置并推送"
+        },
+        {
+          "level": 2,
+          "text": "4. 常用检查和维护命令"
         }
       ],
       "canonical": null,
-      "contentHash": "0ab3510ecc004f20bf8083b35e9e4c068c35134a1ef77bea126c7b69e7e73224",
-      "characters": 888,
+      "contentHash": "ded37911e6a1b99f255094625a6ad2c8f20d79280abbd3b9df85c4c168a168e4",
+      "characters": 1440,
       "links": [],
       "backlinks": [
         "docs/AI/Tools/Git/Git.md"
@@ -9884,14 +11324,15 @@
       "backlinks": []
     },
     {
-      "id": "docs/Electronics/Network_Analyser/Application.md",
+      "id": "docs/Electronics/Device/Network_Analyser/Application.md",
       "title": "应用领域",
       "section": "electronics",
       "sectionLabel": "电子与通信",
-      "group": "Network_Analyser",
+      "group": "Device / Network_Analyser",
       "status": "unreviewed",
       "tags": [
         "Electronics",
+        "Device",
         "Network_Analyser"
       ],
       "summary": "天线，带通滤波器，线缆",
@@ -9910,33 +11351,346 @@
       "characters": 24,
       "links": [],
       "backlinks": [
-        "docs/Electronics/Network_Analyser/README.md"
+        "docs/Electronics/Theory/README.md"
       ]
     },
     {
-      "id": "docs/Electronics/Network_Analyser/README.md",
-      "title": "网络分析仪",
+      "id": "docs/Electronics/Device/Network_Analyser/README.md",
+      "title": "数学",
       "section": "electronics",
       "sectionLabel": "电子与通信",
-      "group": "Network_Analyser",
+      "group": "Device / Network_Analyser",
       "status": "unreviewed",
       "tags": [
         "Electronics",
+        "Device",
         "Network_Analyser"
       ],
-      "summary": "记录网络分析仪的基础原理、使用方法与应用场景。",
+      "summary": "数学是人类思维的一种反映，是一切科学的基础",
       "headings": [
         {
           "level": 1,
-          "text": "网络分析仪"
+          "text": "数学"
         }
       ],
       "canonical": null,
-      "contentHash": "378d399fdcca5f6848f30c4a32aa7db41e5407b5e9ad35080b4b8df7f37703b2",
-      "characters": 56,
-      "links": [
-        "docs/Electronics/Network_Analyser/Application.md"
+      "contentHash": "aeb2365a45fde47ea2b8768599ffe796658f75b1e86ca6f86257d07ef9c2f3ef",
+      "characters": 25,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/README.md",
+      "title": "数学",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device"
       ],
+      "summary": "数学是人类思维的一种反映，是一切科学的基础",
+      "headings": [
+        {
+          "level": 1,
+          "text": "数学"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "aeb2365a45fde47ea2b8768599ffe796658f75b1e86ca6f86257d07ef9c2f3ef",
+      "characters": 25,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/3D_senser.md",
+      "title": "3D senser",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "你的描述抓住了线激光三角测量法（“3D线扫相机”）的核心思路，但还不够完整：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "3D senser"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "91bb3a8aad8a302074b4b96600d31ba3446fb2210669b3be16c5cfd394e0385a",
+      "characters": 1300,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/background.md",
+      "title": "background",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "智能机器人焊接作业需要高精度的三维点云数据作为输入，并对点云进行分割以获取期望的轨迹信息；",
+      "headings": [
+        {
+          "level": 1,
+          "text": "background"
+        },
+        {
+          "level": 2,
+          "text": "3D结构光基本原理"
+        },
+        {
+          "level": 2,
+          "text": "结构光系统"
+        },
+        {
+          "level": 2,
+          "text": "核心逻辑---相位解码＋三角测量求解深度"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "1706d9e5bed559e055d894faa412d351b162707e34a1c48362c3e7458aa383ff",
+      "characters": 1276,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/calibration.md",
+      "title": "calibration",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "同心双圆环靶标相机标定算法",
+      "headings": [
+        {
+          "level": 1,
+          "text": "calibration"
+        },
+        {
+          "level": 3,
+          "text": "一、大白话总结"
+        },
+        {
+          "level": 3,
+          "text": "二、数学逻辑与公式解释"
+        },
+        {
+          "level": 3,
+          "text": "总结"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "7ecea87cc5cf2074c67ce77f45b8b72e058dc17d27a9396d0f169baaa018a124",
+      "characters": 1143,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/camera.md",
+      "title": "camera",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "1. 抽象层设计",
+      "headings": [
+        {
+          "level": 1,
+          "text": "camera"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "e15b9eebf043d6a5c9c2e2f9649d5125ce909c52ad3c3771cf154b4c6eb2c16c",
+      "characters": 1032,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/hardware.md",
+      "title": "一、核心光学部件",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "1. 投影仪",
+      "headings": [
+        {
+          "level": 1,
+          "text": "一、核心光学部件"
+        },
+        {
+          "level": 2,
+          "text": "二、结构支撑与同步"
+        },
+        {
+          "level": 2,
+          "text": "三、标定与配套"
+        },
+        {
+          "level": 3,
+          "text": "小结"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "92322dfbefa95601ff5317bc7e99e4e5cbd26ed8ac16e399f587cf0a4162d024",
+      "characters": 749,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/mySDK.md",
+      "title": "mySDK",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "下面是对该博文“结构光3D相机SDK开发（C/C++）”的核心内容提炼：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "mySDK"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "5a2b584c4303231517eabf6537a94b39799e0aa87bf14abe16250f0432ae8beb",
+      "characters": 1485,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/Projector.md",
+      "title": "一、投影仪业务逻辑处理",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "1. 业务层抽象",
+      "headings": [
+        {
+          "level": 1,
+          "text": "一、投影仪业务逻辑处理"
+        },
+        {
+          "level": 3,
+          "text": "二、具体投影仪品牌与型号"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "332ae0175d7b1088516ed545d6ba26b30a7f49b61da65eaed59d64fe52642d41",
+      "characters": 977,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/README.md",
+      "title": "3D结构光相机",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "从0到1搭建一套属于你自己的高精度实时结构光3D相机",
+      "headings": [
+        {
+          "level": 1,
+          "text": "3D结构光相机"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "b17c9d65678a68a1a863eddc6afbce2463209d596abc78c7e72afe52c370c4db",
+      "characters": 35,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/triangulation.md",
+      "title": "triangulation",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "大白话总结：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "triangulation"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "08086cec2a4f18b9791339b8ef27d6907315d666d6f3efe649774e947b015176",
+      "characters": 1928,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/unwrapping.md",
+      "title": "unwrapping",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Device / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "summary": "“相移互补格雷码”就是把两种结构光编码方法合二为一：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "unwrapping"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "6289aeca969852df7cdf3cdb5b34da553433e417b9b0f36b8c2ee6bc3ab0db63",
+      "characters": 1444,
+      "links": [],
       "backlinks": []
     },
     {
@@ -9959,6 +11713,286 @@
       "canonical": null,
       "contentHash": "4e5b2c3bd0a3a359eec69db093bb8124628cdcc0e61ac4661d8838e3ca6d0c3b",
       "characters": 26,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Theory/README.md",
+      "title": "网络分析仪",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Theory",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory"
+      ],
+      "summary": "记录网络分析仪的基础原理、使用方法与应用场景。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "网络分析仪"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "f98df7f407f39531962c623993e9484845425a852bff28a965c5d3a4f979f753",
+      "characters": 83,
+      "links": [
+        "docs/Electronics/Device/Network_Analyser/Application.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/calibration.md",
+      "title": "1. 相机与激光平面标定",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Theory / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "summary": "- 标定方法：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "1. 相机与激光平面标定"
+        },
+        {
+          "level": 3,
+          "text": "相机内参标定（Camera Calibration）"
+        },
+        {
+          "level": 3,
+          "text": "激光平面标定（Laser Plane Calibration）"
+        },
+        {
+          "level": 2,
+          "text": "2. 多帧拼接3D点云流程"
+        },
+        {
+          "level": 3,
+          "text": "数据获取"
+        },
+        {
+          "level": 3,
+          "text": "点云生成"
+        },
+        {
+          "level": 2,
+          "text": "伪代码实现"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "3befe3cfed074ab348749f3473aee6abef0a238d3a8c25a0290924e891e43b52",
+      "characters": 1356,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/CameraMotionCalibration.md",
+      "title": "CameraMotionCalibration",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Theory / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "summary": "标定后不变的参数",
+      "headings": [
+        {
+          "level": 1,
+          "text": "CameraMotionCalibration"
+        },
+        {
+          "level": 2,
+          "text": "相机运动标定"
+        },
+        {
+          "level": 3,
+          "text": "1.具体操作："
+        },
+        {
+          "level": 3,
+          "text": "2.数学推理"
+        },
+        {
+          "level": 4,
+          "text": "1. 角点三维坐标提取"
+        },
+        {
+          "level": 4,
+          "text": "2. 原始运动向量的计算"
+        },
+        {
+          "level": 4,
+          "text": "3. 单位方向向量归一化"
+        },
+        {
+          "level": 4,
+          "text": "4. 知晓物理移动距离的尺度标定"
+        },
+        {
+          "level": 4,
+          "text": "5. 多帧图像间的平移"
+        },
+        {
+          "level": 4,
+          "text": "6. 多帧点云拼接"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "006285ea459dbf880945e546ee1d55052fc72ff70efe28db4ecaa975133e3d50",
+      "characters": 2045,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/centerLine.md",
+      "title": "提取激光条纹图像中心线的方法及效果",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Theory / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "summary": "1. 几何中心法：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "提取激光条纹图像中心线的方法及效果"
+        },
+        {
+          "level": 2,
+          "text": "两家对应做3D测量的公司"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "71bedac78009ddcb6d0110c82426bc1ae5e2e02f73371a3295cfea88676a40f5",
+      "characters": 1090,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/martix.md",
+      "title": "martix",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Theory / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "summary": "外参标定就是在求解：",
+      "headings": [
+        {
+          "level": 1,
+          "text": "martix"
+        },
+        {
+          "level": 2,
+          "text": "从 @\\{R,t\\}@ 到 4×4 齐次变换矩阵"
+        },
+        {
+          "level": 2,
+          "text": "外参标定的含义"
+        },
+        {
+          "level": 3,
+          "text": "小结"
+        },
+        {
+          "level": 3,
+          "text": "把 @R@ 和 @\\mathbf t@ 组合成齐次变换"
+        },
+        {
+          "level": 3,
+          "text": "小结"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "0573f6b8b4d8421f2faebe2f1441547ca9453e90e08f37badc482c3f7d8e1221",
+      "characters": 1942,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/motionCalibration.md",
+      "title": "方案概述",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Theory / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "summary": "运动平台连接一张雷赛的轴卡，轴卡连接电机，电机搭载在运动平台上。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "方案概述"
+        },
+        {
+          "level": 2,
+          "text": "具体流程"
+        },
+        {
+          "level": 2,
+          "text": "主要误差来源"
+        },
+        {
+          "level": 2,
+          "text": "标定精度计算"
+        },
+        {
+          "level": 3,
+          "text": "1. 单次测量的不确定度"
+        },
+        {
+          "level": 3,
+          "text": "2. 多次重复测量的统计精度"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "675dd6ab03a03165c1f6e27385cf879538cc269166d2e8bc62233cc6807eef0f",
+      "characters": 1946,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/README.md",
+      "title": "数学",
+      "section": "electronics",
+      "sectionLabel": "电子与通信",
+      "group": "Theory / Senser3D",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "summary": "数学是人类思维的一种反映，是一切科学的基础",
+      "headings": [
+        {
+          "level": 1,
+          "text": "数学"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "aeb2365a45fde47ea2b8768599ffe796658f75b1e86ca6f86257d07ef9c2f3ef",
+      "characters": 25,
       "links": [],
       "backlinks": []
     },

@@ -89,6 +89,7 @@ for (const file of files) {
 
   const h1Count = proseLines(lines).filter((line) => /^#\s+\S/.test(line)).length;
   const structuralFile = /(^|\/)(?:_sidebar|_navbar|_coverpage)\.md$/i.test(name);
+  const aliasFile = /<!--\s*kb-canonical:\s*[^\s]+\s*-->/.test(markdown);
   if (!structuralFile && h1Count === 0) report.missingTitleFiles.push(name);
   if (h1Count > 1) report.multipleH1Files.push(name);
 
@@ -117,7 +118,7 @@ for (const file of files) {
   }
 
   const normalizedContent = markdown.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").trim();
-  if (!structuralFile && normalizedContent.replace(/\s/g, "").length >= 80) {
+  if (!structuralFile && !aliasFile && normalizedContent.replace(/\s/g, "").length >= 80) {
     const hash = createHash("sha256").update(normalizedContent).digest("hex");
     const group = hashes.get(hash) ?? [];
     group.push(name);

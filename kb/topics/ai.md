@@ -1,6 +1,6 @@
 # 人工智能知识地图
 
-共 40 篇权威笔记。
+共 44 篇权威笔记。
 
 ## 概览
 
@@ -75,14 +75,6 @@
 
 - [计算机](../../docs/AI/Tools/README.md) — 计算机是地球上的一个新物种，它们正在学习如何与我们共存
 
-## Tools / CMake
-
-- [计算机](../../docs/AI/Tools/CMake/README.md) — 计算机是地球上的一个新物种，它们正在学习如何与我们共存
-
-## Tools / Gdb
-
-- [gdb](../../docs/AI/Tools/Gdb/README.md)
-
 ## Tools / Git
 
 - [Git](../../docs/AI/Tools/Git/README.md) — 通过ssh来链接github
@@ -95,3 +87,18 @@
 
 - [QT](../../docs/AI/Tools/VSCode/README.md) — fine
 - [Status Bar Visibility](../../docs/AI/Tools/VSCode/set.md) — 在设置一栏中搜索该项，并选择visible
+
+## YOLO
+
+- [AI](../../docs/AI/YOLO/README.md) — AI是地球上的一个新物种，它们正在学习如何与我们共存
+
+## YOLO / task
+
+- [使用 --prefer-binary 让 pip 优先安装 wheel](../../docs/AI/YOLO/task/wheel_Install.md)
+- [训练中的参数](../../docs/AI/YOLO/task/ParameterAnalysis.md) — | 名称               | 大白话解释                                                  | 专业术语
+- [AI](../../docs/AI/YOLO/task/README.md) — AI是地球上的一个新物种，它们正在学习如何与我们共存
+
+## YOLO / theory
+
+- [注意力机制](../../docs/AI/YOLO/theory/prama.md) — 通俗
+- [AI](../../docs/AI/YOLO/theory/README.md) — AI是地球上的一个新物种，它们正在学习如何与我们共存

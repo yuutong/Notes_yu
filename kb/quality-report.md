@@ -4,9 +4,9 @@
 
 ## 汇总
 
-- 权威笔记：255 篇
-- 兼容跳转页：87 篇
-- 无任何内部关系的笔记：146 篇
+- 权威笔记：302 篇
+- 兼容跳转页：104 篇
+- 无任何内部关系的笔记：183 篇
 - 失效内部链接：3 条
 - 重复权威正文：0 组
 
@@ -56,13 +56,17 @@
 - [TAO Toolkit Docker 环境与训练](../docs/AI/Nvidia_Tao/docker_tao.md)
 - [Tao - 训练、适应、优化](../docs/AI/Nvidia_Tao/README.md)
 - [TAO Toolkit 启动问题与配置](../docs/AI/Nvidia_Tao/Startu_issues.md)
-- [计算机](../docs/AI/Tools/CMake/README.md)
-- [gdb](../docs/AI/Tools/Gdb/README.md)
 - [Git](../docs/AI/Tools/Git/README.md)
 - [QT](../docs/AI/Tools/QT/README.md)
 - [计算机](../docs/AI/Tools/README.md)
 - [QT](../docs/AI/Tools/VSCode/README.md)
 - [Status Bar Visibility](../docs/AI/Tools/VSCode/set.md)
+- [AI](../docs/AI/YOLO/README.md)
+- [训练中的参数](../docs/AI/YOLO/task/ParameterAnalysis.md)
+- [AI](../docs/AI/YOLO/task/README.md)
+- [使用 --prefer-binary 让 pip 优先安装 wheel](../docs/AI/YOLO/task/wheel_Install.md)
+- [注意力机制](../docs/AI/YOLO/theory/prama.md)
+- [AI](../docs/AI/YOLO/theory/README.md)
 - [C++面向对象模型](../docs/computerScience/knowledge/3D/README.md)
 - [模型的设计思路和演化](../docs/computerScience/knowledge/Book/cpp_model/Chapter_1/cppModel.md)
 - [C++在加上类的封装之后，布局成本增加了吗？](../docs/computerScience/knowledge/Book/cpp_model/Chapter_1/encapsulation.md)
@@ -75,18 +79,15 @@
 - [copy constructor progressive](../docs/computerScience/knowledge/Book/cpp_model/Chapter_2/copy_constructor_progressive.md)
 - [一.拷贝构造函数在什么时候被调用](../docs/computerScience/knowledge/Book/cpp_model/Chapter_2/copy_constructor.md)
 - [深度探索C++对象模型](../docs/computerScience/knowledge/Book/cpp_model/Chapter_2/README.md)
-- [一个菱形继承中的各个类的大小](../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/class_size.md)
-- [一.数据的调用](../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md)
-- [一.含义和用法](../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md)
-- [一.Data Member的绑定](../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/dataBind_Layout.md)
-- [Inheritance cppmodel](../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md)
 - [深度探索C++对象模型](../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/README.md)
-- [非静态成员函数调用](../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md)
 - [深度探索C++对象模型](../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/README.md)
 - [单一继承的虚函数调用](../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/VFunction_Invocation.md)
+- [深度探索C++对象模型](../docs/computerScience/knowledge/Book/cpp_model/Chapter_5/README.md)
 - [模型的设计思路和演化](../docs/computerScience/knowledge/Book/cpp_model/cppModel.md)
 - [深度探索C++对象模型](../docs/computerScience/knowledge/Book/cpp_model/README.md)
 - [深度探索C++对象模型](../docs/computerScience/knowledge/Book/README.md)
+- [modbusRtu](../docs/computerScience/knowledge/communication/modbusRtu.md)
+- [modbusTcp](../docs/computerScience/knowledge/communication/modbusTcp.md)
 - [通信](../docs/computerScience/knowledge/communication/README.md)
 - [通信](../docs/computerScience/knowledge/communication/tcp/README.md)
 - [回调函数（Callback Function）](../docs/computerScience/knowledge/cpp/basic/Callback.md)
@@ -112,15 +113,14 @@
 - [Python](../docs/computerScience/knowledge/python/README.md)
 - [计算机](../docs/computerScience/knowledge/README.md)
 - [机器人末端检测](../docs/computerScience/knowledge/robot/README.md)
-- [计算机](../docs/computerScience/Tools/CMake/README.md)
-- [gdb](../docs/computerScience/Tools/Gdb/README.md)
-- [Git](../docs/computerScience/Tools/Git/README.md)
-- [QT](../docs/computerScience/Tools/QT/README.md)
-- [计算机](../docs/computerScience/Tools/README.md)
-- [QT](../docs/computerScience/Tools/VSCode/README.md)
-- [Status Bar Visibility](../docs/computerScience/Tools/VSCode/set.md)
-- [Ubuntu](../docs/computerScience/Ubuntu/README.md)
-- [报错](../docs/computerScience/Ubuntu/Startu_issues.md)
-- [电子与通信](../docs/Electronics/README.md)
-- [proficient English](../docs/English/proficient_English.md)
-- [高等数学](../docs/math/Advanced_Mathematics/README.md)
+- [计算机](../docs/computerScience/Project/README.md)
+- [1.Interface_vision模块](../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/factory.md)
+- [1.接口模块简介](../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/interface.md)
+- [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/README.md)
+- [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/lib_QT/README.md)
+- [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/main_vision/README.md)
+- [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/models/README.md)
+- [插件是怎样导出的？](../docs/computerScience/Project/Vision/3D_Vision/plugins/export.md)
+- [插件是怎样实现的？](../docs/computerScience/Project/Vision/3D_Vision/plugins/Implement.md)
+- [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/plugins/README.md)
+- [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/README.md)

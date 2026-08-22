@@ -1,6 +1,6 @@
 # 计算机科学知识地图
 
-共 138 篇权威笔记。
+共 163 篇权威笔记。
 
 ## 概览
 
@@ -23,17 +23,21 @@
 
 ## knowledge / Book
 
+- [编译器在什么情况下合成析构函数](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_5/Destruction.md) — 编译器只在必要的时候为class生成析构函数:
 - [编译器在什么时候生成默认构造函数](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_2/constructor.md) — C++新手一般有两个常见的误区：
-- [单一继承的虚函数调用](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/VFunction_Invocation.md) — 每个class只会有一个虚表，表中是对应class object中所有active virtual function的地址
+- [单一继承的虚函数调用](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/VFunction_Invocation.md) — 编译器在执行期都做了些什么，才能确保包含虚函数的各类函数的调用正确无误？
 - [非静态成员函数调用](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md) — C++的设计准则之一：nonstatic member function 调用至少必须和一般的nonmember function有相同的效率。那么怎样才能做到呢？
+- [两个3D点坐标的加减](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md) — 对于不同类型的两个3D点加减的函数，执行1000万次，讨论执行效率。
 - [模型的设计思路和演化](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_1/cppModel.md) — 将对象的内存空间分成很多个块，每个块都存一个指向其data Member 或者 function member
 - [模型的设计思路和演化](../../docs/computerScience/knowledge/Book/cpp_model/cppModel.md) — 将对象的内存空间分成很多个块，每个块都存一个指向其data Member 或者 function member
 - [深度探索C++对象模型](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_1/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_2/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_4/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [深度探索C++对象模型](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_5/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/knowledge/Book/cpp_model/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/knowledge/Book/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [什么是编译器，什么是执行期](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md) — 编译器在执行期都做了些什么，才能确保包含虚函数的各类函数的调用正确无误？
 - [一.含义和用法](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md) — 指向数据成员的指针，其类型为成员类型 类名::，它得到的是data member 在类中的偏移量
 - [一.拷贝构造函数在什么时候被调用](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_2/copy_constructor.md) — 有三种情况，会将一个object的内容作为另一个class object的初值
 - [一.数据的调用](../../docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md) — 用对象来调用数据和用指针来调用数据有什么不同呢？
@@ -51,6 +55,8 @@
 
 - [通信](../../docs/computerScience/knowledge/communication/README.md) — 通信协议定义双方通信的规则和约定，确保信息可以准确、有序、可靠地传输。
 - [通信](../../docs/computerScience/knowledge/communication/tcp/README.md) — An awesome subject.
+- [modbusRtu](../../docs/computerScience/knowledge/communication/modbusRtu.md) — 大白话版：
+- [modbusTcp](../../docs/computerScience/knowledge/communication/modbusTcp.md) — 大白话版：
 - [QAbstractSocket 类概述](../../docs/computerScience/knowledge/communication/tcp/base.md) — QAbstractSocket类在Qt中提供了TCP和UDP套接字的功能，QAbstractSocket是一个抽象基类，QTcpSocket和QUdpSocket是它的具体实现。是Qt网络模块的核心，它支持异步网络事件处理。
 - [qabstractsocket类](../../docs/computerScience/knowledge/communication/tcp/qabstractsocket.md) — 在Qt中，QAbstractSocket类提供了TCP和UDP套接字的功能。下面我们来分析waitForReadyRead, waitForBytesWritten, 和waitForDisconnected等方法的实现，以及abort方法，这些方法是QAbstractSocket的核心功能之一。
 - [QT源代码阅读](../../docs/computerScience/knowledge/communication/tcp/QtcpCodeReading.md) — QTcpSocket类继承自QAbstractSocket，只是简单的定义了一些基本的构造函数和析构函数，构造函数创建一个QTcpSocket对象，初始状态为UnconnectedState。它接受一个可选的父对象指针parent，并将其传递给QObject的构造函数。构造函数还初始化了私有数据成员isBuffered为true。这是为了确保QTcpSock
@@ -160,14 +166,42 @@
 - [用于控制和模拟简单机器人手臂的类 robot_arm。](../../docs/computerScience/knowledge/robot/robot_arm_operate.md) — 该类包括正向运动学、逆向运动学、碰撞检测、路径规划等功能，
 - [arm eye calibration](../../docs/computerScience/knowledge/robot/arm_eye_calibration.md) — cloudcompare中的3D点云处理算法：1.点云分割算法的详细描述（写出数学逻辑），2. 这里的点云分割算法是采用PCL库的吗？
 
+## Project
+
+- [计算机](../../docs/computerScience/Project/README.md) — 计算机是地球上的一个新物种，它们正在学习如何与我们共存
+
+## Project / Vision
+
+- [1.接口模块简介](../../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/interface.md) — 这里是3D视觉项目的顶层接口类，对于所有的接口，均不提供具体实现。
+- [1.Interface_vision模块](../../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/factory.md) — 一个纯粹的接口模块，不含有任何实现。是架构的最顶层
+- [插件是怎样导出的？](../../docs/computerScience/Project/Vision/3D_Vision/plugins/export.md) — 导出机制：QDECLEXPORT + extern "C"
+- [插件是怎样实现的？](../../docs/computerScience/Project/Vision/3D_Vision/plugins/Implement.md) — 1.抽象层接口
+- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/lib_QT/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/main_vision/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/models/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/plugins/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/README.md) — 如何用C++ Qt组织一个视觉架构
+- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [Vision架构分析记录](../../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md) — 一个纯粹的接口模块，不含有任何实现。是架构的最顶层
+
 ## Tools
 
 - [计算机](../../docs/computerScience/Tools/README.md) — 计算机是地球上的一个新物种，它们正在学习如何与我们共存
 
 ## Tools / CMake
 
+- [1. VTK9.3.0编译](../../docs/computerScience/Tools/CMake/compile_pcl.md) — 使用cmake-gui编译
 - [计算机](../../docs/computerScience/Tools/CMake/README.md) — 计算机是地球上的一个新物种，它们正在学习如何与我们共存
 - [CMake的使用：](../../docs/computerScience/Tools/CMake/CMake.md) — 针对软件跨平台，在不同的平台下的编译
+
+## Tools / Debug
+
+- [一个拦截 double free 的钩子](../../docs/computerScience/Tools/Debug/hook.md)
+- [ASan gdb](../../docs/computerScience/Tools/Debug/ASan_gdb.md) — 这条命令：
+- [ASan vs Valgrind: 内存泄漏检测对比](../../docs/computerScience/Tools/Debug/memory_leak.md) — | 特性   | AddressSanitizer (ASan)       | Valgrind (Memcheck)      |
+- [gdb](../../docs/computerScience/Tools/Debug/gdb.md) — 定位大型项目中，double‑free、heap corruption、buffer overflow 出现的地方
+- [gdb](../../docs/computerScience/Tools/Debug/README.md)
 
 ## Tools / Gdb
 
@@ -177,7 +211,7 @@
 ## Tools / Git
 
 - [提交删除操作](../../docs/computerScience/Tools/Git/delete_remote.md) — git commit -m "Remove unwanted files except for .ui, .cpp, .h, .pro, and .gitignore"
-- [Git](../../docs/computerScience/Tools/Git/Git.md) — chmod -R 775 /root/Work/3D/Codegit
+- [Git](../../docs/computerScience/Tools/Git/Git.md) — 在 Linux 主机上创建 Git 裸仓库，并通过 SSH 进行访问和推送。
 - [Git](../../docs/computerScience/Tools/Git/README.md) — 通过ssh来链接github
 - [Git 忽略规则示例](../../docs/computerScience/Tools/Git/gitignore.md)
 - [ssh](../../docs/computerScience/Tools/Git/ssh.md) — 要通过SSH从GitHub克隆仓库

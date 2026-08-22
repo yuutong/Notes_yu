@@ -1286,17 +1286,6 @@
       "canonical": "docs/computerScience/Tools/CMake/CMake.md"
     },
     {
-      "id": "docs/AI/Tools/CMake/README.md",
-      "title": "计算机",
-      "section": "ai",
-      "status": "unreviewed",
-      "tags": [
-        "AI",
-        "CMake"
-      ],
-      "canonical": null
-    },
-    {
       "id": "docs/AI/Tools/Gdb/gdb.md",
       "title": "在Linux上使用gdb调试已经在运行的程序",
       "section": "ai",
@@ -1306,17 +1295,6 @@
         "Gdb"
       ],
       "canonical": "docs/computerScience/Tools/Gdb/gdb.md"
-    },
-    {
-      "id": "docs/AI/Tools/Gdb/README.md",
-      "title": "gdb",
-      "section": "ai",
-      "status": "unreviewed",
-      "tags": [
-        "AI",
-        "Gdb"
-      ],
-      "canonical": null
     },
     {
       "id": "docs/AI/Tools/Git/delete_remote.md",
@@ -1424,6 +1402,77 @@
       "tags": [
         "AI",
         "VSCode"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/YOLO/README.md",
+      "title": "AI",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/YOLO/task/ParameterAnalysis.md",
+      "title": "训练中的参数",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "task"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/YOLO/task/README.md",
+      "title": "AI",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "task"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/YOLO/task/wheel_Install.md",
+      "title": "使用 --prefer-binary 让 pip 优先安装 wheel",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "task"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/YOLO/theory/prama.md",
+      "title": "注意力机制",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "theory"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/AI/YOLO/theory/README.md",
+      "title": "AI",
+      "section": "ai",
+      "status": "unreviewed",
+      "tags": [
+        "AI",
+        "YOLO",
+        "theory"
       ],
       "canonical": null
     },
@@ -1737,6 +1786,19 @@
       "canonical": null
     },
     {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md",
+      "title": "两个3D点坐标的加减",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_4"
+      ],
+      "canonical": null
+    },
+    {
       "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md",
       "title": "非静态成员函数调用",
       "section": "computer-science",
@@ -1776,6 +1838,84 @@
       "canonical": null
     },
     {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/copy.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/Destruction.md",
+      "title": "编译器在什么情况下合成析构函数",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md",
+      "title": "非静态成员函数调用",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md"
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/object_Efficiency.md",
+      "title": "两个3D点坐标的加减",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md"
+    },
+    {
+      "id": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Book",
+        "cpp_model",
+        "Chapter_5"
+      ],
+      "canonical": null
+    },
+    {
       "id": "docs/computerScience/knowledge/Book/cpp_model/cppModel.md",
       "title": "模型的设计思路和演化",
       "section": "computer-science",
@@ -1807,6 +1947,28 @@
       "tags": [
         "computerScience",
         "Book"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/modbusRtu.md",
+      "title": "modbusRtu",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/knowledge/communication/modbusTcp.md",
+      "title": "modbusTcp",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "communication"
       ],
       "canonical": null
     },
@@ -2923,6 +3085,378 @@
       "canonical": null
     },
     {
+      "id": "docs/computerScience/Project/README.md",
+      "title": "计算机",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/device.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/factory.md",
+      "title": "1.Interface_vision模块",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/interface.md",
+      "title": "1.接口模块简介",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/vision.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "Interface_vision"
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/construction.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/copy.md",
+      "title": "什么是编译器，什么是执行期",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/Destruction.md",
+      "title": "编译器在什么情况下合成析构函数",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/Destruction.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/inherit_construction.md",
+      "title": "非静态成员函数调用",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/object_Efficiency.md",
+      "title": "两个3D点坐标的加减",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "lib_QT"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/main_vision/interface.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "main_vision"
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/main_vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "main_vision"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/main_vision/vision.md",
+      "title": "Vision架构分析记录",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "main_vision"
+      ],
+      "canonical": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/class_size.md",
+      "title": "一个菱形继承中的各个类的大小",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/class_size.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/data_call_efficiency.md",
+      "title": "一.数据的调用",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/data_member_pointer.md",
+      "title": "一.含义和用法",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/dataBind_Layout.md",
+      "title": "一.Data Member的绑定",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/dataBind_Layout.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/Inheritance_cppmodel.md",
+      "title": "Inheritance cppmodel",
+      "section": "computer-science",
+      "status": "alias",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "canonical": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md"
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/models/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "models"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/plugins/export.md",
+      "title": "插件是怎样导出的？",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "plugins"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/plugins/Implement.md",
+      "title": "插件是怎样实现的？",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "plugins"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/plugins/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision",
+        "plugins"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/3D_Vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "3D_Vision"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/README.md",
+      "title": "深度探索C++对象模型",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision"
+      ],
+      "canonical": null
+    },
+    {
       "id": "docs/computerScience/README.md",
       "title": "计算机",
       "section": "computer-science",
@@ -2944,6 +3478,17 @@
       "canonical": null
     },
     {
+      "id": "docs/computerScience/Tools/CMake/compile_pcl.md",
+      "title": "1. VTK9.3.0编译",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "CMake"
+      ],
+      "canonical": null
+    },
+    {
       "id": "docs/computerScience/Tools/CMake/README.md",
       "title": "计算机",
       "section": "computer-science",
@@ -2951,6 +3496,61 @@
       "tags": [
         "computerScience",
         "CMake"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/ASan_gdb.md",
+      "title": "ASan gdb",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/gdb.md",
+      "title": "gdb",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/hook.md",
+      "title": "一个拦截 double free 的钩子",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/memory_leak.md",
+      "title": "ASan vs Valgrind: 内存泄漏检测对比",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Tools/Debug/README.md",
+      "title": "gdb",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Debug"
       ],
       "canonical": null
     },
@@ -3108,24 +3708,157 @@
       "canonical": null
     },
     {
-      "id": "docs/Electronics/Network_Analyser/Application.md",
+      "id": "docs/Electronics/Device/Network_Analyser/Application.md",
       "title": "应用领域",
       "section": "electronics",
       "status": "unreviewed",
       "tags": [
         "Electronics",
+        "Device",
         "Network_Analyser"
       ],
       "canonical": null
     },
     {
-      "id": "docs/Electronics/Network_Analyser/README.md",
-      "title": "网络分析仪",
+      "id": "docs/Electronics/Device/Network_Analyser/README.md",
+      "title": "数学",
       "section": "electronics",
       "status": "unreviewed",
       "tags": [
         "Electronics",
+        "Device",
         "Network_Analyser"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/README.md",
+      "title": "数学",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/3D_senser.md",
+      "title": "3D senser",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/background.md",
+      "title": "background",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/calibration.md",
+      "title": "calibration",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/camera.md",
+      "title": "camera",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/hardware.md",
+      "title": "一、核心光学部件",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/mySDK.md",
+      "title": "mySDK",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/Projector.md",
+      "title": "一、投影仪业务逻辑处理",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/README.md",
+      "title": "3D结构光相机",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/triangulation.md",
+      "title": "triangulation",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Device/Senser3D/unwrapping.md",
+      "title": "unwrapping",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Device",
+        "Senser3D"
       ],
       "canonical": null
     },
@@ -3136,6 +3869,89 @@
       "status": "unreviewed",
       "tags": [
         "Electronics"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Theory/README.md",
+      "title": "网络分析仪",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/calibration.md",
+      "title": "1. 相机与激光平面标定",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/CameraMotionCalibration.md",
+      "title": "CameraMotionCalibration",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/centerLine.md",
+      "title": "提取激光条纹图像中心线的方法及效果",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/martix.md",
+      "title": "martix",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/motionCalibration.md",
+      "title": "方案概述",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/Electronics/Theory/Senser3D/README.md",
+      "title": "数学",
+      "section": "electronics",
+      "status": "unreviewed",
+      "tags": [
+        "Electronics",
+        "Theory",
+        "Senser3D"
       ],
       "canonical": null
     },
@@ -4306,6 +5122,18 @@
       "target": "docs/computerScience/Tools/QT/Architecture.md"
     },
     {
+      "source": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/copy.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+    },
+    {
+      "source": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Invocation.md"
+    },
+    {
+      "source": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/object_Efficiency.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md"
+    },
+    {
       "source": "docs/computerScience/knowledge/deep-learning/basic/deep-learning.md",
       "target": "docs/AI/knowledge/deep-learning/basic/deep-learning.md"
     },
@@ -4322,8 +5150,64 @@
       "target": "docs/AI/knowledge/deep-learning/lane_detection/lane_detection.md"
     },
     {
-      "source": "docs/Electronics/Network_Analyser/README.md",
-      "target": "docs/Electronics/Network_Analyser/Application.md"
+      "source": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/device.md",
+      "target": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/vision.md",
+      "target": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/construction.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/copy.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/construction.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/Destruction.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/Destruction.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/inherit_construction.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_5/inherit_construction.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/lib_QT/object_Efficiency.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_4/Function_Efficiency.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/main_vision/interface.md",
+      "target": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/main_vision/vision.md",
+      "target": "docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/models/class_size.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/class_size.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/models/data_call_efficiency.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_call_efficiency.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/models/data_member_pointer.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/data_member_pointer.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/models/dataBind_Layout.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/dataBind_Layout.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/3D_Vision/models/Inheritance_cppmodel.md",
+      "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md"
+    },
+    {
+      "source": "docs/Electronics/Theory/README.md",
+      "target": "docs/Electronics/Device/Network_Analyser/Application.md"
     },
     {
       "source": "docs/math/signal_processing/camera/README.md",
