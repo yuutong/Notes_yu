@@ -3462,13 +3462,104 @@
     },
     {
       "id": "docs/computerScience/Project/Vision/README.md",
-      "title": "深度探索C++对象模型",
+      "title": "机器视觉项目",
       "section": "computer-science",
       "status": "unreviewed",
       "tags": [
         "computerScience",
         "Project",
         "Vision"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md",
+      "title": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "title": "机器视觉软件源码还原",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md",
+      "title": "SinceVision 源码还原：从计划到内核与宿主集成",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md",
+      "title": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md",
+      "title": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md",
+      "title": "VS Creator 1.6.2：从还原计划到阶段成果",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "canonical": null
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md",
+      "title": "VS Creator 2.0.14 源码还原：从计划到独立 AI 分割工具",
+      "section": "computer-science",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
       ],
       "canonical": null
     },
@@ -3985,9 +4076,9 @@
       "id": "docs/Keyence-XG源码还原笔记.md",
       "title": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果",
       "section": "other",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "canonical": null
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md"
     },
     {
       "id": "docs/math/Advanced_Mathematics/README.md",
@@ -4084,9 +4175,9 @@
       "id": "docs/SinceVision源码还原笔记.md",
       "title": "SinceVision 源码还原：从计划到内核与宿主集成",
       "section": "other",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "canonical": null
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md"
     },
     {
       "id": "docs/socioeconomics/patent/patent.md",
@@ -4796,20 +4887,36 @@
       "canonical": null
     },
     {
+      "id": "docs/VS Creator 2源码还原笔记.md",
+      "title": "VS Creator 2.0.14 源码还原：从计划到独立 AI 分割工具",
+      "section": "other",
+      "status": "alias",
+      "tags": [],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md"
+    },
+    {
+      "id": "docs/VS Creator源码还原笔记.md",
+      "title": "VS Creator 1.6.2：从还原计划到阶段成果",
+      "section": "other",
+      "status": "alias",
+      "tags": [],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md"
+    },
+    {
       "id": "docs/海康VM4.4.4源码还原笔记.md",
       "title": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果",
       "section": "other",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "canonical": null
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md"
     },
     {
       "id": "docs/海康VM4.4.5源码还原笔记.md",
       "title": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收",
       "section": "other",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "canonical": null
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md"
     },
     {
       "id": "home.md",
@@ -5266,12 +5373,60 @@
       "target": "docs/computerScience/knowledge/Book/cpp_model/Chapter_3/Inheritance_cppmodel.md"
     },
     {
+      "source": "docs/computerScience/Project/Vision/README.md",
+      "target": "docs/computerScience/Project/Vision/3D_Vision/README.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/README.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/README.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/computerScience/Project/Vision/3D_Vision/README.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md"
+    },
+    {
+      "source": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md"
+    },
+    {
       "source": "docs/Electronics/Theory/README.md",
       "target": "docs/Electronics/Device/Network_Analyser/Application.md"
     },
     {
+      "source": "docs/Keyence-XG源码还原笔记.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md"
+    },
+    {
       "source": "docs/math/signal_processing/camera/README.md",
       "target": "docs/math/signal_processing/camera/camera.md"
+    },
+    {
+      "source": "docs/SinceVision源码还原笔记.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md"
     },
     {
       "source": "docs/socioeconomics/work/Basic/camera_code.md",
@@ -5424,6 +5579,22 @@
     {
       "source": "docs/socioeconomics/work/README.md",
       "target": "docs/socioeconomics/work/Knowledge_Base/README.md"
+    },
+    {
+      "source": "docs/VS Creator 2源码还原笔记.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md"
+    },
+    {
+      "source": "docs/VS Creator源码还原笔记.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md"
+    },
+    {
+      "source": "docs/海康VM4.4.4源码还原笔记.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md"
+    },
+    {
+      "source": "docs/海康VM4.4.5源码还原笔记.md",
+      "target": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md"
     },
     {
       "source": "home.md",

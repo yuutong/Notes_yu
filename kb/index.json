@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "stats": {
-    "notes": 411,
-    "canonicalNotes": 307,
-    "aliases": 104,
-    "links": 151,
+    "notes": 420,
+    "canonicalNotes": 310,
+    "aliases": 110,
+    "links": 167,
     "brokenLinks": 0,
     "duplicateGroups": 0,
-    "orphanNotes": 186
+    "orphanNotes": 180
   },
   "notes": [
     {
@@ -1096,7 +1096,8 @@
         "docs/AI/knowledge/deep-learning/basic/deep-learning.md"
       ],
       "backlinks": [
-        "docs/AI/knowledge/deep-learning/README.md"
+        "docs/AI/knowledge/deep-learning/README.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md"
       ]
     },
     {
@@ -10777,11 +10778,14 @@
       "contentHash": "d75e7b8ed48541744e58e9b3dc6df6adf129a34919933265968fe6851b04170e",
       "characters": 29,
       "links": [],
-      "backlinks": []
+      "backlinks": [
+        "docs/computerScience/Project/Vision/README.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md"
+      ]
     },
     {
       "id": "docs/computerScience/Project/Vision/README.md",
-      "title": "深度探索C++对象模型",
+      "title": "机器视觉项目",
       "section": "computer-science",
       "sectionLabel": "计算机科学",
       "group": "Project / Vision",
@@ -10791,18 +10795,396 @@
         "Project",
         "Vision"
       ],
-      "summary": "编译器是怎样组织C++的语言和运行环境的",
+      "summary": "- 3D 视觉软件：视觉软件架构与模块设计。",
       "headings": [
         {
           "level": 1,
-          "text": "深度探索C++对象模型"
+          "text": "机器视觉项目"
         }
       ],
       "canonical": null,
-      "contentHash": "b279fbcf05f5bf8cf2a0c2e705dc06231c3eb4ac44275aa7a4d8008d20244684",
-      "characters": 33,
-      "links": [],
+      "contentHash": "d2389210b97e25f8c3c24f3d4d2261b96e5c7c66e008de0b88a995e78928945f",
+      "characters": 111,
+      "links": [
+        "docs/computerScience/Project/Vision/3D_Vision/README.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md"
+      ],
       "backlinks": []
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md",
+      "title": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "summary": "整理日期：2026-10-29。依据项目中的计划、源码、验证报告和会话归档整理；本文未重新执行测试。各数字为对应报告中的阶段快照，不能推断为所有输入或整机功能均已验证。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果"
+        },
+        {
+          "level": 2,
+          "text": "背景与目标"
+        },
+        {
+          "level": 2,
+          "text": "计划与方法"
+        },
+        {
+          "level": 2,
+          "text": "六类 3D 工具的恢复"
+        },
+        {
+          "level": 2,
+          "text": "编辑器源码与运行验证"
+        },
+        {
+          "level": 2,
+          "text": "扩展到其他检测工具"
+        },
+        {
+          "level": 2,
+          "text": "尚未完成与下一步"
+        },
+        {
+          "level": 2,
+          "text": "资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "4a5ff797c8c13eb40b75e42928a77c88d62753fe5a0771519b059ac41ba196cc",
+      "characters": 2279,
+      "links": [],
+      "backlinks": [
+        "docs/Keyence-XG源码还原笔记.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+      "title": "机器视觉软件源码还原",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "summary": "这里汇集机器视觉软件的源码还原过程、验证证据与尚未解决的问题。各篇记录的成果以原文所述日期、测试条件和依赖边界为准。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "机器视觉软件源码还原"
+        },
+        {
+          "level": 2,
+          "text": "海康 VisionMaster"
+        },
+        {
+          "level": 2,
+          "text": "KEYENCE"
+        },
+        {
+          "level": 2,
+          "text": "SinceVision"
+        },
+        {
+          "level": 2,
+          "text": "相关知识"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "709f4c3d9b1e68aa1e5b567d71265fd0e14ba5e2cc35caaa58c4a9e5fffce3ff",
+      "characters": 596,
+      "links": [
+        "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md",
+        "docs/computerScience/Project/Vision/3D_Vision/README.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md"
+      ],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/README.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md",
+      "title": "SinceVision 源码还原：从计划到内核与宿主集成",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "summary": "整理日期：2026-10-29。依据工作区已有计划、源码、差分证据与阶段报告整理；本文不代表重新执行了测试。报告和状态文件更新日期不同，数字只表示对应阶段的快照。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "SinceVision 源码还原：从计划到内核与宿主集成"
+        },
+        {
+          "level": 2,
+          "text": "1. 背景与目标"
+        },
+        {
+          "level": 2,
+          "text": "2. 计划与推进路径"
+        },
+        {
+          "level": 2,
+          "text": "3. 实际方法"
+        },
+        {
+          "level": 2,
+          "text": "4. 主要成果"
+        },
+        {
+          "level": 2,
+          "text": "5. 关键经验与风险"
+        },
+        {
+          "level": 2,
+          "text": "6. 后续工作与资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "7f00da39c4f560c717bd24c92da09f4e38dbe1add0758edee6930bf58dd9a8cf",
+      "characters": 2967,
+      "links": [],
+      "backlinks": [
+        "docs/SinceVision源码还原笔记.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md",
+      "title": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "summary": "整理于 2026-10-29，依据本机 Applications\\rebuild 中的计划、分析及历史证据；本文没有重新执行测试。4.4.40 对应本次所称 VM 4.4.4。报告中的结果是对应日期的快照，功能演示不等于原厂算法已经完整还原。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果"
+        },
+        {
+          "level": 2,
+          "text": "背景与目标"
+        },
+        {
+          "level": 2,
+          "text": "多相机拼接：计划与实施"
+        },
+        {
+          "level": 2,
+          "text": "AI：接口、演示与验证"
+        },
+        {
+          "level": 2,
+          "text": "现状与后续"
+        },
+        {
+          "level": 2,
+          "text": "资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "d0b644fab87130e3ec84559f0b1c21c5fe528b45d65784c7b4cddef3d545f086",
+      "characters": 2775,
+      "links": [],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+        "docs/海康VM4.4.4源码还原笔记.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md",
+      "title": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "summary": "整理日期：2026-10-29。依据本机 Applications\\VMCode 中的计划、源码和阶段报告整理；本文未重新执行测试。各数字是所注明日期的记录，不代表完整产品已通过验收。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收"
+        },
+        {
+          "level": 2,
+          "text": "1. 目标与软件结构"
+        },
+        {
+          "level": 2,
+          "text": "2. 最初计划与实施顺序"
+        },
+        {
+          "level": 2,
+          "text": "3. 托管层：导出到编译基线"
+        },
+        {
+          "level": 2,
+          "text": "4. 原生视觉和 AI 模块"
+        },
+        {
+          "level": 2,
+          "text": "5. 验证和进一步对齐"
+        },
+        {
+          "level": 2,
+          "text": "6. 当前结论与后续工作"
+        },
+        {
+          "level": 2,
+          "text": "7. 资料索引与复验入口"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "8ced21e469abaffae7df518e389f9c0f7130c230a44ec44fd2c2ce64b4c6826e",
+      "characters": 3284,
+      "links": [],
+      "backlinks": [
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md",
+        "docs/海康VM4.4.5源码还原笔记.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md",
+      "title": "VS Creator 1.6.2：从还原计划到阶段成果",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "summary": "整理日期：2026-10-29。依据本地计划、源码和验证报告整理，本文未重新运行测试。数字是对应报告中的阶段快照，不代表整套产品或全部输入均已验证。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "VS Creator 1.6.2：从还原计划到阶段成果"
+        },
+        {
+          "level": 2,
+          "text": "背景与计划"
+        },
+        {
+          "level": 2,
+          "text": "源码提取与桌面重建"
+        },
+        {
+          "level": 2,
+          "text": "原生边界和传统视觉"
+        },
+        {
+          "level": 2,
+          "text": "AI、学习服务与条码"
+        },
+        {
+          "level": 2,
+          "text": "边界与经验"
+        },
+        {
+          "level": 2,
+          "text": "本地资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "0931ae8d39ff7858e82c56b7acb72d7a8673b5099aeff50576969b246e869148",
+      "characters": 2702,
+      "links": [],
+      "backlinks": [
+        "docs/VS Creator源码还原笔记.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md"
+      ]
+    },
+    {
+      "id": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md",
+      "title": "VS Creator 2.0.14 源码还原：从计划到独立 AI 分割工具",
+      "section": "computer-science",
+      "sectionLabel": "计算机科学",
+      "group": "Project / Vision",
+      "status": "unreviewed",
+      "tags": [
+        "computerScience",
+        "Project",
+        "Vision",
+        "Software_Restoration"
+      ],
+      "summary": "整理日期：2026-10-29。依据工作区计划、源码说明与历史验证记录整理；本文没有重新运行实验。各数字是指定实验的结果，不代表整个产品或现场精度。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "VS Creator 2.0.14 源码还原：从计划到独立 AI 分割工具"
+        },
+        {
+          "level": 2,
+          "text": "1. 目标与范围"
+        },
+        {
+          "level": 2,
+          "text": "2. 从计划到交付"
+        },
+        {
+          "level": 2,
+          "text": "3. 关键还原方法"
+        },
+        {
+          "level": 2,
+          "text": "4. 形成的工具与验证"
+        },
+        {
+          "level": 2,
+          "text": "5. 尚未完成与经验"
+        },
+        {
+          "level": 2,
+          "text": "6. 资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "a2968290e64829ab66680c8565c7ee210fc50c35b4366a2cf53e56c9eac7b3af",
+      "characters": 2983,
+      "links": [],
+      "backlinks": [
+        "docs/VS Creator 2源码还原笔记.md",
+        "docs/computerScience/Project/Vision/Software_Restoration/README.md"
+      ]
     },
     {
       "id": "docs/computerScience/README.md",
@@ -12248,47 +12630,21 @@
       "section": "other",
       "sectionLabel": "其他",
       "group": "docs",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "summary": "整理日期：2026-10-29。依据项目中的计划、源码、验证报告和会话归档整理；本文未重新执行测试。各数字为对应报告中的阶段快照，不能推断为所有输入或整机功能均已验证。",
+      "summary": "此笔记已归类至机器视觉软件源码还原专题。",
       "headings": [
         {
           "level": 1,
           "text": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果"
-        },
-        {
-          "level": 2,
-          "text": "背景与目标"
-        },
-        {
-          "level": 2,
-          "text": "计划与方法"
-        },
-        {
-          "level": 2,
-          "text": "六类 3D 工具的恢复"
-        },
-        {
-          "level": 2,
-          "text": "编辑器源码与运行验证"
-        },
-        {
-          "level": 2,
-          "text": "扩展到其他检测工具"
-        },
-        {
-          "level": 2,
-          "text": "尚未完成与下一步"
-        },
-        {
-          "level": 2,
-          "text": "资料索引"
         }
       ],
-      "canonical": null,
-      "contentHash": "4a5ff797c8c13eb40b75e42928a77c88d62753fe5a0771519b059ac41ba196cc",
-      "characters": 2279,
-      "links": [],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md",
+      "contentHash": "1f14ac38708e5dbb078cb131363b5cd40ea0ceda519d197e091fb8fbf3696c30",
+      "characters": 226,
+      "links": [
+        "docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md"
+      ],
       "backlinks": []
     },
     {
@@ -12576,43 +12932,21 @@
       "section": "other",
       "sectionLabel": "其他",
       "group": "docs",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "summary": "整理日期：2026-10-29。依据工作区已有计划、源码、差分证据与阶段报告整理；本文不代表重新执行了测试。报告和状态文件更新日期不同，数字只表示对应阶段的快照。",
+      "summary": "此笔记已归类至机器视觉软件源码还原专题。",
       "headings": [
         {
           "level": 1,
           "text": "SinceVision 源码还原：从计划到内核与宿主集成"
-        },
-        {
-          "level": 2,
-          "text": "1. 背景与目标"
-        },
-        {
-          "level": 2,
-          "text": "2. 计划与推进路径"
-        },
-        {
-          "level": 2,
-          "text": "3. 实际方法"
-        },
-        {
-          "level": 2,
-          "text": "4. 主要成果"
-        },
-        {
-          "level": 2,
-          "text": "5. 关键经验与风险"
-        },
-        {
-          "level": 2,
-          "text": "6. 后续工作与资料索引"
         }
       ],
-      "canonical": null,
-      "contentHash": "7f00da39c4f560c717bd24c92da09f4e38dbe1add0758edee6930bf58dd9a8cf",
-      "characters": 2967,
-      "links": [],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md",
+      "contentHash": "085d1a5a2794b87482fe052758ecd6bcb46f1c223d963bce4f349cae605faecd",
+      "characters": 214,
+      "links": [
+        "docs/computerScience/Project/Vision/Software_Restoration/sincevision.md"
+      ],
       "backlinks": []
     },
     {
@@ -14925,44 +15259,72 @@
       ]
     },
     {
+      "id": "docs/VS Creator 2源码还原笔记.md",
+      "title": "VS Creator 2.0.14 源码还原：从计划到独立 AI 分割工具",
+      "section": "other",
+      "sectionLabel": "其他",
+      "group": "docs",
+      "status": "alias",
+      "tags": [],
+      "summary": "此笔记已归类至机器视觉软件源码还原专题。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "VS Creator 2.0.14 源码还原：从计划到独立 AI 分割工具"
+        }
+      ],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md",
+      "contentHash": "43f05118cdb646102a98e924b3e75d72e2529fd12e9645af3f725fe9c6dc8bfb",
+      "characters": 231,
+      "links": [
+        "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md"
+      ],
+      "backlinks": []
+    },
+    {
+      "id": "docs/VS Creator源码还原笔记.md",
+      "title": "VS Creator 1.6.2：从还原计划到阶段成果",
+      "section": "other",
+      "sectionLabel": "其他",
+      "group": "docs",
+      "status": "alias",
+      "tags": [],
+      "summary": "此笔记已归类至机器视觉软件源码还原专题。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "VS Creator 1.6.2：从还原计划到阶段成果"
+        }
+      ],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md",
+      "contentHash": "6c09aab9e0e2fdde87901638441f86c879ede840c088dba50b40bc0e7f11117b",
+      "characters": 222,
+      "links": [
+        "docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md"
+      ],
+      "backlinks": []
+    },
+    {
       "id": "docs/海康VM4.4.4源码还原笔记.md",
       "title": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果",
       "section": "other",
       "sectionLabel": "其他",
       "group": "docs",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "summary": "整理于 2026-10-29，依据本机 Applications\\rebuild 中的计划、分析及历史证据；本文没有重新执行测试。4.4.40 对应本次所称 VM 4.4.4。报告中的结果是对应日期的快照，功能演示不等于原厂算法已经完整还原。",
+      "summary": "此笔记已归类至机器视觉软件源码还原专题。",
       "headings": [
         {
           "level": 1,
           "text": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果"
-        },
-        {
-          "level": 2,
-          "text": "背景与目标"
-        },
-        {
-          "level": 2,
-          "text": "多相机拼接：计划与实施"
-        },
-        {
-          "level": 2,
-          "text": "AI：接口、演示与验证"
-        },
-        {
-          "level": 2,
-          "text": "现状与后续"
-        },
-        {
-          "level": 2,
-          "text": "资料索引"
         }
       ],
-      "canonical": null,
-      "contentHash": "d0b644fab87130e3ec84559f0b1c21c5fe528b45d65784c7b4cddef3d545f086",
-      "characters": 2775,
-      "links": [],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md",
+      "contentHash": "7ff74899341b0fc5ad101a8a1affed6814e0c767fb44560a9f47d6dd00b58a90",
+      "characters": 236,
+      "links": [
+        "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md"
+      ],
       "backlinks": []
     },
     {
@@ -14971,47 +15333,21 @@
       "section": "other",
       "sectionLabel": "其他",
       "group": "docs",
-      "status": "unreviewed",
+      "status": "alias",
       "tags": [],
-      "summary": "整理日期：2026-10-29。依据本机 Applications\\VMCode 中的计划、源码和阶段报告整理；本文未重新执行测试。各数字是所注明日期的记录，不代表完整产品已通过验收。",
+      "summary": "此笔记已归类至机器视觉软件源码还原专题。",
       "headings": [
         {
           "level": 1,
           "text": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收"
-        },
-        {
-          "level": 2,
-          "text": "1. 目标与软件结构"
-        },
-        {
-          "level": 2,
-          "text": "2. 最初计划与实施顺序"
-        },
-        {
-          "level": 2,
-          "text": "3. 托管层：导出到编译基线"
-        },
-        {
-          "level": 2,
-          "text": "4. 原生视觉和 AI 模块"
-        },
-        {
-          "level": 2,
-          "text": "5. 验证和进一步对齐"
-        },
-        {
-          "level": 2,
-          "text": "6. 当前结论与后续工作"
-        },
-        {
-          "level": 2,
-          "text": "7. 资料索引与复验入口"
         }
       ],
-      "canonical": null,
-      "contentHash": "8ced21e469abaffae7df518e389f9c0f7130c230a44ec44fd2c2ce64b4c6826e",
-      "characters": 3284,
-      "links": [],
+      "canonical": "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md",
+      "contentHash": "1c007b88f698f773e3d4244cc749123822f030c8ce8808b22c3e70a72903713e",
+      "characters": 236,
+      "links": [
+        "docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md"
+      ],
       "backlinks": []
     },
     {

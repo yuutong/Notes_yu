@@ -1,6 +1,6 @@
 # 计算机科学知识地图
 
-共 163 篇权威笔记。
+共 170 篇权威笔记。
 
 ## 概览
 
@@ -176,14 +176,21 @@
 - [1.Interface_vision模块](../../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/factory.md) — 一个纯粹的接口模块，不含有任何实现。是架构的最顶层
 - [插件是怎样导出的？](../../docs/computerScience/Project/Vision/3D_Vision/plugins/export.md) — 导出机制：QDECLEXPORT + extern "C"
 - [插件是怎样实现的？](../../docs/computerScience/Project/Vision/3D_Vision/plugins/Implement.md) — 1.抽象层接口
+- [海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果](../../docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.40.md) — 整理于 2026-10-29，依据本机 Applications\rebuild 中的计划、分析及历史证据；本文没有重新执行测试。4.4.40 对应本次所称 VM 4.4.4。报告中的结果是对应日期的快照，功能演示不等于原厂算法已经完整还原。
+- [海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收](../../docs/computerScience/Project/Vision/Software_Restoration/visionmaster-4.4.50.md) — 整理日期：2026-10-29。依据本机 Applications\VMCode 中的计划、源码和阶段报告整理；本文未重新执行测试。各数字是所注明日期的记录，不代表完整产品已通过验收。
+- [机器视觉软件源码还原](../../docs/computerScience/Project/Vision/Software_Restoration/README.md) — 这里汇集机器视觉软件的源码还原过程、验证证据与尚未解决的问题。各篇记录的成果以原文所述日期、测试条件和依赖边界为准。
+- [机器视觉项目](../../docs/computerScience/Project/Vision/README.md) — - 3D 视觉软件：视觉软件架构与模块设计。
 - [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/lib_QT/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/main_vision/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/models/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/plugins/README.md) — 编译器是怎样组织C++的语言和运行环境的
 - [深度探索C++对象模型](../../docs/computerScience/Project/Vision/3D_Vision/README.md) — 如何用C++ Qt组织一个视觉架构
-- [深度探索C++对象模型](../../docs/computerScience/Project/Vision/README.md) — 编译器是怎样组织C++的语言和运行环境的
+- [Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果](../../docs/computerScience/Project/Vision/Software_Restoration/keyence-xg-x.md) — 整理日期：2026-10-29。依据项目中的计划、源码、验证报告和会话归档整理；本文未重新执行测试。各数字为对应报告中的阶段快照，不能推断为所有输入或整机功能均已验证。
+- [SinceVision 源码还原：从计划到内核与宿主集成](../../docs/computerScience/Project/Vision/Software_Restoration/sincevision.md) — 整理日期：2026-10-29。依据工作区已有计划、源码、差分证据与阶段报告整理；本文不代表重新执行了测试。报告和状态文件更新日期不同，数字只表示对应阶段的快照。
 - [Vision架构分析记录](../../docs/computerScience/Project/Vision/3D_Vision/Interface_vision/communication.md) — 一个纯粹的接口模块，不含有任何实现。是架构的最顶层
+- [VS Creator 1.6.2：从还原计划到阶段成果](../../docs/computerScience/Project/Vision/Software_Restoration/vs-creator-1.6.2.md) — 整理日期：2026-10-29。依据本地计划、源码和验证报告整理，本文未重新运行测试。数字是对应报告中的阶段快照，不代表整套产品或全部输入均已验证。
+- [VS Creator 2.0.14 源码还原：从计划到独立 AI 分割工具](../../docs/computerScience/Project/Vision/Software_Restoration/vs-creator-2.0.14.md) — 整理日期：2026-10-29。依据工作区计划、源码说明与历史验证记录整理；本文没有重新运行实验。各数字是指定实验的结果，不代表整个产品或现场精度。
 
 ## Tools
 
