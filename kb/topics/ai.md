@@ -1,6 +1,6 @@
 # 人工智能知识地图
 
-共 44 篇权威笔记。
+共 45 篇权威笔记。
 
 ## 概览
 
@@ -33,6 +33,7 @@
 - [简介](../../docs/AI/knowledge/deep-learning/lane_detection/lane_detection.md) — 自动驾驶汽车是人工智能中最具颠覆性的创新之一，其最初的步骤是车道检测，车道检测可使用深度学习算法
 - [深度学习模型训练](../../docs/AI/knowledge/deep-learning/lane_detection/Interview.md) — 1.数据收集：通过爬虫，自主采集等方式搜集图像数据
 - [深度学习入门](../../docs/AI/knowledge/deep-learning/basic/the_way_to_learn.md) — 1.python：安装Anaconda就够了，其他的需要jupyter notebook编程工具
+- [AIS工业缺陷分割从原理到Python与C++实现](../../docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md) — 理解一套工业缺陷分割系统，需要把标注、输入尺度、网络结构、监督目标、训练状态和结果判定连起来看。本文以AICode中已经运行的AIS实现为例，说明每一步做什么、为什么这样做，以及如何验证。
 - [Deep Learning](../../docs/AI/knowledge/deep-learning/basic/README.md) — 深度学习是人工智能的未来，它让机器能够像人类一样学习和思考
 - [Deep Learning](../../docs/AI/knowledge/deep-learning/README.md) — 深度学习是人工智能的未来，它让机器能够像人类一样学习和思考
 

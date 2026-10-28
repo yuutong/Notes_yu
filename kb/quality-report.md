@@ -4,9 +4,9 @@
 
 ## 汇总
 
-- 权威笔记：302 篇
+- 权威笔记：307 篇
 - 兼容跳转页：104 篇
-- 无任何内部关系的笔记：183 篇
+- 无任何内部关系的笔记：186 篇
 - 失效内部链接：0 条
 - 重复权威正文：0 组
 
@@ -31,7 +31,6 @@
 - [C++](../docs/AI/knowledge/cpp/README.md)
 - [Deep Learning](../docs/AI/knowledge/deep-learning/basic/README.md)
 - [车道检测](../docs/AI/knowledge/deep-learning/lane_detection/README.md)
-- [Deep Learning](../docs/AI/knowledge/deep-learning/README.md)
 - [opencv进阶算法](../docs/AI/knowledge/opencv/Advanced/README.md)
 - [opencv基础算法](../docs/AI/knowledge/opencv/basic/README.md)
 - [图像压缩](../docs/AI/knowledge/opencv/Image_Compression/README.md)
@@ -118,3 +117,4 @@
 - [插件是怎样实现的？](../docs/computerScience/Project/Vision/3D_Vision/plugins/Implement.md)
 - [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/plugins/README.md)
 - [深度探索C++对象模型](../docs/computerScience/Project/Vision/3D_Vision/README.md)
+- [深度探索C++对象模型](../docs/computerScience/Project/Vision/README.md)

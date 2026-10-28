@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "stats": {
-    "notes": 406,
-    "canonicalNotes": 302,
+    "notes": 411,
+    "canonicalNotes": 307,
     "aliases": 104,
-    "links": 148,
+    "links": 151,
     "brokenLinks": 0,
     "duplicateGroups": 0,
-    "orphanNotes": 183
+    "orphanNotes": 186
   },
   "notes": [
     {
@@ -918,6 +918,188 @@
       "backlinks": []
     },
     {
+      "id": "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md",
+      "title": "AIS工业缺陷分割从原理到Python与C++实现",
+      "section": "ai",
+      "sectionLabel": "人工智能",
+      "group": "knowledge / deep-learning",
+      "status": "evergreen",
+      "tags": [
+        "ai",
+        "segmentation",
+        "computer-vision",
+        "tensorflow",
+        "cpp",
+        "AI",
+        "deep-learning"
+      ],
+      "summary": "理解一套工业缺陷分割系统，需要把标注、输入尺度、网络结构、监督目标、训练状态和结果判定连起来看。本文以AICode中已经运行的AIS实现为例，说明每一步做什么、为什么这样做，以及如何验证。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AIS工业缺陷分割从原理到Python与C++实现"
+        },
+        {
+          "level": 2,
+          "text": "1 核心结论与适用范围"
+        },
+        {
+          "level": 2,
+          "text": "2 先把完整数据流连起来"
+        },
+        {
+          "level": 2,
+          "text": "3 标注格式与数据契约"
+        },
+        {
+          "level": 3,
+          "text": "3.1 网络需要的是像素标签"
+        },
+        {
+          "level": 3,
+          "text": "3.2 多边形 画笔与PNG"
+        },
+        {
+          "level": 3,
+          "text": "3.3 YOLO分割多边形"
+        },
+        {
+          "level": 3,
+          "text": "3.4 ANN与RLE"
+        },
+        {
+          "level": 3,
+          "text": "3.5 数据划分与泄漏"
+        },
+        {
+          "level": 2,
+          "text": "4 检测范围 缩放与分块"
+        },
+        {
+          "level": 3,
+          "text": "4.1 有效范围"
+        },
+        {
+          "level": 3,
+          "text": "4.2 异常大小是输入尺度参数"
+        },
+        {
+          "level": 3,
+          "text": "4.3 图像与掩码使用不同缩放语义"
+        },
+        {
+          "level": 3,
+          "text": "4.4 网络画布与重叠"
+        },
+        {
+          "level": 2,
+          "text": "5 AIS骨干与SE门控"
+        },
+        {
+          "level": 3,
+          "text": "5.1 五路特征的含义"
+        },
+        {
+          "level": 3,
+          "text": "5.2 SE如何控制通道"
+        },
+        {
+          "level": 3,
+          "text": "5.3 输入量化与特征反量化"
+        },
+        {
+          "level": 2,
+          "text": "6 分割头如何恢复缺陷位置"
+        },
+        {
+          "level": 2,
+          "text": "7 监督目标 损失与训练参数"
+        },
+        {
+          "level": 3,
+          "text": "7.1 固定骨干只训练头部"
+        },
+        {
+          "level": 3,
+          "text": "7.2 高灵敏度的单通道监督"
+        },
+        {
+          "level": 3,
+          "text": "7.3 标准灵敏度的14通道监督"
+        },
+        {
+          "level": 3,
+          "text": "7.4 Epoch与更新步数"
+        },
+        {
+          "level": 3,
+          "text": "7.5 学习率与阶段"
+        },
+        {
+          "level": 2,
+          "text": "8 推理 融合与业务判定"
+        },
+        {
+          "level": 3,
+          "text": "8.1 像素分割阈值"
+        },
+        {
+          "level": 3,
+          "text": "8.2 整图缺陷程度与公差"
+        },
+        {
+          "level": 2,
+          "text": "9 模型保存 续训与INT8部署"
+        },
+        {
+          "level": 2,
+          "text": "10 Python与C++怎样落地"
+        },
+        {
+          "level": 3,
+          "text": "10.1 职责划分"
+        },
+        {
+          "level": 3,
+          "text": "10.2 从零建立可验证的实现"
+        },
+        {
+          "level": 3,
+          "text": "10.3 当前CLI的最小调用方式"
+        },
+        {
+          "level": 2,
+          "text": "11 验证指标与真实实验"
+        },
+        {
+          "level": 3,
+          "text": "11.1 0828实验"
+        },
+        {
+          "level": 3,
+          "text": "11.2 fber实验"
+        },
+        {
+          "level": 2,
+          "text": "12 排查问题时先看什么"
+        },
+        {
+          "level": 2,
+          "text": "13 相关笔记与来源"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "55e2195a89d2efd84a3e028271595dc65fa95d7180e9fe358b57359ee08057e7",
+      "characters": 11381,
+      "links": [
+        "docs/AI/knowledge/deep-learning/README.md",
+        "docs/AI/knowledge/deep-learning/basic/deep-learning.md"
+      ],
+      "backlinks": [
+        "docs/AI/knowledge/deep-learning/README.md"
+      ]
+    },
+    {
       "id": "docs/AI/knowledge/deep-learning/basic/deep-learning.md",
       "title": "机器学习",
       "section": "ai",
@@ -953,6 +1135,7 @@
       "characters": 2451,
       "links": [],
       "backlinks": [
+        "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md",
         "docs/computerScience/knowledge/deep-learning/basic/deep-learning.md"
       ]
     },
@@ -1167,13 +1350,21 @@
         {
           "level": 1,
           "text": "Deep Learning"
+        },
+        {
+          "level": 2,
+          "text": "工业视觉实践"
         }
       ],
       "canonical": null,
-      "contentHash": "292aff1c5097b419b3ad77b5e19853e0826fc8a7a635802936c6a8c0cbb96ba9",
-      "characters": 43,
-      "links": [],
-      "backlinks": []
+      "contentHash": "43dabf0b56287fec5793ee3f8b5aabe3c541a9ae28d9bcae668876634f7b7992",
+      "characters": 130,
+      "links": [
+        "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md"
+      ],
+      "backlinks": [
+        "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md"
+      ]
     },
     {
       "id": "docs/AI/knowledge/opencv/Advanced/Adaptive_Threshold.md",
@@ -12052,6 +12243,55 @@
       "backlinks": []
     },
     {
+      "id": "docs/Keyence-XG源码还原笔记.md",
+      "title": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果",
+      "section": "other",
+      "sectionLabel": "其他",
+      "group": "docs",
+      "status": "unreviewed",
+      "tags": [],
+      "summary": "整理日期：2026-10-29。依据项目中的计划、源码、验证报告和会话归档整理；本文未重新执行测试。各数字为对应报告中的阶段快照，不能推断为所有输入或整机功能均已验证。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果"
+        },
+        {
+          "level": 2,
+          "text": "背景与目标"
+        },
+        {
+          "level": 2,
+          "text": "计划与方法"
+        },
+        {
+          "level": 2,
+          "text": "六类 3D 工具的恢复"
+        },
+        {
+          "level": 2,
+          "text": "编辑器源码与运行验证"
+        },
+        {
+          "level": 2,
+          "text": "扩展到其他检测工具"
+        },
+        {
+          "level": 2,
+          "text": "尚未完成与下一步"
+        },
+        {
+          "level": 2,
+          "text": "资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "4a5ff797c8c13eb40b75e42928a77c88d62753fe5a0771519b059ac41ba196cc",
+      "characters": 2279,
+      "links": [],
+      "backlinks": []
+    },
+    {
       "id": "docs/math/Advanced_Mathematics/README.md",
       "title": "高等数学",
       "section": "math",
@@ -12327,6 +12567,51 @@
       "canonical": null,
       "contentHash": "e85e3ae3fa3ed694c566aa17732a3d9bc0df90fa5ad81e5cdbdd9e557bf2316d",
       "characters": 58,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/SinceVision源码还原笔记.md",
+      "title": "SinceVision 源码还原：从计划到内核与宿主集成",
+      "section": "other",
+      "sectionLabel": "其他",
+      "group": "docs",
+      "status": "unreviewed",
+      "tags": [],
+      "summary": "整理日期：2026-10-29。依据工作区已有计划、源码、差分证据与阶段报告整理；本文不代表重新执行了测试。报告和状态文件更新日期不同，数字只表示对应阶段的快照。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "SinceVision 源码还原：从计划到内核与宿主集成"
+        },
+        {
+          "level": 2,
+          "text": "1. 背景与目标"
+        },
+        {
+          "level": 2,
+          "text": "2. 计划与推进路径"
+        },
+        {
+          "level": 2,
+          "text": "3. 实际方法"
+        },
+        {
+          "level": 2,
+          "text": "4. 主要成果"
+        },
+        {
+          "level": 2,
+          "text": "5. 关键经验与风险"
+        },
+        {
+          "level": 2,
+          "text": "6. 后续工作与资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "7f00da39c4f560c717bd24c92da09f4e38dbe1add0758edee6930bf58dd9a8cf",
+      "characters": 2967,
       "links": [],
       "backlinks": []
     },
@@ -14638,6 +14923,96 @@
       "backlinks": [
         "docs/socioeconomics/work/Knowledge_Base/README.md"
       ]
+    },
+    {
+      "id": "docs/海康VM4.4.4源码还原笔记.md",
+      "title": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果",
+      "section": "other",
+      "sectionLabel": "其他",
+      "group": "docs",
+      "status": "unreviewed",
+      "tags": [],
+      "summary": "整理于 2026-10-29，依据本机 Applications\\rebuild 中的计划、分析及历史证据；本文没有重新执行测试。4.4.40 对应本次所称 VM 4.4.4。报告中的结果是对应日期的快照，功能演示不等于原厂算法已经完整还原。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果"
+        },
+        {
+          "level": 2,
+          "text": "背景与目标"
+        },
+        {
+          "level": 2,
+          "text": "多相机拼接：计划与实施"
+        },
+        {
+          "level": 2,
+          "text": "AI：接口、演示与验证"
+        },
+        {
+          "level": 2,
+          "text": "现状与后续"
+        },
+        {
+          "level": 2,
+          "text": "资料索引"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "d0b644fab87130e3ec84559f0b1c21c5fe528b45d65784c7b4cddef3d545f086",
+      "characters": 2775,
+      "links": [],
+      "backlinks": []
+    },
+    {
+      "id": "docs/海康VM4.4.5源码还原笔记.md",
+      "title": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收",
+      "section": "other",
+      "sectionLabel": "其他",
+      "group": "docs",
+      "status": "unreviewed",
+      "tags": [],
+      "summary": "整理日期：2026-10-29。依据本机 Applications\\VMCode 中的计划、源码和阶段报告整理；本文未重新执行测试。各数字是所注明日期的记录，不代表完整产品已通过验收。",
+      "headings": [
+        {
+          "level": 1,
+          "text": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收"
+        },
+        {
+          "level": 2,
+          "text": "1. 目标与软件结构"
+        },
+        {
+          "level": 2,
+          "text": "2. 最初计划与实施顺序"
+        },
+        {
+          "level": 2,
+          "text": "3. 托管层：导出到编译基线"
+        },
+        {
+          "level": 2,
+          "text": "4. 原生视觉和 AI 模块"
+        },
+        {
+          "level": 2,
+          "text": "5. 验证和进一步对齐"
+        },
+        {
+          "level": 2,
+          "text": "6. 当前结论与后续工作"
+        },
+        {
+          "level": 2,
+          "text": "7. 资料索引与复验入口"
+        }
+      ],
+      "canonical": null,
+      "contentHash": "8ced21e469abaffae7df518e389f9c0f7130c230a44ec44fd2c2ce64b4c6826e",
+      "characters": 3284,
+      "links": [],
+      "backlinks": []
     },
     {
       "id": "home.md",

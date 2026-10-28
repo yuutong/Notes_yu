@@ -334,6 +334,22 @@
       "canonical": null
     },
     {
+      "id": "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md",
+      "title": "AIS工业缺陷分割从原理到Python与C++实现",
+      "section": "ai",
+      "status": "evergreen",
+      "tags": [
+        "ai",
+        "segmentation",
+        "computer-vision",
+        "tensorflow",
+        "cpp",
+        "AI",
+        "deep-learning"
+      ],
+      "canonical": null
+    },
+    {
       "id": "docs/AI/knowledge/deep-learning/basic/deep-learning.md",
       "title": "机器学习",
       "section": "ai",
@@ -3966,6 +3982,14 @@
       "canonical": null
     },
     {
+      "id": "docs/Keyence-XG源码还原笔记.md",
+      "title": "Keyence XG-X VisionEditor 3.4：从还原计划到阶段成果",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
       "id": "docs/math/Advanced_Mathematics/README.md",
       "title": "高等数学",
       "section": "math",
@@ -4054,6 +4078,14 @@
         "math",
         "signal_processing"
       ],
+      "canonical": null
+    },
+    {
+      "id": "docs/SinceVision源码还原笔记.md",
+      "title": "SinceVision 源码还原：从计划到内核与宿主集成",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
       "canonical": null
     },
     {
@@ -4764,6 +4796,22 @@
       "canonical": null
     },
     {
+      "id": "docs/海康VM4.4.4源码还原笔记.md",
+      "title": "海康 VisionMaster 4.4.40 源码还原：从计划到阶段成果",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
+      "id": "docs/海康VM4.4.5源码还原笔记.md",
+      "title": "海康 VisionMaster 4.4.50 源码还原：从计划到阶段验收",
+      "section": "other",
+      "status": "unreviewed",
+      "tags": [],
+      "canonical": null
+    },
+    {
       "id": "home.md",
       "title": "瑜的笔记",
       "section": "other",
@@ -4876,6 +4924,18 @@
     {
       "source": "docs/AI/knowledge/cpp/objModel/virtual_function.md",
       "target": "docs/computerScience/knowledge/cpp/objModel/virtual_function.md"
+    },
+    {
+      "source": "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md",
+      "target": "docs/AI/knowledge/deep-learning/basic/deep-learning.md"
+    },
+    {
+      "source": "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md",
+      "target": "docs/AI/knowledge/deep-learning/README.md"
+    },
+    {
+      "source": "docs/AI/knowledge/deep-learning/README.md",
+      "target": "docs/AI/knowledge/deep-learning/ais-segmentation-principles-and-implementation.md"
     },
     {
       "source": "docs/AI/knowledge/opencv/Advanced/Adaptive_Threshold.md",
